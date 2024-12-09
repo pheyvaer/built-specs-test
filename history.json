@@ -1,0 +1,15 @@
+{
+  "Markdown spec example": {
+    "publications": {
+      "first-tag": {
+        "latest-run": "2024-12-09T16:57:49.757Z",
+        "runs": [
+          {
+            "date": "2024-12-09T16:57:49.757Z",
+            "path": "test/resources/specific-tag/actual-dist/markdown-spec-example/v0.0.1"
+          }
+        ]
+      }
+    }
+  }
+}
