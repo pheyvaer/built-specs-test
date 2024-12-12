@@ -2,14 +2,35 @@
   "Markdown spec example": {
     "publications": {
       "first-tag": {
-        "latest-run": "2024-12-09T16:57:49.757Z",
+        "latest-run": "2024-12-12T20:41:44.355Z",
         "runs": [
           {
             "date": "2024-12-09T16:57:49.757Z",
             "path": "test/resources/specific-tag/actual-dist/markdown-spec-example/v0.0.1"
           }
         ]
+      },
+      "all-commits": {
+        "latest-run": "2024-12-12T20:41:41.719Z",
+        "runs": [
+          {
+            "date": "2024-12-12T20:41:41.718Z",
+            "path": "tmp/storage-repo/publications/markdown-spec-example/all/e02ba94cbf38b477cecf7994ebc129a6532748f2"
+          }
+        ]
+      },
+      "initial-commit": {
+        "latest-run": "2024-12-12T20:41:44.354Z",
+        "runs": [
+          {
+            "date": "2024-12-12T20:41:44.354Z",
+            "path": "tmp/storage-repo/publications/markdown-spec-example/initial-commit"
+          }
+        ]
       }
     }
+  },
+  "orchestrator": {
+    "latest-run": "2024-12-12T20:41:44.355Z"
   }
 }
