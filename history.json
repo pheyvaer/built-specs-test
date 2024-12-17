@@ -1,0 +1,18 @@
+{
+  "Authorization for Data Spaces (A4DS) attempt A": {
+    "publications": {
+      "all-commits": {
+        "latest-run": "2024-12-17T15:10:51.095Z",
+        "runs": [
+          {
+            "date": "2024-12-17T15:10:51.095Z",
+            "path": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/A4DS/all/db96b318de2bb97b3577f8df77c68d056112f0a8"
+          }
+        ]
+      }
+    }
+  },
+  "orchestrator": {
+    "latest-run": "2024-12-17T15:10:51.096Z"
+  }
+}
