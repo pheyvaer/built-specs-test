@@ -1,0 +1,36 @@
+{
+  "Markdown spec example": {
+    "publications": {
+      "all-commits": {
+        "latest-run": "2024-12-17T14:58:51.547Z",
+        "runs": [
+          {
+            "date": "2024-12-17T14:58:51.546Z",
+            "path": "/Users/pheyvaer/Development/spec-platform/orchestrator/tmp/storage-repo/docs/markdown-spec-example/all/e02ba94cbf38b477cecf7994ebc129a6532748f2"
+          }
+        ]
+      },
+      "initial-commit": {
+        "latest-run": "2024-12-17T14:58:54.889Z",
+        "runs": [
+          {
+            "date": "2024-12-17T14:58:54.889Z",
+            "path": "/Users/pheyvaer/Development/spec-platform/orchestrator/tmp/storage-repo/docs/markdown-spec-example/initial-commit"
+          }
+        ]
+      },
+      "first-tag": {
+        "latest-run": "2024-12-17T14:58:58.132Z",
+        "runs": [
+          {
+            "date": "2024-12-17T14:58:58.132Z",
+            "path": "/Users/pheyvaer/Development/spec-platform/orchestrator/tmp/storage-repo/docs/markdown-spec-example/v0.0.1"
+          }
+        ]
+      }
+    }
+  },
+  "orchestrator": {
+    "latest-run": "2024-12-17T14:58:58.133Z"
+  }
+}
