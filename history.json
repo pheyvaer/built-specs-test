@@ -2,7 +2,7 @@
   "Authorization for Data Spaces (A4DS) attempt A": {
     "publications": {
       "all-commits": {
-        "latest-run": "2024-12-17T15:10:51.095Z",
+        "latest-run": "2024-12-17T15:15:39.956Z",
         "runs": [
           {
             "date": "2024-12-17T15:10:51.095Z",
@@ -13,6 +13,19 @@
     }
   },
   "orchestrator": {
-    "latest-run": "2024-12-17T15:10:51.096Z"
+    "latest-run": "2024-12-17T15:15:40.869Z"
+  },
+  "RDF Time Snippets": {
+    "publications": {
+      "all-commits": {
+        "latest-run": "2024-12-17T15:15:40.869Z",
+        "runs": [
+          {
+            "date": "2024-12-17T15:15:40.869Z",
+            "path": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/rdf-time-snippets/all/6a6c5fa518f449a8a9e3427f1d6e4a37dc11b9c5"
+          }
+        ]
+      }
+    }
   }
 }
