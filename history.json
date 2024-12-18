@@ -3,7 +3,7 @@
     "Authorization for Data Spaces (A4DS) attempt A": {
       "publications": {
         "all-commits": {
-          "latest-run": "2024-12-18T07:03:26.065Z",
+          "latest-run": "2024-12-18T08:03:31.261Z",
           "runs": [
             {
               "date": "2024-12-17T17:24:25.969Z",
@@ -16,7 +16,7 @@
     "RDF Time Snippets": {
       "publications": {
         "all-commits": {
-          "latest-run": "2024-12-18T07:03:26.335Z",
+          "latest-run": "2024-12-18T08:03:31.515Z",
           "runs": [
             {
               "date": "2024-12-17T17:24:26.701Z",
@@ -28,6 +28,7 @@
     }
   },
   "orchestrator": {
-    "latest-run": "2024-12-18T07:03:26.335Z"
+    "latest-run": "2024-12-18T08:03:31.515Z",
+    "version": "0.0.9"
   }
 }
