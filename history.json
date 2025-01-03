@@ -2,7 +2,7 @@
   "specs": {
     "Authorization for Data Spaces (A4DS) attempt A": {
       "publications": {
-        "all-commits": {
+        "All commits": {
           "latest-run": "2025-01-03T13:49:31.149Z",
           "runs": [
             {
@@ -15,7 +15,7 @@
     },
     "RDF Time Snippets": {
       "publications": {
-        "all-commits": {
+        "All commits": {
           "latest-run": "2025-01-03T13:49:31.361Z",
           "runs": [
             {
@@ -28,7 +28,7 @@
     },
     "RML Specification: Dynamic Logical Targets": {
       "publications": {
-        "all-commits": {
+        "All commits": {
           "latest-run": "2025-01-03T13:49:31.540Z",
           "runs": [
             {
