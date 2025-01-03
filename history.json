@@ -25,19 +25,6 @@
           ]
         }
       }
-    },
-    "RML Specification: Dynamic Logical Targets": {
-      "publications": {
-        "all-commits": {
-          "latest-run": "2025-01-03T10:47:41.385Z",
-          "runs": [
-            {
-              "date": "2025-01-03T10:47:41.385Z",
-              "path": "rml-specification:-dynamic-logical-targets/all/8a74c5c25c62c08de79918757617ef95a2ca4551"
-            }
-          ]
-        }
-      }
     }
   },
   "orchestrator": {
