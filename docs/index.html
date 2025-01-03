@@ -43,22 +43,44 @@
     const history = await response.json();
     const {specs, orchestrator} = history;
     const $allSpecs = document.getElementById("all-specs");
-    let ul = `<ul>`;
+    let counter = 0;
 
     for (const spec of specs) {
-      ul += `<li>${spec.name}: `;
-      const pubs = [];
+      $allSpecs.innerHTML += `<h3 class="mt-3">${spec.name}</h3>`
+      let accordion = `<div class="accordion" id="${spec.slug}">`;
 
       for (const pub of spec.publications) {
-        pubs.push(`<a href="${pub.latestRun.path}">${pub.name}</a>`);
+        accordion += `
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${counter}"
+                aria-expanded="false" aria-controls="collapse${counter}">
+              ${pub.name}
+              </button>
+            </h2>
+            <div id="collapse${counter}" class="accordion-collapse collapse" data-bs-parent="#${spec.slug}">
+              <div class="accordion-body">
+        `;
+
+        let ul = `<ul>`;
+        for (const build of pub.builds) {
+          ul += `<li><a href="${build.path}">${dateFns.format(new Date(build.date), "yyyy-MM-dd kk:mm O")}</a></li>`
+        }
+        ul += `</ul>`;
+        accordion += ul;
+        accordion += `
+           </div>
+          </div>
+        </div>
+        `;
+
+        counter++;
       }
 
-      ul += pubs.join(", ");
-      ul += `</li>`;
+      accordion += `</div>`;
+      $allSpecs.innerHTML += accordion;
     }
 
-    ul += `</ul>`;
-    $allSpecs.innerHTML = ul;
     document.getElementById("latest-run").innerText = dateFns.format(new Date(orchestrator["latest-run"]), "yyyy-MM-dd kk:mm O");
   });
 </script>
