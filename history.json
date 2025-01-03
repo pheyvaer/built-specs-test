@@ -3,7 +3,7 @@
     "Authorization for Data Spaces (A4DS) attempt A": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-01-03T05:03:24.595Z",
+          "latest-run": "2025-01-03T10:47:40.382Z",
           "runs": [
             {
               "date": "2024-12-17T17:24:25.969Z",
@@ -16,7 +16,7 @@
     "RDF Time Snippets": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-01-03T05:03:24.830Z",
+          "latest-run": "2025-01-03T10:47:40.637Z",
           "runs": [
             {
               "date": "2024-12-17T17:24:26.701Z",
@@ -25,10 +25,23 @@
           ]
         }
       }
+    },
+    "RML Specification: Dynamic Logical Targets": {
+      "publications": {
+        "all-commits": {
+          "latest-run": "2025-01-03T10:47:41.385Z",
+          "runs": [
+            {
+              "date": "2025-01-03T10:47:41.385Z",
+              "path": "rml-specification:-dynamic-logical-targets/all/8a74c5c25c62c08de79918757617ef95a2ca4551"
+            }
+          ]
+        }
+      }
     }
   },
   "orchestrator": {
-    "latest-run": "2025-01-03T05:03:24.830Z",
-    "version": "0.0.10"
+    "latest-run": "2025-01-03T10:47:41.385Z",
+    "version": "0.0.13"
   }
 }
