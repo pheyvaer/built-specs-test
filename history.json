@@ -4,7 +4,7 @@
       "publications": {
         "All commits": {
           "latest-run": "2025-01-03T14:00:45.303Z",
-          "runs": [
+          "builds": [
             {
               "date": "2024-12-17T17:24:25.969Z",
               "path": "A4DS/all/db96b318de2bb97b3577f8df77c68d056112f0a8"
@@ -17,7 +17,7 @@
       "publications": {
         "All commits": {
           "latest-run": "2025-01-03T14:00:45.501Z",
-          "runs": [
+          "builds": [
             {
               "date": "2024-12-17T17:24:26.701Z",
               "path": "rdf-time-snippets/all/6a6c5fa518f449a8a9e3427f1d6e4a37dc11b9c5"
@@ -30,7 +30,7 @@
       "publications": {
         "All commits": {
           "latest-run": "2025-01-03T14:00:45.649Z",
-          "runs": [
+          "builds": [
             {
               "date": "2025-01-03T11:45:33.679Z",
               "path": "rml-specification-dynamic-logical-targets/all/8a74c5c25c62c08de79918757617ef95a2ca4551"
