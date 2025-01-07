@@ -36,7 +36,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 <script>
-  window.addEventListener('DOMContentLoaded', async (event) => {
+  window.addEventListener('DOMContentLoaded', async () => {
     new PagefindUI({element: "#search", showSubResults: true});
 
     const response = await fetch("./history.json");
@@ -47,7 +47,7 @@
 
     for (const spec of specs) {
       $allSpecs.innerHTML += `<h3 class="mt-3">${spec.name}</h3>`
-      let accordion = `<div class="accordion" id="${spec.slug}">`;
+      let accordion = `<div class="accordion" id="${spec.id}">`;
 
       for (const pub of spec.publications) {
         accordion += `
@@ -58,7 +58,7 @@
               ${pub.name}
               </button>
             </h2>
-            <div id="collapse${counter}" class="accordion-collapse collapse" data-bs-parent="#${spec.slug}">
+            <div id="collapse${counter}" class="accordion-collapse collapse" data-bs-parent="#${spec.id}">
               <div class="accordion-body">
         `;
 
