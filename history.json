@@ -3,7 +3,7 @@
     "a4ds-attempt-a": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-01-08T16:00:19.742Z",
+          "latest-run": "2025-01-08T17:16:22.264Z",
           "builds": [
             {
               "date": "2024-12-17T17:24:25.969Z",
@@ -12,7 +12,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2025-01-08T16:00:19.754Z",
+          "latest-run": "2025-01-08T17:16:22.265Z",
           "builds": [
             {
               "date": "2025-01-08T16:00:19.754Z",
@@ -26,7 +26,7 @@
     "rdf-time-snippets": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-01-08T16:00:19.977Z",
+          "latest-run": "2025-01-08T17:16:22.473Z",
           "builds": [
             {
               "date": "2024-12-17T17:24:26.701Z",
@@ -39,7 +39,7 @@
     "rml-dynamic-logical-targets": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-01-08T16:00:20.175Z",
+          "latest-run": "2025-01-08T17:16:22.608Z",
           "builds": [
             {
               "date": "2025-01-03T11:45:33.679Z",
@@ -51,7 +51,7 @@
     }
   },
   "orchestrator": {
-    "latest-run": "2025-01-08T16:00:20.175Z",
-    "version": "0.0.21"
+    "latest-run": "2025-01-08T17:16:22.608Z",
+    "version": "0.0.24"
   }
 }

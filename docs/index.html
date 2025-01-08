@@ -13,8 +13,11 @@
 </head>
 <body>
 <div class="container mt-4">
+  <div id="warning-container" class="row mb-3 text-bg-danger p-3">
+    <h2 id="warning-message"></h2>
+  </div>
   <div class="row mb-3">
-    <h1>KNoWS' Spec Platform</h1>
+    <h1>KNoWS Spec Platform</h1>
   </div>
   <div class="row">
     <div id="search"></div>
@@ -38,6 +41,14 @@
 <script>
   window.addEventListener('DOMContentLoaded', async () => {
     new PagefindUI({element: "#search", showSubResults: true});
+
+    const responseConfig = await fetch("./config.json");
+    const {warningMessage} = await responseConfig.json();
+    if (warningMessage) {
+      document.getElementById("warning-message").innerText = warningMessage;
+    } else {
+      document.getElementById("warning-container").remove();
+    }
 
     const response = await fetch("./history.json");
     const history = await response.json();
