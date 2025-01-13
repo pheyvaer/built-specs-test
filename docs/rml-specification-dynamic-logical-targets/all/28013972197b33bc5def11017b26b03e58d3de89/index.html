@@ -1,0 +1,868 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head>
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 35.2.2">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.issue.closed span.issue-number::after{content:" (Closed)";font-size:smaller}
+.warning{border-color:#f11;border-color:var(--warning-border,#f11);border-width:.2em;border-style:solid;background:#fbe9e9;background:var(--warning-bg,#fbe9e9);color:#000;color:var(--text,#000)}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
+.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+    
+<title>DYNAMIC TARGETS</title>
+    
+    
+<link rel="stylesheet" type="text/css" href="./20250113/resources/css/extras.css">
+    
+    
+<style type="text/css">
+
+        /* Adapted from R2RML */
+        aside.ex-input,
+        aside.ex-mapping,
+        aside.ex-output,
+        aside.ex-target,
+        aside.ex-access {
+            word-wrap:normal;
+            margin-top: 1.5em;
+            padding: 1em;
+            font-size: 80%;
+        }
+        aside.ex-input:before,
+        aside.ex-mapping:before,
+        aside.ex-output:before,
+        aside.ex-target:before,
+        aside.ex-access:before {
+            background: white;
+            display: block;
+            font-family: sans-serif;
+            font-size: 90%;
+            margin: -1.5em 0 0.5em 0;
+            padding: 0.4em 0.4em;
+            width: 18em;
+        }
+        /* Input data example */
+        aside.ex-input {
+            background: #cee;
+        }
+        aside.ex-input,
+        aside.ex-input:before {
+            border: 1px solid #acc;
+            overflow: auto;
+        }
+        aside.ex-input:before {
+            content: "Example input data";
+        }
+        /* RML mapping example */
+        aside.ex-mapping {
+            background: #eeb;
+        }
+        aside.ex-mapping,
+        aside.ex-mapping:before {
+            border: 1px solid #cc9;
+            overflow: auto;
+        }
+        aside.ex-mapping:before {
+            content: "Example RML mapping";
+        }
+        /* Output RDF example */
+        aside.ex-output {
+            background: #cfc;
+        }
+        aside.ex-output,
+        aside.ex-output:before {
+            border: 1px solid #aca;
+            overflow: auto;
+        }
+        aside.ex-output:before {
+            content: "Example RDF output";
+        }
+        /* target description example */
+        aside.ex-target {
+            background: #ffc8d4;
+        }
+        aside.ex-target,
+        aside.ex-target:before {
+            border: 1px solid #bbb;
+            overflow: auto;
+        }
+        aside.ex-target:before {
+            content: "Example target description";
+        }
+        /* Data access description example */
+        aside.ex-access {
+            background: #d4dddd;
+        }
+        aside.ex-access,
+        aside.ex-access:before {
+            border: 1px solid #cca;
+            overflow: auto;
+        }
+        aside.ex-access:before {
+            content: "Example data access description";
+        }
+        table, th, td {
+            background: white;
+            border-collapse: collapse;
+            border: 1px solid;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+        th {
+            font-weight: bold;
+        }
+    
+</style>
+    
+
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+.self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+aside.example .marker>a.self-link{color:inherit}
+.header-wrapper{display:flex;align-items:baseline}
+:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3)+a.self-link{top:-.2em}
+:is(h4,h5,h6)+a.self-link::before{color:#000}
+@media (max-width:767px){
+dd{margin-left:0}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+<meta name="color-scheme" content="light">
+<meta name="description" content="In RDF Mapping Language [RML], you can use a logical target to specify how and to which target generated RDF should be exported. Logical targets are statically described, i.e. they are constant values throughout a mapping process.
+There is no scalable solution in RML to dynamically define a logical target based on source data.">
+<style>
+.hljs{--base:#fafafa;--mono-1:#383a42;--mono-2:#686b77;--mono-3:#717277;--hue-1:#0b76c5;--hue-2:#336ae3;--hue-3:#a626a4;--hue-4:#42803c;--hue-5:#ca4706;--hue-5-2:#c91243;--hue-6:#986801;--hue-6-2:#9a6a01}
+@media (prefers-color-scheme:dark){
+.hljs{--base:#282c34;--mono-1:#abb2bf;--mono-2:#818896;--mono-3:#5c6370;--hue-1:#56b6c2;--hue-2:#61aeee;--hue-3:#c678dd;--hue-4:#98c379;--hue-5:#e06c75;--hue-5-2:#be5046;--hue-6:#d19a66;--hue-6-2:#e6c07b}
+}
+.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;color:var(--mono-1,#383a42);background:#fafafa;background:var(--base,#fafafa)}
+.hljs-comment,.hljs-quote{color:#717277;color:var(--mono-3,#717277);font-style:italic}
+.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4;color:var(--hue-3,#a626a4)}
+.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;color:var(--hue-5,#ca4706);font-weight:700}
+.hljs-literal{color:#0b76c5;color:var(--hue-1,#0b76c5)}
+.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c;color:var(--hue-4,#42803c)}
+.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01;color:var(--hue-6-2,#9a6a01)}
+.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801;color:var(--hue-6,#986801)}
+.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3;color:var(--hue-2,#336ae3)}
+.hljs-emphasis{font-style:italic}
+.hljs-strong{font-weight:700}
+.hljs-link{text-decoration:underline}
+</style>
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#222}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#222;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "preProcess": [
+    null
+  ],
+  "localBiblio": {
+    "RDF": {
+      "title": "RDF 1.1 Concepts and Abstract Syntax",
+      "href": "https://www.w3.org/TR/rdf11-concepts/",
+      "status": "W3C Recommendation",
+      "publisher": "W3C",
+      "date": "25 February 2014",
+      "id": "rdf"
+    },
+    "Turtle": {
+      "title": "RDF 1.1 Turtle",
+      "href": "https://www.w3.org/TR/turtle/",
+      "status": "W3C Recommendation",
+      "publisher": "W3C",
+      "date": "25 February 2014",
+      "id": "turtle"
+    },
+    "RML": {
+      "title": "RDF Mapping Language",
+      "href": "https://kg-construct.github.io/rml-resources/portal/",
+      "id": "rml"
+    },
+    "RML-Core": {
+      "title": "RML-Core",
+      "href": "https://w3id.org/rml/core/spec",
+      "status": "Draft Community Group Report",
+      "publisher": "W3C",
+      "date": "16 February 2024"
+    },
+    "RML-IO": {
+      "title": "RML-IO",
+      "href": "https://w3id.org/rml/io/spec",
+      "status": "Draft Community Group Report",
+      "publisher": "W3C",
+      "date": "27 September 2023"
+    },
+    "Solid": {
+      "title": "Solid project",
+      "href": "https://solidproject.org/specification",
+      "id": "solid"
+    }
+  },
+  "doRdfa": "true",
+  "specStatus": "unofficial",
+  "shortName": "dynamic-target",
+  "publishDate": "2025-01-13",
+  "copyrightStart": "2024",
+  "editors": [
+    {
+      "name": "Els de Vleeschauwer",
+      "mailto": "els.devleeschauwer@ugent.be",
+      "company": "Ghent University &ndash; imec &ndash; IDLab",
+      "orcidid": "0000-0002-8630-3947",
+      "companyURL": "https://idlab.technology/",
+      "url": "mailto:els.devleeschauwer@ugent.be"
+    },
+    {
+      "name": "Ben De Meester",
+      "mailto": "ben.demeester@ugent.be",
+      "company": "Ghent University &ndash; imec &ndash; IDLab",
+      "orcidid": "0000-0003-0248-0987",
+      "companyURL": "https://idlab.technology/",
+      "url": "mailto:ben.demeester@ugent.be"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Els de Vleeschauwer",
+      "mailto": "els.devleeschauwer@ugent.be",
+      "company": "Ghent University &ndash; imec &ndash; IDLab",
+      "orcidid": "0000-0002-8630-3947",
+      "companyURL": "https://idlab.technology/",
+      "url": "mailto:els.devleeschauwer@ugent.be"
+    },
+    {
+      "name": "Ben De Meester",
+      "mailto": "ben.demeester@ugent.be",
+      "company": "Ghent University &ndash; imec &ndash; IDLab",
+      "orcidid": "0000-0003-0248-0987",
+      "companyURL": "https://idlab.technology/",
+      "url": "mailto:ben.demeester@ugent.be"
+    }
+  ],
+  "latestVersion": "https://w3id.org/imec/rml/specs/target/dynamictarget",
+  "otherLinks": [
+    {
+      "key": "This Version",
+      "data": [
+        {
+          "value": "https://w3id.org/imec/rml/specs/target/dynamictarget/20250113/",
+          "href": "https://w3id.org/imec/rml/specs/target/dynamictarget/20250113/"
+        }
+      ]
+    },
+    {
+      "key": "Previous Version",
+      "data": [
+        {
+          "value": "https://w3id.org/imec/rml/specs/target/dynamictarget/20241212/",
+          "href": "https://w3id.org/imec/rml/specs/target/dynamictarget/20241212/"
+        }
+      ]
+    },
+    {
+      "key": "Website",
+      "data": [
+        {
+          "value": "https://w3id.org/imec/rml/",
+          "href": "https://w3id.org/imec/rml/"
+        }
+      ]
+    }
+  ],
+  "publishISODate": "2025-01-13T00:00:00.000Z",
+  "generatedSubtitle": "Unofficial Draft 13 January 2025"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD"></head>
+<body class="h-entry"><div class="head">
+    
+    <h1 id="title" class="title">DYNAMIC TARGETS</h1> 
+    <p id="w3c-state">Unofficial Draft <time class="dt-published" datetime="2025-01-13">13 January 2025</time></p>
+    <details open="">
+      <summary>More details about this document</summary>
+      <dl>
+        
+        <dt>Latest published version:</dt><dd>
+                <a href="https://w3id.org/imec/rml/specs/target/dynamictarget">https://w3id.org/imec/rml/specs/target/dynamictarget</a>
+              </dd>
+        
+        
+        
+        
+        
+        
+        
+        <dt>Editors:</dt><dd class="editor p-author h-card vcard">
+    <a class="ed_mailto u-email email p-name" href="mailto:els.devleeschauwer@ugent.be">Els de Vleeschauwer</a> (<a class="p-org org h-org" href="https://idlab.technology/">Ghent University – imec – IDLab</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <a class="ed_mailto u-email email p-name" href="mailto:ben.demeester@ugent.be">Ben De Meester</a> (<a class="p-org org h-org" href="https://idlab.technology/">Ghent University – imec – IDLab</a>)
+  </dd>
+        
+        <dt>Authors:</dt><dd class="editor p-author h-card vcard">
+    <a class="ed_mailto u-email email p-name" href="mailto:els.devleeschauwer@ugent.be">Els de Vleeschauwer</a> (<a class="p-org org h-org" href="https://idlab.technology/">Ghent University – imec – IDLab</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <a class="ed_mailto u-email email p-name" href="mailto:ben.demeester@ugent.be">Ben De Meester</a> (<a class="p-org org h-org" href="https://idlab.technology/">Ghent University – imec – IDLab</a>)
+  </dd>
+        
+        
+        <dt>This Version</dt><dd>
+    <a href="https://w3id.org/imec/rml/specs/target/dynamictarget/20250113/">https://w3id.org/imec/rml/specs/target/dynamictarget/20250113/</a>
+  </dd><dt>Previous Version</dt><dd>
+    <a href="https://w3id.org/imec/rml/specs/target/dynamictarget/20241212/">https://w3id.org/imec/rml/specs/target/dynamictarget/20241212/</a>
+  </dd><dt>Website</dt><dd>
+    <a href="https://w3id.org/imec/rml/">https://w3id.org/imec/rml/</a>
+  </dd>
+      </dl>
+    </details>
+    
+    
+    <p class="copyright">
+      Copyright ©
+      2024-2025
+      the document editors/authors.
+      Text is available under the
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International Public License</a>; additional terms may apply.
+    </p>
+    <hr title="Separator for header">
+  </div>
+<section id="abstract" class="introductory"><h2 id="abstract">Abstract</h2><p>In RDF Mapping Language [<cite><a class="bibref" data-link-type="biblio" href="#bib-rml" title="RDF Mapping Language">RML</a></cite>], you can use a logical target to specify how and to which target generated RDF should be exported. Logical targets are statically described, i.e. they are constant values throughout a mapping process.
+There is no scalable solution in RML to dynamically define a logical target based on source data.</p>
+<p>One use case for dynamic targets is enabling fine-grained access control in Solid [<cite><a class="bibref" data-link-type="biblio" href="#bib-solid" title="Solid project">Solid</a></cite>]. Solid is a specification that lets people and organizations store their data securely as resources on decentralized data stores called Pods. Each resource is identified by a Uniform Resource Identifier [<cite><a class="bibref" data-link-type="biblio" href="#bib-uri" title="Uniform Resource Identifier (URI): Generic Syntax">URI</a></cite>]. The access to the data in a Pod is controlled on resource level, i.e. per URI. To allow for fine-grained access control, it might be needed to define URI patterns that are based on the source data.</p>
+</section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#overview"><bdi class="secno">1. </bdi>Overview</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#conventions"><bdi class="secno">1.1 </bdi>Document conventions</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">1.2 </bdi>Conformance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#DynamicTargets"><bdi class="secno">2. </bdi>Dynamic targets</a></li><li class="tocline"><a class="tocxref" href="#example"><bdi class="secno">3. </bdi>Example</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">A.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">A.2 </bdi>Informative references</a></li></ol></li></ol></nav>
+<section id="overview-0"><div class="header-wrapper"><h2 id="overview"><bdi class="secno">1. </bdi>Overview</h2><a class="self-link" href="#overview" aria-label="Permalink for Section 1."></a></div><p><em>This section is non-normative.</em></p>
+<section id="document-conventions"><div class="header-wrapper"><h3 id="conventions"><bdi class="secno">1.1 </bdi>Document conventions</h3><a class="self-link" href="#conventions" aria-label="Permalink for Section 1.1"></a></div><p>We assume readers have basic familiarity with [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf" title="RDF 1.1 Concepts and Abstract Syntax">RDF</a></cite>] and [<cite><a class="bibref" data-link-type="biblio" href="#bib-rml" title="RDF Mapping Language">RML</a></cite>] concepts.</p>
+<p>In this document, examples assume 
+the following namespace prefix bindings unless otherwise stated:</p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Namespace</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>rml:</code></td>
+<td><a href="http://w3id.org/rml/">http://w3id.org/rml/</a></td>
+</tr>
+<tr>
+<td><code>rmle:</code></td>
+<td><a href="https://w3id.org/imec/rml/ns/extensions#">https://w3id.org/imec/rml/ns/extensions#</a></td>
+</tr>
+<tr>
+<td><code>htv:</code></td>
+<td><a href="http://www.w3.org/2011/http#">http://www.w3.org/2011/http#</a></td>
+</tr>
+<tr>
+<td><code>ex:</code></td>
+<td><a href="http://example.org/">http://example.org/</a></td>
+</tr>
+<tr>
+<td><code>foaf:</code></td>
+<td><a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a></td>
+</tr>
+</tbody></table>
+<p>The examples are contained in color-coded boxes. We use the Turtle syntax [<cite><a class="bibref" data-link-type="biblio" href="#bib-turtle" title="RDF 1.1 Turtle">Turtle</a></cite>] to write RDF.</p>
+<aside class="ex-input">
+# This box contains an example input
+</aside>
+
+<aside class="ex-mapping">
+# This box contains an example mapping
+</aside>
+
+<aside class="ex-output">
+# This box contains the example output
+</aside></section><section id="conformance"><div class="header-wrapper"><h3 id="x1-2-conformance"><bdi class="secno">1.2 </bdi>Conformance</h3><a class="self-link" href="#conformance" aria-label="Permalink for Section 1.2"></a></div><p>As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.</p> </section>
+
+</section>
+<section id="dynamic-targets"><div class="header-wrapper"><h2 id="DynamicTargets"><bdi class="secno">2. </bdi>Dynamic targets</h2><a class="self-link" href="#DynamicTargets" aria-label="Permalink for Section 2."></a></div><p><a href="https://kg-construct.github.io/rml-io/spec/docs/#defining-targets">Logical targets</a> are a set of RDF triples. Consequently, it is possible to define RML mapping rules to generate logical targets based on source data.</p>
+<p>The generated logical targets are to be used during the same mapping process by which they are generated. For this purpose a <dfn id="dfn-self-referencing-logical-target" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">self-referencing logical target</dfn> (<code>rmle:ThisMapping</code>) is introduced. This logical target indicates that the RDF triples, generated during the current mapping process and exported to <code>rmle:ThisMapping</code>, have to be added to the RML mapping rules that are part of the current mapping process, as additional RML rules.</p>
+<p>In RML, logical targets are identified with a constant blank node or named node, connected to a <a href="https://kg-construct.github.io/rml-core/spec/docs/#termmap">term map</a> with the <code>rml:logicalTarget</code> property. 
+To refer to a generated logical target, a <dfn id="dfn-logical-target-map" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">logical target map</dfn> (<code>rmle:LogicalTargetMap</code>) is introduced, connected to a term map the <code>rmle:logicalTargetMap</code> property. 
+A <a data-link-type="dfn|abstract-op" href="#dfn-logical-target-map" class="internalDFN" id="ref-for-dfn-logical-target-map-1">logical target map</a> is a subclass of an <a href="https://kg-construct.github.io/rml-core/spec/docs/#dfn-expression-map">expression map</a>, which is evaluated on the logical iteration of the triples maps in which it is declared, to generate identifiers of logical targets during the mapping process. 
+It is the responsibility of the author of the mapping file to ensure that the identifiers generated by a logical target map refer to valid logical target descriptions.</p>
+<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Note</span></div><aside class="">
+The introduction of a referencing logical target map (similar to a <a href="https://kg-construct.github.io/rml-core/spec/docs/\#referencing-object-map">referencing object map</a>) can secure the relation between the triples map creating logical target descriptions and the identifiers generated by the logical target map), but is out of scope for this specification, aligned with the current limitation in [<cite><a class="bibref" data-link-type="biblio" href="#bib-rml" title="RDF Mapping Language">RML</a></cite>] to use referencing maps only for object maps, and not for any other term maps.  
+</aside></div>
+
+<p>With the addition of a <a data-link-type="dfn|abstract-op" href="#dfn-self-referencing-logical-target" class="internalDFN" id="ref-for-dfn-self-referencing-logical-target-1">self-referencing logical target</a> (<code>rmle:ThisMapping</code>) and a <a data-link-type="dfn|abstract-op" href="#dfn-logical-target-map" class="internalDFN" id="ref-for-dfn-logical-target-map-2">logical target map</a> (<code>rmle:LogicalTargetMap</code>), RML can export RDF triples to dynamically generated logical targets based on the source data.</p>
+</section>
+<section id="example-0"><div class="header-wrapper"><h2 id="example"><bdi class="secno">3. </bdi>Example</h2><a class="self-link" href="#example" aria-label="Permalink for Section 3."></a></div><p>In this example RDF triples are exported using dynamic logical targets: one resource per person described in the source data. More persons in the source data result in more (dynamically generated) targets, using the same RML mapping.
+We can use this dynamic logical target, for example, to store one resource per person in a Solid pod.</p>
+<aside class="ex-input">
+
+<pre><code class="json hljs" aria-busy="false"><span class="hljs-punctuation">[</span>
+  <span class="hljs-punctuation">{</span> 
+    <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"name"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Monica Geller"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"age"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">33</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-punctuation">{</span> 
+    <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"name"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Rachel Green"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"age"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">34</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-punctuation">{</span> 
+    <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"name"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Joey Tribbiani"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"age"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">35</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-punctuation">{</span> 
+    <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"name"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Chandler Bing"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"age"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">36</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-punctuation">{</span> 
+    <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">4</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"name"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Ross Geller"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"age"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">37</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">]</span>
+</code></pre>
+</aside>
+
+<aside class="ex-mapping">
+
+<pre><code class="turtle hljs" aria-busy="false"><span class="hljs-comment"># The logical source</span>
+<span class="hljs-literal">&lt;#ls_persons&gt;</span> <span class="hljs-built_in">a</span> <span class="hljs-symbol">rml:LogicalSource</span> ; 
+  <span class="hljs-symbol">rml:source</span> [
+   <span class="hljs-built_in">a</span> <span class="hljs-symbol">rml:Source</span>, <span class="hljs-symbol">dcat:Distribution</span> ;
+   <span class="hljs-symbol">dcat:downloadURL</span> <span class="hljs-string">"https://rml.io/specs/rml-target/Friends.json"</span> ;
+  ] ;
+.
+
+<span class="hljs-comment"># The authentication details </span>
+<span class="hljs-literal">&lt;#auth&gt;</span> <span class="hljs-built_in">a</span> <span class="hljs-symbol">rmle:CssClientCredentialsAuthentication</span> ;
+  <span class="hljs-symbol">rmle:authEmail</span> <span class="hljs-string">"hello@mypod.com"</span> ;
+  <span class="hljs-symbol">rmle:authPassword</span> <span class="hljs-string">"abc123"</span> ;
+  <span class="hljs-symbol">rmle:authWebId</span> <span class="hljs-literal">&lt;https://mypod/profile/card#me&gt;</span> ;
+  <span class="hljs-symbol">rmle:authOidcIssuer</span> <span class="hljs-literal">&lt;https://mypod/&gt;</span> ;
+.
+
+<span class="hljs-comment"># A triples map generating logical targets </span>
+<span class="hljs-literal">&lt;#tm_lt_person&gt;</span> <span class="hljs-built_in">a</span> <span class="hljs-symbol">rml:TriplesMap</span> ;
+  <span class="hljs-symbol">rml:logicalSource</span> <span class="hljs-literal">&lt;#ls_persons&gt;</span> ;
+  <span class="hljs-symbol">rml:subjectMap</span> [
+    <span class="hljs-built_in">a</span> <span class="hljs-symbol">rml:SubjectMap</span> ;
+    <span class="hljs-symbol">rml:template</span> <span class="hljs-string">"lt_person_{id}"</span> ;
+    <span class="hljs-symbol">rml:class</span> <span class="hljs-symbol">rml:LogicalTarget</span> ;
+    <span class="hljs-symbol">rml:logicalTarget</span> <span class="hljs-symbol">rmle:ThisMapping</span> ; <span class="hljs-comment"># self-referencing logical target, making this a dynamic logical target</span>
+    ] ;
+  <span class="hljs-symbol">rml:predicateObjectMap</span> [
+    <span class="hljs-built_in">a</span> <span class="hljs-symbol">rml:PredicateObjectMap</span> ;
+    <span class="hljs-symbol">rml:predicate</span> <span class="hljs-symbol">rml:target</span> ;
+    <span class="hljs-symbol">rml:objectMap</span> [      
+      <span class="hljs-built_in">a</span> <span class="hljs-symbol">rml:ObjectMap</span> ;
+      <span class="hljs-symbol">rml:template</span> <span class="hljs-string">"t_person_{id}"</span> ; 
+    ] ;
+  ] ;
+.
+
+<span class="hljs-comment"># A triples map generating targets </span>
+<span class="hljs-literal">&lt;#tm_t_person&gt;</span> <span class="hljs-built_in">a</span> <span class="hljs-symbol">rml:TriplesMap</span> ;
+  <span class="hljs-symbol">rml:logicalSource</span> <span class="hljs-literal">&lt;#ls_persons&gt;</span> ;
+  <span class="hljs-symbol">rml:subjectMap</span> [
+    <span class="hljs-symbol">rml:template</span> <span class="hljs-string">"t/{product_id}"</span> ;
+    <span class="hljs-symbol">rml:class</span> <span class="hljs-symbol">rml:Target</span>, <span class="hljs-symbol">rmle:DirectHttpRequest</span> ;
+    <span class="hljs-symbol">rml:logicalTarget</span> <span class="hljs-symbol">rmle:ThisMapping</span> ; <span class="hljs-comment"># self-referencing logical target</span>
+  ] ;
+  <span class="hljs-symbol">rml:predicateObjectMap</span> [
+    <span class="hljs-built_in">a</span> <span class="hljs-symbol">rml:PredicateObjectMap</span> ;
+    <span class="hljs-symbol">rml:predicate</span> <span class="hljs-symbol">htv:absoluteURI</span> ;
+    <span class="hljs-symbol">rml:objectMap</span> [
+      <span class="hljs-built_in">a</span> <span class="hljs-symbol">rml:ObjectMap</span> ;
+      <span class="hljs-symbol">rml:template</span> <span class="hljs-string">"https://mypod/person-{id}"</span> ;
+      <span class="hljs-symbol">rml:termType</span> <span class="hljs-symbol">rml:Literal</span> ;
+    ] ;
+  ] ;
+  <span class="hljs-symbol">rml:predicateObjectMap</span> [
+    <span class="hljs-built_in">a</span> <span class="hljs-symbol">rml:PredicateObjectMap</span> ;
+    <span class="hljs-symbol">rml:predicate</span> <span class="hljs-symbol">rmle:userAuthentication</span> ;
+    <span class="hljs-symbol">rml:object</span> <span class="hljs-literal">&lt;#auth&gt;</span> ;
+  ] ;
+.
+
+<span class="hljs-comment"># A triples map generating RDF Triples that are exported to the dynamically generated logical targets</span>
+<span class="hljs-literal">&lt;#TriplesMap&gt;</span> <span class="hljs-built_in">a</span> <span class="hljs-symbol">rml:TriplesMap</span> ;
+  <span class="hljs-symbol">rml:logicalSource</span> <span class="hljs-literal">&lt;#ls_persons&gt;</span> ;
+  <span class="hljs-symbol">rml:subjectMap</span> [ 
+    <span class="hljs-built_in">a</span> <span class="hljs-symbol">rml:SubjectMap</span> ;
+    <span class="hljs-symbol">rml:template</span> <span class="hljs-string">"http://example.org/{id}"</span> ;
+    <span class="hljs-symbol">rmle:LogicalTargetMap</span> [
+      <span class="hljs-built_in">a</span> <span class="hljs-symbol">rmle:LogicalTargetMap</span> ; 
+      <span class="hljs-symbol">rml:template</span> <span class="hljs-string">"lt_person_{id}"</span> ;
+    ] ; 
+  ];
+  <span class="hljs-symbol">rml:predicateObjectMap</span> [ 
+    <span class="hljs-built_in">a</span> <span class="hljs-symbol">rml:PredicateObjectMap</span> ;
+    <span class="hljs-symbol">rml:predicate</span> <span class="hljs-symbol">foaf:name</span> ;
+    <span class="hljs-symbol">rml:objectMap</span> [ 
+      <span class="hljs-built_in">a</span> <span class="hljs-symbol">rml:ObjectMap</span> ;
+      <span class="hljs-symbol">rml:reference</span> <span class="hljs-string">"name"</span> ;
+    ] ;
+  ] ;
+  <span class="hljs-symbol">rml:predicateObjectMap</span> [ 
+    <span class="hljs-built_in">a</span> <span class="hljs-symbol">rml:PredicateObjectMap</span> ;
+    <span class="hljs-symbol">rml:predicate</span> <span class="hljs-symbol">foaf:age</span> ;
+    <span class="hljs-symbol">rml:objectMap</span> [ 
+      <span class="hljs-built_in">a</span> <span class="hljs-symbol">rml:ObjectMap</span> ;
+      <span class="hljs-symbol">rml:reference</span> <span class="hljs-string">"age"</span> ;
+    ] ;
+  ] ;
+.
+</code></pre>
+</aside>
+
+<aside class="ex-output">
+
+<pre><code class="turtle hljs" aria-busy="false"><span class="hljs-comment"># https://mypod/person-0</span>
+<span class="hljs-literal">&lt;http://example.org/0&gt;</span> <span class="hljs-literal">&lt;http://xmlns.com/foaf/0.1/name&gt;</span> <span class="hljs-string">"Monica Geller"</span> .
+<span class="hljs-literal">&lt;http://example.org/0&gt;</span> <span class="hljs-literal">&lt;http://xmlns.com/foaf/0.1/age&gt;</span> <span class="hljs-string">"33"</span> .
+
+<span class="hljs-comment"># https://mypod/person-1</span>
+<span class="hljs-literal">&lt;http://example.org/1&gt;</span> <span class="hljs-literal">&lt;http://xmlns.com/foaf/0.1/name&gt;</span> <span class="hljs-string">"Rachel Green"</span> .
+<span class="hljs-literal">&lt;http://example.org/1&gt;</span> <span class="hljs-literal">&lt;http://xmlns.com/foaf/0.1/age&gt;</span> <span class="hljs-string">"34"</span> .
+
+<span class="hljs-comment"># https://mypod/person-2</span>
+<span class="hljs-literal">&lt;http://example.org/2&gt;</span> <span class="hljs-literal">&lt;http://xmlns.com/foaf/0.1/name&gt;</span> <span class="hljs-string">"Joey Tribbiani"</span> .
+<span class="hljs-literal">&lt;http://example.org/2&gt;</span> <span class="hljs-literal">&lt;http://xmlns.com/foaf/0.1/age&gt;</span> <span class="hljs-string">"35"</span> .
+
+<span class="hljs-comment"># https://mypod/person-3</span>
+<span class="hljs-literal">&lt;http://example.org/3&gt;</span> <span class="hljs-literal">&lt;http://xmlns.com/foaf/0.1/name&gt;</span> <span class="hljs-string">"Chandler Bing"</span> .
+<span class="hljs-literal">&lt;http://example.org/3&gt;</span> <span class="hljs-literal">&lt;http://xmlns.com/foaf/0.1/age&gt;</span> <span class="hljs-string">"36"</span> .
+
+<span class="hljs-comment"># https://mypod/person-4</span>
+<span class="hljs-literal">&lt;http://example.org/4&gt;</span> <span class="hljs-literal">&lt;http://xmlns.com/foaf/0.1/name&gt;</span> <span class="hljs-string">"Ross Geller"</span> .
+<span class="hljs-literal">&lt;http://example.org/4&gt;</span> <span class="hljs-literal">&lt;http://xmlns.com/foaf/0.1/age&gt;</span> <span class="hljs-string">"37"</span> .
+</code></pre>
+</aside></section>
+
+
+<section id="references" class="appendix"><div class="header-wrapper"><h2 id="a-references"><bdi class="secno">A. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix A."></a></div><section id="normative-references"><div class="header-wrapper"><h3 id="a-1-normative-references"><bdi class="secno">A.1 </bdi>Normative references</h3><a class="self-link" href="#normative-references" aria-label="Permalink for Appendix A.1"></a></div>
+    
+    <dl class="bibliography"><dt id="bib-rdf">[RDF]</dt><dd>
+      <a href="https://www.w3.org/TR/rdf11-concepts/"><cite>RDF 1.1 Concepts and Abstract Syntax</cite></a>.  W3C. 25 February 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/rdf11-concepts/">https://www.w3.org/TR/rdf11-concepts/</a>
+    </dd><dt id="bib-rml">[RML]</dt><dd>
+      <a href="https://kg-construct.github.io/rml-resources/portal/"><cite>RDF Mapping Language</cite></a>. URL: <a href="https://kg-construct.github.io/rml-resources/portal/">https://kg-construct.github.io/rml-resources/portal/</a>
+    </dd><dt id="bib-turtle">[Turtle]</dt><dd>
+      <a href="https://www.w3.org/TR/turtle/"><cite>RDF 1.1 Turtle</cite></a>.  W3C. 25 February 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/turtle/">https://www.w3.org/TR/turtle/</a>
+    </dd></dl>
+  </section><section id="informative-references"><div class="header-wrapper"><h3 id="a-2-informative-references"><bdi class="secno">A.2 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix A.2"></a></div>
+    
+    <dl class="bibliography"><dt id="bib-solid">[Solid]</dt><dd>
+      <a href="https://solidproject.org/specification"><cite>Solid project</cite></a>. URL: <a href="https://solidproject.org/specification">https://solidproject.org/specification</a>
+    </dd><dt id="bib-uri">[URI]</dt><dd>
+      <a href="https://www.rfc-editor.org/rfc/rfc3986"><cite>Uniform Resource Identifier (URI): Generic Syntax</cite></a>. T. Berners-Lee; R. Fielding; L. Masinter.  IETF. January 2005. Internet Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc3986">https://www.rfc-editor.org/rfc/rfc3986</a>
+    </dd></dl>
+  </section></section><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-self-referencing-logical-target" aria-label="Links in this document to definition: self-referencing logical target">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-self-referencing-logical-target" aria-label="Permalink for definition: self-referencing logical target. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+      <a href="#ref-for-dfn-self-referencing-logical-target-1" title="§ 2. Dynamic targets">§ 2. Dynamic targets</a> 
+    </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-logical-target-map" aria-label="Links in this document to definition: logical target map">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-logical-target-map" aria-label="Permalink for definition: logical target map. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+      <a href="#ref-for-dfn-logical-target-map-1" title="§ 2. Dynamic targets">§ 2. Dynamic targets</a> <a href="#ref-for-dfn-logical-target-map-2" title="Reference 2">(2)</a> 
+    </li>
+  </ul>
+    </div><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
