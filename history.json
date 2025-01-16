@@ -3,7 +3,7 @@
     "a4ds-attempt-a": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-01-14T06:27:35.645Z",
+          "latest-run": "2025-01-16T13:44:20.658Z",
           "builds": [
             {
               "date": "2024-12-17T17:24:25.969Z",
@@ -12,7 +12,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2025-01-14T06:27:35.646Z",
+          "latest-run": "2025-01-16T13:44:20.659Z",
           "builds": [
             {
               "date": "2025-01-08T16:00:19.754Z",
@@ -26,7 +26,7 @@
     "rdf-time-snippets": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-01-14T06:27:35.845Z",
+          "latest-run": "2025-01-16T13:44:21.721Z",
           "builds": [
             {
               "date": "2024-12-17T17:24:26.701Z",
@@ -39,7 +39,7 @@
     "rml-dynamic-logical-targets": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-01-14T06:27:36.004Z",
+          "latest-run": "2025-01-16T13:44:22.018Z",
           "builds": [
             {
               "date": "2025-01-03T11:45:33.679Z",
@@ -56,10 +56,23 @@
           ]
         }
       }
+    },
+    "claims-network": {
+      "publications": {
+        "all-commits": {
+          "latest-run": "2025-01-16T13:44:21.485Z",
+          "builds": [
+            {
+              "date": "2025-01-16T13:44:21.485Z",
+              "path": "claims-network/all/b54f042558f37c41807e5d4323186ef24586c7d9"
+            }
+          ]
+        }
+      }
     }
   },
   "orchestrator": {
-    "latest-run": "2025-01-14T06:27:36.004Z",
-    "version": "1.0.0"
+    "latest-run": "2025-01-16T13:44:22.018Z",
+    "version": "1.0.1"
   }
 }
