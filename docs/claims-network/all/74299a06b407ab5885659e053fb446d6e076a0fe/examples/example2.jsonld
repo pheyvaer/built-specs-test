@@ -1,0 +1,27 @@
+{
+    "@context": "https://www.w3.org/ns/activitystreams",
+    "id": "urn:uuid:6d21a2ae-df59-40d9-999c-18e19277d21a",
+    "type": "Announce",
+    "published": "2025-02-02T06:45:54.000Z",
+    "actor": {
+      "id": "https://social.edu.nl/@alice",
+      "name": "Alice",
+      "type": "Person"
+    },
+    "origin": {
+      "id": "https://mycontributions.info/service/m/profile/card#me",
+      "name": "Mastodon Bot",
+      "type": "Service"
+    },
+    "object": {
+      "id": "https://social.edu.nl/@alice/112891078566219289",
+      "content": "<p>I just submitted by first question to the Dutch parliament! https://parlaiment.nl/questions/2025-21-121291 /cc @logbot@bots.surf.nl",
+      "url": [
+        {
+          "type": "Link",
+          "href": "https://parlaiment.nl/questions/2025-21-121291"
+        }
+      ],
+      "type": "Note"
+    }
+}
