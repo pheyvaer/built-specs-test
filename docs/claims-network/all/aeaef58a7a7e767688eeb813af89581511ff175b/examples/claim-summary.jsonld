@@ -1,0 +1,35 @@
+{
+    "@context" : "https://mycontributions.info/contexts/claim.jsonld",
+    "id" : "urn:uuid:80965c07-59b4-429c-bdf9-50932284425c",
+    "type" : "Claim",
+    "about" : {
+       "https://mycontributions.info/service/x/result/12712-128219.jsonld" : {
+          "id" : "https://parliament.nl/questions/2025-21-121291",
+          "type" : "http://purl.org/net/xbiblio/csl#post-weblog",
+          "author" : {
+             "id" : "https://orcid.org/0000-0000-0000-0001",
+             "familyName" : "Hayes",
+             "givenName" : "Alice",
+             "type" : "Person"
+          },
+          "datePublished" : "2025",
+          "language" : "en-US",
+          "title" : "Violating the ban on killing eels with a salt bath."
+       }
+    },
+    "creator" : {
+       "id" : "https://social.edu.nl/@alice",
+       "name" : "Alice Hayes",
+       "type" : "Person"
+    },
+    "isBasedOn" : {
+       "id" : "https://social.edu.nl/@alice/112891078566219289"
+    },
+    "mainEntity" : "https://parliament.nl/questions/2025-21-121291",
+    "sdDatePublished" : "2025-02-02T06:45:54.000Z",
+    "sdPublisher" : {
+       "id" : "https://mycontributions.info/service/m/profile/card#me",
+       "name" : "Mastodon Bot",
+       "type" : "Service"
+    }
+ }

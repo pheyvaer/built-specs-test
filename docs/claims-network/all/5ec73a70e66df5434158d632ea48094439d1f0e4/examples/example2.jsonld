@@ -9,17 +9,17 @@
       "type": "Person"
     },
     "origin": {
-      "id": "https://bots.surf.nl/profile/card#me",
+      "id": "https://mycontributions.info/service/m/profile/card#me",
       "name": "Mastodon Bot",
       "type": "Service"
     },
     "object": {
       "id": "https://social.edu.nl/@alice/112891078566219289",
-      "content": "<p>I just submitted my first question to the Dutch parliament! https://parliament.nl/questions/2025-21-121291 /cc @logbot@bots.surf.nl",
+      "content": "<p>I just submitted my first question to the Dutch parliament! https://parlaiment.nl/questions/2025-21-121291 /cc @logbot@bots.surf.nl",
       "url": [
         {
           "type": "Link",
-          "href": "https://parliament.nl/questions/2025-21-121291"
+          "href": "https://parlaiment.nl/questions/2025-21-121291"
         }
       ],
       "type": "Note"

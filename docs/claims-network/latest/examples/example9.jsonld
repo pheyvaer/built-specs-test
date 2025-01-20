@@ -1,0 +1,20 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "id": "urn:uuid:535dff96-1082-43b8-b1ce-66933bee768a",
+  "type": "Announce",
+  "published": "2025-02-02T06:48:39.000Z",
+  "actor": {
+    "id": "https://bots.surf.nl/profile/card#me",
+    "name": "Mastodon Bot",
+    "type": "Service"
+  },
+  "origin": {
+    "id": "https://mastodon.bit.are.us/profile",
+    "name": "Mastodon Bot Software",
+    "type": "Service"
+  },
+  "object": {
+    "id": "https://bots.surf.nl/summary/237123-21318.jsonld",
+    "type": "Document"
+  }
+}
