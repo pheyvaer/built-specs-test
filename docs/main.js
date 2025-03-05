@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         let ul = "<ul>";
         for (const build of pub.builds) {
-          ul += `<li><a href="${build.path}">${build.path}</a> (${dateFns.format(new Date(build.date), "yyyy-MM-dd kk:mm O")})</li>`;
+          ul += `<li><a href="${build.path}">${build.path}</a> (${dateFns.format(new Date(build.date), "yyyy-MM-dd HH:mm O")})</li>`;
         }
         ul += "</ul>";
         accordion += ul;
@@ -77,5 +77,5 @@ window.addEventListener("DOMContentLoaded", async () => {
     $allSpecs.innerHTML += accordion;
   }
 
-  document.getElementById("latest-run").innerText = dateFns.format(new Date(orchestrator["latest-run"]), "yyyy-MM-dd kk:mm O");
+  document.getElementById("latest-run").innerText = dateFns.format(new Date(orchestrator["latest-run"]), "yyyy-MM-dd HH:mm O");
 });
