@@ -22,7 +22,7 @@
           ]
         },
         "level1-latest": {
-          "latest-run": "2025-03-13T15:42:59.691Z",
+          "latest-run": "2025-03-19T14:24:27.312Z",
           "builds": [
             {
               "date": "2025-03-05T09:46:07.494Z",
@@ -37,7 +37,7 @@
           ]
         },
         "level1-commits": {
-          "latest-run": "2025-03-13T15:42:59.689Z",
+          "latest-run": "2025-03-19T14:24:27.301Z",
           "builds": [
             {
               "date": "2025-03-05T09:46:06.976Z",
@@ -54,7 +54,7 @@
           ]
         },
         "level0-latest": {
-          "latest-run": "2025-03-13T15:42:59.690Z",
+          "latest-run": "2025-03-19T14:24:27.310Z",
           "builds": [
             {
               "date": "2025-03-05T09:46:07.486Z",
@@ -67,7 +67,7 @@
     "rdf-time-snippets": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-03-13T15:43:00.370Z",
+          "latest-run": "2025-03-19T14:24:28.778Z",
           "builds": [
             {
               "date": "2024-12-17T17:24:26.701Z",
@@ -105,7 +105,7 @@
     "claims-network": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-03-13T15:42:59.885Z",
+          "latest-run": "2025-03-19T14:24:27.515Z",
           "builds": [
             {
               "date": "2025-01-16T13:44:21.485Z",
@@ -182,7 +182,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2025-03-13T15:42:59.885Z",
+          "latest-run": "2025-03-19T14:24:27.515Z",
           "builds": [
             {
               "date": "2025-01-17T10:59:04.539Z",
@@ -206,7 +206,7 @@
     "ldes-server-for-developers": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-03-13T15:43:00.150Z",
+          "latest-run": "2025-03-19T14:24:28.572Z",
           "builds": [
             {
               "date": "2025-01-20T13:39:54.537Z",
@@ -287,7 +287,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2025-03-13T15:43:00.151Z",
+          "latest-run": "2025-03-19T14:24:28.572Z",
           "builds": [
             {
               "date": "2025-01-20T13:39:54.539Z",
@@ -302,10 +302,33 @@
           ]
         }
       }
+    },
+    "force": {
+      "publications": {
+        "all-commits": {
+          "latest-run": "2025-03-19T14:24:28.385Z",
+          "builds": [
+            {
+              "date": "2025-03-19T14:24:28.385Z",
+              "path": "framework-for-odrl-rule-compliance-through-evaluation/all/8968f333cd1a188bc8779fba53a1661d237364e4"
+            }
+          ]
+        },
+        "latest": {
+          "latest-run": "2025-03-19T14:24:28.388Z",
+          "builds": [
+            {
+              "date": "2025-03-19T14:24:28.388Z",
+              "path": "framework-for-odrl-rule-compliance-through-evaluation/latest",
+              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/framework-for-odrl-rule-compliance-through-evaluation/all/8968f333cd1a188bc8779fba53a1661d237364e4"
+            }
+          ]
+        }
+      }
     }
   },
   "orchestrator": {
-    "latest-run": "2025-03-13T15:43:00.385Z",
+    "latest-run": "2025-03-19T14:24:28.810Z",
     "version": "1.0.6"
   }
 }
