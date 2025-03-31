@@ -1,7 +1,7 @@
 <!doctype html><html lang="en">
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title>Framework for ODRL Rule Compliance through Evaluation</title>
+  <title>Trustflows</title>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
@@ -1489,7 +1489,7 @@ Possible extra rowspan handling
 	}
 </style>
   <meta content="Bikeshed version f3fd50cc3, updated Tue Mar 18 14:19:40 2025 -0700" name="generator">
-  <link href="https://pheyvaer.github.io/built-specs-test/force/all/1305449adc6b93dda2e94433f398eb535dd2d32d" rel="canonical">
+  <link href="https://pheyvaer.github.io/built-specs-test/trustflows/all/a02f6c94e92ee237d49363e81007bd902093e98a" rel="canonical">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -2170,15 +2170,18 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://knows.idlab.ugent.be/"> <img alt="KNoWS" height="48" src="logo.png"> </a> </p>
-   <h1 class="p-name no-ref" id="title">Framework for ODRL Rule Compliance through Evaluation</h1>
+   <h1 class="p-name no-ref" id="title">Trustflows</h1>
    <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2025-03-31">31 March 2025</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>Previous Versions:
-     <dd><a href="https://pheyvaer.github.io/built-specs-test/force/all/54e22833adfc33e2f775b957952b2ee215bc91a4" rel="prev">https://pheyvaer.github.io/built-specs-test/force/all/54e22833adfc33e2f775b957952b2ee215bc91a4</a>
+     <dd><a href="_ORCHESTRATOR_PREVIOUS_BUILD_FULL_LINK_" rel="prev">_ORCHESTRATOR_PREVIOUS_BUILD_FULL_LINK_</a>
      <dt class="editor">Editors:
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:wout.slabbinck@ugent.be">Wout Slabbinck</a> (<a class="p-org org" href="http://idlab.ugent.be/">Ghent University - imec</a>)
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:beatriz.esteves@ugent.be">Beatriz Esteves</a> (<a class="p-org org" href="http://idlab.ugent.be/">Ghent University - imec</a>)
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:julianandres.rojasmelendez@ugent.be">Julian Rojas</a> (<a class="p-org org" href="http://idlab.ugent.be/">Ghent University - imec</a>)
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:pieter.colpaert@ugent.be">Pieter Colpaert</a> (<a class="p-org org" href="http://idlab.ugent.be/">Ghent University - imec</a>)
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:ruben.verborgh@ugent.be">Ruben Verborgh</a> (<a class="p-org org" href="http://idlab.ugent.be/">Ghent University - imec</a>)
     </dl>
    </div>
    <div data-fill-with="warning"></div>
@@ -2192,7 +2195,7 @@ Parts of this work may be from another specification document.  If so, those par
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>The Framework for ODRL Rule Compliance through Evaluation (FORCE) is designed to assist in ODRL policy development and enhance comprehension of ODRL evaluation outputs.</p>
+   <p><mark>TODO:</mark> one-liner trustflow</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
@@ -2202,12 +2205,19 @@ Parts of this work may be from another specification document.  If so, those par
      <a href="#introduction"><span class="secno">1</span> <span class="content">Introd­uction</span></a>
      <ol class="toc">
       <li><a href="#terminology"><span class="secno">1.1</span> <span class="content">Terminology</span></a>
+      <li><a href="#requirements"><span class="secno">1.2</span> <span class="content">Requirements</span></a>
      </ol>
-    <li><a href="#compliance-report"><span class="secno">2</span> <span class="content">ODRL Compliance Report Model</span></a>
-    <li><a href="#test-suite"><span class="secno">3</span> <span class="content">ODRL Test Suite</span></a>
-    <li><a href="#evaluator"><span class="secno">4</span> <span class="content">ODRL Evaluator</span></a>
-    <li><a href="#supporting-materials"><span class="secno">5</span> <span class="content">Supporting Materials</span></a>
-    <li><a href="#namespaces"><span class="secno">6</span> <span class="content">Namespaces</span></a>
+    <li>
+     <a href="#components"><span class="secno">2</span> <span class="content">Components</span></a>
+     <ol class="toc">
+      <li><a href="#envelope"><span class="secno">2.1</span> <span class="content">Trust Envelope</span></a>
+      <li><a href="#policy-engine"><span class="secno">2.2</span> <span class="content">Policy Engine</span></a>
+      <li><a href="#credentials"><span class="secno">2.3</span> <span class="content">Credential Verifier</span></a>
+      <li><a href="#data-minimization"><span class="secno">2.4</span> <span class="content">Data Minimization</span></a>
+     </ol>
+    <li><a href="#architecture"><span class="secno">3</span> <span class="content">Architecture</span></a>
+    <li><a href="#supporting-materials"><span class="secno">4</span> <span class="content">Supporting Materials</span></a>
+    <li><a href="#namespaces"><span class="secno">5</span> <span class="content">Namespaces</span></a>
     <li><a href="#conformance"><span class="secno"></span> <span class="content"> Conformance</span></a>
     <li>
      <a href="#index"><span class="secno"></span> <span class="content">Index</span></a>
@@ -2218,85 +2228,68 @@ Parts of this work may be from another specification document.  If so, those par
      <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
      <ol class="toc">
       <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
+      <li><a href="#informative"><span class="secno"></span> <span class="content">Informative References</span></a>
      </ol>
    </ol>
   </nav>
   <main>
    <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introd­uction</span><a class="self-link" href="#introduction"></a></h2>
-    <mark>TODO:</mark> write full text
-Mention ODRL <a data-link-type="biblio" href="#biblio-odrl-model" title="ODRL Information Model 2.2">[ODRL-model]</a> <a data-link-type="biblio" href="#biblio-odrl-vocab" title="ODRL Vocabulary &amp; Expression 2.2">[odrl-vocab]</a> 
-   <p>The curent problem</p>
-   <p>Formal Semantics spec <a data-link-type="biblio" href="#biblio-odrl-formal-semantics" title="ODRL Formal Semantics">[odrl-formal-semantics]</a></p>
-   <p>What is FORCE</p>
-   <ul>
-    <li data-md>
-     <p>compliance report model</p>
-    <li data-md>
-     <p>ODRL evaluator</p>
-    <li data-md>
-     <p>test suite</p>
-   </ul>
+   <p><mark>TODO:</mark> what are trust flows <a data-link-type="dfn" href="#trustflow" id="ref-for-trustflow">Trustflow</a> and <a data-link-type="dfn" href="#trust-envelope" id="ref-for-trust-envelope">Trust Envelope</a></p>
    <h3 class="heading settled" data-level="1.1" id="terminology"><span class="secno">1.1. </span><span class="content">Terminology</span><a class="self-link" href="#terminology"></a></h3>
    <dl>
-    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="odrl-compliance-report">ODRL Compliance Report</dfn>
-    <dd>A vocabulary that is used to elaborate the result of an evaluation of an ODRL Policy, (optionally) ODRL Request and the State of the World. It elaborates not only whether a rule from a policy is active, but also why.
-    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="odrl-evaluator">ODRL Evaluator</dfn>
-    <dd>A system that determines whether the Rules of an ODRL Policy expression have meet their intended action performance.
+    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="trustflow">Trustflow</dfn>
+    <dd><mark>TODO:</mark>
+    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="trust-envelope">Trust Envelope</dfn>
+    <dd><mark>TODO:</mark>
    </dl>
-   <h2 class="heading settled" data-level="2" id="compliance-report"><span class="secno">2. </span><span class="content">ODRL Compliance Report Model</span><a class="self-link" href="#compliance-report"></a></h2>
-   <figure id="compliance-report-model-figure">
-     <img src="./img/Compliance Report Model.svg"> 
-    <figcaption>Compliance Report model</figcaption>
-   </figure>
-    <mark>TODO:</mark> refer to custom spec 
-   <h2 class="heading settled" data-level="3" id="test-suite"><span class="secno">3. </span><span class="content">ODRL Test Suite</span><a class="self-link" href="#test-suite"></a></h2>
-   <figure id="test-suite-figure">
-     <img height="293" src="./img/test-suite-cropped.jpg" width="640"> 
-    <figcaption>ODRL Test Suite</figcaption>
-   </figure>
-    <mark>TODO:</mark> write full text 
+   <h3 class="heading settled" data-level="1.2" id="requirements"><span class="secno">1.2. </span><span class="content">Requirements</span><a class="self-link" href="#requirements"></a></h3>
+   <h2 class="heading settled" data-level="2" id="components"><span class="secno">2. </span><span class="content">Components</span><a class="self-link" href="#components"></a></h2>
+   <h3 class="heading settled" data-level="2.1" id="envelope"><span class="secno">2.1. </span><span class="content">Trust Envelope</span><a class="self-link" href="#envelope"></a></h3>
+   <p><mark>TODO:</mark> What do we mean with that</p>
+   <p>Technologies envisioned:</p>
    <ul>
     <li data-md>
-     <p><mark>TODO:</mark> what makes a test pass or fail in plain terms.</p>
+     <p>Reference to https://w3id.org/context-associations/specification</p>
    </ul>
-   <h2 class="heading settled" data-level="4" id="evaluator"><span class="secno">4. </span><span class="content">ODRL Evaluator</span><a class="self-link" href="#evaluator"></a></h2>
-   <figure id="odrl-evaluator-figure">
-     <img src="./img/ODRL-Evaluator.svg"> 
-    <figcaption>ODRL Evaluator architecture</figcaption>
-   </figure>
-    <mark>TODO:</mark> write full text 
-   <p>Mention different steps</p>
-   <p>Elaborate the need for the time thingy
-Refer to repo how much we support</p>
-   <h2 class="heading settled" data-level="5" id="supporting-materials"><span class="secno">5. </span><span class="content">Supporting Materials</span><a class="self-link" href="#supporting-materials"></a></h2>
+   <h3 class="heading settled" data-level="2.2" id="policy-engine"><span class="secno">2.2. </span><span class="content">Policy Engine</span><a class="self-link" href="#policy-engine"></a></h3>
+   <p><mark>TODO:</mark> What do we mean with that</p>
+   <p>Technologies envisioned</p>
    <ul>
     <li data-md>
-     <p><a data-link-type="dfn" href="#odrl-compliance-report" id="ref-for-odrl-compliance-report">ODRL Compliance Report</a>: https://w3id.org/force/compliance-report</p>
-     <ul>
-      <li data-md>
-       <p>repo: https://w3id.org/force/compliance-report/repo</p>
-     </ul>
+     <p>Reference to <a data-link-type="biblio" href="#biblio-force" title="Framework for ODRL Rule Compliance through Evaluation">[FORCE]</a></p>
     <li data-md>
-     <p>test suite: https://w3id.org/force/test-suite</p>
-     <ul>
-      <li data-md>
-       <p>repo: https://w3id.org/force/test-suite/repo</p>
-     </ul>
+     <p>Reference to SDS paper</p>
     <li data-md>
-     <p>github repository for an <a data-link-type="dfn" href="#odrl-evaluator" id="ref-for-odrl-evaluator">ODRL Evaluator</a>: <a href="https://w3id.org/force/evaluator">https://w3id.org/force/evaluator</a></p>
-    <li data-md>
-     <p>eswc paper: <mark>TODO:</mark></p>
-    <li data-md>
-     <p>demonstrator: https://w3id.org/force/ESWC2025-demo</p>
-     <ul>
-      <li data-md>
-       <p>source code: https://w3id.org/force/ESWC2025-demo/repo</p>
-     </ul>
+     <p>Reference to XACML?</p>
    </ul>
-   <h2 class="heading settled" data-level="6" id="namespaces"><span class="secno">6. </span><span class="content">Namespaces</span><a class="self-link" href="#namespaces"></a></h2>
+   <h3 class="heading settled" data-level="2.3" id="credentials"><span class="secno">2.3. </span><span class="content">Credential Verifier</span><a class="self-link" href="#credentials"></a></h3>
+   <p><mark>TODO:</mark> What do we mean with that</p>
+   <p>Technologies envisioned</p>
+   <ul>
+    <li data-md>
+     <p>Reference to OIDC?</p>
+    <li data-md>
+     <p>Reference to WebID and Solid-OIDC</p>
+    <li data-md>
+     <p>Reference to DID and VC</p>
+   </ul>
+   <h3 class="heading settled" data-level="2.4" id="data-minimization"><span class="secno">2.4. </span><span class="content">Data Minimization</span><a class="self-link" href="#data-minimization"></a></h3>
+   <p><mark>TODO:</mark> What do we mean with that</p>
+   <ul>
+    <li data-md>
+     <p>ZKP</p>
+    <li data-md>
+     <p>SPARQL + CSS -> Joachim paper</p>
+   </ul>
+   <h2 class="heading settled" data-level="3" id="architecture"><span class="secno">3. </span><span class="content">Architecture</span><a class="self-link" href="#architecture"></a></h2>
+    Elaborate UMA: seperation of concerns (RS + AS) 
+   <p>Rerefence to user managed access server?</p>
+   <h2 class="heading settled" data-level="4" id="supporting-materials"><span class="secno">4. </span><span class="content">Supporting Materials</span><a class="self-link" href="#supporting-materials"></a></h2>
+   <h2 class="heading settled" data-level="5" id="namespaces"><span class="secno">5. </span><span class="content">Namespaces</span><a class="self-link" href="#namespaces"></a></h2>
    <p>Commonly used namespace prefixes used in this specification:</p>
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dct:</c->    <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>odrl:</c->   <c- g>&lt;http://www.w3.org/ns/odrl/2/></c-><c- p>.</c->
+<c- k>@prefix</c-> <c- nn>rca:</c->    <c- g>&lt;https://w3id.org/context-associations></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>rdf:</c->    <c- g>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>report:</c-> <c- g>&lt;https://w3id.org/force/compliance-report#></c->
 <c- k>@prefix</c-> <c- nn>xsd:</c->    <c- g>&lt;http://www.w3.org/2001/XMLSchema#></c-> <c- p>.</c->
@@ -2451,20 +2444,19 @@ Refer to repo how much we support</p>
   <h2 class="no-num no-ref heading settled" id="index"><span class="content">Index</span><a class="self-link" href="#index"></a></h2>
   <h3 class="no-num no-ref heading settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
   <ul class="index">
-   <li><a href="#odrl-compliance-report">ODRL Compliance Report</a><span>, in § 1.1</span>
-   <li><a href="#odrl-evaluator">ODRL Evaluator</a><span>, in § 1.1</span>
+   <li><a href="#trust-envelope">Trust Envelope</a><span>, in § 1.1</span>
+   <li><a href="#trustflow">Trustflow</a><span>, in § 1.1</span>
   </ul>
   <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
   <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
-   <dt id="biblio-odrl-formal-semantics">[ODRL-FORMAL-SEMANTICS]
-   <dd>Nicoletta Fornara; et al. <a href="https://w3c.github.io/odrl/formal-semantics/"><cite>ODRL Formal Semantics</cite></a>. URL: <a href="https://w3c.github.io/odrl/formal-semantics/">https://w3c.github.io/odrl/formal-semantics/</a>
-   <dt id="biblio-odrl-model">[ODRL-model]
-   <dd>Renato Iannella; Serena Villata. <a href="https://w3c.github.io/poe/model/"><cite>ODRL Information Model 2.2</cite></a>. URL: <a href="https://w3c.github.io/poe/model/">https://w3c.github.io/poe/model/</a>
-   <dt id="biblio-odrl-vocab">[ODRL-VOCAB]
-   <dd>Renato Iannella; et al. <a href="https://w3c.github.io/poe/vocab/"><cite>ODRL Vocabulary &amp; Expression 2.2</cite></a>. URL: <a href="https://w3c.github.io/poe/vocab/">https://w3c.github.io/poe/vocab/</a>
    <dt id="biblio-rfc2119">[RFC2119]
    <dd>S. Bradner. <a href="https://datatracker.ietf.org/doc/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. March 1997. Best Current Practice. URL: <a href="https://datatracker.ietf.org/doc/html/rfc2119">https://datatracker.ietf.org/doc/html/rfc2119</a>
+  </dl>
+  <h3 class="no-num no-ref heading settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="#informative"></a></h3>
+  <dl>
+   <dt id="biblio-force">[FORCE]
+   <dd>Wout Slabbinck; Beatriz Esteves. <a href="https://w3id.org/force/"><cite>Framework for ODRL Rule Compliance through Evaluation</cite></a>. URL: <a href="https://w3id.org/force/">https://w3id.org/force/</a>
   </dl>
 <script>/* Boilerplate: script-dom-helper */
 "use strict";
@@ -2666,8 +2658,8 @@ function parseHTML(markup) {
 "use strict";
 {
 let dfnPanelData = {
-"odrl-compliance-report": {"dfnID":"odrl-compliance-report","dfnText":"ODRL Compliance Report","external":false,"refSections":[{"refs":[{"id":"ref-for-odrl-compliance-report"}],"title":"5. Supporting Materials"}],"url":"#odrl-compliance-report"},
-"odrl-evaluator": {"dfnID":"odrl-evaluator","dfnText":"ODRL Evaluator","external":false,"refSections":[{"refs":[{"id":"ref-for-odrl-evaluator"}],"title":"5. Supporting Materials"}],"url":"#odrl-evaluator"},
+"trust-envelope": {"dfnID":"trust-envelope","dfnText":"Trust Envelope","external":false,"refSections":[{"refs":[{"id":"ref-for-trust-envelope"}],"title":"1. Introd\u00aduction"}],"url":"#trust-envelope"},
+"trustflow": {"dfnID":"trustflow","dfnText":"Trustflow","external":false,"refSections":[{"refs":[{"id":"ref-for-trustflow"}],"title":"1. Introd\u00aduction"}],"url":"#trustflow"},
 };
 
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -3056,8 +3048,8 @@ function genLinkingSyntaxes(dfn) {
 "use strict";
 {
 let refsData = {
-"#odrl-compliance-report": {"displayText":"odrl compliance report","export":true,"for_":[],"level":"","normative":true,"shortname":"force","spec":"force","status":"local","text":"odrl compliance report","type":"dfn","url":"#odrl-compliance-report"},
-"#odrl-evaluator": {"displayText":"odrl evaluator","export":true,"for_":[],"level":"","normative":true,"shortname":"force","spec":"force","status":"local","text":"odrl evaluator","type":"dfn","url":"#odrl-evaluator"},
+"#trust-envelope": {"displayText":"trust envelope","export":true,"for_":[],"level":"","normative":true,"shortname":"trustflows","spec":"trustflows","status":"local","text":"trust envelope","type":"dfn","url":"#trust-envelope"},
+"#trustflow": {"displayText":"trustflow","export":true,"for_":[],"level":"","normative":true,"shortname":"trustflows","spec":"trustflows","status":"local","text":"trustflow","type":"dfn","url":"#trustflow"},
 };
 
 function mkRefHint(link, ref) {
