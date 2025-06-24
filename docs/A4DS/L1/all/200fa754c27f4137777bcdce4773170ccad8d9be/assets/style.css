@@ -1,0 +1,421 @@
+
+:root {
+  isolation: isolate;
+  
+  --color-main-F: #06452a; /* #06452a #06452a */
+  --color-main-E: #075735; /* #075735 #075735 */
+  --color-main-D: #08683f; /* #08683f #08683f */
+  --color-main-C: #0a794a; /* #0a794a #0a794a */
+  --color-main-B: #0b8a54; /* #0b8a54 #0b8a54 */
+  --color-main-A: #0d9c5f; /* #0d9c5f #0d9c5f */
+  --color-main-0: #0ead69; /* #1b7 #0ead69 */
+  --color-main-1: #26b578; /* #26b578 #26b578 */
+  --color-main-2: #3ebd87; /* #3ebd87 #3ebd87 */
+  --color-main-3: #56c696; /* #56c696 #56c696 */
+  --color-main-4: #6ecea5; /* #6ecea5 #6ecea5 */
+  --color-main-5: #87d6b4; /* #87d6b4 #87d6b4 */
+  --color-main-6: #9fdec3; /* #9fdec3 #9fdec3 */
+  --color-main-7: #b7e6d2; /* #b7e6d2 #b7e6d2 */
+  --color-main-8: #cfefe1; /* #cfefe1 #cfefe1 */
+  --color-main-9: #e7f7f0; /* #e7f7f0 #e7f7f0 */
+  
+  --color-main-light: #0b8a54;
+  --color-main-dark: #0a794a;
+
+  --heading-text: #0d9c5f !important;
+
+  --a-normal-text: var(--color-main-dark) !important;
+  --a-normal-underline: var(--color-main-light) !important;
+  --a-visited-text: var(--color-main-light) !important;
+  --a-visited-underline: var(--color-main-light) !important;
+
+  --a-hover-bg: #ffffff00 !important;
+  
+  --toclink-text: var(--color-main-dark) !important;
+  --toclink-underline: var(--color-main-light) !important;
+  --toclink-visited-text: var(--color-main-dark) !important;
+  --toclink-visited-underline: var(--color-main-light) !important;
+}
+
+body {
+  background: white;
+  font-family: "Titillium Web", "Helvetica Neue", Arial, sans-serif;
+
+  /* Reset base counters and additional ones */
+  counter-reset: example note issue assertion advisement figure !important;
+}
+
+/* Configure increments for additional counters */
+.note { counter-increment: note; }
+.assertion { counter-increment: assertion; }
+.advisement { counter-increment: advisement; }
+
+/* Configure display of additional counters */ /*
+.note:not(.no-marker)::before { content: "Note " counter(note); }
+.assertion:not(.no-marker)::before { content: "Assertion " counter(assertion); }
+.advisement:not(.no-marker)::before { content: "Advisement " counter(advisement); }
+*/
+
+p:not(:has(> .rfc2119:first-child))::first-letter {
+  text-transform: capitalize;
+}
+
+.sc {
+  font-variant: small-caps;
+}
+
+.inline-note {
+  font-style: italic;
+  
+  &::before {
+    content: "note: ";
+    color: var(--color-conformance);
+    font-style: initial;
+    font-size: 1.35em;
+    font-weight: bold;
+    font-variant: all-small-caps;
+  }
+}
+
+.note,
+.issue,
+.example,
+.assertion,
+.advisement {
+  font-size: .9em;
+
+  &.no-num {
+    counter-increment: none !important;
+  }
+}
+
+#start {
+  counter-reset: example 0;
+  counter-set: example 0;
+}
+
+code {
+  background: none !important;
+}
+
+pre, code {
+  font-size: .8em;
+  font-style: normal;
+
+  &.idl {
+    font-size: 0.95em;
+  }
+}
+
+#toc li li a {
+  color: #0b8a54;
+  font-size: 0.9em;
+}
+
+#toc a:hover .content {
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
+  border-bottom-color: initial !important;
+}
+
+a.self-link {
+  font-size: 1.2em;
+}
+
+main pre.idl {
+  display: none;
+}
+
+a:is(*, :link, :visited, :active, :hover, :focus) {
+  text-decoration: none !important;
+  text-decoration-skip-ink: auto !important;
+
+  &:hover {
+    text-decoration-color: initial !important;
+    text-decoration-line: underline !important;
+    text-decoration-style: solid !important;
+    text-decoration-thickness: 1px !important;
+  }
+
+  &.rfc2119 {
+    text-transform: lowercase;
+    font-variant: small-caps;
+    font-style: normal;
+    font-size: 1.2em;
+    line-height: 0.85em;
+    color: #905;
+
+    & em {
+      all: inherit
+    }
+  }
+
+  &[data-link-type="biblio"],
+  &[data-link-type="biblio"] + a {
+    color: #07a;
+  }
+  
+  &[data-link-type="dfn"] {
+    color: #0a794a;
+  }
+
+  &[data-link-type="algorithm"],
+  &[data-link-type="abstract-op"] {
+    color: #07a;
+  }
+  
+  &[data-link-type="scheme"]{
+    color: #905;
+  }
+
+  &[data-link-type="http-header"] {
+    color: #905;
+  }
+
+  &[data-link-type="typedef"],
+  &[data-link-type="const"],
+  &[data-link-type="enum"],
+  &[data-link-type="enum-value"],
+  &[data-link-type="dictionary"],
+  &[data-link-type="dict-member"],
+  &[data-link-type="exception"] {
+    color: #07a;
+  }
+  
+  &[data-link-type="idl"] {
+    color: #07a;
+
+    &[href|="#dictdef"] {
+      color: #0b8a54;
+    }
+  }
+
+  &[data-link-type="idl-name"] {
+    color: #07a;
+  }
+}
+
+dfn {
+  color: #0a794a;
+
+  &.idl-code {
+    color: #07a;
+    font-weight: semi-bold;
+
+    &[data-dfn-type="dictionary"] {
+      color: #0a794a;
+
+      & code { all: inherit; }
+    };
+
+    /* &[data-dfn-type="dict-member"] {
+      color: #a504c9;
+    };
+
+    &[data-dfn-type="enum-value"] {
+      color: #7340fe;
+    }; */
+  }
+}
+
+dt[data-md]:has(dfn.idl-code) {
+  visibility: hidden;
+  & dfn {
+    visibility: visible !important;
+  }
+  & span {
+    display: inline-flex;
+    font-size: 0;
+  }
+  & span a {
+    font-weight: normal;
+    font-size: 0.9rem !important;
+    visibility: visible !important;
+    order: -1;
+    
+    &::before {
+      content: '[';
+      font-size: 0.85rem;
+    }
+    &::after {
+      content: ']';
+      font-size: 0.85rem;
+    }
+  }
+  /* 
+  & dfn + span {
+    & a[data-link-type="idl-name"] {
+      font-size: 0.95em;
+      font-style: normal;
+      font-variant: normal;
+      font-family: Menlo, Consolas, "DejaVu Sans Mono", Monaco, monospace;
+      text-transform: none;
+      text-align: left;
+      text-align: start;
+      hyphens: none;
+      orphans: 3;
+      widows: 3;
+      page-break-before: avoid;
+    }
+  }
+  */
+}
+
+code.idl:has(> a[href|="#dictdef"]) {
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-variant: inherit;
+  font-family: inherit;
+  page-break-before: inherit;
+  text-transform: inherit;
+  text-align: inherit;
+  hyphens: inherit;
+  orphans: inherit;
+  widows: inherit;
+  border: inherit;
+  padding: inherit;
+  background: inherit;
+}
+
+ol {
+  list-style-type: upper-roman;
+  & ol {
+    list-style-type: decimal;
+    & ol {
+      list-style-type: lower-roman;
+    }
+  }
+}
+
+.issue {
+  opacity: 0.4;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+main dt {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+main dd p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+[data-link-type="biblio"] { 
+  /* allows breaks in inline references */ 
+  white-space: normal !important;
+}
+
+.copyright {
+  margin-top: 2em;
+  font-size: .85em;
+
+  & img {
+    max-width: 1em;
+    max-height: 1em;
+    margin-left: .2em;
+  }
+}
+
+/* .
+
+footer {
+  bottom: 0;
+  height: 40px; 
+  line-height: 40px; 
+  background: var(--color-main-0);
+  color: white;
+  border-radius: 20px 0 20px 0 !important;
+  margin-top: 50px;
+}
+
+.footer a {
+  color: white;
+}
+
+<div boilerplate="footer" class="footer">
+  <p class="float-right">
+  <a href="#">Back to top</a>
+  </p>
+  <p>
+  KNoWS © 2025
+  </p>
+</div> 
+
+*/
+
+c- {
+  &[il], /* Literal.Number.Integer.Long */
+  &[l],  /* Literal */
+  &[ld], /* Literal.Date */
+  &[m],  /* Literal.Number */
+  &[mb], /* Literal.Number.Bin */
+  &[mf], /* Literal.Number.Float */
+  &[mh], /* Literal.Number.Hex */
+  &[mi], /* Literal.Number.Integer */
+  &[mo]  /* Literal.Number.Oct */ {
+    color: #000 !important;
+  }
+  &[e],  /* Name.Attribute */
+  &[n],  /* Name */
+  &[nc], /* Name.Class */
+  &[nd], /* Name.Decorator */
+  &[ne], /* Name.Exception */
+  &[nf], /* Name.Function */
+  &[ni], /* Name.Entity */
+  &[nl], /* Name.Label */
+  &[nn], /* Name.Namespace */
+  &[no], /* Name.Constant */
+  &[py], /* Name.Property */
+  &[vc], /* Name.Variable.Class */
+  &[vg], /* Name.Variable.Global */
+  &[vi]  /* Name.Variable.Instance */ {
+    color: #07a !important;
+  }
+  &[g]   /* Name.Variable */ {
+    color: #222 !important;
+  }
+  &[f]   /* Name.Tag */ {
+    color: #07a !important;
+  }
+  &[c],  /* Comment */
+  &[c1], /* Comment.Single */
+  &[cp], /* Comment.Preproc */
+  &[cs], /* Comment.Special */
+  &[d]   /* Comment.Multiline */ {
+    color: #789 !important;
+  }
+  &[a],  /* Keyword.Declaration */
+  &[b],  /* Keyword.Type */
+  &[k],  /* Keyword */
+  &[kc], /* Keyword.Constant */
+  &[kn], /* Keyword.Namespace */
+  &[kp], /* Keyword.Pseudo */
+  &[kr]  /* Keyword.Reserved */ {
+    color: #905 !important;
+  }
+  &[o],  /* Operator */
+  &[ow], /* Operator.Word */
+  &[p]   /* Punctuation */ {
+    color: #999 !important;
+  }
+  &[s],  /* Literal.String */
+  &[sb], /* Literal.String.Backtick */
+  &[sc], /* Literal.String.Char */
+  &[sd], /* Literal.String.Doc */
+  &[se], /* Literal.String.Escape */
+  &[sh], /* Literal.String.Heredoc */
+  &[si], /* Literal.String.Interpol */
+  &[sr], /* Literal.String.Regex */
+  &[ss], /* Literal.String.Symbol */
+  &[sx], /* Literal.String.Other */
+  &[t],  /* Literal.String.Single */
+  &[u]   /* Literal.String.Double */ {
+    color: #a60 !important;
+  }
+}

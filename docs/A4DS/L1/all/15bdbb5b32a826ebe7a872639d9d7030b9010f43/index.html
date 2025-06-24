@@ -1,7 +1,7 @@
 <!doctype html><html lang="en">
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title>Framework for ODRL Rule Compliance through Evaluation</title>
+  <title>Authorization for Data Spaces (A4DS)</title>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
@@ -1488,9 +1488,29 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version f3fd50cc3, updated Tue Mar 18 14:19:40 2025 -0700" name="generator">
-  <link href="https://pheyvaer.github.io/built-specs-test/force/all/b1ebfc9536948fca33371b8fb21c8c8009c35112" rel="canonical">
-  <meta content="dark light" name="color-scheme">
+  <meta content="Bikeshed version 60c422380, updated Thu Feb 20 19:11:22 2025 -0800" name="generator">
+  <link href="https://spec.knows.idlab.ugent.be/A4DS/L0/latest/" rel="canonical">
+  <meta content="793b925ac36949f6d8e3e08ccad47b9abc4e2e53" name="revision">
+<style>
+  .note,
+  .issue,
+  .example,
+  .assertion,
+  .advisement {
+      font-size: 0.9em;
+  }
+  pre {
+      font-size: .8em;
+  }
+  em.rfc2119 {
+      text-transform: lowercase;
+      font-variant: small-caps;
+      font-style: normal;
+      font-size: 18px;
+      color: #900;
+  }
+  [data-link-type=biblio] { white-space: normal !important; /* allows breaks in inline references */ }
+</style>
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
     color: var(--a-normal-text);
@@ -1553,13 +1573,6 @@ pre .property::before, pre .property::after {
     white-space: pre;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --selflink-text: black;
-        --selflink-bg: silver;
-        --selflink-hover-text: white;
-    }
-}
 </style>
 <style>/* Boilerplate: style-colors */
 /* Any --*-text not paired with a --*-bg is assumed to have a transparent bg */
@@ -1670,117 +1683,6 @@ pre .property::before, pre .property::after {
     --editedrec-bg: darkorange;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text: #ddd;
-        --bg: black;
-
-        --unofficial-watermark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cg fill='%23100808' transform='translate(200 200) rotate(-45) translate(-200 -200)' stroke='%23100808' stroke-width='3'%3E%3Ctext x='50%25' y='220' style='font: bold 70px sans-serif; text-anchor: middle; letter-spacing: 6px;'%3EUNOFFICIAL%3C/text%3E%3Ctext x='50%25' y='305' style='font: bold 70px sans-serif; text-anchor: middle; letter-spacing: 6px;'%3EDRAFT%3C/text%3E%3C/g%3E%3C/svg%3E");
-
-        --logo-bg: #1a5e9a;
-        --logo-active-bg: #c00;
-        --logo-text: white;
-
-        --tocnav-normal-text: #999;
-        --tocnav-normal-bg: var(--bg);
-        --tocnav-hover-text: var(--tocnav-normal-text);
-        --tocnav-hover-bg: #080808;
-        --tocnav-active-text: #f44;
-        --tocnav-active-bg: var(--tocnav-normal-bg);
-
-        --tocsidebar-text: var(--text);
-        --tocsidebar-bg: #080808;
-        --tocsidebar-shadow: rgba(255,255,255,.1);
-        --tocsidebar-heading-text: hsla(203,20%,40%,.7);
-
-        --toclink-text: var(--text);
-        --toclink-underline: #6af;
-        --toclink-visited-text: var(--toclink-text);
-        --toclink-visited-underline: #054572;
-
-        --heading-text: #8af;
-
-        --hr-text: var(--text);
-
-        --algo-border: #456;
-
-        --del-text: #f44;
-        --del-bg: transparent;
-        --ins-text: #4a4;
-        --ins-bg: transparent;
-
-        --a-normal-text: #6af;
-        --a-normal-underline: #555;
-        --a-visited-text: var(--a-normal-text);
-        --a-visited-underline: var(--a-normal-underline);
-        --a-hover-bg: rgba(25%, 25%, 25%, .2);
-        --a-active-text: #f44;
-        --a-active-underline: var(--a-active-text);
-
-        --borderedblock-bg: rgba(255, 255, 255, .05);
-
-        --blockquote-border: silver;
-        --blockquote-bg: var(--borderedblock-bg);
-        --blockquote-text: currentcolor;
-
-        --issue-border: #e05252;
-        --issue-bg: var(--borderedblock-bg);
-        --issue-text: var(--text);
-        --issueheading-text: hsl(0deg, 70%, 70%);
-
-        --example-border: hsl(50deg, 90%, 60%);
-        --example-bg: var(--borderedblock-bg);
-        --example-text: var(--text);
-        --exampleheading-text: hsl(50deg, 70%, 70%);
-
-        --note-border: hsl(120deg, 100%, 35%);
-        --note-bg: var(--borderedblock-bg);
-        --note-text: var(--text);
-        --noteheading-text: hsl(120, 70%, 70%);
-        --notesummary-underline: silver;
-
-        --assertion-border: #444;
-        --assertion-bg: var(--borderedblock-bg);
-        --assertion-text: var(--text);
-
-        --advisement-border: orange;
-        --advisement-bg: #222218;
-        --advisement-text: var(--text);
-        --advisementheading-text: #f84;
-
-        --warning-border: red;
-        --warning-bg: hsla(40,100%,20%,0.95);
-        --warning-text: var(--text);
-
-        --amendment-border: #330099;
-        --amendment-bg: #080010;
-        --amendment-text: var(--text);
-        --amendmentheading-text: #cc00ff;
-
-        --def-border: #8ccbf2;
-        --def-bg: #080818;
-        --def-text: var(--text);
-        --defrow-border: #136;
-
-        --datacell-border: silver;
-
-        --indexinfo-text: #aaa;
-
-        --indextable-hover-text: var(--text);
-        --indextable-hover-bg: #181818;
-
-        --outdatedspec-bg: rgba(255, 255, 255, .5);
-        --outdatedspec-text: black;
-        --outdated-bg: maroon;
-        --outdated-text: white;
-        --outdated-shadow: red;
-
-        --editedrec-bg: darkorange;
-    }
-    /* In case a transparent-bg image doesn't expect to be on a dark bg,
-       which is quite common in practice... */
-    img { background: white; }
-}
 </style>
 <style>/* Boilerplate: style-counters */
 body {
@@ -1817,14 +1719,6 @@ figcaption:not(.no-marker)::before {
     --dfnpanel-text: var(--text);
     --dfnpanel-target-bg: #ffc;
     --dfnpanel-target-outline: orange;
-}
-@media (prefers-color-scheme: dark) {
-    :root {
-        --dfnpanel-bg: #222;
-        --dfnpanel-text: var(--text);
-        --dfnpanel-target-bg: #333;
-        --dfnpanel-target-outline: silver;
-    }
 }
 .dfn-panel {
     position: absolute;
@@ -1944,6 +1838,40 @@ a[href].issue-return {
     text-decoration: none;
 }
 </style>
+<style>/* Boilerplate: style-line-numbers */
+:root {
+    --highlight-hover-bg: rgba(0, 0, 0, .05);
+}
+.line-numbered {
+    display: grid !important;
+    grid-template-columns: min-content 1fr;
+    grid-auto-flow: row;
+}
+.line-numbered > *,
+.line-numbered::before,
+.line-numbered::after {
+    grid-column: 1/-1;
+}
+.line-no {
+    grid-column: 1;
+    color: gray;
+}
+.line {
+    grid-column: 2;
+}
+.line:hover {
+    background: var(--highlight-hover-bg);
+}
+.line-no[data-line]::before {
+    padding: 0 .5em 0 .1em;
+    content: attr(data-line);
+}
+.line-no[data-line-end]::after {
+    padding: 0 .5em 0 .1em;
+    content: attr(data-line-end);
+}
+
+</style>
 <style>/* Boilerplate: style-md-lists */
 /* This is a weird hack for me not yet following the commonmark spec
    regarding paragraph and lists. */
@@ -1958,12 +1886,6 @@ a[href].issue-return {
 :root {
     --ref-hint-bg: #ddd;
     --ref-hint-text: var(--text);
-}
-@media (prefers-color-scheme: dark) {
-    :root {
-        --ref-hint-bg: #222;
-        --ref-hint-text: var(--text);
-    }
 }
 
 .ref-hint {
@@ -2104,236 +2026,199 @@ c-[vg] { color: #0077aa } /* Name.Variable.Global */
 c-[vi] { color: #0077aa } /* Name.Variable.Instance */
 c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
 
-@media (prefers-color-scheme: dark) {
-    .highlight:not(.idl) { background: rgba(255, 255, 255, .05); }
-
-    c-[a] { color: #d33682 } /* Keyword.Declaration */
-    c-[b] { color: #d33682 } /* Keyword.Type */
-    c-[c] { color: #2aa198 } /* Comment */
-    c-[d] { color: #2aa198 } /* Comment.Multiline */
-    c-[e] { color: #268bd2 } /* Name.Attribute */
-    c-[f] { color: #b58900 } /* Name.Tag */
-    c-[g] { color: #cb4b16 } /* Name.Variable */
-    c-[k] { color: #d33682 } /* Keyword */
-    c-[l] { color: #657b83 } /* Literal */
-    c-[m] { color: #657b83 } /* Literal.Number */
-    c-[n] { color: #268bd2 } /* Name */
-    c-[o] { color: #657b83 } /* Operator */
-    c-[p] { color: #657b83 } /* Punctuation */
-    c-[s] { color: #6c71c4 } /* Literal.String */
-    c-[t] { color: #6c71c4 } /* Literal.String.Single */
-    c-[u] { color: #6c71c4 } /* Literal.String.Double */
-    c-[ch] { color: #2aa198 } /* Comment.Hashbang */
-    c-[cp] { color: #2aa198 } /* Comment.Preproc */
-    c-[cpf] { color: #2aa198 } /* Comment.PreprocFile */
-    c-[c1] { color: #2aa198 } /* Comment.Single */
-    c-[cs] { color: #2aa198 } /* Comment.Special */
-    c-[kc] { color: #d33682 } /* Keyword.Constant */
-    c-[kn] { color: #d33682 } /* Keyword.Namespace */
-    c-[kp] { color: #d33682 } /* Keyword.Pseudo */
-    c-[kr] { color: #d33682 } /* Keyword.Reserved */
-    c-[ld] { color: #657b83 } /* Literal.Date */
-    c-[nc] { color: #268bd2 } /* Name.Class */
-    c-[no] { color: #268bd2 } /* Name.Constant */
-    c-[nd] { color: #268bd2 } /* Name.Decorator */
-    c-[ni] { color: #268bd2 } /* Name.Entity */
-    c-[ne] { color: #268bd2 } /* Name.Exception */
-    c-[nf] { color: #268bd2 } /* Name.Function */
-    c-[nl] { color: #268bd2 } /* Name.Label */
-    c-[nn] { color: #268bd2 } /* Name.Namespace */
-    c-[py] { color: #268bd2 } /* Name.Property */
-    c-[ow] { color: #657b83 } /* Operator.Word */
-    c-[mb] { color: #657b83 } /* Literal.Number.Bin */
-    c-[mf] { color: #657b83 } /* Literal.Number.Float */
-    c-[mh] { color: #657b83 } /* Literal.Number.Hex */
-    c-[mi] { color: #657b83 } /* Literal.Number.Integer */
-    c-[mo] { color: #657b83 } /* Literal.Number.Oct */
-    c-[sa] { color: #6c71c4 } /* Literal.String.Affix */
-    c-[sb] { color: #6c71c4 } /* Literal.String.Backtick */
-    c-[sc] { color: #6c71c4 } /* Literal.String.Char */
-    c-[dl] { color: #6c71c4 } /* Literal.String.Delimiter */
-    c-[sd] { color: #6c71c4 } /* Literal.String.Doc */
-    c-[se] { color: #6c71c4 } /* Literal.String.Escape */
-    c-[sh] { color: #6c71c4 } /* Literal.String.Heredoc */
-    c-[si] { color: #6c71c4 } /* Literal.String.Interpol */
-    c-[sx] { color: #6c71c4 } /* Literal.String.Other */
-    c-[sr] { color: #6c71c4 } /* Literal.String.Regex */
-    c-[ss] { color: #6c71c4 } /* Literal.String.Symbol */
-    c-[fm] { color: #268bd2 } /* Name.Function.Magic */
-    c-[vc] { color: #cb4b16 } /* Name.Variable.Class */
-    c-[vg] { color: #cb4b16 } /* Name.Variable.Global */
-    c-[vi] { color: #cb4b16 } /* Name.Variable.Instance */
-    c-[vm] { color: #cb4b16 } /* Name.Variable.Magic */
-    c-[il] { color: #657b83 } /* Literal.Number.Integer.Long */
-}
 </style>
  <body class="h-entry">
   <div class="head">
-   <p data-fill-with="logo"><a class="logo" href="https://knows.idlab.ugent.be/"> <img alt="KNoWS" height="48" src="logo.png"> </a> </p>
-   <h1 class="p-name no-ref" id="title">Framework for ODRL Rule Compliance through Evaluation</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2025-05-28">28 May 2025</time></span></h2>
+   <p data-fill-with="logo"></p>
+   <h1 class="p-name no-ref" id="title">Authorization for Data Spaces (A4DS)</h1>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2025-03-06">6 March 2025</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
-     <dt>This version:
-     <dd><a class="u-url" href="https://w3id.org/force/">https://w3id.org/force/</a>
-     <dt>Previous Versions:
-     <dd><a href="https://pheyvaer.github.io/built-specs-test/force/all/3c426ba9ae1e3a7790af8dc7f480bd18a5cc275b" rel="prev">https://pheyvaer.github.io/built-specs-test/force/all/3c426ba9ae1e3a7790af8dc7f480bd18a5cc275b</a>
-     <dt>Issue Tracking:
-     <dd><a href="https://github.com/SolidLabResearch/FORCE/issues/">GitHub</a>
-     <dt class="editor">Editors:
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:wout.slabbinck@ugent.be">Wout Slabbinck</a> (<a class="p-org org" href="http://idlab.ugent.be/">Ghent University - imec</a>)
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:beatriz.esteves@ugent.be">Beatriz Esteves</a> (<a class="p-org org" href="http://idlab.ugent.be/">Ghent University - imec</a>)
-     <dt>License:
-     <dd><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a>
+     <dt>Latest published version:
+     <dd><a href="https://spec.knows.idlab.ugent.be/A4DS/L0/latest/">https://spec.knows.idlab.ugent.be/A4DS/L0/latest/</a>
+     <dt>Feedback:
+     <dd><a href="https://github.com/SolidLabResearch/authz-spec/issues/">GitHub</a>
+     <dd><a href="#issues-index">Inline In Spec</a>
+     <dt class="editor">Editor:
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Wouter Termont</span> (<span class="p-org org">imec</span>)
     </dl>
    </div>
-   <div data-fill-with="warning"></div>
-   <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" height="15" src="https://licensebuttons.net/p/zero/1.0/80x15.png" width="80"></a> To the extent possible under law, the editors have waived all copyright
-and related or neighboring rights to this work.
-In addition, as of 28 May 2025,
-the editors have made this specification available under the <a href="https://www.openwebfoundation.org/the-agreements/the-owf-1-0-agreements-granted-claims/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
-which is available at https://www.openwebfoundation.org/the-agreements/the-owf-1-0-agreements-granted-claims/owfa-1-0.
-Parts of this work may be from another specification document.  If so, those parts are instead covered by the license of that specification document. </p>
+   <div data-fill-with="warning">
+    <details class="annoying-warning" open>
+     <summary>Next level available: A4DS L1</summary>
+     <p>This documents specifies an initial explorative level of the Authorization for Data Spaces (A4DS L0). A draft of the next level (A4DS L1) is available at <a href="https://spec.knows.idlab.ugent.be/A4DS/L1/latest/">https://spec.knows.idlab.ugent.be/A4DS/L1/latest/</a>.</p>
+    </details>
+   </div>
+   <p class="copyright" data-fill-with="copyright"></p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>The Framework for ODRL Rule Compliance through Evaluation (FORCE) is designed to assist in ODRL policy development and enhance comprehension of ODRL evaluation outputs. Furthermore, it enables experimentation and prototyping of ODRL 3.0 proposals.</p>
+   <p>Authorization for Data Spaces (A4DS) is a profile for the User-Managed Access (UMA) specifications ...</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
    <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory">
+    <li><a href="#h-status"><span class="secno"></span> <span class="content">Status of this document</span></a>
+    <li><a href="#h-intro"><span class="secno">1</span> <span class="content">Introduction</span></a>
+    <li><a href="#h-def"><span class="secno">2</span> <span class="content">Definitions</span></a>
+    <li><a href="#h-meta"><span class="secno">3</span> <span class="content">Authorization server metadata</span></a>
     <li>
-     <a href="#introduction"><span class="secno">1</span> <span class="content">Introd­uction</span></a>
+     <a href="#h-fed"><span class="secno">4</span> <span class="content">The federated protection API</span></a>
      <ol class="toc">
-      <li><a href="#terminology"><span class="secno">1.1</span> <span class="content">Terminology</span></a>
+      <li><a href="#h-fed-sec"><span class="secno">4.1</span> <span class="content">Security</span></a>
+      <li><a href="#h-fed-res"><span class="secno">4.2</span> <span class="content">Resource management</span></a>
+      <li><a href="#h-fed-res-ticket"><span class="secno">4.3</span> <span class="content">Requesting a Ticket</span></a>
      </ol>
-    <li><a href="#compliance-report"><span class="secno">2</span> <span class="content">ODRL Compliance Report Model</span></a>
-    <li><a href="#test-suite"><span class="secno">3</span> <span class="content">ODRL Test Suite</span></a>
-    <li><a href="#evaluator"><span class="secno">4</span> <span class="content">ODRL Evaluator</span></a>
-    <li><a href="#UI"><span class="secno">5</span> <span class="content">User Inteface</span></a>
-    <li><a href="#odrl3.0"><span class="secno">6</span> <span class="content">ODRL 3.0</span></a>
-    <li><a href="#supporting-materials"><span class="secno">7</span> <span class="content">Supporting Materials</span></a>
-    <li><a href="#namespaces"><span class="secno">8</span> <span class="content">Namespaces</span></a>
+    <li>
+     <a href="#h-access"><span class="secno">5</span> <span class="content">Accessing resources at the resource server</span></a>
+     <ol class="toc">
+      <li><a href="#h-access-no-token"><span class="secno">5.1</span> <span class="content">Attempting access WITHOUT a token</span></a>
+      <li><a href="#h-access-token"><span class="secno">5.2</span> <span class="content">Attempting access WITH a token</span></a>
+     </ol>
+    <li>
+     <a href="#h-authz"><span class="secno">6</span> <span class="content">Requesting access at the authorization server</span></a>
+     <ol class="toc">
+      <li><a href="#h-authz-ticket"><span class="secno">6.1</span> <span class="content">Requesting access WITH a permission ticket</span></a>
+      <li><a href="#h-authz-no-token"><span class="secno">6.2</span> <span class="content">Requesting access WITHOUT a permission ticket</span></a>
+      <li><a href="#h-authz-access"><span class="secno">6.3</span> <span class="content">Receiving an access token</span></a>
+      <li><a href="#h-authz-claims"><span class="secno">6.4</span> <span class="content">Claim token formats</span></a>
+     </ol>
     <li><a href="#conformance"><span class="secno"></span> <span class="content"> Conformance</span></a>
     <li>
      <a href="#index"><span class="secno"></span> <span class="content">Index</span></a>
      <ol class="toc">
-      <li><a href="#index-defined-here"><span class="secno"></span> <span class="content">Terms defined by this specification</span></a>
+      <li><a href="#index-defined-elsewhere"><span class="secno"></span> <span class="content">Terms defined by reference</span></a>
      </ol>
     <li>
      <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
      <ol class="toc">
       <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
+      <li><a href="#informative"><span class="secno"></span> <span class="content">Informative References</span></a>
      </ol>
+    <li><a href="#issues-index"><span class="secno"></span> <span class="content">Issues Index</span></a>
    </ol>
   </nav>
   <main>
-   <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introd­uction</span><a class="self-link" href="#introduction"></a></h2>
-    <mark>TODO:</mark> write full text
-The Open Digital Rights Language (ODRL) is a W3C Recommendation 
+   <h2 class="no-num heading settled" id="h-status"><span class="content">Status of this document</span></h2>
+   <p><em>This section is non-normative.</em> </p>
+   <p>This document is a draft for a technical specification published by the <a href="https://knows.idlab.ugent.be/">Knowledge on Web Scale</a> (KNoWS) group of the <a href="https://idlab.ugent.be/">Internet Technology and Data Science Lab</a> (IDLab), an <a href="https://www.imec-int.com/">imec</a>-affiliated research group at <a href="https://ugent.be/">Ghent University</a> (UGent).</p>
+   <p>It is a working document, that has NOT been publically reviewed, but represents active research at its time of publication. As such, document may be subject to changes, and other documents may supersede it at any time.</p>
+   <p>The specification proposed in this document is being drafted in multiple stages.</p>
    <ul>
     <li data-md>
-     <p><a data-link-type="biblio" href="#biblio-odrl-model" title="ODRL Information Model 2.2">[ODRL-model]</a>: interoperable information model</p>
+     <p><strong>Level 0</strong>, specified in this current draft, describes the interfaces and protocols of the final prototype implementation presented in the white paper <a data-biblio-display="inline" data-link-type="biblio" href="https://arxiv.org/abs/2411.05622"><cite>From Resource Control to Digital Trust with User-Managed Access</cite></a> <a data-link-type="biblio" href="#biblio-uma-trust" title="From Resource Control to Digital Trust with User-Managed Access">[UMA-Trust]</a>. It lays the groundwork for the general flow of the protocol.</p>
     <li data-md>
-     <p><a data-link-type="biblio" href="#biblio-odrl-vocab" title="ODRL Vocabulary &amp; Expression 2.2">[odrl-vocab]</a>: The vocabulary used in that model</p>
+     <p><strong>Level 1</strong> build on Level 0, addressing some minor shortcomings discussed in the white paper, and optimising alignment with existing standards.</p>
+    <li data-md>
+     <p><strong>Level 2</strong> and higher will build on Level 1, to cover the more extensive questions left open in the white paper.</p>
    </ul>
-   <p>The current problem: the recommendation defines how to represent policies using the vocabulary using the model, the interpretation and evaluation of these policies and its accompanying rules are not standardized.</p>
-   <p>To this extend: Formal Semantics spec <a data-link-type="biblio" href="#biblio-odrl-formal-semantics" title="ODRL Formal Semantics">[odrl-formal-semantics]</a></p>
-   <p>Inspired by the ODRL Formal Semantics CG, Slabbinck et al. made in <a href="https://raw.githubusercontent.com/woutslabbinck/papers/main/2025/Interoperable-Interpretation-and-Evaluation-of-ODRL-Policies.pdf">Interoperable Interpretation and Evaluation of ODRL Policies</a>:</p>
+   <p>Comments regarding this document are welcome, via the <a href="https://github.com/SolidLabResearch/authz-spec/issues/">GitHub issue tracker</a>, but the editors do NOT guarantee that this feedback will be processed, or when.</p>
+   <h2 class="heading settled" data-level="1" id="h-intro"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#h-intro"></a></h2>
+   <p><em>This section is non-normative.</em></p>
+   <p><em>User-Managed Access</em> (<abbr title="User-Managed Access">UMA</abbr>) is a pair of complementary extensions to <a data-biblio-display="inline" data-link-type="biblio" href="https://www.rfc-editor.org/rfc/rfc6749"><cite>The OAuth 2.0 Authorization Framework</cite></a> <a data-link-type="biblio" href="#biblio-oauth20" title="The OAuth 2.0 Authorization Framework">[OAuth20]</a>, published by the Kantara Initiative. It comprises the following specifications:</p>
    <ul>
     <li data-md>
-     <p><a data-link-type="dfn" href="#odrl-compliance-report" id="ref-for-odrl-compliance-report">ODRL Compliance Report</a></p>
+     <p><a data-biblio-display="inline" data-link-type="biblio" href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html"><cite>User-Managed Access (UMA) 2.0 Grant for OAuth 2.0 Authorization</cite></a>, which defines a new <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=1.3.-,Authorization%20Grant,-An%20authorization%20grant" id="ref-for-section-1:~:text=1.3.-,Authorization%20Grant,-An%20authorization%20grant">authorization grant</a> that enables party-to-party authorization and asynchronous policy configuration <a data-link-type="biblio" href="#biblio-uma-grant" title="User-Managed Access (UMA) 2.0 Grant for OAuth 2.0 Authorization">[UMA-Grant]</a>.</p>
     <li data-md>
-     <p><a href="https://w3id.org/force/test-suite">ODRL Test Suite</a>:</p>
-    <li data-md>
-     <p><a data-link-type="dfn" href="#odrl-evaluator" id="ref-for-odrl-evaluator">ODRL Evaluator</a></p>
+     <p><a data-biblio-display="inline" data-link-type="biblio" href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html"><cite>Federated Authorization for User-Managed Access (UMA) 2.0</cite></a>, which adds a <a data-link-type="dfn" href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#UMA-Impl:~:text=protection%20API,-The%20API" id="ref-for-UMA-Impl:~:text=protection%20API,-The%20API">protection API</a> enabling the federation of <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server">resource servers</a> and <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server">authorization servers</a>, enabling improved automation, central monitoring and a more granular control over resources and scopes <a data-link-type="biblio" href="#biblio-uma-fed" title="Federated Authorization for User-Managed Access (UMA) 2.0">[UMA-Fed]</a>.</p>
    </ul>
-   <p>FORCE is build on top of an <a data-link-type="dfn" href="#odrl-evaluator" id="ref-for-odrl-evaluator①">ODRL Evaluator</a> to allow experimenting with ODRL policies and the evaluation process.
-This is made possible through a user friendly User Interface
-Furthermore, it is used as an experimentation platform to prototype and showcase future ODRL proposals that could be included for ODRL 3.0.</p>
-   <h3 class="heading settled" data-level="1.1" id="terminology"><span class="secno">1.1. </span><span class="content">Terminology</span><a class="self-link" href="#terminology"></a></h3>
-   <p>The following terms are used to describe concepts in this specification.</p>
+   <p>This document introduces a profile for the combined <abbr title="User-Managed Access">UMA</abbr> specifications, called <strong>Authorization for Data Spaces</strong> (<abbr title="Authorization for Data Spaces">A4DS</abbr>, read as 'affords').</p>
+   <p>...</p>
+   <h2 class="heading settled" data-level="2" id="h-def"><span class="secno">2. </span><span class="content">Definitions</span><a class="self-link" href="#h-def"></a></h2>
+   <p>...</p>
+   <h2 class="heading settled" data-level="3" id="h-meta"><span class="secno">3. </span><span class="content">Authorization server metadata</span><a class="self-link" href="#h-meta"></a></h2>
+   <p>To inform other parties (e.g. <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server①">resource server</a>s and clients) about its API endpoints and capabilities, the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server①">authorization server</a> <em class="rfc2119">MUST</em> declare this metadata in a discovery document that is publically readable on the well-known URI <a data-link-type="biblio" href="#biblio-rfc8615" title="Well-Known Uniform Resource Identifiers (URIs)">[RFC8615]</a> formed by appending the string <code class="highlight">/.well-known/uma2-configuration</code> to the root URI of the <span id="ref-for-section-1:~:text=authorization%20server,-The%20server②">authorization server</span>. The document <em class="rfc2119">MUST</em> be in <a data-link-type="biblio" href="#biblio-json" title="The JavaScript Object Notation (JSON) Data Interchange Format">[JSON]</a> and adhere to <a data-link-type="biblio" href="#biblio-rfc8414" title="OAuth 2.0 Authorization Server Metadata">[RFC8414]</a>, as specified by <a data-link-type="biblio" href="#biblio-uma-grant" title="User-Managed Access (UMA) 2.0 Grant for OAuth 2.0 Authorization">[UMA-Grant]</a>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html#as-config">§ 2</a>, and <a data-link-type="biblio" href="#biblio-uma-fed" title="Federated Authorization for User-Managed Access (UMA) 2.0">[UMA-Fed]</a>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#as-config">§ 2</a>. The following metadata parameters are or special concern to this UMA extension profile:</p>
    <dl>
-    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="odrl-compliance-report">ODRL Compliance Report</dfn>
-    <dd>A vocabulary that is used to elaborate the result of an evaluation of an ODRL Policy, (optionally) ODRL Request and the State of the World. It elaborates not only whether a rule from a policy is active, but also why.
-    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="odrl-evaluator">ODRL Evaluator</dfn>
-    <dd>A system that determines whether the Rules of an ODRL Policy expression have meet their intended action performance.
-    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="state-of-the-world">State of the World</dfn>
-    <dd>A set of knowledge representing real-world information aiding the evaluation of ODRL Policies. See the <a href="https://w3id.org/force/sotw">State of the World for ODRL Evaluator</a> specification for further details. 
+    <dt data-md><code class="highlight">uma_profiles_supported</code>
+    <dd data-md>
+     <p><em class="rfc2119">REQUIRED</em>.  UMA profiles and extensions supported by this <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server③">authorization server</a>, as specified by <a data-link-type="biblio" href="#biblio-uma-grant" title="User-Managed Access (UMA) 2.0 Grant for OAuth 2.0 Authorization">[UMA-Grant]</a>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html#as-config">§ 2</a>. The metadata value <em class="rfc2119">MUST</em> be a <a data-link-type="biblio" href="#biblio-json" title="The JavaScript Object Notation (JSON) Data Interchange Format">[JSON]</a> array containing the URI <code class="highlight"><c- p>...</c-></code> as a <span title="The JavaScript Object Notation (JSON) Data Interchange Format">[JSON]</span> string value, to identify the extension profile specified in this document.</p>
    </dl>
-    <mark>TODO:</mark> add state of the world and refer to state of the world specification 
-   <h2 class="heading settled" data-level="2" id="compliance-report"><span class="secno">2. </span><span class="content">ODRL Compliance Report Model</span><a class="self-link" href="#compliance-report"></a></h2>
-   <figure id="compliance-report-model-figure">
-     <img src="./img/Compliance Report Model.svg"> 
-    <figcaption>Compliance Report model</figcaption>
-   </figure>
-    <mark>TODO:</mark> refer to custom spec 
-   <h2 class="heading settled" data-level="3" id="test-suite"><span class="secno">3. </span><span class="content">ODRL Test Suite</span><a class="self-link" href="#test-suite"></a></h2>
-   <figure id="test-suite-figure">
-     <img height="293" src="./img/test-suite-cropped.jpg" width="640"> 
-    <figcaption>ODRL Test Suite</figcaption>
-   </figure>
-    <mark>TODO:</mark> write full text 
+   <p class="issue" id="issue-73faab49"><a class="self-link" href="#issue-73faab49"></a> decide on profile URI</p>
+   <dl>
+    <dt data-md><code class="highlight">issuer</code>
+    <dd data-md>
+     <p><em class="rfc2119">REQUIRED</em>.  The authorization server’s <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc8414#section-2:~:text=issuer,-REQUIRED" id="ref-for-section-2:~:text=issuer,-REQUIRED">issuer</a> identifier, as specified by <a data-link-type="biblio" href="#biblio-rfc8414" title="OAuth 2.0 Authorization Server Metadata">[RFC8414]</a>, <a href="https://www.rfc-editor.org/rfc/rfc8414#section-2">§ 2</a>.</p>
+    <dt data-md><code class="highlight">jwks_uri</code>
+    <dd data-md>
+     <p><em class="rfc2119">REQUIRED</em>.  The URL at which the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server④">authorization server</a> serves its JWK Set <a data-link-type="biblio" href="#biblio-jwk" title="JSON Web Key (JWK)">[JWK]</a> document, which contains the public key(s) used to validate signatures from the authorization server, as specified by <a data-link-type="biblio" href="#biblio-rfc8414" title="OAuth 2.0 Authorization Server Metadata">[RFC8414]</a>, <a href="https://www.rfc-editor.org/rfc/rfc8414#section-2">§ 2</a>.</p>
+    <dt data-md><code class="highlight">resource_registration_endpoint</code>
+    <dd data-md>
+     <p><em class="rfc2119">REQUIRED</em>.  The URI at which the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server②">resource server</a> registers resources to put them under protection of the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server⑤">authorization server</a>, as specified by <a data-link-type="biblio" href="#biblio-uma-fed" title="Federated Authorization for User-Managed Access (UMA) 2.0">[UMA-Fed]</a>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#as-config">§ 2</a>, and extended in <a href="#h-fed-res-reg">§ 4.2.1 Resource registration</a>.</p>
+    <dt data-md><code class="highlight">permission_endpoint</code>
+    <dd data-md>
+     <p><em class="rfc2119">REQUIRED</em>.  The URI at which the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server③">resource server</a> requests permissions on the client’s behalf, as specified by <a data-link-type="biblio" href="#biblio-uma-fed" title="Federated Authorization for User-Managed Access (UMA) 2.0">[UMA-Fed]</a>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#as-config">§ 2</a>, and extended in <a href="#h-fed-res-ticket">§ 4.3 Requesting a Ticket</a>.</p>
+    <dt data-md><code class="highlight">token_endpoint</code>
+    <dd data-md>
+     <p><em class="rfc2119">REQUIRED</em>.  The URL at which the client requests an access token from the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server⑥">authorization server</a>, as defined in <a data-link-type="biblio" href="#biblio-oauth20" title="The OAuth 2.0 Authorization Framework">[OAuth20]</a>.</p>
+    <dt data-md><code class="highlight">introspection_endpoint</code>
+    <dd data-md>
+     <p><em class="rfc2119">REQUIRED</em>.  The URL at which the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server④">resource server</a> can retrieve meta information about a token, including whether this token is currently active, as defined in <a data-link-type="biblio" href="#biblio-rfc7662" title="OAuth 2.0 Token Introspection">[RFC7662]</a>, <a href="https://www.rfc-editor.org/rfc/rfc7662#section-2">§ 2</a>.</p>
+   </dl>
+   <h2 class="heading settled" data-level="4" id="h-fed"><span class="secno">4. </span><span class="content">The federated protection API</span><a class="self-link" href="#h-fed"></a></h2>
+   <p>The <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server⑦">authorization server</a> <em class="rfc2119">MUST</em> provide a <a data-link-type="dfn" href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#UMA-Impl:~:text=protection%20API,-The%20API" id="ref-for-UMA-Impl:~:text=protection%20API,-The%20API①">protection API</a>, as defined by <a data-link-type="biblio" href="#biblio-uma-fed" title="Federated Authorization for User-Managed Access (UMA) 2.0">[UMA-Fed]</a>, to govern its interactions with one or more <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server⑤">resource servers</a>. This API consists of three endpoints, listed in the <span id="ref-for-section-1:~:text=authorization%20server,-The%20server⑧">authorization server</span>’s metadata: <a data-link-type="dfn" href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#as-configresource_registration_endpoint" id="ref-for-as-configresource_registration_endpoint">resource registration endpoint</a>, <span id="ref-for-as-configresource_registration_endpoint①">resource registration endpoint</span>, and <a data-link-type="dfn" href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#as-configintrospection_endpoint" id="ref-for-as-configintrospection_endpoint">introspection endpoint</a>.</p>
+   <h3 class="heading settled" data-level="4.1" id="h-fed-sec"><span class="secno">4.1. </span><span class="content">Security</span><a class="self-link" href="#h-fed-sec"></a></h3>
+   <h4 class="heading settled" data-level="4.1.1" id="h-fed-sec-chan"><span class="secno">4.1.1. </span><span class="content">Channel security</span><a class="self-link" href="#h-fed-sec-chan"></a></h4>
+   <p>As specified by <a data-link-type="biblio" href="#biblio-uma-fed" title="Federated Authorization for User-Managed Access (UMA) 2.0">[UMA-Fed]</a>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#api-sec">§ 1.3</a>, all interactions via the <a data-link-type="dfn" href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#UMA-Impl:~:text=protection%20API,-The%20API" id="ref-for-UMA-Impl:~:text=protection%20API,-The%20API②">protection API</a> <em class="rfc2119">MUST</em> happen over an <a data-link-type="biblio" href="#biblio-rfc9112" title="HTTP/1.1">HTTP/1.1</a> channel (or higher) protected by <a data-link-type="biblio" href="#biblio-rfc8446" title="The Transport Layer Security (TLS) Protocol Version 1.3">TLS 1.3</a> (or higher), according to the
+  recommendations formulated in <a data-link-type="biblio" href="#biblio-rfc9325" title="Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)">[RFC9325]</a>.</p>
+   <h4 class="heading settled" data-level="4.1.2" id="h-fed-sec-msg"><span class="secno">4.1.2. </span><span class="content">Message security</span><a class="self-link" href="#h-fed-sec-msg"></a></h4>
+   <p>To be securely identifiable, the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server⑥">resource server</a> <em class="rfc2119">MUST</em> declare a JSON Web Key Set <a data-link-type="biblio" href="#biblio-jwk" title="JSON Web Key (JWK)">[JWK]</a> on the Well-Known URI <code class="highlight">/.well-known/jwks.json</code> <a data-link-type="biblio" href="#biblio-rfc8615" title="Well-Known Uniform Resource Identifiers (URIs)">[RFC8615]</a>.</p>
+   <p class="issue" id="issue-ff11e303"><a class="self-link" href="#issue-ff11e303"></a> loosen required url (since ref in discovery anyway)</p>
+   <p>In contrast to <a data-link-type="biblio" href="#biblio-uma-fed" title="Federated Authorization for User-Managed Access (UMA) 2.0">[UMA-Fed]</a>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#api-sec">§ 1.3</a>, messages from the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server⑦">resource server</a> to the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server⑨">authorization server</a> <em class="rfc2119">MUST NOT</em> be protected with
+  a protection API access token (PAT), but <em class="rfc2119">MUST</em> be protected with a HTTP Message Signature <a data-link-type="biblio" href="#biblio-rfc9421" title="HTTP Message Signatures">[RFC9421]</a> using one of the keys present in the aforementioned JWK Set.</p>
+   <p class="issue" id="issue-7be3fe08"><a class="self-link" href="#issue-7be3fe08"></a> discuss use of token (classic UMA)</p>
+   <p class="issue" id="issue-5a4f8c86"><a class="self-link" href="#issue-5a4f8c86"></a> discuss other key-based approaches (e.g. mTLS)</p>
+   <h4 class="heading settled" data-level="4.1.3" id="h-fed-sec-link"><span class="secno">4.1.3. </span><span class="content">Linking an RS to an AS</span><a class="self-link" href="#h-fed-sec-link"></a></h4>
+   <p class="issue" id="issue-0f6fe3fa"><a class="self-link" href="#issue-0f6fe3fa"></a> decide on protocol: how to get do mutual registration between AS and RS ?</p>
+   <h3 class="heading settled" data-level="4.2" id="h-fed-res"><span class="secno">4.2. </span><span class="content">Resource management</span><a class="self-link" href="#h-fed-res"></a></h3>
+   <h4 class="heading settled" data-level="4.2.1" id="h-fed-res-reg"><span class="secno">4.2.1. </span><span class="content">Resource registration</span><a class="self-link" href="#h-fed-res-reg"></a></h4>
+   <p>In order to make resources accessible via <abbr title="Authorization for Data Spaces">A4DS</abbr>, the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server⑧">resource server</a> needs to register them at the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server①⓪">authorization server</a>. <a data-link-type="biblio" href="#biblio-uma-fed" title="Federated Authorization for User-Managed Access (UMA) 2.0">[UMA-Fed]</a>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#resource-registration-endpoint">§ 3</a>, specifies how to manage these <a data-link-type="dfn" href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#resource-set-desc" id="ref-for-resource-set-desc">resource descriptions</a> using CRUD operations within the namespace of the <a data-link-type="dfn" href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#as-configresource_registration_endpoint" id="ref-for-as-configresource_registration_endpoint②">resource registration endpoint</a>.</p>
+   <p class="issue" id="issue-aaccd938"><a class="self-link" href="#issue-aaccd938"></a> go into resource and scope descriptions</p>
+   <p class="issue" id="issue-c9f4e35e"><a class="self-link" href="#issue-c9f4e35e"></a> make user_access_policy_uri recommended ?</p>
+   <h5 class="heading settled" data-level="4.2.1.1" id="h-fed-res-reg-init"><span class="secno">4.2.1.1. </span><span class="content">Initial resources</span><a class="self-link" href="#h-fed-res-reg-init"></a></h5>
+   <p>...</p>
+   <p class="issue" id="issue-b57e3bf7"><a class="self-link" href="#issue-b57e3bf7"></a> discuss (bulk) registration of initial resources</p>
+   <h3 class="heading settled" data-level="4.3" id="h-fed-res-ticket"><span class="secno">4.3. </span><span class="content">Requesting a Ticket</span><a class="self-link" href="#h-fed-res-ticket"></a></h3>
+   <p>When a client application makes an unauthorized attempt to access resources on an <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server⑨">resource server</a> – with an invalid access token, or none at all – the <span id="ref-for-section-1:~:text=resource%20server,-The%20server①⓪">resource server</span> can request a permission ticket from the relevant <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server①①">authorization server</a>, and provide the ticket to the client as an indication of the scope of the attempted access, while pointing the client to the <span id="ref-for-section-1:~:text=authorization%20server,-The%20server①②">authorization server</span>, as described in <a data-link-type="biblio" href="#biblio-uma-fed" title="Federated Authorization for User-Managed Access (UMA) 2.0">[UMA-Fed]</a>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#permission-endpoint">§ 4</a>.</p>
+   <p>As specified in <a data-link-type="biblio" href="#biblio-uma-fed" title="Federated Authorization for User-Managed Access (UMA) 2.0">[UMA-Fed]</a>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#rfc.section.4.1">§ 4.1</a>, the ticket is requested by sending a <code class="highlight">POST</code> request to
+  the <code class="highlight">permission_endpoint</code>, with an <code class="highlight">application<c- o>/</c->json</code> body consisting of a permission object or an array of one  or more permission objects. Each permission object contains the <code class="highlight">resource_scopes</code> requested for a specific <code class="highlight">resource_id</code>.  According to <span title="Federated Authorization for User-Managed Access (UMA) 2.0">[UMA-Fed]</span>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#rfc.section.4.2">§ 4.2</a>, a successful permission request results in a <code class="highlight"><c- mf>201</c-></code> response containing the <code class="highlight">ticket</code> parameter in an <code class="highlight">application<c- o>/</c->json</code> body.</p>
+   <p><abbr title="Authorization for Data Spaces">A4DS</abbr> extends the possible responses of the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server①③">authorization server</a> to a permission request, to enable better integration with public resources. When the <span id="ref-for-section-1:~:text=authorization%20server,-The%20server①④">authorization server</span> can detect within reasonable time that the resources in question are publically accessible, it <em class="rfc2119">SHOULD</em> signal this to the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server①①">resource server</a> by sending a <code class="highlight"><c- mf>200</c-></code> response without a body instead. This way, the <span id="ref-for-section-1:~:text=resource%20server,-The%20server①②">resource server</span> can allow the client to access public resources without a round-trip to the <span id="ref-for-section-1:~:text=authorization%20server,-The%20server①⑤">authorization server</span>, thus increasing performance and making public resources accessible for clients that are not aware of the UMA protocol.</p>
+   <h2 class="heading settled" data-level="5" id="h-access"><span class="secno">5. </span><span class="content">Accessing resources at the resource server</span><a class="self-link" href="#h-access"></a></h2>
+   <h3 class="heading settled" data-level="5.1" id="h-access-no-token"><span class="secno">5.1. </span><span class="content">Attempting access WITHOUT a token</span><a class="self-link" href="#h-access-no-token"></a></h3>
+   <p>When the client attempting to access resources has no token authorizing the access, the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server①③">resource server</a> <em class="rfc2119">MUST</em> request a permission ticket from the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server①⑥">authorization server</a>, as specified in <a data-link-type="biblio" href="#biblio-uma-grant" title="User-Managed Access (UMA) 2.0 Grant for OAuth 2.0 Authorization">[UMA-Grant]</a>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html#rs-tokenless-response">§ 3.2</a>, and described in <a href="#h-fed-res-ticket">§ 4.3 Requesting a Ticket</a>.</p>
+   <p>If the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server①⑦">authorization server</a> responds with status code <code class="highlight"><c- mf>200</c-></code>, the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server①④">resource server</a> <em class="rfc2119">SHOULD</em> let the attempted access succeed.</p>
+   <p>If the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server①⑧">authorization server</a> responds with status code <code class="highlight"><c- mf>201</c-></code> and a <code class="highlight">ticket</code> parameter, the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server①⑤">resource server</a> <em class="rfc2119">MUST NOT</em> let the attempted access succeed. Instead, the <span id="ref-for-section-1:~:text=resource%20server,-The%20server①⑥">resource server</span> <em class="rfc2119">MUST</em> pass this parameter to the client in the <code class="highlight">WWW<c- o>-</c->Authenticate</code> header of a <code class="highlight"><c- mf>401</c-></code> response, with the scheme <code class="highlight">UMA</code>, and the <code class="highlight">issuer</code> URI of the <span id="ref-for-section-1:~:text=authorization%20server,-The%20server①⑨">authorization server</span> as an additional parameter <code class="highlight">as_uri</code>, as specified in <a data-link-type="biblio" href="#biblio-uma-grant" title="User-Managed Access (UMA) 2.0 Grant for OAuth 2.0 Authorization">[UMA-Grant]</a>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html#permission-success-to-client">§ 3.2.1</a> (see also <a data-link-type="biblio" href="#biblio-rfc9110" title="HTTP Semantics">[RFC9110]</a>, <a href="https://httpwg.org/specs/rfc9110.html#field.www-authenticate">§ 11.6.1</a>). For example:</p>
+<pre class="highlight line-numbered"><span class="line-no" data-line="1"></span><span class="line">HTTP<c- o>/</c-><c- mf>1.1</c-> <c- mf>401</c-> Unauthorized</span><span class="line-no" data-line="2"></span><span class="line">WWW<c- o>-</c->Authenticate<c- o>:</c-> UMA</span><span class="line-no" data-line="3"></span><span class="line">  as_uri<c- o>=</c-><c- u>"https://as.example.com"</c-><c- p>,</c-></span><span class="line-no" data-line="4"></span><span class="line">  ticket<c- o>=</c-><c- u>"016f84e8-f9b9-11e0-bd6f-0021cc6004de"</c-></span><span class="line-no" data-line="5"></span><span class="line"><c- p>...</c-></span></pre>
+   <p class="issue" id="issue-2e30079c"><a class="self-link" href="#issue-2e30079c"></a> look into particular use of realm parameter (vs scope) to limit protection space for user/ticket/type</p>
+   <h3 class="heading settled" data-level="5.2" id="h-access-token"><span class="secno">5.2. </span><span class="content">Attempting access WITH a token</span><a class="self-link" href="#h-access-token"></a></h3>
+   <p>When the client attempting to access resources presents the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server①⑦">resource server</a> with an access token, e.g., a Bearer token passed in the <code class="highlight">Authorization</code> header of the request (cf. <a data-link-type="biblio" href="#biblio-rfc6750" title="The OAuth 2.0 Authorization Framework: Bearer Token Usage">[RFC6750]</a>), the <span id="ref-for-section-1:~:text=resource%20server,-The%20server①⑧">resource server</span> <em class="rfc2119">MUST</em> determine whether the token is valid and covers the resources and scopes being accessed, as specified in <a data-link-type="biblio" href="#biblio-uma-grant" title="User-Managed Access (UMA) 2.0 Grant for OAuth 2.0 Authorization">[UMA-Grant]</a>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html#rs-rpt-response">§ 3.5</a> and <a data-link-type="biblio" href="#biblio-uma-fed" title="Federated Authorization for User-Managed Access (UMA) 2.0">[UMA-Fed]</a>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#introspection-endpoint">§ 5</a>, using token introspection as necessary (cf. <a data-link-type="biblio" href="#biblio-rfc7662" title="OAuth 2.0 Token Introspection">[RFC7662]</a>). If this is indeed the case, the <span id="ref-for-section-1:~:text=resource%20server,-The%20server①⑨">resource server</span> <em class="rfc2119">MUST</em> process the authorized request. If, on the contrary, the token is invalid, or does not cover the neccessary resources or scopes, the <span id="ref-for-section-1:~:text=resource%20server,-The%20server②⓪">resource server</span> <em class="rfc2119">MUST NOT</em> give the client access, and <em class="rfc2119">MUST</em> instead respond as if the request were unaccompanied by an access token.</p>
+   <h2 class="heading settled" data-level="6" id="h-authz"><span class="secno">6. </span><span class="content">Requesting access at the authorization server</span><a class="self-link" href="#h-authz"></a></h2>
+   <h3 class="heading settled" data-level="6.1" id="h-authz-ticket"><span class="secno">6.1. </span><span class="content">Requesting access WITH a permission ticket</span><a class="self-link" href="#h-authz-ticket"></a></h3>
+   <p>Having received a permission ticket from the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server②①">resource server</a>, the client can turn to the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server②⓪">authorization server</a> to request access for the resource(s) and scope(s) represented by the ticket. This request is sent to the token_endpoint of the <span id="ref-for-section-1:~:text=authorization%20server,-The%20server②①">authorization server</span>, as described by <a data-link-type="biblio" href="#biblio-uma-grant" title="User-Managed Access (UMA) 2.0 Grant for OAuth 2.0 Authorization">[UMA-Grant]</a>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html#uma-grant-type">§ 3.3.1</a>. Contrary to the UMA specification, the request can not limit the scope represented in the ticket (but it can achieve the same with the <code class="highlight">permission</code> parameter described in the following section).</p>
+   <p class="issue" id="issue-f975cb6b"><a class="self-link" href="#issue-f975cb6b"></a> still allowing scope would not break anything</p>
+   <p>The body of the request is encoded as <code class="highlight">application<c- o>/</c->json</code>, rather than <code class="highlight">application<c- o>/</c->x<c- o>-</c->www<c- o>-</c->form<c- o>-</c->urlencoded</code>.</p>
+   <p class="issue" id="issue-3099c6ef"><a class="self-link" href="#issue-3099c6ef"></a> revert this decision, allowing both, to remain compatible with standard oauth/uma clients; e.g. by relying on Rich Authorization Requests and/or JWT-Secured Authorization Requests and/or Pushed Authorization Requests.</p>
+   <p>For example:</p>
+<pre class="highlight line-numbered"><span class="line-no" data-line="1"></span><span class="line">POST <c- o>/</c->token HTTP<c- o>/</c-><c- mf>1.1</c-></span><span class="line-no" data-line="2"></span><span class="line">Host<c- o>:</c-> <c- kr>as</c-><c- p>.</c->example<c- p>.</c->com</span><span class="line-no" data-line="3"></span><span class="line">Content<c- o>-</c->Type<c- o>:</c-> application<c- o>/</c->json</span><span class="line-no" data-line="4"></span><span class="line"><c- p>...</c-></span><span class="line-no" data-line="5"></span><span class="line"></span><span class="line-no" data-line="6"></span><span class="line"><c- p>{</c-></span><span class="line-no" data-line="7"></span><span class="line">  <c- u>"grant_type"</c-><c- o>:</c-> <c- u>"urn:ietf:params:oauth:grant-type:uma-ticket"</c-><c- p>,</c-></span><span class="line-no" data-line="8"></span><span class="line">  <c- u>"ticket"</c-><c- o>:</c-> <c- u>"016f84e8-f9b9-11e0-bd6f-0021cc6004de"</c-><c- p>,</c-></span><span class="line-no" data-line="9"></span><span class="line">  <c- u>"claim_token_format"</c-><c- o>:</c-> <c- u>"http://openid.net/specs/openid-connect-core-1_0.html#IDToken"</c-><c- p>,</c-></span><span class="line-no" data-line="10"></span><span class="line">  <c- u>"claim_token"</c-><c- o>:</c-> <c- u>"eyj0..."</c-></span><span class="line-no" data-line="11"></span><span class="line"><c- p>}</c-></span></pre>
+   <h3 class="heading settled" data-level="6.2" id="h-authz-no-token"><span class="secno">6.2. </span><span class="content">Requesting access WITHOUT a permission ticket</span><a class="self-link" href="#h-authz-no-token"></a></h3>
+   <p>For clients that know the resource(s) and scope(s) they need access to, the <abbr title="Authorization for Data Spaces">A4DS</abbr> profile adds a shortcut that saves them the initial request to the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server②②">resource server</a>. Instead, those clients can address the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server②②">authorization server</a> directly, and include the resource(s) and scope(s) directly under the <code class="highlight">permissions</code> parameter. A new ticket is then automatically generated on-the-fly. When present, the <code class="highlight">permissions</code> parameter <em class="rfc2119">MUST</em> contain a JSON array of objects with the following two fields:</p>
    <ul>
     <li data-md>
-     <p><mark>TODO:</mark> what makes a test pass or fail in plain terms.</p>
+     <p><code class="highlight">resource_id</code>: a string</p>
+    <li data-md>
+     <p><code class="highlight">resource_scopes</code>: an array of strings</p>
    </ul>
-   <h2 class="heading settled" data-level="4" id="evaluator"><span class="secno">4. </span><span class="content">ODRL Evaluator</span><a class="self-link" href="#evaluator"></a></h2>
-   <figure id="odrl-evaluator-figure">
-     <img src="./img/ODRL-Evaluator.svg"> 
-    <figcaption>ODRL Evaluator architecture</figcaption>
-   </figure>
-    <mark>TODO:</mark> write full text 
-   <p>Mention different steps</p>
-   <p>Elaborate the need for the time thingy
-Refer to repo how much we support</p>
-   <h2 class="heading settled" data-level="5" id="UI"><span class="secno">5. </span><span class="content">User Inteface</span><a class="self-link" href="#UI"></a></h2>
-    <a href="https://w3id.org/force/ESWC2025-demo">https://w3id.org/force/ESWC2025-demo</a> <mark>TODO: rename to NXDG2025 demo</mark> 
-   <h2 class="heading settled" data-level="6" id="odrl3.0"><span class="secno">6. </span><span class="content">ODRL 3.0</span><a class="self-link" href="#odrl3.0"></a></h2>
-   <p><a data-link-type="biblio" href="#biblio-odrl30proposal" title="Open Digital Rights Language (ODRL) 3.0 Proposal">[ODRL3.0PROPOSAL]</a></p>
-   <h2 class="heading settled" data-level="7" id="supporting-materials"><span class="secno">7. </span><span class="content">Supporting Materials</span><a class="self-link" href="#supporting-materials"></a></h2>
-   <ul>
-    <li data-md>
-     <p><a data-link-type="dfn" href="#odrl-compliance-report" id="ref-for-odrl-compliance-report①">ODRL Compliance Report</a>: <a href="https://w3id.org/force/compliance-report">https://w3id.org/force/compliance-report</a></p>
-     <ul>
-      <li data-md>
-       <p>repo: <a href="https://w3id.org/force/compliance-report/repo">https://w3id.org/force/compliance-report/repo</a></p>
-     </ul>
-    <li data-md>
-     <p>test suite: <a href="https://w3id.org/force/test-suite">https://w3id.org/force/test-suite</a></p>
-     <ul>
-      <li data-md>
-       <p>repo: <a href="https://w3id.org/force/test-suite/repo">https://w3id.org/force/test-suite/repo</a></p>
-     </ul>
-    <li data-md>
-     <p>github repository for an <a data-link-type="dfn" href="#odrl-evaluator" id="ref-for-odrl-evaluator②">ODRL Evaluator</a>: <a href="https://w3id.org/force/evaluator">https://w3id.org/force/evaluator</a></p>
-    <li data-md>
-     <p>ESWC 2025 paper: <mark>TODO:</mark></p>
-    <li data-md>
-     <p><a data-link-type="dfn" href="#state-of-the-world" id="ref-for-state-of-the-world">State of the World</a> for ODRL specification (<a data-link-type="biblio" href="#biblio-sotw4odrl" title="State of the World for ODRL Evaluator">[SotW4ODRL]</a>): <a href="https://w3id.org/sotw">https://w3id.org/sotw</a></p>
-    <li data-md>
-     <p>ODRL Policy Instantiation specification (<a data-link-type="biblio" href="#biblio-odrl-instantiation" title="ODRL Policy Agreement Instantiation">[ODRL-Instantiation]</a>): <a href="https://w3id.org/policy-instantiation">https://w3id.org/policy-instantiation</a></p>
-    <li data-md>
-     <p>ODRL 3.0 Proposal specification: <a href="https://w3id.org/odrl3proposal">https://w3id.org/odrl3proposal</a></p>
-    <li data-md>
-     <p>demonstrator: <a href="https://w3id.org/force/ESWC2025-demo">https://w3id.org/force/ESWC2025-demo</a></p>
-     <ul>
-      <li data-md>
-       <p>source code: <a href="https://w3id.org/force/ESWC2025-demo/repo">https://w3id.org/force/ESWC2025-demo/repo</a></p>
-     </ul>
-   </ul>
-   <h2 class="heading settled" data-level="8" id="namespaces"><span class="secno">8. </span><span class="content">Namespaces</span><a class="self-link" href="#namespaces"></a></h2>
-   <p>Commonly used namespace prefixes used in this specification:</p>
-<pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcterms:</c->       <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>odrl:</c->          <c- g>&lt;http://www.w3.org/ns/odrl/2/></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>odrl3proposal:</c-> <c- g>&lt;https://w3id.org/force/odrl3proposal#></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>report:</c->        <c- g>&lt;https://w3id.org/force/compliance-report#></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>rdf:</c->           <c- g>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>skos:</c->          <c- g>&lt;http://www.w3.org/2004/02/skos/core#></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>xsd:</c->           <c- g>&lt;http://www.w3.org/2001/XMLSchema#></c-> <c- p>.</c->
-</pre>
+   <p class="note" role="note"><span class="marker">NOTE:</span> Keycloak employs a similar approach, but restricts the their <code class="highlight">permission</code> to a single string encoding of JSON data. Keycloak also allows such requests to target specific resource URIs, so their AS knows more than a standard UMA server.</p>
+   <p>For example:</p>
+<pre class="highlight line-numbered"><span class="line-no" data-line="1"></span><span class="line">POST <c- o>/</c->token HTTP<c- o>/</c-><c- mf>1.1</c-></span><span class="line-no" data-line="2"></span><span class="line">Host<c- o>:</c-> <c- kr>as</c-><c- p>.</c->example<c- p>.</c->com</span><span class="line-no" data-line="3"></span><span class="line">Content<c- o>-</c->Type<c- o>:</c-> application<c- o>/</c->json</span><span class="line-no" data-line="4"></span><span class="line"><c- p>...</c-></span><span class="line-no" data-line="5"></span><span class="line"></span><span class="line-no" data-line="6"></span><span class="line"><c- p>{</c-></span><span class="line-no" data-line="7"></span><span class="line">  <c- u>"permissions"</c-><c- o>:</c-> <c- p>{</c-></span><span class="line-no" data-line="8"></span><span class="line">    <c- u>"resource_id"</c-><c- o>:</c-> <c- u>"KX3A-39WE"</c-><c- p>,</c-></span><span class="line-no" data-line="9"></span><span class="line">    <c- u>"resource_scopes"</c-><c- o>:</c-> <c- p>[</c-> </span><span class="line-no" data-line="10"></span><span class="line">      <c- u>"post-updates"</c-><c- p>,</c-></span><span class="line-no" data-line="11"></span><span class="line">      <c- u>"http://photoz.example.com/dev/scopes/print"</c-></span><span class="line-no" data-line="12"></span><span class="line">    <c- p>]</c-></span><span class="line-no" data-line="13"></span><span class="line">  <c- p>},</c-></span><span class="line-no" data-line="14"></span><span class="line">  <c- u>"claim_token_format"</c-><c- o>:</c-> <c- u>"http://openid.net/specs/openid-connect-core-1_0.html#IDToken"</c-><c- p>,</c-></span><span class="line-no" data-line="15"></span><span class="line">  <c- u>"claim_token"</c-><c- o>:</c-> <c- u>"eyj0..."</c-></span><span class="line-no" data-line="16"></span><span class="line"><c- p>}</c-></span></pre>
+   <h3 class="heading settled" data-level="6.3" id="h-authz-access"><span class="secno">6.3. </span><span class="content">Receiving an access token</span><a class="self-link" href="#h-authz-access"></a></h3>
+   <p>When the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server" id="ref-for-section-1:~:text=authorization%20server,-The%20server②③">authorization server</a> concludes that the provided claims are sufficient to grant the client access to the requested resources, it responds with an access token and Authorization scheme, as specified in <a data-link-type="biblio" href="#biblio-uma-grant" title="User-Managed Access (UMA) 2.0 Grant for OAuth 2.0 Authorization">[UMA-Grant]</a>, <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html#uma-grant-type">§ 3.3.5</a> (see also <a data-link-type="biblio" href="#biblio-rfc9110" title="HTTP Semantics">[RFC9110]</a>, <a href="https://httpwg.org/specs/rfc9110.html#field.authorization">§ 11.6.2</a>)). For example:</p>
+<pre class="highlight line-numbered"><span class="line-no" data-line="1"></span><span class="line">HTTP<c- o>/</c-><c- mf>1.1</c-> <c- mf>200</c-> OK</span><span class="line-no" data-line="2"></span><span class="line">Content<c- o>-</c->Type<c- o>:</c-> application<c- o>/</c->json</span><span class="line-no" data-line="3"></span><span class="line"><c- p>...</c-> </span><span class="line-no" data-line="4"></span><span class="line"></span><span class="line-no" data-line="5"></span><span class="line"><c- p>{</c->  </span><span class="line-no" data-line="6"></span><span class="line">  <c- u>"access_token"</c-><c- o>:</c-> <c- u>"sbjsbhs(/SSJHBSUSSJHVhjsgvhsgvshgsv"</c-><c- p>,</c-></span><span class="line-no" data-line="7"></span><span class="line">  <c- u>"token_type"</c-><c- o>:</c-> <c- u>"Bearer"</c-></span><span class="line-no" data-line="8"></span><span class="line"><c- p>}</c-></span></pre>
+   <p>The client can then use this token to access the required resources at the <a data-link-type="dfn" href="https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server" id="ref-for-section-1:~:text=resource%20server,-The%20server②③">resource server</a> (cf <a href="#h-access-token">§ 5.2 Attempting access WITH a token</a>).</p>
+   <h3 class="heading settled" data-level="6.4" id="h-authz-claims"><span class="secno">6.4. </span><span class="content">Claim token formats</span><a class="self-link" href="#h-authz-claims"></a></h3>
+   <p>...</p>
+   <p class="issue" id="issue-71947774"><a class="self-link" href="#issue-71947774"></a> clarify claim token formats, and discuss advertising them with a parameter separate from uma profiles</p>
   </main>
   <div data-fill-with="conformance">
    <h2 class="no-ref no-num heading settled" id="conformance"><span class="content"> Conformance</span><a class="self-link" href="#conformance"></a></h2>
@@ -2482,30 +2367,83 @@ Refer to repo how much we support</p>
 })();
 </script>
   <h2 class="no-num no-ref heading settled" id="index"><span class="content">Index</span><a class="self-link" href="#index"></a></h2>
-  <h3 class="no-num no-ref heading settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
+  <h3 class="no-num no-ref heading settled" id="index-defined-elsewhere"><span class="content">Terms defined by reference</span><a class="self-link" href="#index-defined-elsewhere"></a></h3>
   <ul class="index">
-   <li><a href="#odrl-compliance-report">ODRL Compliance Report</a><span>, in § 1.1</span>
-   <li><a href="#odrl-evaluator">ODRL Evaluator</a><span>, in § 1.1</span>
-   <li><a href="#state-of-the-world">State of the World</a><span>, in § 1.1</span>
+   <li>
+    <a data-link-type="biblio">[OAuth20]</a> defines the following terms:
+    <ul>
+     <li><span class="dfn-paneled" id="d6ebf33c">authorization grant</span>
+     <li><span class="dfn-paneled" id="7cdd857e">authorization server</span>
+     <li><span class="dfn-paneled" id="84160aef">resource server</span>
+    </ul>
+   <li>
+    <a data-link-type="biblio">[RFC8414]</a> defines the following terms:
+    <ul>
+     <li><span class="dfn-paneled" id="0cf6ae20">issuer</span>
+    </ul>
+   <li>
+    <a data-link-type="biblio">[UMA-Fed]</a> defines the following terms:
+    <ul>
+     <li><span class="dfn-paneled" id="c16f6445">introspection endpoint</span>
+     <li><span class="dfn-paneled" id="fde72978">protection API</span>
+     <li><span class="dfn-paneled" id="eeb48604">resource description</span>
+     <li><span class="dfn-paneled" id="565fe40c">resource registration endpoint</span>
+    </ul>
   </ul>
   <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
   <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
-   <dt id="biblio-odrl-formal-semantics">[ODRL-FORMAL-SEMANTICS]
-   <dd>Nicoletta Fornara; et al. <a href="https://w3c.github.io/odrl/formal-semantics/"><cite>ODRL Formal Semantics</cite></a>. URL: <a href="https://w3c.github.io/odrl/formal-semantics/">https://w3c.github.io/odrl/formal-semantics/</a>
-   <dt id="biblio-odrl-instantiation">[ODRL-Instantiation]
-   <dd>Ruben Dedecker; Beatriz Esteves. <a href="https://w3id.org/force/policy-instantiation"><cite>ODRL Policy Agreement Instantiation</cite></a>. URL: <a href="https://w3id.org/force/policy-instantiation">https://w3id.org/force/policy-instantiation</a>
-   <dt id="biblio-odrl-model">[ODRL-model]
-   <dd>Renato Iannella; Serena Villata. <a href="https://w3c.github.io/poe/model/"><cite>ODRL Information Model 2.2</cite></a>. URL: <a href="https://w3c.github.io/poe/model/">https://w3c.github.io/poe/model/</a>
-   <dt id="biblio-odrl-vocab">[ODRL-VOCAB]
-   <dd>Renato Iannella; et al. <a href="https://w3c.github.io/poe/vocab/"><cite>ODRL Vocabulary &amp; Expression 2.2</cite></a>. URL: <a href="https://w3c.github.io/poe/vocab/">https://w3c.github.io/poe/vocab/</a>
-   <dt id="biblio-odrl30proposal">[ODRL3.0PROPOSAL]
-   <dd>Beatriz Esteves; et al. <a href="https://w3id.org/force/odrl3proposal"><cite>Open Digital Rights Language (ODRL) 3.0 Proposal</cite></a>. URL: <a href="https://w3id.org/force/odrl3proposal">https://w3id.org/force/odrl3proposal</a>
+   <dt id="biblio-json">[JSON]
+   <dd>T. Bray, Ed.. <a href="https://www.rfc-editor.org/rfc/rfc8259"><cite>The JavaScript Object Notation (JSON) Data Interchange Format</cite></a>. December 2017. Internet Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc8259">https://www.rfc-editor.org/rfc/rfc8259</a>
+   <dt id="biblio-oauth20">[OAuth20]
+   <dd>D. Hardt, Ed.. <a href="https://www.rfc-editor.org/rfc/rfc6749"><cite>The OAuth 2.0 Authorization Framework</cite></a>. October 2012. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc6749">https://www.rfc-editor.org/rfc/rfc6749</a>
    <dt id="biblio-rfc2119">[RFC2119]
    <dd>S. Bradner. <a href="https://datatracker.ietf.org/doc/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. March 1997. Best Current Practice. URL: <a href="https://datatracker.ietf.org/doc/html/rfc2119">https://datatracker.ietf.org/doc/html/rfc2119</a>
-   <dt id="biblio-sotw4odrl">[SotW4ODRL]
-   <dd>Beatriz Esteves; Wout Slabbinck. <a href="https://w3id.org/force/sotw"><cite>State of the World for ODRL Evaluator</cite></a>. URL: <a href="https://w3id.org/force/sotw">https://w3id.org/force/sotw</a>
+   <dt id="biblio-rfc7662">[RFC7662]
+   <dd>J. Richer, Ed.. <a href="https://www.rfc-editor.org/rfc/rfc7662"><cite>OAuth 2.0 Token Introspection</cite></a>. October 2015. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc7662">https://www.rfc-editor.org/rfc/rfc7662</a>
+   <dt id="biblio-rfc8414">[RFC8414]
+   <dd>M. Jones; N. Sakimura; J. Bradley. <a href="https://www.rfc-editor.org/rfc/rfc8414"><cite>OAuth 2.0 Authorization Server Metadata</cite></a>. June 2018. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc8414">https://www.rfc-editor.org/rfc/rfc8414</a>
+   <dt id="biblio-rfc8446">[RFC8446]
+   <dd>E. Rescorla. <a href="https://www.rfc-editor.org/rfc/rfc8446"><cite>The Transport Layer Security (TLS) Protocol Version 1.3</cite></a>. August 2018. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc8446">https://www.rfc-editor.org/rfc/rfc8446</a>
+   <dt id="biblio-rfc8615">[RFC8615]
+   <dd>M. Nottingham. <a href="https://www.rfc-editor.org/rfc/rfc8615"><cite>Well-Known Uniform Resource Identifiers (URIs)</cite></a>. May 2019. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc8615">https://www.rfc-editor.org/rfc/rfc8615</a>
+   <dt id="biblio-rfc9110">[RFC9110]
+   <dd>R. Fielding, Ed.; M. Nottingham, Ed.; J. Reschke, Ed.. <a href="https://httpwg.org/specs/rfc9110.html"><cite>HTTP Semantics</cite></a>. June 2022. Internet Standard. URL: <a href="https://httpwg.org/specs/rfc9110.html">https://httpwg.org/specs/rfc9110.html</a>
+   <dt id="biblio-rfc9112">[RFC9112]
+   <dd>R. Fielding, Ed.; M. Nottingham, Ed.; J. Reschke, Ed.. <a href="https://httpwg.org/specs/rfc9112.html"><cite>HTTP/1.1</cite></a>. June 2022. Internet Standard. URL: <a href="https://httpwg.org/specs/rfc9112.html">https://httpwg.org/specs/rfc9112.html</a>
+   <dt id="biblio-rfc9325">[RFC9325]
+   <dd>Y. Sheffer; P. Saint-Andre; T. Fossati. <a href="https://www.rfc-editor.org/rfc/rfc9325"><cite>Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)</cite></a>. November 2022. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc9325">https://www.rfc-editor.org/rfc/rfc9325</a>
+   <dt id="biblio-uma-fed">[UMA-Fed]
+   <dd>Maciej Machulak; Justin Richer; Eve Maler, Ed.. <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html"><cite>Federated Authorization for User-Managed Access (UMA) 2.0</cite></a>. 7 January 2018. Recommendation. URL: <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html">https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html</a>
+   <dt id="biblio-uma-grant">[UMA-Grant]
+   <dd>Maciej Machulak; Justin Richer; Eve Maler, Ed.. <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html"><cite>User-Managed Access (UMA) 2.0 Grant for OAuth 2.0 Authorization</cite></a>. 7 January 2018. Recommendation. URL: <a href="https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html">https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html</a>
   </dl>
+  <h3 class="no-num no-ref heading settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="#informative"></a></h3>
+  <dl>
+   <dt id="biblio-jwk">[JWK]
+   <dd>M. Jones. <a href="https://www.rfc-editor.org/rfc/rfc7517"><cite>JSON Web Key (JWK)</cite></a>. May 2015. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc7517">https://www.rfc-editor.org/rfc/rfc7517</a>
+   <dt id="biblio-rfc6750">[RFC6750]
+   <dd>M. Jones; D. Hardt. <a href="https://www.rfc-editor.org/rfc/rfc6750"><cite>The OAuth 2.0 Authorization Framework: Bearer Token Usage</cite></a>. October 2012. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc6750">https://www.rfc-editor.org/rfc/rfc6750</a>
+   <dt id="biblio-rfc9421">[RFC9421]
+   <dd>A. Backman, Ed.; J. Richer, Ed.; M. Sporny. <a href="https://www.rfc-editor.org/rfc/rfc9421"><cite>HTTP Message Signatures</cite></a>. February 2024. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc9421">https://www.rfc-editor.org/rfc/rfc9421</a>
+   <dt id="biblio-uma-trust">[UMA-Trust]
+   <dd>Wouter Termont; et al. <a href="https://arxiv.org/abs/2411.05622"><cite>From Resource Control to Digital Trust with User-Managed Access</cite></a>. 5 November 2024. URL: <a href="https://arxiv.org/abs/2411.05622">https://arxiv.org/abs/2411.05622</a>
+  </dl>
+  <h2 class="no-num no-ref heading settled" id="issues-index"><span class="content">Issues Index</span><a class="self-link" href="#issues-index"></a></h2>
+  <div style="counter-reset:issue">
+   <div class="issue"> decide on profile URI <a class="issue-return" href="#issue-73faab49" title="Jump to section">↵</a></div>
+   <div class="issue"> loosen required url (since ref in discovery anyway) <a class="issue-return" href="#issue-ff11e303" title="Jump to section">↵</a></div>
+   <div class="issue"> discuss use of token (classic UMA) <a class="issue-return" href="#issue-7be3fe08" title="Jump to section">↵</a></div>
+   <div class="issue"> discuss other key-based approaches (e.g. mTLS) <a class="issue-return" href="#issue-5a4f8c86" title="Jump to section">↵</a></div>
+   <div class="issue"> decide on protocol: how to get do mutual registration between AS and RS ? <a class="issue-return" href="#issue-0f6fe3fa" title="Jump to section">↵</a></div>
+   <div class="issue"> go into resource and scope descriptions <a class="issue-return" href="#issue-aaccd938" title="Jump to section">↵</a></div>
+   <div class="issue"> make user_access_policy_uri recommended ? <a class="issue-return" href="#issue-c9f4e35e" title="Jump to section">↵</a></div>
+   <div class="issue"> discuss (bulk) registration of initial resources <a class="issue-return" href="#issue-b57e3bf7" title="Jump to section">↵</a></div>
+   <div class="issue"> look into particular use of realm parameter (vs scope) to limit protection space for user/ticket/type <a class="issue-return" href="#issue-2e30079c" title="Jump to section">↵</a></div>
+   <div class="issue"> still allowing scope would not break anything <a class="issue-return" href="#issue-f975cb6b" title="Jump to section">↵</a></div>
+   <div class="issue"> revert this decision, allowing both, to remain compatible with standard oauth/uma clients; e.g. by relying on Rich Authorization Requests and/or JWT-Secured Authorization Requests and/or Pushed Authorization Requests. <a class="issue-return" href="#issue-3099c6ef" title="Jump to section">↵</a></div>
+   <div class="issue"> clarify claim token formats, and discuss advertising them with a parameter separate from uma profiles <a class="issue-return" href="#issue-71947774" title="Jump to section">↵</a></div>
+  </div>
 <script>/* Boilerplate: script-dom-helper */
 "use strict";
 function query(sel) { return document.querySelector(sel); }
@@ -2706,9 +2644,14 @@ function parseHTML(markup) {
 "use strict";
 {
 let dfnPanelData = {
-"odrl-compliance-report": {"dfnID":"odrl-compliance-report","dfnText":"ODRL Compliance Report","external":false,"refSections":[{"refs":[{"id":"ref-for-odrl-compliance-report"}],"title":"1. Introd\u00aduction"},{"refs":[{"id":"ref-for-odrl-compliance-report\u2460"}],"title":"7. Supporting Materials"}],"url":"#odrl-compliance-report"},
-"odrl-evaluator": {"dfnID":"odrl-evaluator","dfnText":"ODRL Evaluator","external":false,"refSections":[{"refs":[{"id":"ref-for-odrl-evaluator"},{"id":"ref-for-odrl-evaluator\u2460"}],"title":"1. Introd\u00aduction"},{"refs":[{"id":"ref-for-odrl-evaluator\u2461"}],"title":"7. Supporting Materials"}],"url":"#odrl-evaluator"},
-"state-of-the-world": {"dfnID":"state-of-the-world","dfnText":"State of the World","external":false,"refSections":[{"refs":[{"id":"ref-for-state-of-the-world"}],"title":"7. Supporting Materials"}],"url":"#state-of-the-world"},
+"0cf6ae20": {"dfnID":"0cf6ae20","dfnText":"issuer","external":true,"refSections":[{"refs":[{"id":"ref-for-section-2:~:text=issuer,-REQUIRED"}],"title":"3. Authorization server metadata"}],"url":"https://datatracker.ietf.org/doc/html/rfc8414#section-2:~:text=issuer,-REQUIRED"},
+"565fe40c": {"dfnID":"565fe40c","dfnText":"resource registration endpoint","external":true,"refSections":[{"refs":[{"id":"ref-for-as-configresource_registration_endpoint"},{"id":"ref-for-as-configresource_registration_endpoint\u2460"}],"title":"4. The federated protection API"},{"refs":[{"id":"ref-for-as-configresource_registration_endpoint\u2461"}],"title":"4.2.1. Resource registration"}],"url":"https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#as-configresource_registration_endpoint"},
+"7cdd857e": {"dfnID":"7cdd857e","dfnText":"authorization server","external":true,"refSections":[{"refs":[{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server"}],"title":"1. Introduction"},{"refs":[{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2460"},{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2461"},{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2462"},{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2463"},{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2464"},{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2465"}],"title":"3. Authorization server metadata"},{"refs":[{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2466"},{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2467"}],"title":"4. The federated protection API"},{"refs":[{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2468"}],"title":"4.1.2. Message security"},{"refs":[{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2460\u24ea"}],"title":"4.2.1. Resource registration"},{"refs":[{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2460\u2460"},{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2460\u2461"},{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2460\u2462"},{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2460\u2463"},{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2460\u2464"}],"title":"4.3. Requesting a Ticket"},{"refs":[{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2460\u2465"},{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2460\u2466"},{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2460\u2467"},{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2460\u2468"}],"title":"5.1. Attempting access WITHOUT a token"},{"refs":[{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2461\u24ea"},{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2461\u2460"}],"title":"6.1. Requesting access WITH a permission ticket"},{"refs":[{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2461\u2461"}],"title":"6.2. Requesting access WITHOUT a permission ticket"},{"refs":[{"id":"ref-for-section-1:~:text=authorization%20server,-The%20server\u2461\u2462"}],"title":"6.3. Receiving an access token"}],"url":"https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server"},
+"84160aef": {"dfnID":"84160aef","dfnText":"resource server","external":true,"refSections":[{"refs":[{"id":"ref-for-section-1:~:text=resource%20server,-The%20server"}],"title":"1. Introduction"},{"refs":[{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2460"},{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2461"},{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2462"},{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2463"}],"title":"3. Authorization server metadata"},{"refs":[{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2464"}],"title":"4. The federated protection API"},{"refs":[{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2465"},{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2466"}],"title":"4.1.2. Message security"},{"refs":[{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2467"}],"title":"4.2.1. Resource registration"},{"refs":[{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2468"},{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2460\u24ea"},{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2460\u2460"},{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2460\u2461"}],"title":"4.3. Requesting a Ticket"},{"refs":[{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2460\u2462"},{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2460\u2463"},{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2460\u2464"},{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2460\u2465"}],"title":"5.1. Attempting access WITHOUT a token"},{"refs":[{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2460\u2466"},{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2460\u2467"},{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2460\u2468"},{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2461\u24ea"}],"title":"5.2. Attempting access WITH a token"},{"refs":[{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2461\u2460"}],"title":"6.1. Requesting access WITH a permission ticket"},{"refs":[{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2461\u2461"}],"title":"6.2. Requesting access WITHOUT a permission ticket"},{"refs":[{"id":"ref-for-section-1:~:text=resource%20server,-The%20server\u2461\u2462"}],"title":"6.3. Receiving an access token"}],"url":"https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server"},
+"c16f6445": {"dfnID":"c16f6445","dfnText":"introspection endpoint","external":true,"refSections":[{"refs":[{"id":"ref-for-as-configintrospection_endpoint"}],"title":"4. The federated protection API"}],"url":"https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#as-configintrospection_endpoint"},
+"d6ebf33c": {"dfnID":"d6ebf33c","dfnText":"authorization grant","external":true,"refSections":[{"refs":[{"id":"ref-for-section-1:~:text=1.3.-,Authorization%20Grant,-An%20authorization%20grant"}],"title":"1. Introduction"}],"url":"https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=1.3.-,Authorization%20Grant,-An%20authorization%20grant"},
+"eeb48604": {"dfnID":"eeb48604","dfnText":"resource description","external":true,"refSections":[{"refs":[{"id":"ref-for-resource-set-desc"}],"title":"4.2.1. Resource registration"}],"url":"https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#resource-set-desc"},
+"fde72978": {"dfnID":"fde72978","dfnText":"protection API","external":true,"refSections":[{"refs":[{"id":"ref-for-UMA-Impl:~:text=protection%20API,-The%20API"}],"title":"1. Introduction"},{"refs":[{"id":"ref-for-UMA-Impl:~:text=protection%20API,-The%20API\u2460"}],"title":"4. The federated protection API"},{"refs":[{"id":"ref-for-UMA-Impl:~:text=protection%20API,-The%20API\u2461"}],"title":"4.1.1. Channel security"}],"url":"https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#UMA-Impl:~:text=protection%20API,-The%20API"},
 };
 
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -3097,9 +3040,14 @@ function genLinkingSyntaxes(dfn) {
 "use strict";
 {
 let refsData = {
-"#odrl-compliance-report": {"displayText":"odrl compliance report","export":true,"for_":[],"level":"","normative":true,"shortname":"force","spec":"force","status":"local","text":"odrl compliance report","type":"dfn","url":"#odrl-compliance-report"},
-"#odrl-evaluator": {"displayText":"odrl evaluator","export":true,"for_":[],"level":"","normative":true,"shortname":"force","spec":"force","status":"local","text":"odrl evaluator","type":"dfn","url":"#odrl-evaluator"},
-"#state-of-the-world": {"displayText":"state of the world","export":true,"for_":[],"level":"","normative":true,"shortname":"force","spec":"force","status":"local","text":"state of the world","type":"dfn","url":"#state-of-the-world"},
+"https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=1.3.-,Authorization%20Grant,-An%20authorization%20grant": {"displayText":"authorization grant","export":true,"for_":[],"level":"","normative":true,"shortname":"rfc6749","spec":"rfc6749","status":"anchor-block","text":"authorization grant","type":"dfn","url":"https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=1.3.-,Authorization%20Grant,-An%20authorization%20grant"},
+"https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server": {"displayText":"authorization server","export":true,"for_":[],"level":"","normative":true,"shortname":"rfc6749","spec":"rfc6749","status":"anchor-block","text":"authorization server","type":"dfn","url":"https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=authorization%20server,-The%20server"},
+"https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server": {"displayText":"resource server","export":true,"for_":[],"level":"","normative":true,"shortname":"rfc6749","spec":"rfc6749","status":"anchor-block","text":"resource server","type":"dfn","url":"https://datatracker.ietf.org/doc/html/rfc6749#section-1:~:text=resource%20server,-The%20server"},
+"https://datatracker.ietf.org/doc/html/rfc8414#section-2:~:text=issuer,-REQUIRED": {"displayText":"issuer","export":true,"for_":[],"level":"","normative":true,"shortname":"rfc8414","spec":"rfc8414","status":"anchor-block","text":"issuer","type":"dfn","url":"https://datatracker.ietf.org/doc/html/rfc8414#section-2:~:text=issuer,-REQUIRED"},
+"https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#UMA-Impl:~:text=protection%20API,-The%20API": {"displayText":"protection API","export":true,"for_":[],"level":"","normative":true,"shortname":"uma-fed","spec":"uma-fed","status":"anchor-block","text":"protection api","type":"dfn","url":"https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#UMA-Impl:~:text=protection%20API,-The%20API"},
+"https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#as-configintrospection_endpoint": {"displayText":"introspection endpoint","export":true,"for_":[],"level":"","normative":true,"shortname":"uma-fed","spec":"uma-fed","status":"anchor-block","text":"introspection endpoint","type":"dfn","url":"https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#as-configintrospection_endpoint"},
+"https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#as-configresource_registration_endpoint": {"displayText":"resource registration endpoint","export":true,"for_":[],"level":"","normative":true,"shortname":"uma-fed","spec":"uma-fed","status":"anchor-block","text":"resource registration endpoint","type":"dfn","url":"https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#as-configresource_registration_endpoint"},
+"https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#resource-set-desc": {"displayText":"resource description","export":true,"for_":[],"level":"","normative":true,"shortname":"uma-fed","spec":"uma-fed","status":"anchor-block","text":"resource description","type":"dfn","url":"https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html#resource-set-desc"},
 };
 
 function mkRefHint(link, ref) {

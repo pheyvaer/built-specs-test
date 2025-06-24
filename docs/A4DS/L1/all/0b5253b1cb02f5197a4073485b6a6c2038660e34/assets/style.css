@@ -1,0 +1,110 @@
+
+:root {
+  --color-main: #0ead69;
+  --color-main-t85: rgba(14, 173, 105, 0.85);
+  --color-main-t50: rgba(14, 173, 105, 0.50);
+  --color-main-t10: rgba(14, 173, 105, 0.10);
+  --color-main-light: #7bd2ad;
+  --color-main-dark: #0b7e4d;
+  --color-bg: white;
+
+  --heading-text: var(--color-main-dark) !important;
+
+  --a-normal-text: var(--color-main) !important;
+  --a-normal-underline: var(--color-main-t50) !important;
+  --a-visited-text: var(--color-main-dark) !important;
+  --a-visited-underline: var(--color-main-t50) !important;
+
+  --a-hover-bg: var(--color-main-t10) !important;
+  
+  --toclink-text: var(--color-main-dark) !important;
+  --toclink-underline: var(--color-main-t50) !important;
+  --toclink-visited-text: var(--color-main-dark) !important;
+  --toclink-visited-underline: var(--color-main-t50) !important;
+  
+  --note-bg: var(--color-main-t10) !important;
+  --note-border: var(--color-main) !important;
+}
+
+h1 { color: var(--color-main) !important; }
+
+body {
+  background-color: var(--color-bg);
+  font-family: "Titillium Web", "Helvetica Neue", Arial, sans-serif;
+
+  /* Reset base counters and additional ones */
+  counter-reset: example note issue assertion advisement figure !important;
+}
+
+/* Configure increments for additional counters */
+.note { counter-increment: note; }
+.assertion { counter-increment: assertion; }
+.advisement { counter-increment: advisement; }
+
+/* Configure display of additional counters */ /*
+.note:not(.no-marker)::before { content: "Note " counter(note); }
+.assertion:not(.no-marker)::before { content: "Assertion " counter(assertion); }
+.advisement:not(.no-marker)::before { content: "Advisement " counter(advisement); }
+*/
+
+.note,
+.issue,
+.example,
+.assertion,
+.advisement {
+  font-size: .9em;
+}
+
+a.self-link {
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+pre, code {
+  font-size: .8em;
+  font-style: normal;
+}
+
+em.rfc2119 {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-style: normal;
+  font-size: 1.2em;
+  color: #900;
+}
+
+dt {
+  margin-top: 0.8em;
+}
+
+[data-link-type=biblio] { 
+  /* allows breaks in inline references */ 
+  white-space: normal !important;
+}
+
+/* .
+
+footer {
+  bottom: 0;
+  height: 40px; 
+  line-height: 40px; 
+  background-color: var(--color-main);
+  color: white;
+  border-radius: 20px 0 20px 0 !important;
+  margin-top: 50px;
+}
+
+.footer a {
+  color: white;
+}
+
+<div boilerplate="footer" class="footer">
+  <p class="float-right">
+  <a href="#">Back to top</a>
+  </p>
+  <p>
+  KNoWS © 2025
+  </p>
+</div> 
+
+*/

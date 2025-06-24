@@ -1,7 +1,7 @@
 <!doctype html><html lang="en">
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title>State of the World for Open Digital Rights Language (ODRL) Evaluator</title>
+  <title>HEalth Data exchanGE policy framework</title>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
@@ -1489,9 +1489,15 @@ Possible extra rowspan handling
 	}
 </style>
   <meta content="Bikeshed version b25686b9f, updated Fri Mar 14 14:15:20 2025 -0700" name="generator">
-  <link href="https://w3id.org/force/sotw" rel="canonical">
-  <meta content="a3f8e5488a1454ea3a4485aefc81eef88c77e6cd" name="revision">
+  <link href="https://w3id.org/hedge" rel="canonical">
+  <meta content="c64009af3e5c6dc5240bccaccc31d405fc85814b" name="revision">
   <meta content="dark light" name="color-scheme">
+<style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
     color: var(--a-normal-text);
@@ -1812,130 +1818,6 @@ figcaption:not(.no-marker)::before {
     content: "Figure " counter(figure) " ";
 }
 </style>
-<style>/* Boilerplate: style-dfn-panel */
-:root {
-    --dfnpanel-bg: #ddd;
-    --dfnpanel-text: var(--text);
-    --dfnpanel-target-bg: #ffc;
-    --dfnpanel-target-outline: orange;
-}
-@media (prefers-color-scheme: dark) {
-    :root {
-        --dfnpanel-bg: #222;
-        --dfnpanel-text: var(--text);
-        --dfnpanel-target-bg: #333;
-        --dfnpanel-target-outline: silver;
-    }
-}
-.dfn-panel {
-    position: absolute;
-    z-index: 35;
-    width: 20em;
-    width: 300px;
-    height: auto;
-    max-height: 500px;
-    overflow: auto;
-    padding: 0.5em 0.75em;
-    font: small Helvetica Neue, sans-serif, Droid Sans Fallback;
-    background: var(--dfnpanel-bg);
-    color: var(--dfnpanel-text);
-    border: outset 0.2em;
-    white-space: normal; /* in case it's moved into a pre */
-}
-.dfn-panel:not(.on) { display: none; }
-.dfn-panel * { margin: 0; padding: 0; text-indent: 0; }
-.dfn-panel > b { display: block; }
-.dfn-panel a { color: var(--dfnpanel-text); }
-.dfn-panel a:not(:hover) { text-decoration: none !important; border-bottom: none !important; }
-.dfn-panel a:focus {
-    outline: 5px auto Highlight;
-    outline: 5px auto -webkit-focus-ring-color;
-}
-.dfn-panel > b + b { margin-top: 0.25em; }
-.dfn-panel ul { padding: 0 0 0 1em; list-style: none; }
-.dfn-panel li a {
-    max-width: calc(300px - 1.5em - 1em);
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.dfn-panel.activated {
-    display: inline-block;
-    position: fixed;
-    left: 8px;
-    bottom: 2em;
-    margin: 0 auto;
-    max-width: calc(100vw - 1.5em - .4em - .5em);
-    max-height: 30vh;
-    transition: left 1s ease-out, bottom 1s ease-out;
-}
-
-.dfn-panel .link-item:hover {
-    text-decoration: underline;
-}
-.dfn-panel .link-item .copy-icon {
-    opacity: 0;
-}
-.dfn-panel .link-item:hover .copy-icon,
-.dfn-panel .link-item .copy-icon:focus {
-    opacity: 1;
-}
-
-.dfn-panel .copy-icon {
-    display: inline-block;
-    margin-right: 0.5em;
-    width: 0.85em;
-    height: 1em;
-    border-radius: 3px;
-    background-color: #ccc;
-    cursor: pointer;
-}
-
-.dfn-panel .copy-icon .icon {
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.dfn-panel .copy-icon .icon::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
-    background-color: #ccc;
-    opacity: 0.25;
-    transform: translate(3px, -3px);
-}
-
-.dfn-panel .copy-icon:active .icon::before {
-    opacity: 1;
-}
-
-.dfn-paneled[role="button"] { cursor: help; }
-
-.highlighted {
-    animation: target-fade 3s;
-}
-
-@keyframes target-fade {
-    from {
-        background-color: var(--dfnpanel-target-bg);
-        outline: 5px solid var(--dfnpanel-target-outline);
-    }
-    to {
-        color: var(--a-normal-text);
-        background-color: transparent;
-        outline: transparent;
-    }
-}
-</style>
 <style>/* Boilerplate: style-issues */
 a[href].issue-return {
     float: right;
@@ -2138,19 +2020,21 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://knows.idlab.ugent.be/"> <img alt="KNoWS" height="48" src="logo.png"> </a></p>
-   <h1 class="p-name no-ref" id="title">State of the World for Open Digital Rights Language (ODRL) Evaluator</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2025-05-19">19 May 2025</time></span></h2>
+   <h1 class="p-name no-ref" id="title">HEalth Data exchanGE policy framework</h1>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2025-06-07">7 June 2025</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a class="u-url" href="https://w3id.org/force/sotw">https://w3id.org/force/sotw</a>
+     <dd><a class="u-url" href="https://w3id.org/hedge">https://w3id.org/hedge</a>
      <dt>Previous Versions:
-     <dd><a href="https://pheyvaer.github.io/built-specs-test/state-of-the-world-for-open-digital-rights-language-odrl-evaluator/all/a3f8e5488a1454ea3a4485aefc81eef88c77e6cd" rel="prev">https://pheyvaer.github.io/built-specs-test/state-of-the-world-for-open-digital-rights-language-odrl-evaluator/all/a3f8e5488a1454ea3a4485aefc81eef88c77e6cd</a>
+     <dd><a href="_ORCHESTRATOR_PREVIOUS_BUILD_FULL_LINK_" rel="prev">_ORCHESTRATOR_PREVIOUS_BUILD_FULL_LINK_</a>
      <dt>Issue Tracking:
-     <dd><a href="https://github.com/KNowledgeOnWebScale/sotw/issues/">GitHub</a>
+     <dd><a href="https://github.com/KNowledgeOnWebScale/hedge-spec/issues/">GitHub</a>
+     <dd><a href="#issues-index">Inline In Spec</a>
      <dt class="editor">Editors:
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:beatriz.esteves@ugent.be">Beatriz Esteves</a> (<a class="p-org org" href="http://idlab.ugent.be/">Ghent University - imec</a>)
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:wout.slabbinck@ugent.be">Wout Slabbinck</a> (<a class="p-org org" href="http://idlab.ugent.be/">Ghent University - imec</a>)
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Filip Pattyn</span> (<a class="p-org org" href="https://faqir.org">FAQIR</a>)
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Henar Martín Santos</span> (<a class="p-org org" href="https://faqir.org">FAQIR</a>)
      <dt>License:
      <dd><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a>
     </dl>
@@ -2161,129 +2045,441 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>TODO</p>
+   <p>This document defines a framework for modelling and cataloguing health data exchange conditions,
+aligned with legal requirements, e.g., from the European Union’s General Data Protection Regulation (GDPR) and the
+European Health Data Spaces (EHDS) regulation,
+using semantic standards and specifications such as the <a href="https://www.w3.org/TR/odrl-model/">Open Digital Rights Language (ODRL)</a> and the <a href="https://w3id.org/dpv">Data Privacy Vocabulary (DPV)</a>.</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
    <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory">
+    <li><a href="#introduction"><span class="secno">1</span> <span class="content">Introd­uction</span></a>
     <li>
-     <a href="#introduction"><span class="secno">1</span> <span class="content">Introd­uction</span></a>
+     <a href="#specs"><span class="secno">2</span> <span class="content">Used standards/specifications</span></a>
      <ol class="toc">
-      <li><a href="#terminology"><span class="secno">1.1</span> <span class="content">Terminology</span></a>
+      <li><a href="#namespaces"><span class="secno">2.1</span> <span class="content">Namespaces</span></a>
      </ol>
-    <li><a href="#sotw-representation"><span class="secno">2</span> <span class="content">State of the World Representation</span></a>
-    <li><a href="#supporting-materials"><span class="secno">3</span> <span class="content">Supporting Materials</span></a>
-    <li><a href="#namespaces"><span class="secno">4</span> <span class="content">Namespaces</span></a>
+    <li>
+     <a href="#requirements"><span class="secno">3</span> <span class="content">Policy requirements</span></a>
+     <ol class="toc">
+      <li><a href="#policies"><span class="secno">3.1</span> <span class="content">Subject/Holder policies</span></a>
+      <li><a href="#requests"><span class="secno">3.2</span> <span class="content">Requests</span></a>
+     </ol>
+    <li>
+     <a href="#instantiation"><span class="secno">4</span> <span class="content">Agreement Instantiation</span></a>
+     <ol class="toc">
+      <li><a href="#examples"><span class="secno">4.1</span> <span class="content">Examples</span></a>
+     </ol>
+    <li><a href="#legal-grounds"><span class="secno">5</span> <span class="content">Using different legal grounds</span></a>
+    <li>
+     <a href="#catalogs"><span class="secno">6</span> <span class="content">Health data sharing policy catalogs</span></a>
+     <ol class="toc">
+      <li><a href="#healthdcatap"><span class="secno">6.1</span> <span class="content">Alignment with HealthDCAT-AP</span></a>
+      <li><a href="#EHRxF"><span class="secno">6.2</span> <span class="content">Alignment with EHRxF</span></a>
+     </ol>
     <li><a href="#conformance"><span class="secno"></span> <span class="content"> Conformance</span></a>
-    <li>
-     <a href="#index"><span class="secno"></span> <span class="content">Index</span></a>
-     <ol class="toc">
-      <li><a href="#index-defined-here"><span class="secno"></span> <span class="content">Terms defined by this specification</span></a>
-     </ol>
     <li>
      <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
      <ol class="toc">
       <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
+      <li><a href="#informative"><span class="secno"></span> <span class="content">Informative References</span></a>
      </ol>
+    <li><a href="#issues-index"><span class="secno"></span> <span class="content">Issues Index</span></a>
    </ol>
   </nav>
   <main>
    <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introd­uction</span><a class="self-link" href="#introduction"></a></h2>
-    TODO: write full text
-Mention ODRL <a data-link-type="biblio" href="#biblio-odrl-model" title="ODRL Information Model 2.2">[ODRL-model]</a> <a data-link-type="biblio" href="#biblio-odrl-vocab" title="ODRL Vocabulary &amp; Expression 2.2">[odrl-vocab]</a> 
-   <p>Formal Semantics spec <a data-link-type="biblio" href="#biblio-odrl-formal-semantics" title="ODRL Formal Semantics">[odrl-formal-semantics]</a></p>
-   <h3 class="heading settled" data-level="1.1" id="terminology"><span class="secno">1.1. </span><span class="content">Terminology</span><a class="self-link" href="#terminology"></a></h3>
-   <dl>
-    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="compliance-report">ODRL Compliance Report</dfn>
-    <dd>A vocabulary that is used to elaborate the result of an evaluation of an ODRL Policy, (optionally) ODRL Request and the State of the World. It elaborates not only whether a rule from a policy is active, but also why.
-    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="evaluator">ODRL Evaluator</dfn>
-    <dd>A system that determines whether the Rules of an ODRL Policy expression have meet their intended action performance.
-    <dt><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="sotw-dfn">State of the World</dfn>
-    <dd>A set of knowledge representing real-world information aiding the evaluation of ODRL Policies.
-   </dl>
-   <h2 class="heading settled" data-level="2" id="sotw-representation"><span class="secno">2. </span><span class="content">State of the World Representation</span><a class="self-link" href="#sotw-representation"></a></h2>
-   <p>Minimal set of information that needs to be represented in the SotW and existing terms that can be reused to represent it:</p>
+   <p>The increasing digitalisation of healthcare has led to the generation of vast amounts of health-related
+data from multiple sources, including clinical records, wearable devices, and patient-generated data.
+However, the fragmentation and complexity of these data sources poses significant challenges in
+achieving interoperability and data integration across healthcare systems. Addressing these challenges
+is crucial to ensuring that health data can be effectively shared and utilized while maintaining its
+accuracy and accessibility across different platforms and stakeholders. Beyond interoperability, the
+reusability of health data plays a pivotal role in advancing public health initiatives, healthcare delivery,
+and health-related research and development.</p>
+   <p>In this context, ensuring that health data can be repurposed for 'altruistic' activities, such as for
+improving healthcare or performing scientific research for the general interest, as specified in the
+EU’s Data Governance Act <a data-link-type="biblio" href="#biblio-dga" title="Regulation (EU) 2022/868 of the European Parliament and of the Council of 30 May 2022 on European data governance and amending Regulation (EU) 2018/1724 (Data Governance Act)">[DGA]</a> and further specified in the newly-enforceable European Health Data Space Regulation <a data-link-type="biblio" href="#biblio-ehds" title="Regulation (EU) 2025/327 of the European Parliament and of the Council of 11 February 2025 on the European Health Data Space and amending Directive 2011/24/EU and Regulation (EU) 2024/2847">[EHDS]</a>, e.g., 
+for the improvement and optimisation of personalised treatment delivery
+or for purposes of development of health-related products or services or training new algorithms for
+medical devices, is of the utmost importance and requires robust mechanisms for data governance and
+regulatory compliance. Moreover, both of the previously mentioned regulations build their health data
+processing requirements over the EU’s General Data Protection Regulation <a data-link-type="biblio" href="#biblio-gdpr" title="Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation)">[GDPR]</a>,
+which sets the regulatory framework for the processing of personal data related to EU citizens, and categorises
+health data as a special category of personal data and places additional constraints to its processing.
+Thus, compliance with these frameworks is essential to fostering trust among stakeholders, including
+patients, healthcare providers, researchers, and policymakers.</p>
+   <p>Given these considerations, it is imperative to develop a common framework to facilitate the interoperable
+and legally compliant exchange of health data. For designing such a framework, data exchange
+conditions must be expressed and shared amongst involved parties via interoperable, machine-readable
+policies that are expressive enough to address technical and legal frameworks. In this context, the
+usage of semantic standards, such as the Open Digital Rights Language (ODRL) <a data-link-type="biblio" href="#biblio-odrl-model" title="ODRL Information Model 2.2">[ODRL-model]</a> <a data-link-type="biblio" href="#biblio-odrl-vocab" title="ODRL Vocabulary &amp; Expression 2.2">[odrl-vocab]</a> or the Data Privacy Vocabulary <a data-link-type="biblio" href="#biblio-dpv" title="Data Privacy Vocabulary (DPV)">[DPV]</a>,
+are well-suited solutions for policy expression and data protection requirement
+modelling, that enable a shared understanding for interpreting and enforcing health data sharing
+conditions. As such, this document proposes a framework for modelling such conditions, aligned
+with legal requirements from the EU’s GDPR and EHDS regulation, which utilises ODRL and DPV
+to model requirements for health data sharing. The following requirements were identified to develop the framework:</p>
    <ul>
     <li data-md>
-     <p><strong>current time</strong>: <a href="http://purl.org/dc/terms/issued">dcterms:issued</a></p>
+     <p><b>R1.</b> Ability to model policies for both data subjects/holders and data controllers/users</p>
+    <li data-md>
+     <p><b>R2.</b> Support legal requirements for health data exchange</p>
+    <li data-md>
+     <p><b>R3.</b> Define the necessity, e.g., mandatory or optional, of these requirements according to the identified legal framework</p>
+    <li data-md>
+     <p><b>R4.</b> Specify 'pre-defined' templates for common exchanges, e.g., patient-doctor, citizen-research organisation</p>
+    <li data-md>
+     <p><b>R5.</b> Generate agreements for specific health-related data exchanges between 2 parties</p>
    </ul>
-   <p>Example: <code>ex:currentTime dct:issued "2024-01-01T00:00:00"^^xsd:dateTime .</code></p>
+   <h2 class="heading settled" data-level="2" id="specs"><span class="secno">2. </span><span class="content">Used standards/specifications</span><a class="self-link" href="#specs"></a></h2>
+   <p>The following standards and specifications are being used to develop HEDGE.
+In the <a href="#namespaces">Namespaces section</a>, there are links to each solution.</p>
    <ul>
     <li data-md>
-     <p><strong>location</strong>: <a href="https://w3id.org/dpv/loc">DPV’s location</a> extension models locations based on the <a href="https://en.wikipedia.org/wiki/ISO_3166">ISO 3166</a> and <a href="https://unstats.un.org/unsd/methodology/m49">UN M49</a> standards.</p>
-   </ul>
-   <p>Example: <code>ex:location dpv:hasLocation loc:BE .</code></p>
-   <ul>
-    <li data-md>
-     <p><strong>asset/party collections</strong>: <a href="http://www.w3.org/ns/odrl/2/partOf">odrl:partOf</a></p>
-   </ul>
-   <p>Example: <code></code></p>
-   <code> <pre>ex:asset odrl:partOf ex:assetCollection .
-ex:alice odrl:partOf ex:partyIdentifier.
-</pre></code>
-   <p><code></code></p>
-   <ul>
-    <li data-md>
-     <p><strong>performed actions</strong>: extracted from existing <a href="#compliance-report" id="ref-for-compliance-report">Compliance Reports</a></p>
-   </ul>
-   <p>Example: <code></code></p>
-   <code> <pre>ex:policyReport a report:PolicyReport ;
-    dcterms:created "2024-02-12T11:20:10.999Z"^^xsd:dateTime ;
-    report:policy ex:policy ;
-    report:ruleReport ex:dutyReport .
-ex:dutyReport a report:DutyReport ;
-    report:attemptState report:Attempted ;
-    report:rule ex:duty ;
-    report:performanceState report:Performed ;
-    report:deonticState report:Fulfilled .
-ex:duty a odrl:Duty ;
-    odrl:action odrl:compensate ;
-    odrl:assignee ex:alice .
-</pre></code>
-   <p><code></code></p>
-   <p class="note" role="note"><span class="marker">Note:</span> Should we be explicit about the context on which this SotW is valid?
-First thought to make this happen is to model SotW as a concept and have properties to connect an instance of SotW with
-contextual information that describes that SotW.
-Example: <code></code></p>
-   <code> <pre>ex:sotw a sotw:SotW ;
-    sotw:currentTime ex:currentTime ;
-    sotw:location ex:location ;
-    sotw:assetCollection ex:assetCollection ;
-    ...
-</pre></code>
-   <p><code></code></p>
-   <h2 class="heading settled" data-level="3" id="supporting-materials"><span class="secno">3. </span><span class="content">Supporting Materials</span><a class="self-link" href="#supporting-materials"></a></h2>
-   <ul>
-    <li data-md>
-     <p>FORCE: <a href="https://w3id.org/force">https://w3id.org/force</a></p>
-    <li data-md>
-     <p>ODRL Compliance Report: <a href="https://w3id.org/force/compliance-report">https://w3id.org/force/compliance-report</a></p>
+     <p><b>ODRL</b>: W3C standard for policy expression <a data-link-type="biblio" href="#biblio-odrl-model" title="ODRL Information Model 2.2">[ODRL-model]</a> <a data-link-type="biblio" href="#biblio-odrl-vocab" title="ODRL Vocabulary &amp; Expression 2.2">[odrl-vocab]</a></p>
      <ul>
       <li data-md>
-       <p>repo: <a href="https://w3id.org/force/compliance-report/repo">https://w3id.org/force/compliance-report/repo</a></p>
+       <p><b>DPV-ODRL mapping</b>: ODRL profile for using DPV’s terms in ODRL policies</p>
      </ul>
     <li data-md>
-     <p>test suite: <a href="https://w3id.org/force/test-suite">https://w3id.org/force/test-suite</a></p>
+     <p><b>DPV</b>: W3C specification, developed by the W3C DPVCG, for the expression of data protection-related terms <a data-link-type="biblio" href="#biblio-dpv" title="Data Privacy Vocabulary (DPV)">[DPV]</a></p>
      <ul>
       <li data-md>
-       <p>repo: <a href="https://w3id.org/force/test-suite/repo">https://w3id.org/force/test-suite/repo</a></p>
+       <p><b>EU-GDPR</b>: DPV extension for the expression of concepts related to the EU’s General Data Protection Regulation</p>
+      <li data-md>
+       <p><b>EU-EHDS</b>: DPV extension for the expression of concepts related to the EU’s European Health Data Spaces</p>
+      <li data-md>
+       <p><b>SECTOR-HEALTH</b>: DPV extension for the expression of concepts related to the healthcare sector</p>
+      <li data-md>
+       <p><b>PD</b>: DPV extension for the expression of concepts related to personal data categories, including health data categories</p>
      </ul>
-    <li data-md>
-     <p>github repository for an ODRL Evaluator: <a href="https://w3id.org/force/evaluator">https://w3id.org/force/evaluator</a></p>
    </ul>
-   <h2 class="heading settled" data-level="4" id="namespaces"><span class="secno">4. </span><span class="content">Namespaces</span><a class="self-link" href="#namespaces"></a></h2>
+   <div class="note no-marker" role="note">
+    <div class="marker">NOTE: Additional standards/specifications to add to HEDGE</div>
+    <p> The usage of provenance-related vocabularies, such as DCTerms, PROV, should also be explored.
+        Furthermore, DCAT, and its specialization HealthDCAT-AP, will be explored to formalise policy catalogs. </p>
+   </div>
+   <h3 class="heading settled" data-level="2.1" id="namespaces"><span class="secno">2.1. </span><span class="content">Namespaces</span><a class="self-link" href="#namespaces"></a></h3>
    <p>Commonly used namespace prefixes used in this specification:</p>
-<pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcterms:</c-> <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>dpv:</c->     <c- g>&lt;https://w3id.org/dpv#></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>ex:</c->      <c- g>&lt;http://example.org/></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>loc:</c->     <c- g>&lt;https://w3id.org/dpv/loc#></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>odrl:</c->    <c- g>&lt;http://www.w3.org/ns/odrl/2/></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>report:</c->  <c- g>&lt;https://w3id.org/force/compliance-report#></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>sotw:</c->    <c- g>&lt;https://w3id.org/force/sotw#></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>rdf:</c->     <c- g>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>xsd:</c->     <c- g>&lt;http://www.w3.org/2001/XMLSchema#></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcat:</c->          <c- g>&lt;hhttp://www.w3.org/ns/dcat#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>dcterms:</c->       <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>dpv:</c->           <c- g>&lt;https://w3id.org/dpv#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>dpv-odrl:</c->      <c- g>&lt;https://w3id.org/dpv/mappings/odrl#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>eu-ehds:</c->       <c- g>&lt;https://w3id.org/dpv/legal/eu/ehds#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>eu-gdpr:</c->       <c- g>&lt;https://w3id.org/dpv/legal/eu/gdpr#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>odrl:</c->          <c- g>&lt;http://www.w3.org/ns/odrl/2/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>ex:</c->            <c- g>&lt;https://example.com/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>pd:</c->            <c- g>&lt;https://w3id.org/dpv/pd#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>report:</c->        <c- g>&lt;https://w3id.org/force/compliance-report#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>rdf:</c->           <c- g>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>sector-health:</c-> <c- g>&lt;https://w3id.org/dpv/sector/health#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>skos:</c->          <c- g>&lt;http://www.w3.org/2004/02/skos/core#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>xsd:</c->           <c- g>&lt;http://www.w3.org/2001/XMLSchema#></c-> <c- p>.</c->
 </pre>
+   <h2 class="heading settled" data-level="3" id="requirements"><span class="secno">3. </span><span class="content">Policy requirements</span><a class="self-link" href="#requirements"></a></h2>
+   <h3 class="heading settled" data-level="3.1" id="policies"><span class="secno">3.1. </span><span class="content">Subject/Holder policies</span><a class="self-link" href="#policies"></a></h3>
+   <div class="issue no-marker" id="issue-c0bd9107">
+    <a class="self-link" href="#issue-c0bd9107"></a>
+    <div class="marker">ISSUE: Necessity of specified terms for offers</div>
+    <p>The minimal set of terms to define data subject or holder policies, identified in <a href="#table-offers">Table 1</a>, is still work-in-progress.</p>
+   </div>
+   <table class="tg" id="table-offers">
+    <thead>
+     <tr>
+      <th class="tg-0lax">Term
+      <th class="tg-0lax">Concept
+      <th class="tg-0lax">Relation / Constraint
+      <th class="tg-0lax">Necessity
+    <tbody>
+     <tr>
+      <td class="tg-0lax">Data subject
+      <td class="tg-0lax">URI
+      <td class="tg-0lax">odrl:assigner
+      <td class="tg-0lax">Mandatory
+     <tr>
+      <td class="tg-0lax">Personal data
+      <td class="tg-0lax">URI / subclass of dpv:PersonalData
+      <td class="tg-0lax">odrl:target
+      <td class="tg-0lax">Mandatory
+     <tr>
+      <td class="tg-0lax">Processing operation
+      <td class="tg-0lax">subclass of odrl:Action or dpv:Processing
+      <td class="tg-0lax">odrl:action
+      <td class="tg-0lax">Mandatory
+     <tr>
+      <td class="tg-0lax">Purpose
+      <td class="tg-0lax">subclass of dpv:Purpose
+      <td class="tg-0lax">dpv-odrl:Purpose
+      <td class="tg-0lax">Mandatory
+     <tr>
+      <td class="tg-0lax">Pseudo/Anonymisation
+      <td class="tg-0lax">dpv-odrl:Pseudonymise, dpv-odrl:Anonymise
+      <td class="tg-0lax">odrl:action
+      <td class="tg-0lax">Optional
+     <tr>
+      <td class="tg-0lax">Recipient
+      <td class="tg-0lax">URI / subclass of dpv:Organisation
+      <td class="tg-0lax">dpv-odrl:Recipient
+      <td class="tg-0lax">Optional
+     <tr>
+      <td class="tg-0lax">Duration
+      <td class="tg-0lax">xsd:duration
+      <td class="tg-0lax">dpv-odrl:Duration
+      <td class="tg-0lax">Optional
+     <tr>
+      <td class="tg-0lax">Frequency
+      <td class="tg-0lax">xsd:positiveInteger
+      <td class="tg-0lax">dpv-odrl:Frequency
+      <td class="tg-0lax">Optional
+    <caption>Table 1 - Terms for defining ODRL data subject policies, respective mapping into DPV &amp; ODRL, and their necessity according to the identified requirements</caption>
+   </table>
+   <div class="issue no-marker" id="issue-4150646f">
+    <a class="self-link" href="#issue-4150646f"></a>
+    <div class="marker">ISSUE: Specify common healthcare-related recipients</div>
+    <p>DPV’s organisation taxonomy already has some concepts for this, are they enough?</p>
+   </div>
+   <div class="issue no-marker" id="issue-d430f43f">
+    <a class="self-link" href="#issue-d430f43f"></a>
+    <div class="marker">ISSUE: Access/usage of retrospective/prospective data</div>
+    <p>We should be able to allow both or just one of them</p>
+    <p>In the absence of this information, should we assume by default only retrospective data or retrospective+prospective data?</p>
+   </div>
+   <h3 class="heading settled" data-level="3.2" id="requests"><span class="secno">3.2. </span><span class="content">Requests</span><a class="self-link" href="#requests"></a></h3>
+   <div class="issue no-marker" id="issue-73e190e1">
+    <a class="self-link" href="#issue-73e190e1"></a>
+    <div class="marker">ISSUE: Necessity of specified terms for requests</div>
+    <p> The minimal set of terms to define requests, identified in <a href="#table-requests">Table 2</a>, 
+        and respective mapping into legal requirements, e.g., from the GDPR and EHDS,
+        is still work-in-progress. </p>
+   </div>
+   <table class="tg" id="table-requests">
+    <thead>
+     <tr>
+      <th class="tg-0lax">Term
+      <th class="tg-0lax">Concept
+      <th class="tg-0lax">Relation / Constraint
+      <th class="tg-0lax">Necessity
+      <th class="tg-0lax">Legal requirements
+    <tbody>
+     <tr>
+      <td class="tg-0lax">Data controller
+      <td class="tg-0lax">URI
+      <td class="tg-0lax">odrl:assignee
+      <td class="tg-0lax">Mandatory
+      <td class="tg-0lax">GDPR
+     <tr>
+      <td class="tg-0lax">Data subject (type)
+      <td class="tg-0lax">URI / subclass of dpv:HumanSubject
+      <td class="tg-0lax">odrl:assigner
+      <td class="tg-0lax">Mandatory
+      <td class="tg-0lax">GDPR
+     <tr>
+      <td class="tg-0lax">Personal data
+      <td class="tg-0lax">subclass of dpv:PersonalData
+      <td class="tg-0lax">odrl:target
+      <td class="tg-0lax">Mandatory
+      <td class="tg-0lax">GDPR
+     <tr>
+      <td class="tg-0lax">Personal electronic health data
+      <td class="tg-0lax">subclass of pd:MedicalHealth
+      <td class="tg-0lax">odrl:target
+      <td class="tg-0lax">Mandatory
+      <td class="tg-0lax">EHDS
+     <tr>
+      <td class="tg-0lax">Non-personal electronic health data
+      <td class="tg-0lax">***
+      <td class="tg-0lax">odrl:target
+      <td class="tg-0lax">Mandatory
+      <td class="tg-0lax">EHDS
+     <tr>
+      <td class="tg-0lax">Processing operation
+      <td class="tg-0lax">subclass of odrl:Action or dpv:Processing
+      <td class="tg-0lax">odrl:action
+      <td class="tg-0lax">Mandatory
+      <td class="tg-0lax">GDPR
+     <tr>
+      <td class="tg-0lax">Purpose
+      <td class="tg-0lax">subclass of dpv:Purpose
+      <td class="tg-0lax">dpv-odrl:Purpose
+      <td class="tg-0lax">Mandatory
+      <td class="tg-0lax">GDPR
+     <tr>
+      <td class="tg-0lax">Primary/Secondary use
+      <td class="tg-0lax">***
+      <td class="tg-0lax">***
+      <td class="tg-0lax">Mandatory
+      <td class="tg-0lax">EHDS
+     <tr>
+      <td class="tg-0lax">Legal basis
+      <td class="tg-0lax">subclass of dpv:LegalBasis
+      <td class="tg-0lax">dpv-odrl:LegalBasis
+      <td class="tg-0lax">Mandatory
+      <td class="tg-0lax">GDPR
+     <tr>
+      <td class="tg-0lax">Pseudo/Anonymisation
+      <td class="tg-0lax">dpv-odrl:Pseudonymise, dpv-odrl:Anonymise
+      <td class="tg-0lax">odrl:action
+      <td class="tg-0lax">Optional
+      <td class="tg-0lax">GDPR
+     <tr>
+      <td class="tg-0lax">Recipient
+      <td class="tg-0lax">URI / subclass of dpv:Organisation
+      <td class="tg-0lax">dpv-odrl:Recipient
+      <td class="tg-0lax">Mandatory
+      <td class="tg-0lax">GDPR
+     <tr>
+      <td class="tg-0lax">Data source
+      <td class="tg-0lax">subclass of dpv:DataSource
+      <td class="tg-0lax">dpv-odrl:DataSource
+      <td class="tg-0lax">Mandatory
+      <td class="tg-0lax">GDPR
+     <tr>
+      <td class="tg-0lax">Duration
+      <td class="tg-0lax">xsd:duration
+      <td class="tg-0lax">dpv-odrl:Duration
+      <td class="tg-0lax">Mandatory
+      <td class="tg-0lax">GDPR
+     <tr>
+      <td class="tg-0lax">Frequency
+      <td class="tg-0lax">xsd:positiveInteger
+      <td class="tg-0lax">dpv-odrl:Frequency
+      <td class="tg-0lax">Optional
+      <td class="tg-0lax">GDPR
+     <tr>
+      <td class="tg-0lax">Events/Activities
+      <td class="tg-0lax">***
+      <td class="tg-0lax">odrl:event
+      <td class="tg-0lax">Mandatory
+      <td class="tg-0lax">GDPR
+    <caption>Table 2 - Terms for defining ODRL requests, respective mapping into DPV &amp; ODRL, and their necessity according to the identified legal requirements. *** is used to identity terms that currently cannot be modelled with ODRL or DPV.</caption>
+   </table>
+   <div class="issue no-marker" id="issue-8cebdce9">
+    <a class="self-link" href="#issue-8cebdce9"></a>
+    <div class="marker">ISSUE: Add personal and non-personal electronic health data concepts to EHDS</div>
+    <p> EHDS "lays down common rules and mechanisms for primary use of electronic health data and secondary use of electronic health data",
+        and "'electronic health data’'means personal or non-personal electronic health data". </p>
+   </div>
+   <div class="issue no-marker" id="issue-7ab0fc6b">
+    <a class="self-link" href="#issue-7ab0fc6b"></a>
+    <div class="marker">ISSUE: Add primary and secondary use concepts to EHDS</div>
+    <p> Use case for complex right operands? (Where more than one value is needed to assess the left/right operand relation) </p>
+   </div>
+   <div class="issue no-marker" id="issue-5d77fbfb">
+    <a class="self-link" href="#issue-5d77fbfb"></a>
+    <div class="marker">ISSUE: Add concepts/examples to deal with joint controllers and data processors</div>
+    <p> In case there’s joint-controllership and/or data processors involved in the processing, then policies must be specified for that as well including each parties responsibilities. </p>
+   </div>
+   <div class="issue no-marker" id="issue-0686b6e0">
+    <a class="self-link" href="#issue-0686b6e0"></a>
+    <div class="marker">ISSUE: How to model events/activities, e.g., emergency events that can justify using vital interest as the legal basis</div>
+    <p> We can use <code>odrl:event</code> or look into how to use DPV’s justifications to do it. 
+        Though, at this moment, DPV’s justifications don’t have any concepts for this. 
+        See <a href="https://w3c.github.io/dpv/2.1/dpv/modules/legal_basis.html#desc-vital-interest">https://w3c.github.io/dpv/2.1/dpv/modules/legal_basis.html#desc-vital-interest</a></p>
+   </div>
+   <h2 class="heading settled" data-level="4" id="instantiation"><span class="secno">4. </span><span class="content">Agreement Instantiation</span><a class="self-link" href="#instantiation"></a></h2>
+   <div class="note no-marker" role="note">
+    <div class="marker">NOTE: Link to policy instantiation specification</div>
+    <p> ODRL policy instantiation specification being developed at <a href="https://w3id.org/force/policy-instantiation">https://w3id.org/force/policy-instantiation</a>. </p>
+    <p> ODRL policy instantiation implementation being developed at <a href="https://w3id.org/force/policy-instantiation/poc">https://w3id.org/force/policy-instantiation/poc</a>. </p>
+   </div>
+   <p>The final agreement instantiation,
+that results from the matching of a concrete request with the set of policies that determine the access/usage of a certain target resource,
+should include the following terms:</p>
+   <ul>
+    <li data-md>
+     <p>Validate the proper modelling of the <code>odrl:Policy</code>, <code>odrl:Request</code> and SoTW information</p>
+    <li data-md>
+     <p>Convert compact policies into their atomic equivalents</p>
+    <li data-md>
+     <p>Remove the rules that are not relevant for the request</p>
+    <li data-md>
+     <p>Reference the ODRL request that triggered the agreement instantiation and the policies from the data subject/holder</p>
+     <ul>
+      <li data-md>
+       <p>The policies associated with the data subject/holder data exchange conditions should only be directly accessible by the data subject/holder to mitigate privacy concerns, e.g., to avoid requesters targeting concrete 'personal data-purpose' exchange scenarios</p>
+      <li data-md>
+       <p>Data subjects/holders should be able to set these policies as public if that is their wish</p>
+     </ul>
+    <li data-md>
+     <p>Instantiate the concrete assigner and assignee of the agreement</p>
+    <li data-md>
+     <p>Include relevant rules with concrete actions, targets and constraints</p>
+   </ul>
+   <h3 class="heading settled" data-level="4.1" id="examples"><span class="secno">4.1. </span><span class="content">Examples</span><a class="self-link" href="#examples"></a></h3>
+   <aside class="example" id="set">
+    <a class="self-link" href="#set"></a> ODRL policy specifying a patient’s permission for its health data to be read for primary care. 
+<pre class="language-turtle highlight"><c- nn>ex</c-><c- p>:</c-><c- f>health-primarycare</c-> <c- b>a</c-> <c- nn>odrl</c-><c- p>:</c-><c- f>Set</c-> <c- p>;</c->
+    <c- nn>odrl</c-><c- p>:</c-><c- f>uid</c-> <c- nn>ex</c-><c- p>:</c-><c- f>health-primarycare</c-> <c- p>;</c->
+    <c- nn>dcterms</c-><c- p>:</c-><c- f>description</c-> <c- s>"Patient allows her health data to be read for primary care."</c-> <c- p>;</c->
+    <c- nn>odrl</c-><c- p>:</c-><c- f>permission</c-> <c- p>[</c->
+        <c- nn>odrl</c-><c- p>:</c-><c- f>action</c-> <c- nn>odrl</c-><c- p>:</c-><c- f>read</c-> <c- p>;</c->
+        <c- nn>odrl</c-><c- p>:</c-><c- f>target</c-> <c- nn>ex</c-><c- p>:</c-><c- f>health-data</c-> <c- p>;</c->
+        <c- nn>odrl</c-><c- p>:</c-><c- f>assigner</c-> <c- nn>ex</c-><c- p>:</c-><c- f>patient</c-> <c- p>;</c->
+        <c- nn>odrl</c-><c- p>:</c-><c- f>constraint</c-> <c- p>[</c->
+            <c- nn>odrl</c-><c- p>:</c-><c- f>leftOperand</c-> <c- nn>dpv-odrl</c-><c- p>:</c-><c- f>Purpose</c-> <c- p>;</c->
+            <c- nn>odrl</c-><c- p>:</c-><c- f>operator</c-> <c- nn>odrl</c-><c- p>:</c-><c- f>eq</c-> <c- p>;</c->
+            <c- nn>odrl</c-><c- p>:</c-><c- f>rightOperand</c-> <c- nn>sector-health</c-><c- p>:</c-><c- f>PrimaryCareManagement</c-> <c- p>]</c-> <c- p>]</c-> <c- p>.</c->
+</pre>
+   </aside>
+   <aside class="example" id="request">
+    <a class="self-link" href="#request"></a> ODRL Request specifying a physician’s request to read the patient’s health data for primary care. 
+<pre class="language-turtle highlight"><c- nn>ex</c-><c- p>:</c-><c- f>physician-request</c-> <c- b>a</c-> <c- nn>odrl</c-><c- p>:</c-><c- f>Request</c-> <c- p>;</c->
+    <c- nn>odrl</c-><c- p>:</c-><c- f>uid</c-> <c- nn>ex</c-><c- p>:</c-><c- f>physician-request</c-> <c- p>;</c->
+    <c- nn>dcterms</c-><c- p>:</c-><c- f>description</c-> <c- s>"Physician requests patient to read health data for primary care."</c-> <c- p>;</c->
+    <c- nn>odrl</c-><c- p>:</c-><c- f>permission</c-> <c- p>[</c->
+        <c- nn>odrl</c-><c- p>:</c-><c- f>action</c-> <c- nn>odrl</c-><c- p>:</c-><c- f>read</c-> <c- p>;</c->
+        <c- nn>odrl</c-><c- p>:</c-><c- f>target</c-> <c- nn>ex</c-><c- p>:</c-><c- f>health-data</c-> <c- p>;</c->
+        <c- nn>odrl</c-><c- p>:</c-><c- f>assignee</c-> <c- nn>ex</c-><c- p>:</c-><c- f>physician</c-> <c- p>;</c->
+        <c- nn>odrl</c-><c- p>:</c-><c- f>constraint</c-> <c- p>[</c->
+            <c- nn>odrl</c-><c- p>:</c-><c- f>leftOperand</c-> <c- nn>dpv-odrl</c-><c- p>:</c-><c- f>Purpose</c-> <c- p>;</c->
+            <c- nn>odrl</c-><c- p>:</c-><c- f>operator</c-> <c- nn>odrl</c-><c- p>:</c-><c- f>eq</c-> <c- p>;</c->
+            <c- nn>odrl</c-><c- p>:</c-><c- f>rightOperand</c-> <c- nn>sector-health</c-><c- p>:</c-><c- f>PrimaryCareManagement</c-> <c- p>],</c-> <c- p>[</c->
+            <c- nn>odrl</c-><c- p>:</c-><c- f>leftOperand</c-> <c- nn>dpv-odrl</c-><c- p>:</c-><c- f>LegalBasis</c-> <c- p>;</c->
+            <c- nn>odrl</c-><c- p>:</c-><c- f>operator</c-> <c- nn>odrl</c-><c- p>:</c-><c- f>eq</c-> <c- p>;</c->
+            <c- nn>odrl</c-><c- p>:</c-><c- f>rightOperand</c-> <c- nn>eu-gdpr</c-><c- p>:</c-><c- f>A9-2-a</c-> <c- p>]</c-> <c- p>]</c-> <c- p>.</c->
+</pre>
+   </aside>
+   <aside class="example" id="agreement">
+    <a class="self-link" href="#agreement"></a> ODRL Agreement specifying the agreed terms between physician and patient to read health data for primary care 
+<pre class="language-turtle highlight"><c- nn>ex</c-><c- p>:</c-><c- f>patient-physician-agreement</c-> <c- b>a</c-> <c- nn>odrl</c-><c- p>:</c-><c- f>Agreement</c-> <c- p>;</c->
+    <c- nn>odrl</c-><c- p>:</c-><c- f>uid</c-> <c- nn>ex</c-><c- p>:</c-><c- f>patient-physician-agreement</c-> <c- p>;</c->
+    <c- nn>dcterms</c-><c- p>:</c-><c- f>description</c-> <c- s>"Agreement between physician and patient to read health data for primary care."</c-> <c- p>;</c->
+    <c- nn>odrl</c-><c- p>:</c-><c- f>permission</c-> <c- p>[</c->
+        <c- nn>odrl</c-><c- p>:</c-><c- f>action</c-> <c- nn>odrl</c-><c- p>:</c-><c- f>read</c-> <c- p>;</c->
+        <c- nn>odrl</c-><c- p>:</c-><c- f>target</c-> <c- nn>ex</c-><c- p>:</c-><c- f>health-data</c-> <c- p>;</c->
+        <c- nn>odrl</c-><c- p>:</c-><c- f>assigner</c-> <c- nn>ex</c-><c- p>:</c-><c- f>patient</c-> <c- p>;</c->
+        <c- nn>odrl</c-><c- p>:</c-><c- f>assignee</c-> <c- nn>ex</c-><c- p>:</c-><c- f>physician</c-> <c- p>;</c->
+        <c- nn>odrl</c-><c- p>:</c-><c- f>constraint</c-> <c- p>[</c->
+            <c- nn>odrl</c-><c- p>:</c-><c- f>leftOperand</c-> <c- nn>odrl</c-><c- p>:</c-><c- f>purpose</c-> <c- p>;</c->
+            <c- nn>odrl</c-><c- p>:</c-><c- f>operator</c-> <c- nn>odrl</c-><c- p>:</c-><c- f>eq</c-> <c- p>;</c->
+            <c- nn>odrl</c-><c- p>:</c-><c- f>rightOperand</c-> <c- nn>sector-health</c-><c- p>:</c-><c- f>PrimaryCareManagement</c-><c- p>],</c-> <c- p>[</c->
+            <c- nn>odrl</c-><c- p>:</c-><c- f>leftOperand</c-> <c- nn>oac</c-><c- p>:</c-><c- f>LegalBasis</c-> <c- p>;</c->
+            <c- nn>odrl</c-><c- p>:</c-><c- f>operator</c-> <c- nn>odrl</c-><c- p>:</c-><c- f>eq</c-> <c- p>;</c->
+            <c- nn>odrl</c-><c- p>:</c-><c- f>rightOperand</c-> <c- nn>eu-gdpr</c-><c- p>:</c-><c- f>A9-2-a</c-> <c- p>]</c-> <c- p>]</c-> <c- p>.</c->
+</pre>
+   </aside>
+   <h2 class="heading settled" data-level="5" id="legal-grounds"><span class="secno">5. </span><span class="content">Using different legal grounds</span><a class="self-link" href="#legal-grounds"></a></h2>
+   <div class="issue no-marker" id="issue-19d84162">
+    <a class="self-link" href="#issue-19d84162"></a>
+    <div class="marker">ISSUE: Using different legal grounds</div>
+    <p>Which GDPR legal grounds make sense for the sharing of health data? Consent, vital interest, more?</p>
+    <p>How do we justify that something is of vital interest to use vital interest as the legal ground</p>
+   </div>
+   <h2 class="heading settled" data-level="6" id="catalogs"><span class="secno">6. </span><span class="content">Health data sharing policy catalogs</span><a class="self-link" href="#catalogs"></a></h2>
+   <h3 class="heading settled" data-level="6.1" id="healthdcatap"><span class="secno">6.1. </span><span class="content">Alignment with HealthDCAT-AP</span><a class="self-link" href="#healthdcatap"></a></h3>
+   <div class="issue no-marker" id="issue-a0427ddb">
+    <a class="self-link" href="#issue-a0427ddb"></a>
+    <div class="marker">ISSUE: Alignment with HealthDCAT-AP</div>
+    <p>See <a href="https://github.com/w3c/dpv/issues/201">https://github.com/w3c/dpv/issues/201</a></p>
+    <p>HealthDCAT-AP draft spec available at <a href="https://healthdcat-ap.github.io">https://healthdcat-ap.github.io</a></p>
+   </div>
+   <h3 class="heading settled" data-level="6.2" id="EHRxF"><span class="secno">6.2. </span><span class="content">Alignment with EHRxF</span><a class="self-link" href="#EHRxF"></a></h3>
+   <div class="issue no-marker" id="issue-91e162c7">
+    <a class="self-link" href="#issue-91e162c7"></a>
+    <div class="marker">ISSUE: Alignment with the European Electronic Health Record exchange Format (EHRxF)</div>
+    <p>See <a href="https://ehr-exchange-format.eu">https://ehr-exchange-format.eu</a></p>
+   </div>
   </main>
   <div data-fill-with="conformance">
    <h2 class="no-ref no-num heading settled" id="conformance"><span class="content"> Conformance</span><a class="self-link" href="#conformance"></a></h2>
@@ -2431,18 +2627,11 @@ Example: <code></code></p>
 
 })();
 </script>
-  <h2 class="no-num no-ref heading settled" id="index"><span class="content">Index</span><a class="self-link" href="#index"></a></h2>
-  <h3 class="no-num no-ref heading settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
-  <ul class="index">
-   <li><a href="#compliance-report">ODRL Compliance Report</a><span>, in § 1.1</span>
-   <li><a href="#evaluator">ODRL Evaluator</a><span>, in § 1.1</span>
-   <li><a href="#sotw-dfn">State of the World</a><span>, in § 1.1</span>
-  </ul>
   <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
   <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
-   <dt id="biblio-odrl-formal-semantics">[ODRL-FORMAL-SEMANTICS]
-   <dd>Nicoletta Fornara; et al. <a href="https://w3c.github.io/odrl/formal-semantics/"><cite>ODRL Formal Semantics</cite></a>. URL: <a href="https://w3c.github.io/odrl/formal-semantics/">https://w3c.github.io/odrl/formal-semantics/</a>
+   <dt id="biblio-dpv">[DPV]
+   <dd>Harshvardhan J. Pandit; et al. <a href="https://w3id.org/dpv"><cite>Data Privacy Vocabulary (DPV)</cite></a>. URL: <a href="https://w3id.org/dpv">https://w3id.org/dpv</a>
    <dt id="biblio-odrl-model">[ODRL-model]
    <dd>Renato Iannella; Serena Villata. <a href="https://w3c.github.io/poe/model/"><cite>ODRL Information Model 2.2</cite></a>. URL: <a href="https://w3c.github.io/poe/model/">https://w3c.github.io/poe/model/</a>
    <dt id="biblio-odrl-vocab">[ODRL-VOCAB]
@@ -2450,590 +2639,78 @@ Example: <code></code></p>
    <dt id="biblio-rfc2119">[RFC2119]
    <dd>S. Bradner. <a href="https://datatracker.ietf.org/doc/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. March 1997. Best Current Practice. URL: <a href="https://datatracker.ietf.org/doc/html/rfc2119">https://datatracker.ietf.org/doc/html/rfc2119</a>
   </dl>
-<script>/* Boilerplate: script-dom-helper */
-"use strict";
-function query(sel) { return document.querySelector(sel); }
-
-function queryAll(sel) { return [...document.querySelectorAll(sel)]; }
-
-function iter(obj) {
-	if(!obj) return [];
-	var it = obj[Symbol.iterator];
-	if(it) return it;
-	return Object.entries(obj);
-}
-
-function mk(tagname, attrs, ...children) {
-	const el = document.createElement(tagname);
-	for(const [k,v] of iter(attrs)) {
-		if(k.slice(0,3) == "_on") {
-			const eventName = k.slice(3);
-			el.addEventListener(eventName, v);
-		} else if(k[0] == "_") {
-			// property, not attribute
-			el[k.slice(1)] = v;
-		} else {
-			if(v === false || v == null) {
-        continue;
-      } else if(v === true) {
-        el.setAttribute(k, "");
-        continue;
-      } else {
-  			el.setAttribute(k, v);
-      }
-		}
-	}
-	append(el, children);
-	return el;
-}
-
-/* Create shortcuts for every known HTML element */
-[
-  "a",
-  "abbr",
-  "acronym",
-  "address",
-  "applet",
-  "area",
-  "article",
-  "aside",
-  "audio",
-  "b",
-  "base",
-  "basefont",
-  "bdo",
-  "big",
-  "blockquote",
-  "body",
-  "br",
-  "button",
-  "canvas",
-  "caption",
-  "center",
-  "cite",
-  "code",
-  "col",
-  "colgroup",
-  "datalist",
-  "dd",
-  "del",
-  "details",
-  "dfn",
-  "dialog",
-  "div",
-  "dl",
-  "dt",
-  "em",
-  "embed",
-  "fieldset",
-  "figcaption",
-  "figure",
-  "font",
-  "footer",
-  "form",
-  "frame",
-  "frameset",
-  "head",
-  "header",
-  "h1",
-  "h2",
-  "h3",
-  "h4",
-  "h5",
-  "h6",
-  "hr",
-  "html",
-  "i",
-  "iframe",
-  "img",
-  "input",
-  "ins",
-  "kbd",
-  "label",
-  "legend",
-  "li",
-  "link",
-  "main",
-  "map",
-  "mark",
-  "meta",
-  "meter",
-  "nav",
-  "nobr",
-  "noscript",
-  "object",
-  "ol",
-  "optgroup",
-  "option",
-  "output",
-  "p",
-  "param",
-  "pre",
-  "progress",
-  "q",
-  "s",
-  "samp",
-  "script",
-  "section",
-  "select",
-  "small",
-  "source",
-  "span",
-  "strike",
-  "strong",
-  "style",
-  "sub",
-  "summary",
-  "sup",
-  "table",
-  "tbody",
-  "td",
-  "template",
-  "textarea",
-  "tfoot",
-  "th",
-  "thead",
-  "time",
-  "title",
-  "tr",
-  "u",
-  "ul",
-  "var",
-  "video",
-  "wbr",
-  "xmp",
-].forEach(tagname=>{
-	mk[tagname] = (...args) => mk(tagname, ...args);
-});
-
-function* nodesFromChildList(children) {
-	for(const child of children.flat(Infinity)) {
-		if(child instanceof Node) {
-			yield child;
-		} else {
-			yield new Text(child);
-		}
-	}
-}
-function append(el, ...children) {
-	for(const child of nodesFromChildList(children)) {
-		if(el instanceof Node) el.appendChild(child);
-		else el.push(child);
-	}
-	return el;
-}
-
-function insertAfter(el, ...children) {
-	for(const child of nodesFromChildList(children)) {
-		el.parentNode.insertBefore(child, el.nextSibling);
-	}
-	return el;
-}
-
-function clearContents(el) {
-	el.innerHTML = "";
-	return el;
-}
-
-function parseHTML(markup) {
-	if(markup.toLowerCase().trim().indexOf('<!doctype') === 0) {
-		const doc = document.implementation.createHTMLDocument("");
-		doc.documentElement.innerHTML = markup;
-		return doc;
-	} else {
-		const el = mk.template({});
-		el.innerHTML = markup;
-		return el.content;
-	}
-}</script>
-<script>/* Boilerplate: script-dfn-panel */
-"use strict";
-{
-let dfnPanelData = {
-"compliance-report": {"dfnID":"compliance-report","dfnText":"ODRL Compliance Report","external":false,"refSections":[{"refs":[{"id":"ref-for-compliance-report"}],"title":"2. State of the World Representation"}],"url":"#compliance-report"},
-"evaluator": {"dfnID":"evaluator","dfnText":"ODRL Evaluator","external":false,"refSections":[],"url":"#evaluator"},
-"sotw-dfn": {"dfnID":"sotw-dfn","dfnText":"State of the World","external":false,"refSections":[],"url":"#sotw-dfn"},
-};
-
-document.addEventListener("DOMContentLoaded", ()=>{
-    genAllDfnPanels();
-
-    document.body.addEventListener("click", (e) => {
-        // If not handled already, just hide all dfn panels.
-        hideAllDfnPanels();
-    });
-});
-
-window.addEventListener("resize", () => {
-    // Pin any visible dfn panel
-    queryAll(".dfn-panel.on, .dfn-panel.activated").forEach(el=>positionDfnPanel(el));
-});
-
-function genAllDfnPanels() {
-    for(const panelData of Object.values(dfnPanelData)) {
-        const dfnID = panelData.dfnID;
-        const dfn = document.getElementById(dfnID);
-        if(!dfn) {
-            console.log(`Can't find dfn#${dfnID}.`, panelData);
-            continue;
-        }
-        dfn.panelData = panelData;
-        insertDfnPopupAction(dfn);
-    }
-}
-
-function genDfnPanel(dfn, { dfnID, url, dfnText, refSections, external }) {
-    const dfnPanel = mk.aside({
-        class: "dfn-panel on",
-        id: `infopanel-for-${dfnID}`,
-        "data-for": dfnID,
-        "aria-labelled-by":`infopaneltitle-for-${dfnID}`,
-        },
-        mk.span({id:`infopaneltitle-for-${dfnID}`, style:"display:none"},
-            `Info about the '${dfnText}' ${external?"external":""} reference.`),
-        mk.a({href:url, class:"dfn-link"}, url),
-        refSections.length == 0 ? [] :
-            mk.b({}, "Referenced in:"),
-            mk.ul({},
-                ...refSections.map(section=>
-                    mk.li({},
-                        ...section.refs.map((ref, refI)=>
-                            [
-                                mk.a({ href: `#${ref.id}` },
-                                    (refI == 0) ? section.title : `(${refI + 1})`
-                                ),
-                                " ",
-                            ]
-                        ),
-                    ),
-                ),
-            ),
-        genLinkingSyntaxes(dfn),
-    );
-
-    dfnPanel.addEventListener('click', (event) => {
-        if (event.target.nodeName == 'A') {
-            scrollToTargetAndHighlight(event);
-            pinDfnPanel(dfnPanel);
-        }
-        event.stopPropagation();
-        refocusOnTarget(event);
-    });
-    dfnPanel.addEventListener('keydown', (event) => {
-        if(event.keyCode == 27) { // Escape key
-            hideDfnPanel({dfnPanel});
-            event.stopPropagation();
-            event.preventDefault();
-        }
-    });
-
-    dfnPanel.dfn = dfn;
-    dfn.dfnPanel = dfnPanel;
-    return dfnPanel;
-}
-
-
-
-function hideAllDfnPanels() {
-    // Delete the currently-active dfn panel.
-    queryAll(".dfn-panel").forEach(dfnPanel=>hideDfnPanel({dfnPanel}));
-}
-
-function showDfnPanel(dfn) {
-    hideAllDfnPanels(); // Only display one at a time.
-
-    dfn.setAttribute("aria-expanded", "true");
-
-    const dfnPanel = genDfnPanel(dfn, dfn.panelData);
-
-    // Give the dfn a unique tabindex, and then
-    // give all the tabbable panel bits successive indexes.
-    let tabIndex = 100;
-    dfn.tabIndex = tabIndex++;
-    const tabbable = dfnPanel.querySelectorAll(":is(a, button)");
-    for (const el of tabbable) {
-        el.tabIndex = tabIndex++;
-    }
-
-    append(document.body, dfnPanel);
-    positionDfnPanel(dfnPanel);
-}
-
-function positionDfnPanel(dfnPanel) {
-    const dfn = dfnPanel.dfn;
-    const dfnPos = getBounds(dfn);
-    dfnPanel.style.top = dfnPos.bottom + "px";
-    dfnPanel.style.left = dfnPos.left + "px";
-
-    const panelPos = dfnPanel.getBoundingClientRect();
-    const panelMargin = 8;
-    const maxRight = document.body.parentNode.clientWidth - panelMargin;
-    if (panelPos.right > maxRight) {
-        const overflowAmount = panelPos.right - maxRight;
-        const newLeft = Math.max(panelMargin, dfnPos.left - overflowAmount);
-        dfnPanel.style.left = newLeft + "px";
-    }
-}
-
-function pinDfnPanel(dfnPanel) {
-    // Switch it to "activated" state, which pins it.
-    dfnPanel.classList.add("activated");
-    dfnPanel.style.position = "fixed";
-    dfnPanel.style.left = null;
-    dfnPanel.style.top = null;
-}
-
-function hideDfnPanel({dfn, dfnPanel}) {
-    if(!dfnPanel) dfnPanel = dfn.dfnPanel;
-    if(!dfn) dfn = dfnPanel.dfn;
-    dfn.dfnPanel = undefined;
-    dfnPanel.dfn = undefined;
-    dfn.setAttribute("aria-expanded", "false");
-    dfn.tabIndex = undefined;
-    dfnPanel.remove()
-}
-
-function toggleDfnPanel(dfn) {
-    if(dfn.dfnPanel) {
-        hideDfnPanel(dfn);
-    } else {
-        showDfnPanel(dfn);
-    }
-}
-
-function insertDfnPopupAction(dfn) {
-    dfn.setAttribute('role', 'button');
-    dfn.setAttribute('aria-expanded', 'false')
-    dfn.tabIndex = 0;
-    dfn.classList.add('has-dfn-panel');
-    dfn.addEventListener('click', (event) => {
-        toggleDfnPanel(dfn);
-        event.stopPropagation();
-    });
-    dfn.addEventListener('keypress', (event) => {
-        const kc = event.keyCode;
-        // 32->Space, 13->Enter
-        if(kc == 32 || kc == 13) {
-            toggleDfnPanel(dfn);
-            event.stopPropagation();
-            event.preventDefault();
-        }
-    });
-}
-
-function refocusOnTarget(event) {
-    const target = event.target;
-    setTimeout(() => {
-        // Refocus on the event.target element.
-        // This is needed after browser scrolls to the destination.
-        target.focus();
-    });
-}
-
-// TODO: shared util
-// Returns the root-level absolute position {left and top} of element.
-function getBounds(el, relativeTo=document.body) {
-    const relativeRect = relativeTo.getBoundingClientRect();
-    const elRect = el.getBoundingClientRect();
-    const top = elRect.top - relativeRect.top;
-    const left = elRect.left - relativeRect.left;
-    return {
-        top,
-        left,
-        bottom: top + elRect.height,
-        right: left + elRect.width,
-    }
-}
-
-function scrollToTargetAndHighlight(event) {
-    let hash = event.target.hash;
-    if (hash) {
-        hash = decodeURIComponent(hash.substring(1));
-        const dest = document.getElementById(hash);
-        if (dest) {
-            dest.classList.add('highlighted');
-            setTimeout(() => dest.classList.remove('highlighted'), 1000);
-        }
-    }
-}
-
-// Functions, divided by link type, that wrap an autolink's
-// contents with the appropriate outer syntax.
-// Alternately, a string naming another type they format
-// the same as.
-function needsFor(type) {
-    switch(type) {
-        case "descriptor":
-        case "value":
-        case "element-attr":
-        case "attr-value":
-        case "element-state":
-        case "method":
-        case "constructor":
-        case "argument":
-        case "attribute":
-        case "const":
-        case "dict-member":
-        case "event":
-        case "enum-value":
-        case "stringifier":
-        case "serializer":
-        case "iterator":
-        case "maplike":
-        case "setlike":
-        case "state":
-        case "mode":
-        case "context":
-        case "facet": return true;
-
-        default: return false;
-    }
-}
-function refusesFor(type) {
-    switch(type) {
-        case "property":
-        case "element":
-        case "interface":
-        case "namespace":
-        case "callback":
-        case "dictionary":
-        case "enum":
-        case "exception":
-        case "typedef":
-        case "http-header":
-        case "permission": return true;
-
-        default: return false;
-    }
-}
-function linkFormatterFromType(type) {
-    switch(type) {
-        case 'scheme':
-        case 'permission':
-        case 'dfn': return (text) => `[=${text}=]`;
-
-        case 'abstract-op': return (text) => `[\$${text}\$]`;
-
-        case 'function':
-        case 'at-rule':
-        case 'selector':
-        case 'value': return (text) => `''${text}''`;
-
-        case 'http-header': return (text) => `[:${text}:]`;
-
-        case 'interface':
-        case 'constructor':
-        case 'method':
-        case 'argument':
-        case 'attribute':
-        case 'callback':
-        case 'dictionary':
-        case 'dict-member':
-        case 'enum':
-        case 'enum-value':
-        case 'exception':
-        case 'const':
-        case 'typedef':
-        case 'stringifier':
-        case 'serializer':
-        case 'iterator':
-        case 'maplike':
-        case 'setlike':
-        case 'extended-attribute':
-        case 'event':
-        case 'idl': return (text) => `{{${text}}}`;
-
-        case 'element-state':
-        case 'element-attr':
-        case 'attr-value':
-        case 'element': return (element) => `<{${element}}>`;
-
-        case 'grammar': return (text) => `${text} (within a <pre class=prod>)`;
-
-        case 'type': return (text)=> `<<${text}>>`;
-
-        case 'descriptor':
-        case 'property': return (text) => `'${text}'`;
-
-        default: return;
-    };
-};
-
-function genLinkingSyntaxes(dfn) {
-    if(dfn.tagName != "DFN") return;
-
-    const type = dfn.getAttribute('data-dfn-type');
-    if(!type) {
-        console.log(`<dfn> doesn't have a data-dfn-type:`, dfn);
-        return [];
-    }
-
-    // Return a function that wraps link text based on the type
-    const linkFormatter = linkFormatterFromType(type);
-    if(!linkFormatter) {
-        console.log(`<dfn> has an unknown data-dfn-type:`, dfn);
-        return [];
-    }
-
-    let ltAlts;
-    if(dfn.hasAttribute('data-lt')) {
-        ltAlts = dfn.getAttribute('data-lt')
-            .split("|")
-            .map(x=>x.trim());
-    } else {
-        ltAlts = [dfn.textContent.trim()];
-    }
-    if(type == "type") {
-        // lt of "<foo>", but "foo" is the interior;
-        // <<foo/bar>> is how you write it with a for,
-        // not <foo/<bar>> or whatever.
-        for(var i = 0; i < ltAlts.length; i++) {
-            const lt = ltAlts[i];
-            const match = /<(.*)>/.exec(lt);
-            if(match) { ltAlts[i] = match[1]; }
-        }
-    }
-
-    let forAlts;
-    if(dfn.hasAttribute('data-dfn-for')) {
-        forAlts = dfn.getAttribute('data-dfn-for')
-            .split(",")
-            .map(x=>x.trim());
-    } else {
-        forAlts = [''];
-    }
-
-    let linkingSyntaxes = [];
-    if(!needsFor(type)) {
-        for(const lt of ltAlts) {
-            linkingSyntaxes.push(linkFormatter(lt));
-        }
-    }
-    if(!refusesFor(type)) {
-        for(const f of forAlts) {
-            linkingSyntaxes.push(linkFormatter(`${f}/${ltAlts[0]}`))
-        }
-    }
-    return [
-        mk.b({}, 'Possible linking syntaxes:'),
-        mk.ul({},
-            ...linkingSyntaxes.map(link => {
-                const copyLink = async () =>
-                    await navigator.clipboard.writeText(link);
-                return mk.li({},
-                    mk.div({ class: 'link-item' },
-                        mk.button({
-                            class: 'copy-icon', title: 'Copy',
-                            type: 'button',
-                            _onclick: copyLink,
-                            tabindex: 0,
-                        }, mk.span({ class: 'icon' }) ),
-                        mk.span({}, link)
-                    )
-                );
-            })
-        )
-    ];
-}
-}
-</script>
+  <h3 class="no-num no-ref heading settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="#informative"></a></h3>
+  <dl>
+   <dt id="biblio-dga">[DGA]
+   <dd><a href="http://data.europa.eu/eli/reg/2022/868/oj"><cite>Regulation (EU) 2022/868 of the European Parliament and of the Council of 30 May 2022 on European data governance and amending Regulation (EU) 2018/1724 (Data Governance Act)</cite></a>. URL: <a href="http://data.europa.eu/eli/reg/2022/868/oj">http://data.europa.eu/eli/reg/2022/868/oj</a>
+   <dt id="biblio-ehds">[EHDS]
+   <dd><a href="http://data.europa.eu/eli/reg/2025/327/oj"><cite>Regulation (EU) 2025/327 of the European Parliament and of the Council of 11 February 2025 on the European Health Data Space and amending Directive 2011/24/EU and Regulation (EU) 2024/2847</cite></a>. URL: <a href="http://data.europa.eu/eli/reg/2025/327/oj">http://data.europa.eu/eli/reg/2025/327/oj</a>
+   <dt id="biblio-gdpr">[GDPR]
+   <dd><a href="http://data.europa.eu/eli/reg/2016/679/oj"><cite>Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation)</cite></a>. URL: <a href="http://data.europa.eu/eli/reg/2016/679/oj">http://data.europa.eu/eli/reg/2016/679/oj</a>
+  </dl>
+  <h2 class="no-num no-ref heading settled" id="issues-index"><span class="content">Issues Index</span><a class="self-link" href="#issues-index"></a></h2>
+  <div style="counter-reset:issue">
+   <div class="issue no-marker">
+    <div class="marker">ISSUE: Necessity of specified terms for offers</div>
+    <p>The minimal set of terms to define data subject or holder policies, identified in <a href="#table-offers">Table 1</a>, is still work-in-progress.</p>
+     <a class="issue-return" href="#issue-c0bd9107" title="Jump to section">↵</a>
+   </div>
+   <div class="issue no-marker">
+    <div class="marker">ISSUE: Specify common healthcare-related recipients</div>
+    <p>DPV’s organisation taxonomy already has some concepts for this, are they enough?</p>
+     <a class="issue-return" href="#issue-4150646f" title="Jump to section">↵</a>
+   </div>
+   <div class="issue no-marker">
+    <div class="marker">ISSUE: Access/usage of retrospective/prospective data</div>
+    <p>We should be able to allow both or just one of them</p>
+    <p>In the absence of this information, should we assume by default only retrospective data or retrospective+prospective data?</p>
+     <a class="issue-return" href="#issue-d430f43f" title="Jump to section">↵</a>
+   </div>
+   <div class="issue no-marker">
+    <div class="marker">ISSUE: Necessity of specified terms for requests</div>
+    <p> The minimal set of terms to define requests, identified in <a href="#table-requests">Table 2</a>, 
+        and respective mapping into legal requirements, e.g., from the GDPR and EHDS,
+        is still work-in-progress. </p>
+     <a class="issue-return" href="#issue-73e190e1" title="Jump to section">↵</a>
+   </div>
+   <div class="issue no-marker">
+    <div class="marker">ISSUE: Add personal and non-personal electronic health data concepts to EHDS</div>
+    <p> EHDS "lays down common rules and mechanisms for primary use of electronic health data and secondary use of electronic health data",
+        and "'electronic health data’'means personal or non-personal electronic health data". </p>
+     <a class="issue-return" href="#issue-8cebdce9" title="Jump to section">↵</a>
+   </div>
+   <div class="issue no-marker">
+    <div class="marker">ISSUE: Add primary and secondary use concepts to EHDS</div>
+    <p> Use case for complex right operands? (Where more than one value is needed to assess the left/right operand relation) </p>
+     <a class="issue-return" href="#issue-7ab0fc6b" title="Jump to section">↵</a>
+   </div>
+   <div class="issue no-marker">
+    <div class="marker">ISSUE: Add concepts/examples to deal with joint controllers and data processors</div>
+    <p> In case there’s joint-controllership and/or data processors involved in the processing, then policies must be specified for that as well including each parties responsibilities. </p>
+     <a class="issue-return" href="#issue-5d77fbfb" title="Jump to section">↵</a>
+   </div>
+   <div class="issue no-marker">
+    <div class="marker">ISSUE: How to model events/activities, e.g., emergency events that can justify using vital interest as the legal basis</div>
+    <p> We can use <code>odrl:event</code> or look into how to use DPV’s justifications to do it. 
+        Though, at this moment, DPV’s justifications don’t have any concepts for this. 
+        See <a href="https://w3c.github.io/dpv/2.1/dpv/modules/legal_basis.html#desc-vital-interest">https://w3c.github.io/dpv/2.1/dpv/modules/legal_basis.html#desc-vital-interest</a></p>
+     <a class="issue-return" href="#issue-0686b6e0" title="Jump to section">↵</a>
+   </div>
+   <div class="issue no-marker">
+    <div class="marker">ISSUE: Using different legal grounds</div>
+    <p>Which GDPR legal grounds make sense for the sharing of health data? Consent, vital interest, more?</p>
+    <p>How do we justify that something is of vital interest to use vital interest as the legal ground</p>
+     <a class="issue-return" href="#issue-19d84162" title="Jump to section">↵</a>
+   </div>
+   <div class="issue no-marker">
+    <div class="marker">ISSUE: Alignment with HealthDCAT-AP</div>
+    <p>See <a href="https://github.com/w3c/dpv/issues/201">https://github.com/w3c/dpv/issues/201</a></p>
+    <p>HealthDCAT-AP draft spec available at <a href="https://healthdcat-ap.github.io">https://healthdcat-ap.github.io</a></p>
+     <a class="issue-return" href="#issue-a0427ddb" title="Jump to section">↵</a>
+   </div>
+   <div class="issue no-marker">
+    <div class="marker">ISSUE: Alignment with the European Electronic Health Record exchange Format (EHRxF)</div>
+    <p>See <a href="https://ehr-exchange-format.eu">https://ehr-exchange-format.eu</a></p>
+     <a class="issue-return" href="#issue-91e162c7" title="Jump to section">↵</a>
+   </div>
+  </div>
