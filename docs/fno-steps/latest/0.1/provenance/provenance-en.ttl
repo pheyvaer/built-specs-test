@@ -4,15 +4,11 @@
 @prefix : <> .
 <https://w3id.org/imec/ns/fno-steps/0.1#> a prov:Entity;
 	 dc:title "FnO-Steps vocabulary";
-	 prov:wasAttributedTo <https://sven-lieber.org/profile#me>;
-	 dc:creator <https://sven-lieber.org/profile#me>;
-	 prov:wasAttributedTo <https://ben.de-meester.org/#me>;
-	 dc:contributor <https://ben.de-meester.org/#me>;
 	 prov:wasAttributedTo :agent0;
-	 prov:wasAttributedTo <https://data.knows.idlab.ugent.be/person/geraldh/#me>;
-	 dc:contributor <https://data.knows.idlab.ugent.be/person/geraldh/#me>;
+	 prov:wasAttributedTo :agent1;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:specializationOf <https://w3id.org/imec/ns/fno-steps#>;
 	 prov:wasGeneratedAt "Date created";
 .
-:agent0 a prov:Agent; foaf:name "Dörthe Arndt".
+:agent0 a prov:Agent; foaf:name "Disclosed after review".
+:agent1 a prov:Agent; foaf:name "Disclosed after review".

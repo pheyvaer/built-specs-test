@@ -14,8 +14,7 @@
     <owl:Ontology rdf:about="https://w3id.org/imec/ns/fno-steps#">
         <owl:versionIRI rdf:resource="https://w3id.org/imec/ns/fno-steps/0.2#"/>
         <ns:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <terms:creator rdf:resource="https://data.knows.idlab.ugent.be/person/geraldh/#me"/>
-        <terms:creator rdf:resource="https://sven-lieber.org/profile#me"/>
+        <terms:creator rdf:resource="https://example.org#disclosed-after-review"/>
         <terms:description xml:lang="en">This is the FnO-Steps vocabulary, aiming to describe a workflow consisting of a number of steps.</terms:description>
         <terms:title xml:lang="en">FnO-Steps vocabulary</terms:title>
         <vann:preferredNamespacePrefix>fno-steps</vann:preferredNamespacePrefix>

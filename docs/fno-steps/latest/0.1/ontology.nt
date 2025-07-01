@@ -1,8 +1,7 @@
 <https://w3id.org/imec/ns/fno-steps#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/imec/ns/fno-steps#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/imec/ns/fno-steps/0.2#> .
 <https://w3id.org/imec/ns/fno-steps#> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> .
-<https://w3id.org/imec/ns/fno-steps#> <http://purl.org/dc/terms/creator> <https://data.knows.idlab.ugent.be/person/geraldh/#me> .
-<https://w3id.org/imec/ns/fno-steps#> <http://purl.org/dc/terms/creator> <https://sven-lieber.org/profile#me> .
+<https://w3id.org/imec/ns/fno-steps#> <http://purl.org/dc/terms/creator> <https://example.org#disclosed-after-review> .
 <https://w3id.org/imec/ns/fno-steps#> <http://purl.org/dc/terms/description> "This is the FnO-Steps vocabulary, aiming to describe a workflow consisting of a number of steps."@en .
 <https://w3id.org/imec/ns/fno-steps#> <http://purl.org/dc/terms/title> "FnO-Steps vocabulary"@en .
 <https://w3id.org/imec/ns/fno-steps#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "fno-steps" .

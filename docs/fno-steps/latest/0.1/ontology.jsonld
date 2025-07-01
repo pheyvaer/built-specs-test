@@ -358,9 +358,7 @@
     "@id" : "http://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
-    "@id" : "https://data.knows.idlab.ugent.be/person/geraldh/#me"
-  }, {
-    "@id" : "https://sven-lieber.org/profile#me"
+    "@id" : "https://example.org#disclosed-after-review"
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",

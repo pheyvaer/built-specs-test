@@ -9,8 +9,7 @@
 <https://w3id.org/imec/ns/fno-steps#> rdf:type owl:Ontology ;
                                        owl:versionIRI <https://w3id.org/imec/ns/fno-steps/0.2#> ;
                                        <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> ;
-                                       <http://purl.org/dc/terms/creator> <https://data.knows.idlab.ugent.be/person/geraldh/#me> ,
-                                                                          <https://sven-lieber.org/profile#me> ;
+                                       <http://purl.org/dc/terms/creator> <https://example.org#disclosed-after-review> ;
                                        <http://purl.org/dc/terms/description> "This is the FnO-Steps vocabulary, aiming to describe a workflow consisting of a number of steps."@en ;
                                        <http://purl.org/dc/terms/title> "FnO-Steps vocabulary"@en ;
                                        <http://purl.org/vocab/vann/preferredNamespacePrefix> "fno-steps" ;
