@@ -1,0 +1,1059 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://purl.org/net/p-plan", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2008/05/skos-xl", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://www.w3.org/ns/shacl", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/imec/ns/fno-steps", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "FnO-Steps vocabulary"
+    },
+    "iri" : "https://w3id.org/imec/ns/fno-steps#",
+    "version" : "0.1",
+    "author" : [ "https://example.org#disclosed-after-review" ],
+    "description" : {
+      "en" : "This is the FnO-Steps vocabulary, aiming to describe a workflow consisting of a number of steps."
+    },
+    "labels" : {
+      "en" : "FnO-Steps vocabulary"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://example.org#disclosed-after-review",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "fno-steps",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/imec/ns/fno-steps#",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "0.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "FnO-Steps vocabulary",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "13",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/imec/ns/fno-steps#StateShape",
+    "baseIri" : "https://w3id.org/imec/ns/fno-steps",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/imec/ns/fno-steps#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "StateShape",
+      "en" : "State shape"
+    },
+    "comment" : {
+      "en" : "A state shape is a shape that specifies a set of triples representing a state, and is described as constraints."
+    },
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://purl.org/net/p-plan#Activity",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Activity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Concept"
+    },
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/imec/ns/fno-steps#Plan",
+    "baseIri" : "https://w3id.org/imec/ns/fno-steps",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/imec/ns/fno-steps#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Plan",
+      "en" : "Plan"
+    },
+    "comment" : {
+      "en" : "A fno-steps:Plan is a specific type of p-plan:Plan. It is composed of smaller steps that require and produce states."
+    },
+    "id" : "7",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://purl.org/net/p-plan#Entity",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entity"
+    },
+    "subClasses" : [ "12", "8" ],
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://purl.org/net/p-plan#MultiStep",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MultiStep"
+    },
+    "attributes" : [ "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConceptScheme"
+    },
+    "attributes" : [ "external" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/imec/ns/fno-steps#JourneyLevelStep",
+    "baseIri" : "https://w3id.org/imec/ns/fno-steps",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/imec/ns/fno-steps#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "JourneyLevelStep",
+      "en" : "JourneyLevelStep"
+    },
+    "comment" : {
+      "en" : "Three hierarchy levels are defined. A JourneyLevelStep represents the highest-level."
+    },
+    "id" : "17",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "https://w3id.org/imec/ns/fno-steps#State",
+    "baseIri" : "https://w3id.org/imec/ns/fno-steps",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/imec/ns/fno-steps#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "State",
+      "en" : "State"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/imec/ns/fno-steps#emptyState",
+      "baseIri" : "https://w3id.org/imec/ns/fno-steps",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/imec/ns/fno-steps#",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "This state represents an empty state. It can be used by steps which for example do not require any state, instead they would specify fno-steps:requiresState fno-steps:emptyState."
+      },
+      "labels" : {
+        "IRI-based" : "emptyState",
+        "en" : "Empty state"
+      }
+    } ],
+    "comment" : {
+      "en" : "A state in the sense of a particular condition something is in. In our case a state could be represented as a set of RDF statements."
+    },
+    "id" : "21",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/shacl#PropertyShape",
+    "baseIri" : "http://www.w3.org/ns/shacl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/shacl#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PropertyShape",
+      "en" : "Property shape"
+    },
+    "comment" : {
+      "en" : "A property shape is a shape that specifies constraints on the values of a focus node for a given property or path."
+    },
+    "attributes" : [ "external" ],
+    "id" : "31"
+  }, {
+    "iri" : "https://w3id.org/imec/ns/fno-steps#ContainerLevelStep",
+    "baseIri" : "https://w3id.org/imec/ns/fno-steps",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/imec/ns/fno-steps#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ContainerLevelStep",
+      "en" : "ContainerLevelStep"
+    },
+    "comment" : {
+      "en" : "Three hierarchy levels are defined. A ContainerLevelStep represents the middle-level."
+    },
+    "id" : "33",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "https://w3id.org/imec/ns/fno-steps#Bundle",
+    "baseIri" : "https://w3id.org/imec/ns/fno-steps",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/imec/ns/fno-steps#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Bundle",
+      "en" : "Bundle"
+    },
+    "comment" : {
+      "en" : "A fno-steps:Bundle is a specific type of p-plan:Bundle that contains the provenance assertions of the execution of a fno-steps:Plan"
+    },
+    "id" : "25",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/shacl#NodeShape",
+    "baseIri" : "http://www.w3.org/ns/shacl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/shacl#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "NodeShape",
+      "en" : "Node shape"
+    },
+    "subClasses" : [ "3" ],
+    "comment" : {
+      "en" : "A node shape is a shape that specifies constraint that need to be met with respect to focus nodes."
+    },
+    "attributes" : [ "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "1",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "13",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/imec/ns/fno-steps#ComponentLevelStep",
+    "baseIri" : "https://w3id.org/imec/ns/fno-steps",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/imec/ns/fno-steps#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ComponentLevelStep",
+      "en" : "ComponentLevelStep"
+    },
+    "comment" : {
+      "en" : "Three hierarchy levels are defined. A ComponentLevelStep represents the lowest level."
+    },
+    "id" : "35",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://purl.org/net/p-plan#Step",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/net/p-plan#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A p-plan:Step represents the planned execution activity",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Step",
+      "en" : "Step"
+    },
+    "subClasses" : [ "18" ],
+    "attributes" : [ "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Collection",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Collection"
+    },
+    "attributes" : [ "external" ],
+    "id" : "50"
+  }, {
+    "iri" : "https://w3id.org/imec/ns/fno-steps#Step",
+    "baseIri" : "https://w3id.org/imec/ns/fno-steps",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/imec/ns/fno-steps#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Step",
+      "en" : "Step"
+    },
+    "subClasses" : [ "33", "17", "35" ],
+    "comment" : {
+      "en" : "The Workflow Coalition defines a step as: 'A description of a piece of work that forms one logical step within a process'. Furthermore, such a step may be either a workflow, or the smallest unit of work which is scheduled based on pre/post-conditions (states)."
+    },
+    "id" : "18",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "http://www.w3.org/2008/05/skos-xl#Label",
+    "baseIri" : "http://www.w3.org/2008/05/skos-xl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2008/05/skos-xl",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A special class of lexical entities.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Label",
+      "en" : "Label"
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://purl.org/net/p-plan#Variable",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/net/p-plan#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A p-plan:Variable represents a description of the input of the planned Activity (p-plan:Step)",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Variable",
+      "en" : "Variable"
+    },
+    "subClasses" : [ "21" ],
+    "attributes" : [ "external" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://purl.org/net/p-plan#Bundle",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/net/p-plan#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Bundle",
+      "en" : "Bundle"
+    },
+    "subClasses" : [ "25" ],
+    "comment" : {
+      "en" : "A p-plan:Bundle is a specific type of prov:Bundle that contains the provenance assertions of the execution of a p-plan:Plan"
+    },
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "30", "11" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Bundle",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Bundle"
+    },
+    "subClasses" : [ "12" ],
+    "attributes" : [ "external" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://purl.org/net/p-plan#Plan",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/net/p-plan#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A p-plan:Plan is a specific type of prov:Plan. It is composed of smaller steps that use and produce Variables.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Plan",
+      "en" : "Plan"
+    },
+    "subClasses" : [ "7" ],
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "11", "20" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Plan",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Plan"
+    },
+    "subClasses" : [ "8" ],
+    "attributes" : [ "external" ],
+    "id" : "20"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "51",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.w3.org/2008/05/skos-xl#prefLabel",
+    "baseIri" : "http://www.w3.org/2008/05/skos-xl",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2008/05/skos-xl",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The property skosxl:prefLabel is used to associate an skosxl:Label with a skos:Concept. The property is analogous to skos:prefLabel.",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "prefLabel",
+      "en" : "preferred label"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "If C skosxl:prefLabel L and L skosxl:literalForm V, then X skos:prefLabel V."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://purl.org/net/p-plan#isSubPlanOfPlan",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/net/p-plan#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A p-plan:Plan may be a subplan of another bigger p-plan:Plan. p-plan:isSubPlanOfPlan is used to state the link among the two different plans. Note that if p1 is a p-plan:subPlan of p2, p1will not necessarily be a step of p2. A multistep will represent p1 in p2, and link to p1 with the p-plan.hasStepDecomposition relationship.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isSubPlanOfPlan",
+      "en" : "isSubPlanOfPlan"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "8",
+    "attributes" : [ "object", "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "13",
+    "subproperty" : [ "9" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://www.w3.org/2008/05/skos-xl#altLabel",
+    "baseIri" : "http://www.w3.org/2008/05/skos-xl",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2008/05/skos-xl",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The property skosxl:altLabel is used to associate an skosxl:Label with a skos:Concept. The property is analogous to skos:altLabel.",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core#altLabel",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "altLabel",
+      "en" : "alternative label"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "If C skosxl:altLabel L and L skosxl:literalForm V, then X skos:altLabel V."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "16"
+  }, {
+    "range" : "20",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://purl.org/net/p-plan#isDecomposedAsPlan",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/net/p-plan#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The p-plan:isDecomposedAsPlan relationship binds a p-plan:MultiStep to the p-plan:Plan holding the definition of that step. That is, p-plan:isDecomposedAsPlan links the MultiStep to the Plan sptecification where it is decomposed.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isDecomposedAsPlan",
+      "en" : "isDecomposedAsPlan"
+    },
+    "domain" : "14",
+    "attributes" : [ "object", "external" ],
+    "id" : "23"
+  }, {
+    "range" : "12",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "24"
+  }, {
+    "range" : "22",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "26"
+  }, {
+    "range" : "8",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/imec/ns/fno-steps#producesState",
+    "baseIri" : "https://w3id.org/imec/ns/fno-steps",
+    "range" : "21",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/imec/ns/fno-steps#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "producesState",
+      "en" : "producesState"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "fno-steps:producesState binds a fno-steps:Step to the fno-steps:State the step produces."
+    },
+    "attributes" : [ "object" ],
+    "id" : "28"
+  }, {
+    "range" : "30",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
+  }, {
+    "range" : "18",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "range" : "18",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "18",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://purl.org/net/p-plan#correspondsToVariable",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "range" : "22",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/net/p-plan#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "p-plan:correspondsToVariable binds a p-plan:Entity (used by a p-plan:Activity in the execution of a plan) to the p-plan:Variable it represented it in the p-plan:Plan.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "correspondsToVariable",
+      "en" : "correspondsToVariable"
+    },
+    "domain" : "11",
+    "attributes" : [ "object", "functional", "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://purl.org/net/p-plan#isStepOfPlan",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/net/p-plan#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "p-plan:isStepOfPlan links a p-plan:Step to the p-plan:Plan which it corresponds to.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isStepOfPlan",
+      "en" : "isStepOfPlan"
+    },
+    "domain" : "39",
+    "attributes" : [ "object", "external" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/imec/ns/fno-steps#requiresState",
+    "baseIri" : "https://w3id.org/imec/ns/fno-steps",
+    "range" : "21",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/imec/ns/fno-steps#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "requiresState",
+      "en" : "requiresState"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "fno-steps:requiresState binds a fno-steps:Step to the fno-steps:State the step requires to produce the state bound via fno-steps:producesState."
+    },
+    "attributes" : [ "object" ],
+    "id" : "40"
+  }, {
+    "range" : "2",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://purl.org/net/p-plan#correspondsToStep",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "range" : "39",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/net/p-plan#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "p-plan:correspondsToStep links a p-plan:Activity to its planned p-plan:Step",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "correspondsToStep",
+      "en" : "correspondsToStep"
+    },
+    "domain" : "5",
+    "attributes" : [ "object", "functional", "external" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://w3id.org/imec/ns/fno-steps#hasDescription",
+    "baseIri" : "https://w3id.org/imec/ns/fno-steps",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasDescription"
+    },
+    "domain" : "39",
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "range" : "11",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "range" : "11",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "47"
+  }, {
+    "range" : "39",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "range" : "2",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "range" : "2",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://w3id.org/imec/ns/fno-steps#hasStateShape",
+    "baseIri" : "https://w3id.org/imec/ns/fno-steps",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/imec/ns/fno-steps#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasStateShape",
+      "en" : "hasStateShape"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "Links a fno-steps:State to a description of the state as fno-steps:StateShape."
+    },
+    "attributes" : [ "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://www.w3.org/2008/05/skos-xl#literalForm",
+    "baseIri" : "http://www.w3.org/2008/05/skos-xl",
+    "range" : "42",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2008/05/skos-xl",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The property skosxl:literalForm is used to give the literal form of an skosxl:Label.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "literalForm",
+      "en" : "literal form"
+    },
+    "cardinality" : "1",
+    "domain" : "2",
+    "comment" : {
+      "en" : "The range of skosxl:literalForm is the class of RDF plain literals."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "53"
+  } ]
+}
