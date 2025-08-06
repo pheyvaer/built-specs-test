@@ -1,7 +1,7 @@
 <!doctype html><html lang="en">
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title>Time Functions</title>
+  <title>Trust Envelope specification</title>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
@@ -1488,9 +1488,9 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version 40c07fe, updated Mon Jun 30 13:04:37 2025 +0200" name="generator">
-  <link href="https://w3id.org/time-fn" rel="canonical">
-  <meta content="76f6866c18be147769d4ef330154b3cc11fc7acd" name="revision">
+  <meta content="Bikeshed version b25686b9f, updated Fri Mar 14 14:15:20 2025 -0700" name="generator">
+  <link href="https://w3id.org/trustenvelope" rel="canonical">
+  <meta content="3b9a7ce52a2dbdba81a663feeae8f0373f783891" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -2013,57 +2013,49 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
 </style>
  <body class="h-entry">
   <div class="head">
-   <p data-fill-with="logo"><a class="logo" href="https://knows.idlab.ugent.be/">
-    <img alt="KNoWS" height="48" src="logo.png">
-</a>
-</p>
-   <h1 class="p-name no-ref" id="title">Time Functions</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2025-07-28">28 July 2025</time></span></h2>
+   <p data-fill-with="logo"><a class="logo" href="https://knows.idlab.ugent.be/"> <img alt="KNoWS" height="48" src="logo.png"> </a></p>
+   <h1 class="p-name no-ref" id="title">Trust Envelope specification</h1>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2025-08-05">5 August 2025</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
+     <dt>This version:
+     <dd><a class="u-url" href="https://w3id.org/trustenvelope">https://w3id.org/trustenvelope</a>
+     <dt>Previous Versions:
+     <dd><a href="_ORCHESTRATOR_PREVIOUS_BUILD_FULL_LINK_" rel="prev">_ORCHESTRATOR_PREVIOUS_BUILD_FULL_LINK_</a>
      <dt>Issue Tracking:
-     <dd><a href="https://github.com/smessie/time-fn/issues/">GitHub</a>
-     <dt class="editor">Editor:
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:ieben.smessaert@ugent.be">Ieben Smessaert</a> (<a class="p-org org" href="http://idlab.ugent.be/">Ghent University - imec</a>)
+     <dd><a href="https://github.com/KNowledgeOnWebScale/TrustEnvelope/issues/">GitHub</a>
+     <dt class="editor">Editors:
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:wout.slabbinck@ugent.be">Wout Slabbinck</a> (<a class="p-org org" href="http://idlab.ugent.be/">Ghent University - imec</a>)
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:beatriz.esteves@ugent.be">Beatriz Esteves</a> (<a class="p-org org" href="http://idlab.ugent.be/">Ghent University - imec</a>)
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:ruben.verborgh@ugent.be">Ruben Verborgh</a> (<a class="p-org org" href="http://idlab.ugent.be/">Ghent University - imec</a>)
+     <dt>License:
+     <dd><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a>
     </dl>
    </div>
    <div data-fill-with="warning"></div>
-   <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" height="15" src="https://licensebuttons.net/p/zero/1.0/80x15.png" width="80"></a>
-To the extent possible under law, the editors have waived all copyright
-and related or neighboring rights to this work.
-In addition, as of 28 July 2025,
-the editors have made this specification available under the
-<a href="https://www.openwebfoundation.org/the-agreements/the-owf-1-0-agreements-granted-claims/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
-which is available at https://www.openwebfoundation.org/the-agreements/the-owf-1-0-agreements-granted-claims/owfa-1-0.
-Parts of this work may be from another specification document.  If so, those parts are instead covered by the license of that specification document.
-</p>
+   <p class="copyright" data-fill-with="copyright"></p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>This document defines a set of Time Functions that can be utilized in SPARQL queries to manipulate time literals. These functions enable the explicit specification of timezones for time periods, including partial dateTimes like xsd:gYear, as well as dateTimes without a specified timezone. Additionally, they facilitate the retrieval of the inclusive or exclusive bounds of a time period.</p>
+   <p>TODO</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
    <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory">
     <li>
-     <a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
+     <a href="#introduction"><span class="secno">1</span> <span class="content">Introd­uction</span></a>
      <ol class="toc">
-      <li><a href="#function-signatures"><span class="secno">1.1</span> <span class="content">Function signatures and descriptions</span></a>
+      <li><a href="#terminology"><span class="secno">1.1</span> <span class="content">Terminology</span></a>
      </ol>
-    <li>
-     <a href="#time-functions"><span class="secno">2</span> <span class="content">Time Functions</span></a>
-     <ol class="toc">
-      <li><a href="#periodMinInclusive"><span class="secno">2.1</span> <span class="content">tfn:periodMinInclusive</span></a>
-      <li><a href="#periodMaxInclusive"><span class="secno">2.2</span> <span class="content">tfn:periodMaxInclusive</span></a>
-      <li><a href="#periodMinExclusive"><span class="secno">2.3</span> <span class="content">tfn:periodMinExclusive</span></a>
-      <li><a href="#periodMaxExclusive"><span class="secno">2.4</span> <span class="content">tfn:periodMaxExclusive</span></a>
-      <li><a href="#bindDefaultTimezone"><span class="secno">2.5</span> <span class="content">tfn:bindDefaultTimezone</span></a>
-     </ol>
-    <li><a href="#conformance"><span class="secno"></span> <span class="content">
-    Conformance</span></a>
+    <li><a href="#requirements"><span class="secno">2</span> <span class="content">Requirements</span></a>
+    <li><a href="#model"><span class="secno">3</span> <span class="content">Model</span></a>
+    <li><a href="#vocabulary"><span class="secno">4</span> <span class="content">Vocabulary</span></a>
+    <li><a href="#materialization"><span class="secno">5</span> <span class="content">Materialization</span></a>
+    <li><a href="#legal"><span class="secno">6</span> <span class="content">Legal Considerations</span></a>
+    <li><a href="#namespaces"><span class="secno">7</span> <span class="content">Namespaces</span></a>
+    <li><a href="#conformance"><span class="secno"></span> <span class="content"> Conformance</span></a>
     <li>
      <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
      <ol class="toc">
@@ -2072,225 +2064,51 @@ Parts of this work may be from another specification document.  If so, those par
    </ol>
   </nav>
   <main>
-   <h3 class="heading settled" id="namespace"><span class="content">Namespace</span></h3>
-   <p>The Time Functions ontology’s namespace is <a href="https://w3id.org/time-fn#">https://w3id.org/time-fn#</a>.</p>
-   <p>The preferred namespace prefix is <code>tfn:</code>.</p>
-   <p>The current version of the ontology specified in this document is <code>1.0.0</code>.</p>
-   <p>A Turtle version of the ontology is available <a href="time-fn.ttl">here</a>.</p>
-   <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
-   <p>The Time Functions ontology offers a set of functions tailored to manage time literals in RDF and SPARQL. It addresses the need for manipulating time periods, including those without a designated timezone, and facilitates the retrieval of inclusive or exclusive bounds for these periods.</p>
-   <p>This functionality enables the comparison of time literals in SPARQL queries by mapping time periods (e.g., <code>xsd:gYear</code>, <code>xsd:gYearMonth</code>, and <code>xsd:date</code>) to specific <code>xsd:dateTime</code> values with an explicit timezone.</p>
-   <p>These functions are particularly useful for working with time periods that may include partial dateTimes, such as <code>xsd:gYear</code>, <code>xsd:gYearMonth</code>, and <code>xsd:date</code>, and for handling dateTimes that lack a specified timezone.</p>
-   <p>In addition to mapping time periods to specific <code>xsd:dateTime</code> values based on their inclusive or exclusive bounds, a function is also provided to assign a default timezone to time literals without a specified timezone.</p>
-   <p>When using these functions on a date <code>"2025-06-30"^^xsd:date</code>, the inclusive lower bound is interpreted as <code>"2025-06-30T00:00:00.000-14:00"^^xsd:dateTime</code>, and the inclusive upper bound is interpreted as <code>"2025-06-30T23:59:59.999+14:00"^^xsd:dateTime</code>.
-The exclusive lower bound is interpreted as <code>"2025-06-29T23:59:59.999-14:00"^^xsd:dateTime</code>, and the exclusive upper bound is interpreted as <code>"2025-07-01T00:00:00.000+14:00"^^xsd:dateTime</code>.
-When binding a default timezone <code>"+02:00"</code> to a time literal without an explicit timezone, the date <code>"2025-06-30"^^xsd:date</code> becomes <code>"2025-06-30+02:00"^^xsd:date</code>, and the dateTime <code>"2025-06-30T09:00:00.000"^^xsd:dateTime</code> becomes <code>"2025-06-30T09:00:00.000+02:00"^^xsd:dateTime</code>.</p>
-   <h3 class="heading settled" data-level="1.1" id="function-signatures"><span class="secno">1.1. </span><span class="content">Function signatures and descriptions</span><a class="self-link" href="#function-signatures"></a></h3>
-   <p>Each function in the Time Functions ontology is defined in this document according to a similar standard proforma as defined in <a data-biblio-display="inline" data-link-type="biblio" href="https://www.w3.org/TR/xpath-functions-31/#func-signatures"><cite>XPath and XQuery Functions and Operators 3.1: Function signatures and descriptions</cite></a>.</p>
-   <p>Each function definition follows the structure:</p>
-<pre class="language-xquery highlight"><c- nf>tfn:function-name</c-><c- p>(</c-><c- g>$</c-><c- n>parameter-name</c-> <c- k>as</c-> <c- b>parameter-type</c-><c- p>,</c-> <c- p>..</c-><c- o>.</c-><c- p>)</c-> <c- k>as</c-> <c- k>return</c-><c- p>-</c-><c- f>type</c->
-</pre>
-   <p>Where:</p>
+   <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introd­uction</span><a class="self-link" href="#introduction"></a></h2>
+   <p>TODO:</p>
+   <h3 class="heading settled" data-level="1.1" id="terminology"><span class="secno">1.1. </span><span class="content">Terminology</span><a class="self-link" href="#terminology"></a></h3>
+   <p>TODO</p>
+   <h2 class="heading settled" data-level="2" id="requirements"><span class="secno">2. </span><span class="content">Requirements</span><a class="self-link" href="#requirements"></a></h2>
+   <p>TODO: add requirements from paper as CQs</p>
+   <h2 class="heading settled" data-level="3" id="model"><span class="secno">3. </span><span class="content">Model</span><a class="self-link" href="#model"></a></h2>
+   <p>TODO</p>
+   <h2 class="heading settled" data-level="4" id="vocabulary"><span class="secno">4. </span><span class="content">Vocabulary</span><a class="self-link" href="#vocabulary"></a></h2>
+   <p>TODO</p>
+   <h2 class="heading settled" data-level="5" id="materialization"><span class="secno">5. </span><span class="content">Materialization</span><a class="self-link" href="#materialization"></a></h2>
+   <p>TODO:</p>
    <ul>
     <li data-md>
-     <p><code>tfn:function-name</code> is the name of the function.</p>
+     <p>add worked out examples</p>
     <li data-md>
-     <p><code>$parameter-name</code> is the name of the parameter.</p>
-    <li data-md>
-     <p><code>parameter-type</code> is the type of the parameter, such as <code>xsd:dateTime</code>, <code>xsd:date</code>, or <code>xsd:gYear</code>.</p>
-    <li data-md>
-     <p><code>return-type</code> is the type of the return value, typically <code>xsd:dateTime</code>.</p>
+     <p>current approach on how to signatures + limitations</p>
    </ul>
-   <h2 class="heading settled" data-level="2" id="time-functions"><span class="secno">2. </span><span class="content">Time Functions</span><a class="self-link" href="#time-functions"></a></h2>
-   <p>This section lists all the functions defined in the Time Functions ontology operating on the <a data-biblio-display="inline" data-link-type="biblio" href="https://www.w3.org/TR/xmlschema-2/"><cite>XML Schema Part 2: Datatypes Second Edition</cite></a> date and time types <code>xsd:dateTime</code>, <code>xsd:date</code>, <code>xsd:gYearMonth</code>, and <code>xsd:gYear</code>.</p>
-   <h3 class="heading settled" data-level="2.1" id="periodMinInclusive"><span class="secno">2.1. </span><span class="content">tfn:periodMinInclusive</span><a class="self-link" href="#periodMinInclusive"></a></h3>
-   <p><strong>Summary</strong></p>
-   <p>Returns the inclusive lower bound of a time period.</p>
-   <p><strong>Signature</strong></p>
-<pre class="language-xquery highlight"><c- nf>tfn:periodMinInclusive</c-><c- p>(</c->
-    <c- g>$</c-><c- n>period</c-> <c- k>as</c-> <c- b>xsd:dateTime</c-> <c- o>|</c-> <c- f>xsd:date</c-> <c- o>|</c-> <c- f>xsd:gYearMonth</c-> <c- o>|</c-> <c- f>xsd:gYear</c->
-<c- p>)</c-> <c- k>as</c-> <c- b>xsd:dateTime</c->
+   <h2 class="heading settled" data-level="6" id="legal"><span class="secno">6. </span><span class="content">Legal Considerations</span><a class="self-link" href="#legal"></a></h2>
+   <p>TODO</p>
+   <h2 class="heading settled" data-level="7" id="namespaces"><span class="secno">7. </span><span class="content">Namespaces</span><a class="self-link" href="#namespaces"></a></h2>
+   <p>Commonly used namespace prefixes used in this specification:</p>
+<pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcterms:</c-> <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>odrl:</c->    <c- g>&lt;http://www.w3.org/ns/odrl/2/></c-><c- p>.</c->
+<c- k>@prefix</c-> <c- nn>te:</c->      <c- g>&lt;https://w3id.org/trustenvelope#></c->
+<c- k>@prefix</c-> <c- nn>rdf:</c->     <c- g>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>xsd:</c->     <c- g>&lt;http://www.w3.org/2001/XMLSchema#></c-> <c- p>.</c->
 </pre>
-   <p><strong>Properties</strong></p>
-   <p>This function is <a href="https://www.w3.org/TR/xpath-functions-31/#dt-deterministic">deterministic</a>, <a href="https://www.w3.org/TR/xpath-functions-31/#dt-context-independent">context-independent</a>, and <a href="https://www.w3.org/TR/xpath-functions-31/#dt-focus-independent">focus-independent</a>.</p>
-   <p><strong>Rules</strong></p>
-   <p>The function <code>tfn:periodMinInclusive</code> takes a time period as input and returns the inclusive lower bound of that period as an <code>xsd:dateTime</code>.
-The input <code>$period</code> can be of type <code>xsd:dateTime</code>, <code>xsd:date</code>, <code>xsd:gYearMonth</code>, or <code>xsd:gYear</code>.</p>
-   <p>If the input <code>$period</code> is an <code>xsd:dateTime</code> and has a timezone, the function returns the same value.
-Otherwise, if the input is an <code>xsd:dateTime</code> but has no explicit timezone, the input is interpreted as a period of -14 hours to +14 hours around the given dateTime, and the inclusive lower bound is returned as the <code>xsd:dateTime</code> with a timezone of UTC-14:00.</p>
-   <p>If the input <code>$period</code> is an <code>xsd:date</code>, it is interpreted as a period from the start of that date (00:00:00.000) to the end of that date (23:59:59.999), and the inclusive lower bound is returned as an <code>xsd:dateTime</code> with the given timezone or UTC-14:00 if no timezone is specified.</p>
-   <p>If the input <code>$period</code> is an <code>xsd:gYearMonth</code>, it is interpreted as a period from the start of that month (00:00:00.000 on the first day) to the end of that month (23:59:59.999 on the last day), and the inclusive lower bound is returned as an <code>xsd:dateTime</code> with the given timezone or UTC-14:00 if no timezone is specified.</p>
-   <p>If the input <code>$period</code> is an <code>xsd:gYear</code>, it is interpreted as a period from the start of that year (00:00:00.000 on January 1st) to the end of that year (23:59:59.999 on December 31st), and the inclusive lower bound is returned as an <code>xsd:dateTime</code> with the given timezone or UTC-14:00 if no timezone is specified.</p>
-   <p><strong>Examples</strong></p>
-   <div class="example" id="example-47093712">
-    <a class="self-link" href="#example-47093712"></a>
-The expression <code>tfn:periodMinInclusive("2025-06-30T09:00:00.000Z"^^xsd:dateTime)</code> returns <code>"2025-06-30T09:00:00.000Z"^^xsd:dateTime</code>.
-
-
-    <p>The expression <code>tfn:periodMinInclusive("2025-06-30T09:00:00.000"^^xsd:dateTime)</code> returns <code>"2025-06-30T09:00:00.000-14:00"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMinInclusive("2025-06-30Z"^^xsd:date)</code> returns <code>"2025-06-30T00:00:00.000Z"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMinInclusive("2025-06-30"^^xsd:date)</code> returns <code>"2025-06-30T00:00:00.000-14:00"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMinInclusive("2025-06Z"^^xsd:gYearMonth)</code> returns <code>"2025-06-01T00:00:00.000Z"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMinInclusive("2025-06"^^xsd:gYearMonth)</code> returns <code>"2025-06-01T00:00:00.000-14:00"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMinInclusive("2025Z"^^xsd:gYear)</code> returns <code>"2025-01-01T00:00:00.000Z"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMinInclusive("2025"^^xsd:gYear)</code> returns <code>"2025-01-01T00:00:00.000-14:00"^^xsd:dateTime</code>.</p>
-   </div>
-   <h3 class="heading settled" data-level="2.2" id="periodMaxInclusive"><span class="secno">2.2. </span><span class="content">tfn:periodMaxInclusive</span><a class="self-link" href="#periodMaxInclusive"></a></h3>
-   <p><strong>Summary</strong></p>
-   <p>Returns the inclusive upper bound of a time period.</p>
-   <p><strong>Signature</strong></p>
-<pre class="language-xquery highlight"><c- nf>tfn:periodMaxInclusive</c-><c- p>(</c->
-    <c- g>$</c-><c- n>period</c-> <c- k>as</c-> <c- b>xsd:dateTime</c-> <c- o>|</c-> <c- f>xsd:date</c-> <c- o>|</c-> <c- f>xsd:gYearMonth</c-> <c- o>|</c-> <c- f>xsd:gYear</c->
-<c- p>)</c-> <c- k>as</c-> <c- b>xsd:dateTime</c->
-</pre>
-   <p><strong>Properties</strong></p>
-   <p>This function is <a href="https://www.w3.org/TR/xpath-functions-31/#dt-deterministic">deterministic</a>, <a href="https://www.w3.org/TR/xpath-functions-31/#dt-context-independent">context-independent</a>, and <a href="https://www.w3.org/TR/xpath-functions-31/#dt-focus-independent">focus-independent</a>.</p>
-   <p><strong>Rules</strong></p>
-   <p>The function <code>tfn:periodMaxInclusive</code> takes a time period as input and returns the inclusive upper bound of that period as an <code>xsd:dateTime</code>.
-The input <code>$period</code> can be of type <code>xsd:dateTime</code>, <code>xsd:date</code>, <code>xsd:gYearMonth</code>, or <code>xsd:gYear</code>.</p>
-   <p>If the input <code>$period</code> is an <code>xsd:dateTime</code> and has a timezone, the function returns the same value.
-Otherwise, if the input is an <code>xsd:dateTime</code> but has no explicit timezone, the input is interpreted as a period of -14 hours to +14 hours around the given dateTime, and the inclusive upper bound is returned as the <code>xsd:dateTime</code> with a timezone of UTC+14:00.</p>
-   <p>If the input <code>$period</code> is an <code>xsd:date</code>, it is interpreted as a period from the start of that date (00:00:00.000) to the end of that date (23:59:59.999), and the inclusive upper bound is returned as an <code>xsd:dateTime</code> with the given timezone or UTC+14:00 if no timezone is specified.</p>
-   <p>If the input <code>$period</code> is an <code>xsd:gYearMonth</code>, it is interpreted as a period from the start of that month (00:00:00.000 on the first day) to the end of that month (23:59:59.999 on the last day), and the inclusive upper bound is returned as an <code>xsd:dateTime</code> with the given timezone or UTC+14:00 if no timezone is specified.</p>
-   <p>If the input <code>$period</code> is an <code>xsd:gYear</code>, it is interpreted as a period from the start of that year (00:00:00.000 on January 1st) to the end of that year (23:59:59.999 on December 31st), and the inclusive upper bound is returned as an <code>xsd:dateTime</code> with the given timezone or UTC+14:00 if no timezone is specified.</p>
-   <p><strong>Examples</strong></p>
-   <div class="example" id="example-67976b28">
-    <a class="self-link" href="#example-67976b28"></a>
-The expression <code>tfn:periodMaxInclusive("2025-06-30T09:00:00.000Z"^^xsd:dateTime)</code> returns <code>"2025-06-30T09:00:00.000Z"^^xsd:dateTime</code>.
-
-
-    <p>The expression <code>tfn:periodMaxInclusive("2025-06-30T09:00:00.000"^^xsd:dateTime)</code> returns <code>"2025-06-30T09:00:00.000+14:00"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMaxInclusive("2025-06-30Z"^^xsd:date)</code> returns <code>"2025-06-30T23:59:59.999Z"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMaxInclusive("2025-06-30"^^xsd:date)</code> returns <code>"2025-06-30T23:59:59.999+14:00"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMaxInclusive("2025-06Z"^^xsd:gYearMonth)</code> returns <code>"2025-06-30T23:59:59.999Z"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMaxInclusive("2025-06"^^xsd:gYearMonth)</code> returns <code>"2025-06-30T23:59:59.999+14:00"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMaxInclusive("2025Z"^^xsd:gYear)</code> returns <code>"2025-12-31T23:59:59.999Z"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMaxInclusive("2025"^^xsd:gYear)</code> returns <code>"2025-12-31T23:59:59.999+14:00"^^xsd:dateTime</code>.</p>
-   </div>
-   <h3 class="heading settled" data-level="2.3" id="periodMinExclusive"><span class="secno">2.3. </span><span class="content">tfn:periodMinExclusive</span><a class="self-link" href="#periodMinExclusive"></a></h3>
-   <p><strong>Summary</strong></p>
-   <p>Returns the exclusive lower bound of a time period.</p>
-   <p><strong>Signature</strong></p>
-<pre class="language-xquery highlight"><c- nf>tfn:periodMinExclusive</c-><c- p>(</c->
-    <c- g>$</c-><c- n>period</c-> <c- k>as</c-> <c- b>xsd:dateTime</c-> <c- o>|</c-> <c- f>xsd:date</c-> <c- o>|</c-> <c- f>xsd:gYearMonth</c-> <c- o>|</c-> <c- f>xsd:gYear</c->
-<c- p>)</c-> <c- k>as</c-> <c- b>xsd:dateTime</c->
-</pre>
-   <p><strong>Properties</strong></p>
-   <p>This function is <a href="https://www.w3.org/TR/xpath-functions-31/#dt-deterministic">deterministic</a>, <a href="https://www.w3.org/TR/xpath-functions-31/#dt-context-independent">context-independent</a>, and <a href="https://www.w3.org/TR/xpath-functions-31/#dt-focus-independent">focus-independent</a>.</p>
-   <p><strong>Rules</strong></p>
-   <p>The function <code>tfn:periodMinExclusive</code> takes a time period as input and returns the exclusive lower bound of that period as an <code>xsd:dateTime</code>.
-The input <code>$period</code> can be of type <code>xsd:dateTime</code>, <code>xsd:date</code>, <code>xsd:gYearMonth</code>, or <code>xsd:gYear</code>.</p>
-   <p>If the input <code>$period</code> is an <code>xsd:dateTime</code> and has a timezone, the function returns the same value.
-Otherwise, if the input is an <code>xsd:dateTime</code> but has no explicit timezone, the input is interpreted as a period of -14 hours to +14 hours around the given dateTime, and the exclusive lower bound is returned as the <code>xsd:dateTime</code> with a timezone of UTC-14:00.</p>
-   <p>If the input <code>$period</code> is an <code>xsd:date</code>, it is interpreted as a period from the start of that date (00:00:00.000) to the end of that date (23:59:59.999), and the exclusive lower bound is returned as an <code>xsd:dateTime</code> with the given timezone or UTC-14:00 if no timezone is specified.</p>
-   <p>If the input <code>$period</code> is an <code>xsd:gYearMonth</code>, it is interpreted as a period from the start of that month (00:00:00.000 on the first day) to the end of that month (23:59:59.999 on the last day), and the exclusive lower bound is returned as an <code>xsd:dateTime</code> with the given timezone or UTC-14:00 if no timezone is specified.</p>
-   <p>If the input <code>$period</code> is an <code>xsd:gYear</code>, it is interpreted as a period from the start of that year (00:00:00.000 on January 1st) to the end of that year (23:59:59.999 on December 31st), and the exclusive lower bound is returned as an <code>xsd:dateTime</code> with the given timezone or UTC-14:00 if no timezone is specified.</p>
-   <p><strong>Examples</strong></p>
-   <div class="example" id="example-42c04b15">
-    <a class="self-link" href="#example-42c04b15"></a>
-The expression <code>tfn:periodMinExclusive("2025-06-30T09:00:00.000Z"^^xsd:dateTime)</code> returns <code>"2025-06-30T08:59:59.999Z"^^xsd:dateTime</code>.
-
-
-    <p>The expression <code>tfn:periodMinExclusive("2025-06-30T09:00:00.000"^^xsd:dateTime)</code> returns <code>"2025-06-30T08:59:59.999-14:00"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMinExclusive("2025-06-30Z"^^xsd:date)</code> returns <code>"2025-06-29T23:59:59.999Z"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMinExclusive("2025-06-30"^^xsd:date)</code> returns <code>"2025-06-29T23:59:59.999-14:00"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMinExclusive("2025-06Z"^^xsd:gYearMonth)</code> returns <code>"2025-05-31T23:59:59.999Z"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMinExclusive("2025-06"^^xsd:gYearMonth)</code> returns <code>"2025-05-31T23:59:59.999-14:00"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMinExclusive("2025Z"^^xsd:gYear)</code> returns <code>"2024-12-31T23:59:59.999Z"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMinExclusive("2025"^^xsd:gYear)</code> returns <code>"2024-12-31T23:59:59.999-14:00"^^xsd:dateTime</code>.</p>
-   </div>
-   <h3 class="heading settled" data-level="2.4" id="periodMaxExclusive"><span class="secno">2.4. </span><span class="content">tfn:periodMaxExclusive</span><a class="self-link" href="#periodMaxExclusive"></a></h3>
-   <p><strong>Summary</strong></p>
-   <p>Returns the exclusive upper bound of a time period.</p>
-   <p><strong>Signature</strong></p>
-<pre class="language-xquery highlight"><c- nf>tfn:periodMaxExclusive</c-><c- p>(</c->
-    <c- g>$</c-><c- n>period</c-> <c- k>as</c-> <c- b>xsd:dateTime</c-> <c- o>|</c-> <c- f>xsd:date</c-> <c- o>|</c-> <c- f>xsd:gYearMonth</c-> <c- o>|</c-> <c- f>xsd:gYear</c->
-<c- p>)</c-> <c- k>as</c-> <c- b>xsd:dateTime</c->
-</pre>
-   <p><strong>Properties</strong></p>
-   <p>This function is <a href="https://www.w3.org/TR/xpath-functions-31/#dt-deterministic">deterministic</a>, <a href="https://www.w3.org/TR/xpath-functions-31/#dt-context-independent">context-independent</a>, and <a href="https://www.w3.org/TR/xpath-functions-31/#dt-focus-independent">focus-independent</a>.</p>
-   <p><strong>Rules</strong></p>
-   <p>The function <code>tfn:periodMaxExclusive</code> takes a time period as input and returns the exclusive upper bound of that period as an <code>xsd:dateTime</code>.
-The input <code>$period</code> can be of type <code>xsd:dateTime</code>, <code>xsd:date</code>, <code>xsd:gYearMonth</code>, or <code>xsd:gYear</code>.</p>
-   <p>If the input <code>$period</code> is an <code>xsd:dateTime</code> and has a timezone, the function returns the same value.
-Otherwise, if the input is an <code>xsd:dateTime</code> but has no explicit timezone, the input is interpreted as a period of -14 hours to +14 hours around the given dateTime, and the exclusive upper bound is returned as the <code>xsd:dateTime</code> with a timezone of UTC+14:00.</p>
-   <p>If the input <code>$period</code> is an <code>xsd:date</code>, it is interpreted as a period from the start of that date (00:00:00.000) to the end of that date (23:59:59.999), and the exclusive upper bound is returned as an <code>xsd:dateTime</code> with the given timezone or UTC+14:00 if no timezone is specified.</p>
-   <p>If the input <code>$period</code> is an <code>xsd:gYearMonth</code>, it is interpreted as a period from the start of that month (00:00:00.000 on the first day) to the end of that month (23:59:59.999 on the last day), and the exclusive upper bound is returned as an <code>xsd:dateTime</code> with the given timezone or UTC+14:00 if no timezone is specified.</p>
-   <p>If the input <code>$period</code> is an <code>xsd:gYear</code>, it is interpreted as a period from the start of that year (00:00:00.000 on January 1st) to the end of that year (23:59:59.999 on December 31st), and the exclusive upper bound is returned as an <code>xsd:dateTime</code> with the given timezone or UTC+14:00 if no timezone is specified.</p>
-   <p><strong>Examples</strong></p>
-   <div class="example" id="example-641b39d4">
-    <a class="self-link" href="#example-641b39d4"></a>
-The expression <code>tfn:periodMaxExclusive("2025-06-30T09:00:00.000Z"^^xsd:dateTime)</code> returns <code>"2025-06-30T09:00:00.001Z"^^xsd:dateTime</code>.
-
-
-    <p>The expression <code>tfn:periodMaxExclusive("2025-06-30T09:00:00.000"^^xsd:dateTime)</code> returns <code>"2025-06-30T09:00:00.001+14:00"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMaxExclusive("2025-06-30Z"^^xsd:date)</code> returns <code>"2025-07-01T00:00:00.000Z"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMaxExclusive("2025-06-30"^^xsd:date)</code> returns <code>"2025-07-01T00:00:00.000+14:00"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMaxExclusive("2025-06Z"^^xsd:gYearMonth)</code> returns <code>"2025-07-01T00:00:00.000Z"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMaxExclusive("2025-06"^^xsd:gYearMonth)</code> returns <code>"2025-07-01T00:00:00.000+14:00"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMaxExclusive("2025Z"^^xsd:gYear)</code> returns <code>"2026-01-01T00:00:00.000Z"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:periodMaxExclusive("2025"^^xsd:gYear)</code> returns <code>"2026-01-01T00:00:00.000+14:00"^^xsd:dateTime</code>.</p>
-   </div>
-   <h3 class="heading settled" data-level="2.5" id="bindDefaultTimezone"><span class="secno">2.5. </span><span class="content">tfn:bindDefaultTimezone</span><a class="self-link" href="#bindDefaultTimezone"></a></h3>
-   <p><strong>Summary</strong></p>
-   <p>Bind a default timezone to a time literal if no explicit timezone was indicated in the time literal.</p>
-   <p><strong>Signature</strong></p>
-<pre class="language-xquery highlight"><c- nf>tfn:bindDefaultTimezone</c-><c- p>(</c->
-    <c- g>$</c-><c- n>timeLiteral</c-> <c- k>as</c-> <c- b>xsd:dateTime</c-> <c- o>|</c-> <c- f>xsd:date</c-> <c- o>|</c-> <c- f>xsd:gYearMonth</c-> <c- o>|</c-> <c- f>xsd:gYear</c-><c- p>,</c->
-    <c- g>$</c-><c- n>defaultTimezone</c-> <c- k>as</c-> <c- b>xsd:string</c->
-<c- p>)</c-> <c- k>as</c-> <c- b>xsd:dateTime</c-> <c- o>|</c-> <c- f>xsd:date</c-> <c- o>|</c-> <c- f>xsd:gYearMonth</c-> <c- o>|</c-> <c- f>xsd:gYear</c->
-</pre>
-   <p><strong>Properties</strong></p>
-   <p>This function is <a href="https://www.w3.org/TR/xpath-functions-31/#dt-deterministic">deterministic</a>, <a href="https://www.w3.org/TR/xpath-functions-31/#dt-context-independent">context-independent</a>, and <a href="https://www.w3.org/TR/xpath-functions-31/#dt-focus-independent">focus-independent</a>.</p>
-   <p><strong>Rules</strong></p>
-   <p>The function <code>tfn:bindDefaultTimezone</code> takes a time literal and a default timezone as input and returns the time literal with the default timezone bound to it if no explicit timezone was indicated in the time literal.
-The input <code>$timeLiteral</code> can be of type <code>xsd:dateTime</code>, <code>xsd:date</code>, <code>xsd:gYearMonth</code>, or <code>xsd:gYear</code>.
-The input <code>$defaultTimezone</code> is a string representing the default timezone, typically in the format <code>+HH:MM</code> or <code>-HH:MM</code>, or <code>Z</code> for UTC.</p>
-   <p>If the input <code>$timeLiteral</code> has a timezone, the function returns the same value.
-Otherwise, if the input is an <code>xsd:dateTime</code>, <code>xsd:date</code>, <code>xsd:gYearMonth</code>, or <code>xsd:gYear</code> without a timezone, the function binds the default timezone to the time literal and returns it as an <code>xsd:dateTime</code>, <code>xsd:date</code>, <code>xsd:gYearMonth</code>, or <code>xsd:gYear</code> with the specified timezone.</p>
-   <p><strong>Examples</strong></p>
-   <div class="example" id="example-f17ce7b5">
-    <a class="self-link" href="#example-f17ce7b5"></a>
-The expression <code>tfn:bindDefaultTimezone("2025-06-30T09:00:00.000Z"^^xsd:dateTime, "+02:00")</code> returns <code>"2025-06-30T09:00:00.000Z"^^xsd:dateTime</code>.
-
-
-    <p>The expression <code>tfn:bindDefaultTimezone("2025-06-30T09:00:00.000"^^xsd:dateTime, "+02:00")</code> returns <code>"2025-06-30T09:00:00.000+02:00"^^xsd:dateTime</code>.</p>
-    <p>The expression <code>tfn:bindDefaultTimezone("2025-06-30Z"^^xsd:date, "+02:00")</code> returns <code>"2025-06-30Z"^^xsd:date</code>.</p>
-    <p>The expression <code>tfn:bindDefaultTimezone("2025-06-30"^^xsd:date, "+02:00")</code> returns <code>"2025-06-30+02:00"^^xsd:date</code>.</p>
-   </div>
   </main>
   <div data-fill-with="conformance">
-   <h2 class="no-ref no-num heading settled" id="conformance"><span class="content">
-    Conformance</span><a class="self-link" href="#conformance"></a></h2>
-   <p>
-            Conformance requirements are expressed with a combination of descriptive assertions and RFC 2119 terminology.
+   <h2 class="no-ref no-num heading settled" id="conformance"><span class="content"> Conformance</span><a class="self-link" href="#conformance"></a></h2>
+   <p> Conformance requirements are expressed with a combination of descriptive assertions and RFC 2119 terminology.
             The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL”
             in the normative parts of this document
             are to be interpreted as described in RFC 2119.
             However, for readability,
-            these words do not appear in all uppercase letters in this specification.
-
-        </p>
-   <p>
-            All of the text of this specification is normative
-            except sections explicitly marked as non-normative, examples, and notes. <a data-link-type="biblio" href="#biblio-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">[RFC2119]</a>
-
-        </p>
-   <p>
-            Examples in this specification are introduced with the words “for example”
-            or are set apart from the normative text with <code>class="example"</code>, like this:
-
-        </p>
-   <div class="example" id="example-example"><a class="self-link" href="#example-example"></a>
-            This is an example of an informative example.
-        </div>
-   <p>
-            Informative notes begin with the word “Note”
-            and are set apart from the normative text with <code>class="note"</code>, like this:
-
-        </p>
-   <p class="note" role="note">
-            Note, this is an informative note.</p>
+            these words do not appear in all uppercase letters in this specification. </p>
+   <p> All of the text of this specification is normative
+            except sections explicitly marked as non-normative, examples, and notes. <a data-link-type="biblio" href="#biblio-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">[RFC2119]</a> </p>
+   <p> Examples in this specification are introduced with the words “for example”
+            or are set apart from the normative text with <code>class="example"</code>, like this: </p>
+   <div class="example" id="example-example"><a class="self-link" href="#example-example"></a> This is an example of an informative example. </div>
+   <p> Informative notes begin with the word “Note”
+            and are set apart from the normative text with <code>class="note"</code>, like this: </p>
+   <p class="note" role="note"> Note, this is an informative note.</p>
   </div>
 <script>
 (function() {
@@ -2426,8 +2244,4 @@ The expression <code>tfn:bindDefaultTimezone("2025-06-30T09:00:00.000Z"^^xsd:dat
   <dl>
    <dt id="biblio-rfc2119">[RFC2119]
    <dd>S. Bradner. <a href="https://datatracker.ietf.org/doc/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. March 1997. Best Current Practice. URL: <a href="https://datatracker.ietf.org/doc/html/rfc2119">https://datatracker.ietf.org/doc/html/rfc2119</a>
-   <dt id="biblio-xmlschema">[XMLSchema]
-   <dd>Paul V. Biron; Ashok Malhotra. <a href="https://www.w3.org/TR/xmlschema-2/"><cite>XML Schema Part 2: Datatypes Second Edition</cite></a>. URL: <a href="https://www.w3.org/TR/xmlschema-2/">https://www.w3.org/TR/xmlschema-2/</a>
-   <dt id="biblio-xquery-functions">[XQuery-Functions]
-   <dd>Michael Kay. <a href="https://www.w3.org/TR/xpath-functions-31/#func-signatures"><cite>XPath and XQuery Functions and Operators 3.1: Function signatures and descriptions</cite></a>. URL: <a href="https://www.w3.org/TR/xpath-functions-31/#func-signatures">https://www.w3.org/TR/xpath-functions-31/#func-signatures</a>
   </dl>
