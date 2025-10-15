@@ -1,0 +1,319 @@
+<https://w3id.org/imec/ns/fno-steps#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/imec/ns/fno-steps#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/imec/ns/fno-steps/0.2#> .
+<https://w3id.org/imec/ns/fno-steps#> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/imec/ns/fno-steps#> <http://purl.org/dc/terms/creator> <https://example.org#disclosed-after-review> .
+<https://w3id.org/imec/ns/fno-steps#> <http://purl.org/dc/terms/description> "This is the FnO-Steps vocabulary, aiming to describe a workflow consisting of a number of steps."@en .
+<https://w3id.org/imec/ns/fno-steps#> <http://purl.org/dc/terms/title> "FnO-Steps vocabulary"@en .
+<https://w3id.org/imec/ns/fno-steps#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "fno-steps" .
+<https://w3id.org/imec/ns/fno-steps#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/imec/ns/fno-steps#" .
+<https://w3id.org/imec/ns/fno-steps#> <http://www.w3.org/2000/01/rdf-schema#label> "FnO-Steps vocabulary"@en .
+<https://w3id.org/imec/ns/fno-steps#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/prov#definition
+<http://www.w3.org/ns/prov#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/net/p-plan#correspondsToStep
+<http://purl.org/net/p-plan#correspondsToStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/p-plan#correspondsToStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/net/p-plan#correspondsToStep> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/p-plan#Activity> .
+<http://purl.org/net/p-plan#correspondsToStep> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/p-plan#Step> .
+<http://purl.org/net/p-plan#correspondsToStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/net/p-plan#> .
+<http://purl.org/net/p-plan#correspondsToStep> <http://www.w3.org/2000/01/rdf-schema#label> "correspondsToStep"@en .
+<http://purl.org/net/p-plan#correspondsToStep> <http://www.w3.org/ns/prov#definition> "p-plan:correspondsToStep links a p-plan:Activity to its planned p-plan:Step"@en .
+# 
+# http://purl.org/net/p-plan#correspondsToVariable
+<http://purl.org/net/p-plan#correspondsToVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/p-plan#correspondsToVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/net/p-plan#correspondsToVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/p-plan#Entity> .
+<http://purl.org/net/p-plan#correspondsToVariable> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/p-plan#Variable> .
+<http://purl.org/net/p-plan#correspondsToVariable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/net/p-plan#> .
+<http://purl.org/net/p-plan#correspondsToVariable> <http://www.w3.org/2000/01/rdf-schema#label> "correspondsToVariable"@en .
+<http://purl.org/net/p-plan#correspondsToVariable> <http://www.w3.org/ns/prov#definition> "p-plan:correspondsToVariable binds a p-plan:Entity (used by a p-plan:Activity in the execution of a plan) to the p-plan:Variable it represented it in the p-plan:Plan."@en .
+# 
+# http://purl.org/net/p-plan#isDecomposedAsPlan
+<http://purl.org/net/p-plan#isDecomposedAsPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/p-plan#isDecomposedAsPlan> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/p-plan#MultiStep> .
+<http://purl.org/net/p-plan#isDecomposedAsPlan> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/p-plan#Plan> .
+<http://purl.org/net/p-plan#isDecomposedAsPlan> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/net/p-plan#> .
+<http://purl.org/net/p-plan#isDecomposedAsPlan> <http://www.w3.org/2000/01/rdf-schema#label> "isDecomposedAsPlan"@en .
+<http://purl.org/net/p-plan#isDecomposedAsPlan> <http://www.w3.org/ns/prov#definition> "The p-plan:isDecomposedAsPlan relationship binds a p-plan:MultiStep to the p-plan:Plan holding the definition of that step. That is, p-plan:isDecomposedAsPlan links the MultiStep to the Plan sptecification where it is decomposed."@en .
+# 
+# http://purl.org/net/p-plan#isStepOfPlan
+<http://purl.org/net/p-plan#isStepOfPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/p-plan#isStepOfPlan> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/p-plan#Step> .
+<http://purl.org/net/p-plan#isStepOfPlan> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/p-plan#Plan> .
+<http://purl.org/net/p-plan#isStepOfPlan> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/net/p-plan#> .
+<http://purl.org/net/p-plan#isStepOfPlan> <http://www.w3.org/2000/01/rdf-schema#label> "isStepOfPlan"@en .
+<http://purl.org/net/p-plan#isStepOfPlan> <http://www.w3.org/ns/prov#definition> "p-plan:isStepOfPlan links a p-plan:Step to the p-plan:Plan which it corresponds to."@en .
+# 
+# http://purl.org/net/p-plan#isSubPlanOfPlan
+<http://purl.org/net/p-plan#isSubPlanOfPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/p-plan#isSubPlanOfPlan> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://purl.org/net/p-plan#isSubPlanOfPlan> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/p-plan#Plan> .
+<http://purl.org/net/p-plan#isSubPlanOfPlan> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/p-plan#Plan> .
+<http://purl.org/net/p-plan#isSubPlanOfPlan> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/net/p-plan#> .
+<http://purl.org/net/p-plan#isSubPlanOfPlan> <http://www.w3.org/2000/01/rdf-schema#label> "isSubPlanOfPlan"@en .
+<http://purl.org/net/p-plan#isSubPlanOfPlan> <http://www.w3.org/ns/prov#definition> "A p-plan:Plan may be a subplan of another bigger p-plan:Plan. p-plan:isSubPlanOfPlan is used to state the link among the two different plans. Note that if p1 is a p-plan:subPlan of p2, p1will not necessarily be a step of p2. A multistep will represent p1 in p2, and link to p1 with the p-plan.hasStepDecomposition relationship."@en .
+# 
+# http://www.w3.org/2008/05/skos-xl#altLabel
+<http://www.w3.org/2008/05/skos-xl#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2008/05/skos-xl#altLabel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://www.w3.org/2008/05/skos-xl#altLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "If C skosxl:altLabel L and L skosxl:literalForm V, then X skos:altLabel V."@en .
+<http://www.w3.org/2008/05/skos-xl#altLabel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2008/05/skos-xl> .
+<http://www.w3.org/2008/05/skos-xl#altLabel> <http://www.w3.org/2000/01/rdf-schema#label> "alternative label"@en .
+<http://www.w3.org/2008/05/skos-xl#altLabel> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/2004/02/skos/core#altLabel> .
+<http://www.w3.org/2008/05/skos-xl#altLabel> <http://www.w3.org/2004/02/skos/core#definition> "The property skosxl:altLabel is used to associate an skosxl:Label with a skos:Concept. The property is analogous to skos:altLabel."@en .
+# 
+# http://www.w3.org/2008/05/skos-xl#prefLabel
+<http://www.w3.org/2008/05/skos-xl#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2008/05/skos-xl#prefLabel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://www.w3.org/2008/05/skos-xl#prefLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "If C skosxl:prefLabel L and L skosxl:literalForm V, then X skos:prefLabel V."@en .
+<http://www.w3.org/2008/05/skos-xl#prefLabel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2008/05/skos-xl> .
+<http://www.w3.org/2008/05/skos-xl#prefLabel> <http://www.w3.org/2000/01/rdf-schema#label> "preferred label"@en .
+<http://www.w3.org/2008/05/skos-xl#prefLabel> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/2004/02/skos/core#prefLabel> .
+<http://www.w3.org/2008/05/skos-xl#prefLabel> <http://www.w3.org/2004/02/skos/core#definition> "The property skosxl:prefLabel is used to associate an skosxl:Label with a skos:Concept. The property is analogous to skos:prefLabel."@en .
+# 
+# https://w3id.org/imec/ns/fno-steps#hasDescription
+<https://w3id.org/imec/ns/fno-steps#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/imec/ns/fno-steps#hasDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/p-plan#Step> .
+<https://w3id.org/imec/ns/fno-steps#hasDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2008/05/skos-xl#Label> .
+# 
+# https://w3id.org/imec/ns/fno-steps#hasStateShape
+<https://w3id.org/imec/ns/fno-steps#hasStateShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/imec/ns/fno-steps#hasStateShape> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/imec/ns/fno-steps#State> .
+<https://w3id.org/imec/ns/fno-steps#hasStateShape> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/imec/ns/fno-steps#StateShape> .
+<https://w3id.org/imec/ns/fno-steps#hasStateShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a fno-steps:State to a description of the state as fno-steps:StateShape."@en .
+<https://w3id.org/imec/ns/fno-steps#hasStateShape> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/imec/ns/fno-steps#> .
+<https://w3id.org/imec/ns/fno-steps#hasStateShape> <http://www.w3.org/2000/01/rdf-schema#label> "hasStateShape"@en .
+# 
+# https://w3id.org/imec/ns/fno-steps#producesState
+<https://w3id.org/imec/ns/fno-steps#producesState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/imec/ns/fno-steps#producesState> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/imec/ns/fno-steps#Step> .
+<https://w3id.org/imec/ns/fno-steps#producesState> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/imec/ns/fno-steps#State> .
+<https://w3id.org/imec/ns/fno-steps#producesState> <http://www.w3.org/2000/01/rdf-schema#comment> "fno-steps:producesState binds a fno-steps:Step to the fno-steps:State the step produces."@en .
+<https://w3id.org/imec/ns/fno-steps#producesState> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/imec/ns/fno-steps#> .
+<https://w3id.org/imec/ns/fno-steps#producesState> <http://www.w3.org/2000/01/rdf-schema#label> "producesState"@en .
+# 
+# https://w3id.org/imec/ns/fno-steps#requiresState
+<https://w3id.org/imec/ns/fno-steps#requiresState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/imec/ns/fno-steps#requiresState> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/imec/ns/fno-steps#Step> .
+<https://w3id.org/imec/ns/fno-steps#requiresState> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/imec/ns/fno-steps#State> .
+<https://w3id.org/imec/ns/fno-steps#requiresState> <http://www.w3.org/2000/01/rdf-schema#comment> "fno-steps:requiresState binds a fno-steps:Step to the fno-steps:State the step requires to produce the state bound via fno-steps:producesState."@en .
+<https://w3id.org/imec/ns/fno-steps#requiresState> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/imec/ns/fno-steps#> .
+<https://w3id.org/imec/ns/fno-steps#requiresState> <http://www.w3.org/2000/01/rdf-schema#label> "requiresState"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2008/05/skos-xl#literalForm
+<http://www.w3.org/2008/05/skos-xl#literalForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2008/05/skos-xl#literalForm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://www.w3.org/2008/05/skos-xl#literalForm> <http://www.w3.org/2000/01/rdf-schema#comment> "If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource."@en .
+<http://www.w3.org/2008/05/skos-xl#literalForm> <http://www.w3.org/2000/01/rdf-schema#comment> "The range of skosxl:literalForm is the class of RDF plain literals."@en .
+<http://www.w3.org/2008/05/skos-xl#literalForm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2008/05/skos-xl> .
+<http://www.w3.org/2008/05/skos-xl#literalForm> <http://www.w3.org/2000/01/rdf-schema#label> "literal form"@en .
+<http://www.w3.org/2008/05/skos-xl#literalForm> <http://www.w3.org/2004/02/skos/core#definition> "The property skosxl:literalForm is used to give the literal form of an skosxl:Label."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/net/p-plan#Activity
+<http://purl.org/net/p-plan#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/net/p-plan#Bundle
+<http://purl.org/net/p-plan#Bundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/p-plan#Bundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/p-plan#Entity> .
+<http://purl.org/net/p-plan#Bundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Bundle> .
+<http://purl.org/net/p-plan#Bundle> <http://www.w3.org/2000/01/rdf-schema#comment> "A p-plan:Bundle is a specific type of prov:Bundle that contains the provenance assertions of the execution of a p-plan:Plan"@en .
+<http://purl.org/net/p-plan#Bundle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/net/p-plan#> .
+<http://purl.org/net/p-plan#Bundle> <http://www.w3.org/2000/01/rdf-schema#label> "Bundle"@en .
+# 
+# http://purl.org/net/p-plan#Entity
+<http://purl.org/net/p-plan#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/net/p-plan#MultiStep
+<http://purl.org/net/p-plan#MultiStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/net/p-plan#Plan
+<http://purl.org/net/p-plan#Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/p-plan#Plan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/p-plan#Entity> .
+<http://purl.org/net/p-plan#Plan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Plan> .
+<http://purl.org/net/p-plan#Plan> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/net/p-plan#> .
+<http://purl.org/net/p-plan#Plan> <http://www.w3.org/2000/01/rdf-schema#label> "Plan"@en .
+<http://purl.org/net/p-plan#Plan> <http://www.w3.org/ns/prov#definition> "A p-plan:Plan is a specific type of prov:Plan. It is composed of smaller steps that use and produce Variables."@en .
+# 
+# http://purl.org/net/p-plan#Step
+<http://purl.org/net/p-plan#Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/p-plan#Step> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/net/p-plan#> .
+<http://purl.org/net/p-plan#Step> <http://www.w3.org/2000/01/rdf-schema#label> "Step"@en .
+<http://purl.org/net/p-plan#Step> <http://www.w3.org/ns/prov#definition> "A p-plan:Step represents the planned execution activity"@en .
+# 
+# http://purl.org/net/p-plan#Variable
+<http://purl.org/net/p-plan#Variable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/p-plan#Variable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/net/p-plan#> .
+<http://purl.org/net/p-plan#Variable> <http://www.w3.org/2000/01/rdf-schema#label> "Variable"@en .
+<http://purl.org/net/p-plan#Variable> <http://www.w3.org/ns/prov#definition> "A p-plan:Variable represents a description of the input of the planned Activity (p-plan:Step)"@en .
+# 
+# http://www.w3.org/2004/02/skos/core#Collection
+<http://www.w3.org/2004/02/skos/core#Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#Collection> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2008/05/skos-xl#Label> .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2008/05/skos-xl#Label> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2008/05/skos-xl#Label> .
+# 
+# http://www.w3.org/2008/05/skos-xl#Label
+<http://www.w3.org/2008/05/skos-xl#Label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2008/05/skos-xl#Label> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2008/05/skos-xl#literalForm> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/2008/05/skos-xl#Label> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2008/05/skos-xl> .
+<http://www.w3.org/2008/05/skos-xl#Label> <http://www.w3.org/2000/01/rdf-schema#label> "Label"@en .
+<http://www.w3.org/2008/05/skos-xl#Label> <http://www.w3.org/2004/02/skos/core#definition> "A special class of lexical entities."@en .
+# 
+# http://www.w3.org/ns/prov#Bundle
+<http://www.w3.org/ns/prov#Bundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#Plan
+<http://www.w3.org/ns/prov#Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/shacl#NodeShape
+<http://www.w3.org/ns/shacl#NodeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/shacl#NodeShape> <http://www.w3.org/2000/01/rdf-schema#comment> "A node shape is a shape that specifies constraint that need to be met with respect to focus nodes."@en .
+<http://www.w3.org/ns/shacl#NodeShape> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#NodeShape> <http://www.w3.org/2000/01/rdf-schema#label> "Node shape"@en .
+# 
+# http://www.w3.org/ns/shacl#PropertyShape
+<http://www.w3.org/ns/shacl#PropertyShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/shacl#PropertyShape> <http://www.w3.org/2000/01/rdf-schema#comment> "A property shape is a shape that specifies constraints on the values of a focus node for a given property or path."@en .
+<http://www.w3.org/ns/shacl#PropertyShape> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#PropertyShape> <http://www.w3.org/2000/01/rdf-schema#label> "Property shape"@en .
+# 
+# https://w3id.org/imec/ns/fno-steps#Bundle
+<https://w3id.org/imec/ns/fno-steps#Bundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/imec/ns/fno-steps#Bundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/p-plan#Bundle> .
+<https://w3id.org/imec/ns/fno-steps#Bundle> <http://www.w3.org/2000/01/rdf-schema#comment> "A fno-steps:Bundle is a specific type of p-plan:Bundle that contains the provenance assertions of the execution of a fno-steps:Plan"@en .
+<https://w3id.org/imec/ns/fno-steps#Bundle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/imec/ns/fno-steps#> .
+<https://w3id.org/imec/ns/fno-steps#Bundle> <http://www.w3.org/2000/01/rdf-schema#label> "Bundle"@en .
+# 
+# https://w3id.org/imec/ns/fno-steps#ComponentLevelStep
+<https://w3id.org/imec/ns/fno-steps#ComponentLevelStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/imec/ns/fno-steps#ComponentLevelStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/imec/ns/fno-steps#Step> .
+<https://w3id.org/imec/ns/fno-steps#ComponentLevelStep> <http://www.w3.org/2000/01/rdf-schema#comment> "Three hierarchy levels are defined. A ComponentLevelStep represents the lowest level."@en .
+<https://w3id.org/imec/ns/fno-steps#ComponentLevelStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/imec/ns/fno-steps#> .
+<https://w3id.org/imec/ns/fno-steps#ComponentLevelStep> <http://www.w3.org/2000/01/rdf-schema#label> "ComponentLevelStep"@en .
+# 
+# https://w3id.org/imec/ns/fno-steps#ContainerLevelStep
+<https://w3id.org/imec/ns/fno-steps#ContainerLevelStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/imec/ns/fno-steps#ContainerLevelStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/imec/ns/fno-steps#Step> .
+<https://w3id.org/imec/ns/fno-steps#ContainerLevelStep> <http://www.w3.org/2000/01/rdf-schema#comment> "Three hierarchy levels are defined. A ContainerLevelStep represents the middle-level."@en .
+<https://w3id.org/imec/ns/fno-steps#ContainerLevelStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/imec/ns/fno-steps#> .
+<https://w3id.org/imec/ns/fno-steps#ContainerLevelStep> <http://www.w3.org/2000/01/rdf-schema#label> "ContainerLevelStep"@en .
+# 
+# https://w3id.org/imec/ns/fno-steps#JourneyLevelStep
+<https://w3id.org/imec/ns/fno-steps#JourneyLevelStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/imec/ns/fno-steps#JourneyLevelStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/imec/ns/fno-steps#Step> .
+<https://w3id.org/imec/ns/fno-steps#JourneyLevelStep> <http://www.w3.org/2000/01/rdf-schema#comment> "Three hierarchy levels are defined. A JourneyLevelStep represents the highest-level."@en .
+<https://w3id.org/imec/ns/fno-steps#JourneyLevelStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/imec/ns/fno-steps#> .
+<https://w3id.org/imec/ns/fno-steps#JourneyLevelStep> <http://www.w3.org/2000/01/rdf-schema#label> "JourneyLevelStep"@en .
+# 
+# https://w3id.org/imec/ns/fno-steps#Plan
+<https://w3id.org/imec/ns/fno-steps#Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/imec/ns/fno-steps#Plan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/p-plan#Plan> .
+<https://w3id.org/imec/ns/fno-steps#Plan> <http://www.w3.org/2000/01/rdf-schema#comment> "A fno-steps:Plan is a specific type of p-plan:Plan. It is composed of smaller steps that require and produce states."@en .
+<https://w3id.org/imec/ns/fno-steps#Plan> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/imec/ns/fno-steps#> .
+<https://w3id.org/imec/ns/fno-steps#Plan> <http://www.w3.org/2000/01/rdf-schema#label> "Plan"@en .
+# 
+# https://w3id.org/imec/ns/fno-steps#State
+<https://w3id.org/imec/ns/fno-steps#State> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/imec/ns/fno-steps#State> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/p-plan#Variable> .
+<https://w3id.org/imec/ns/fno-steps#State> <http://www.w3.org/2000/01/rdf-schema#comment> "A state in the sense of a particular condition something is in. In our case a state could be represented as a set of RDF statements."@en .
+<https://w3id.org/imec/ns/fno-steps#State> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/imec/ns/fno-steps#> .
+<https://w3id.org/imec/ns/fno-steps#State> <http://www.w3.org/2000/01/rdf-schema#label> "State"@en .
+# 
+# https://w3id.org/imec/ns/fno-steps#StateShape
+<https://w3id.org/imec/ns/fno-steps#StateShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/imec/ns/fno-steps#StateShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://w3id.org/imec/ns/fno-steps#StateShape> <http://www.w3.org/2000/01/rdf-schema#comment> "A state shape is a shape that specifies a set of triples representing a state, and is described as constraints."@en .
+<https://w3id.org/imec/ns/fno-steps#StateShape> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/imec/ns/fno-steps#> .
+<https://w3id.org/imec/ns/fno-steps#StateShape> <http://www.w3.org/2000/01/rdf-schema#label> "State shape"@en .
+# 
+# https://w3id.org/imec/ns/fno-steps#Step
+<https://w3id.org/imec/ns/fno-steps#Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/imec/ns/fno-steps#Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/p-plan#Step> .
+<https://w3id.org/imec/ns/fno-steps#Step> <http://www.w3.org/2000/01/rdf-schema#comment> "The Workflow Coalition defines a step as: 'A description of a piece of work that forms one logical step within a process'. Furthermore, such a step may be either a workflow, or the smallest unit of work which is scheduled based on pre/post-conditions (states)."@en .
+<https://w3id.org/imec/ns/fno-steps#Step> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/imec/ns/fno-steps#> .
+<https://w3id.org/imec/ns/fno-steps#Step> <http://www.w3.org/2000/01/rdf-schema#label> "Step"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/imec/ns/fno-steps#emptyState
+<https://w3id.org/imec/ns/fno-steps#emptyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/imec/ns/fno-steps#emptyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/imec/ns/fno-steps#State> .
+<https://w3id.org/imec/ns/fno-steps#emptyState> <http://www.w3.org/2000/01/rdf-schema#comment> "This state represents an empty state. It can be used by steps which for example do not require any state, instead they would specify fno-steps:requiresState fno-steps:emptyState."@en .
+<https://w3id.org/imec/ns/fno-steps#emptyState> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/imec/ns/fno-steps#> .
+<https://w3id.org/imec/ns/fno-steps#emptyState> <http://www.w3.org/2000/01/rdf-schema#label> "Empty state"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

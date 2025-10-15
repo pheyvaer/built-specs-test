@@ -1,0 +1,111 @@
+@prefix fno: <https://w3id.org/function/ontology#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix tfn: <https://w3id.org/time-fn#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix vann: <http://purl.org/vocab/vann/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+<https://w3id.org/time-fn#> a skos:ConceptScheme ;
+                            skos:prefLabel "Time Functions"@en ;
+                            dc:title "Time Functions"@en ;
+                            dc:description "Ontology for defining Time Functions in RDF, addressing time literals without timezone and other time periods."@en ;
+                            dcterms:created "2025-06-30+02:00"^^xsd:date ;
+                            dcterms:modified "2025-06-30+02:00"^^xsd:date ;
+                            dcterms:creator <https://solid.smessie.com/profile/card#me> ;
+                            dcterms:contributor <https://solid.smessie.com/profile/card#me> ;
+                            vann:preferredNamespacePrefix "tfn" ;
+                            vann:preferredNamespaceUri <https://w3id.org/time-fn#> ;
+                            owl:versionInfo "1.0.0" ;
+                            owl:versionIRI <https://w3id.org/time-fn/1.0.0/> ;
+                            skos:hasTopConcept
+                                tfn:periodMinInclusive,
+                                tfn:periodMaxInclusive,
+                                tfn:periodMinExclusive,
+                                tfn:periodMaxExclusive,
+                                tfn:bindDefaultTimezone .
+
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+### https://w3id.org/time-fn#periodMinInclusive
+tfn:periodMinInclusive a skos:Concept, fno:Function ;
+                       skos:inScheme tfn: ;
+                       skos:prefLabel "periodMinInclusive"@en ;
+                       skos:definition "Returns the inclusive lower bound of a time period."@en ;
+                       rdfs:label "periodMinInclusive"@en ;
+                       rdfs:comment "Returns the inclusive lower bound of a time period."@en ;
+                       fno:name "periodMinInclusive"@en ;
+                       fno:expects ( tfn:period_param1 ) ;
+                       fno:returns ( tfn:period_output ) .
+
+tfn:period_param1 a fno:Parameter ;
+                    fno:type xsd:dateTime, xsd:date, xsd:gYearMonth, xsd:gYear ;
+                    fno:required true ;
+                    skos:prefLabel "time literal"@en .
+
+tfn:period_output a fno:Output ;
+                  fno:type xsd:dateTime ;
+                  fno:required true .
+
+### https://w3id.org/time-fn#periodMaxInclusive
+tfn:periodMaxInclusive a skos:Concept, fno:Function ;
+                       skos:inScheme tfn: ;
+                       skos:prefLabel "periodMaxInclusive"@en ;
+                       skos:definition "Returns the inclusive upper bound of a time period."@en ;
+                       rdfs:label "periodMaxInclusive"@en ;
+                       rdfs:comment "Returns the inclusive upper bound of a time period."@en ;
+                       fno:name "periodMaxInclusive"@en ;
+                       fno:expects ( tfn:period_param1 ) ;
+                       fno:returns ( tfn:period_output ) .
+
+### https://w3id.org/time-fn#periodMinExclusive
+tfn:periodMinExclusive a skos:Concept, fno:Function ;
+                       skos:inScheme tfn: ;
+                       skos:prefLabel "periodMinExclusive"@en ;
+                       skos:definition "Returns the exclusive lower bound of a time period."@en ;
+                       rdfs:label "periodMinExclusive"@en ;
+                       rdfs:comment "Returns the exclusive lower bound of a time period."@en ;
+                       fno:name "periodMinExclusive"@en ;
+                       fno:expects ( tfn:period_param1 ) ;
+                       fno:returns ( tfn:period_output ) .
+
+### https://w3id.org/time-fn#periodMaxExclusive
+tfn:periodMaxExclusive a skos:Concept, fno:Function ;
+                       skos:inScheme tfn: ;
+                       skos:prefLabel "periodMaxExclusive"@en ;
+                       skos:definition "Returns the exclusive upper bound of a time period."@en ;
+                       rdfs:label "periodMaxExclusive"@en ;
+                       rdfs:comment "Returns the exclusive upper bound of a time period."@en ;
+                       fno:name "periodMaxExclusive"@en ;
+                       fno:expects ( tfn:period_param1 ) ;
+                       fno:returns ( tfn:period_output ) .
+
+### https://w3id.org/time-fn#bindDefaultTimezone
+tfn:bindDefaultTimezone a skos:Concept, fno:Function ;
+                        skos:inScheme tfn: ;
+                        skos:prefLabel "bindDefaultTimezone"@en ;
+                        skos:definition "Bind a default timezone to a time literal if no explicit timezone was indicated in the time literal."@en ;
+                        rdfs:label "bindDefaultTimezone"@en ;
+                        rdfs:comment "Bind a default timezone to a time literal if no explicit timezone was indicated in the time literal."@en ;
+                        fno:name "bindDefaultTimezone"@en ;
+                        fno:expects ( tfn:defaultTimezone_param1 tfn:defaultTimezone_param2 ) ;
+                        fno:returns ( tfn:defaultTimezone_output ) .
+
+tfn:defaultTimezone_param1 a fno:Parameter ;
+                           fno:type xsd:dateTime, xsd:date, xsd:gYearMonth, xsd:gYear ;
+                           fno:required true ;
+                           skos:prefLabel "time literal"@en .
+
+tfn:defaultTimezone_param2 a fno:Parameter ;
+                           fno:type xsd:string ;
+                           fno:required true ;
+                           skos:prefLabel "default timezone"@en .
+
+tfn:defaultTimezone_output a fno:Output ;
+                           fno:type xsd:dateTime, xsd:date, xsd:gYearMonth, xsd:gYear ;
+                           fno:required true .

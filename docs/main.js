@@ -26,7 +26,14 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     for (const pub of spec.publications) {
       if (pub.type === "redirect" || pub.type === "specific") {
-        const build = pub.builds[pub.builds.length - 1];
+        let build;
+
+        for (let i = pub.builds.length - 1; i >= 0; i--) {
+          if (pub.builds[i].status === "success") {
+            build = pub.builds[i];
+            break;
+          }
+        }
 
         accordion += `
           <div class="accordion-item">
@@ -59,7 +66,9 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         let ul = "<ul>";
         for (const build of pub.builds) {
-          ul += `<li><a href="${build.path}">${build.path}</a> (${dateFns.format(new Date(build.date), "yyyy-MM-dd HH:mm O")})</li>`;
+          if (build.status === "success" || build.status === undefined) {
+            ul += `<li><a href="${build.path}">${build.path}</a> (${dateFns.format(new Date(build.date), "yyyy-MM-dd HH:mm O")})</li>`;
+          }
         }
         ul += "</ul>";
         accordion += ul;
