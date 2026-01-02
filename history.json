@@ -24,7 +24,7 @@
           ]
         },
         "level1-latest": {
-          "latest-run": "2025-11-24T17:10:57.699Z",
+          "latest-run": "2026-01-02T10:21:40.242Z",
           "builds": [
             {
               "date": "2025-03-05T09:46:07.494Z",
@@ -47,7 +47,7 @@
           ]
         },
         "level1-commits": {
-          "latest-run": "2025-11-24T17:10:57.699Z",
+          "latest-run": "2026-01-02T10:21:40.242Z",
           "builds": [
             {
               "date": "2025-03-05T09:46:06.976Z",
@@ -107,7 +107,7 @@
           ]
         },
         "level0-latest": {
-          "latest-run": "2025-11-24T17:10:57.699Z",
+          "latest-run": "2026-01-02T10:21:40.242Z",
           "builds": [
             {
               "date": "2025-03-05T09:46:07.486Z",
@@ -121,7 +121,7 @@
     "rdf-time-snippets": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-11-24T17:10:59.670Z",
+          "latest-run": "2026-01-02T10:21:42.108Z",
           "builds": [
             {
               "date": "2024-12-17T17:24:26.701Z",
@@ -164,7 +164,7 @@
     "claims-network": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-11-24T17:10:58.010Z",
+          "latest-run": "2026-01-02T10:21:40.523Z",
           "builds": [
             {
               "date": "2025-01-16T13:44:21.485Z",
@@ -259,7 +259,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2025-11-24T17:10:58.011Z",
+          "latest-run": "2026-01-02T10:21:40.524Z",
           "builds": [
             {
               "date": "2025-01-17T10:59:04.539Z",
@@ -286,7 +286,7 @@
     "ldes-server-for-developers": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-11-24T17:10:58.925Z",
+          "latest-run": "2026-01-02T10:21:41.454Z",
           "builds": [
             {
               "date": "2025-01-20T13:39:54.537Z",
@@ -386,7 +386,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2025-11-24T17:10:58.925Z",
+          "latest-run": "2026-01-02T10:21:41.455Z",
           "builds": [
             {
               "date": "2025-01-20T13:39:54.539Z",
@@ -407,7 +407,7 @@
     "force": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-11-24T17:10:58.485Z",
+          "latest-run": "2026-01-02T10:21:41.027Z",
           "builds": [
             {
               "date": "2025-03-19T14:24:28.385Z",
@@ -517,7 +517,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2025-11-24T17:10:58.485Z",
+          "latest-run": "2026-01-02T10:21:41.027Z",
           "builds": [
             {
               "date": "2025-03-19T14:24:28.388Z",
@@ -562,7 +562,7 @@
     "trustflows": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-11-24T17:11:02.051Z",
+          "latest-run": "2026-01-02T10:21:48.833Z",
           "builds": [
             {
               "date": "2025-03-31T15:41:58.413Z",
@@ -602,7 +602,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2025-11-24T17:11:02.051Z",
+          "latest-run": "2026-01-02T10:21:48.833Z",
           "builds": [
             {
               "date": "2025-03-31T15:41:58.419Z",
@@ -623,7 +623,7 @@
     "odrl3proposal": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-11-24T17:10:59.148Z",
+          "latest-run": "2026-01-02T10:21:41.712Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:36.585Z",
@@ -659,7 +659,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2025-11-24T17:10:59.148Z",
+          "latest-run": "2026-01-02T10:21:41.712Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:36.589Z",
@@ -692,7 +692,7 @@
     "policy-instantiation": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-11-24T17:10:59.419Z",
+          "latest-run": "2026-01-02T10:21:41.926Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:37.581Z",
@@ -712,7 +712,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2025-11-24T17:10:59.419Z",
+          "latest-run": "2026-01-02T10:21:41.926Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:37.584Z",
@@ -733,7 +733,7 @@
     "sotw": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-11-24T17:11:00.166Z",
+          "latest-run": "2026-01-02T10:21:45.685Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:38.587Z",
@@ -808,11 +808,47 @@
               "commit": "29c2973a48fe07a9993dcb02458f15a306e8803c",
               "path": "state-of-the-world-for-open-digital-rights-language-odrl-evaluator/all/29c2973a48fe07a9993dcb02458f15a306e8803c",
               "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:43.118Z",
+              "commit": "bd40f8fdf393d73b0a138a13060627475ba05e7e",
+              "path": "state-of-the-world-for-open-digital-rights-language-odrl-evaluator/all/bd40f8fdf393d73b0a138a13060627475ba05e7e",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:43.624Z",
+              "commit": "52f420febd7792902a5930036d03966bbb06fb2c",
+              "path": "state-of-the-world-for-open-digital-rights-language-odrl-evaluator/all/52f420febd7792902a5930036d03966bbb06fb2c",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:44.162Z",
+              "commit": "b98748e366c2ae8d4cb91e0b219f0c649f5d987c",
+              "path": "state-of-the-world-for-open-digital-rights-language-odrl-evaluator/all/b98748e366c2ae8d4cb91e0b219f0c649f5d987c",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:44.676Z",
+              "commit": "7250e472dce119741e821c2004e3c28537cd7d67",
+              "path": "state-of-the-world-for-open-digital-rights-language-odrl-evaluator/all/7250e472dce119741e821c2004e3c28537cd7d67",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:45.194Z",
+              "commit": "2b4dcdfaaf4ad64b6609d1d90f09e4a16ba69e29",
+              "path": "state-of-the-world-for-open-digital-rights-language-odrl-evaluator/all/2b4dcdfaaf4ad64b6609d1d90f09e4a16ba69e29",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:45.685Z",
+              "commit": "358e57bfa8dcc79ed4eddf0921b69f21e4add9e0",
+              "path": "state-of-the-world-for-open-digital-rights-language-odrl-evaluator/all/358e57bfa8dcc79ed4eddf0921b69f21e4add9e0",
+              "status": "success"
             }
           ]
         },
         "latest": {
-          "latest-run": "2025-11-24T17:11:00.166Z",
+          "latest-run": "2026-01-02T10:21:45.688Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:38.591Z",
@@ -837,6 +873,11 @@
               "path": "state-of-the-world-for-open-digital-rights-language-odrl-evaluator/latest",
               "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/state-of-the-world-for-open-digital-rights-language-odrl-evaluator/all/29c2973a48fe07a9993dcb02458f15a306e8803c",
               "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:45.688Z",
+              "path": "state-of-the-world-for-open-digital-rights-language-odrl-evaluator/latest",
+              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/state-of-the-world-for-open-digital-rights-language-odrl-evaluator/all/358e57bfa8dcc79ed4eddf0921b69f21e4add9e0"
             }
           ]
         }
@@ -845,7 +886,7 @@
     "hedge": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-11-24T17:10:58.773Z",
+          "latest-run": "2026-01-02T10:21:41.256Z",
           "builds": [
             {
               "date": "2025-06-24T08:18:47.351Z",
@@ -1044,7 +1085,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2025-11-24T17:10:58.774Z",
+          "latest-run": "2026-01-02T10:21:41.256Z",
           "builds": [
             {
               "date": "2025-06-24T08:18:47.354Z",
@@ -1107,7 +1148,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2025-11-24T17:10:58.247Z",
+          "latest-run": "2026-01-02T10:21:40.789Z",
           "builds": [
             {
               "date": "2025-06-25T15:19:44.161Z",
@@ -1136,7 +1177,7 @@
           ]
         },
         "all-commits-main": {
-          "latest-run": "2025-11-24T17:10:58.247Z",
+          "latest-run": "2026-01-02T10:21:40.789Z",
           "builds": [
             {
               "date": "2025-07-09T15:23:48.320Z",
@@ -1162,7 +1203,7 @@
     "time-fn": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-11-24T17:11:01.588Z",
+          "latest-run": "2026-01-02T10:21:48.363Z",
           "builds": [
             {
               "date": "2025-07-01T09:24:13.034Z",
@@ -1198,7 +1239,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2025-11-24T17:11:01.588Z",
+          "latest-run": "2026-01-02T10:21:48.363Z",
           "builds": [
             {
               "date": "2025-07-01T09:24:13.038Z",
@@ -1231,7 +1272,7 @@
     "trustenvelope": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-11-24T17:11:01.808Z",
+          "latest-run": "2026-01-02T10:21:48.632Z",
           "builds": [
             {
               "date": "2025-08-06T05:28:28.671Z",
@@ -1313,7 +1354,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2025-11-24T17:11:01.808Z",
+          "latest-run": "2026-01-02T10:21:48.632Z",
           "builds": [
             {
               "date": "2025-08-06T05:28:28.675Z",
@@ -1334,7 +1375,7 @@
     "SA4DS": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-11-24T17:10:59.930Z",
+          "latest-run": "2026-01-02T10:21:42.342Z",
           "builds": [
             {
               "date": "2025-10-30T12:46:59.154Z",
@@ -1345,12 +1386,13 @@
           ]
         },
         "latest": {
-          "latest-run": "2025-11-24T17:10:59.932Z",
+          "latest-run": "2026-01-02T10:21:42.342Z",
           "builds": [
             {
               "date": "2025-11-24T17:10:59.932Z",
               "path": "service-authorization-for-data-spaces/latest",
-              "source": "service-authorization-for-data-spaces/all/16e3969ced95b39ef1924f52bb6d8c7041c824bf"
+              "source": "service-authorization-for-data-spaces/all/16e3969ced95b39ef1924f52bb6d8c7041c824bf",
+              "status": "success"
             }
           ]
         }
@@ -1359,7 +1401,7 @@
     "sparql-1-1-incremental-protocol": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-11-24T17:11:01.344Z",
+          "latest-run": "2026-01-02T10:21:48.134Z",
           "builds": [
             {
               "date": "2025-10-30T12:48:33.188Z",
@@ -1378,16 +1420,52 @@
               "commit": "8a32e50f46fae888f00a29d893e51e659847a1da",
               "path": "sparql-11-incremental-protocol/all/8a32e50f46fae888f00a29d893e51e659847a1da",
               "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:46.331Z",
+              "commit": "de8216aaf6bcc00e3e80bb0cd5b144f6b44e1f61",
+              "path": "sparql-11-incremental-protocol/all/de8216aaf6bcc00e3e80bb0cd5b144f6b44e1f61",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:46.787Z",
+              "commit": "080a43b178fe55b05ee8a6c5c4d44d2fcd669fc7",
+              "path": "sparql-11-incremental-protocol/all/080a43b178fe55b05ee8a6c5c4d44d2fcd669fc7",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:47.235Z",
+              "commit": "070aeba5f385fe1e5015fa2cc4c85feb692c6ff2",
+              "path": "sparql-11-incremental-protocol/all/070aeba5f385fe1e5015fa2cc4c85feb692c6ff2",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:47.681Z",
+              "commit": "8e9e0e95656551b8e0c336c0de59d057ab1429ff",
+              "path": "sparql-11-incremental-protocol/all/8e9e0e95656551b8e0c336c0de59d057ab1429ff",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:48.134Z",
+              "commit": "9692383efb39edcd03ea019e3f8c9a050890a74b",
+              "path": "sparql-11-incremental-protocol/all/9692383efb39edcd03ea019e3f8c9a050890a74b",
+              "status": "success"
             }
           ]
         },
         "latest": {
-          "latest-run": "2025-11-24T17:11:01.345Z",
+          "latest-run": "2026-01-02T10:21:48.136Z",
           "builds": [
             {
               "date": "2025-11-24T17:11:01.345Z",
               "path": "sparql-11-incremental-protocol/latest",
-              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/sparql-11-incremental-protocol/all/8a32e50f46fae888f00a29d893e51e659847a1da"
+              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/sparql-11-incremental-protocol/all/8a32e50f46fae888f00a29d893e51e659847a1da",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:48.136Z",
+              "path": "sparql-11-incremental-protocol/latest",
+              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/sparql-11-incremental-protocol/all/9692383efb39edcd03ea019e3f8c9a050890a74b"
             }
           ]
         }
@@ -1396,23 +1474,101 @@
     "aggregator-protocol": {
       "publications": {
         "all-commits": {
-          "latest-run": "2025-11-24T17:10:57.439Z",
+          "latest-run": "2026-01-02T10:21:39.988Z",
           "builds": [
             {
               "date": "2025-11-24T17:10:57.438Z",
               "path": "aggregator-protocol/all/fba1646f6495ca3f16410e522feebb1ca6865ed5",
               "commit": "fba1646f6495ca3f16410e522feebb1ca6865ed5",
               "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:34.721Z",
+              "commit": "9a8a3a6add6655da8e8861f8d34ad7459215239e",
+              "path": "aggregator-protocol/all/9a8a3a6add6655da8e8861f8d34ad7459215239e",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:35.197Z",
+              "commit": "99dcc26926f004c63d454c841ae7177054fb8279",
+              "path": "aggregator-protocol/all/99dcc26926f004c63d454c841ae7177054fb8279",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:35.678Z",
+              "commit": "9e61f85d9ea75c17632a8e90e6aacccc0fdadb55",
+              "path": "aggregator-protocol/all/9e61f85d9ea75c17632a8e90e6aacccc0fdadb55",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:36.159Z",
+              "commit": "babe52d5fd03dc0a5814b356b719950671a84a2d",
+              "path": "aggregator-protocol/all/babe52d5fd03dc0a5814b356b719950671a84a2d",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:36.646Z",
+              "commit": "1efeb939c9a646e6223f5b8177199f880f1abd2d",
+              "path": "aggregator-protocol/all/1efeb939c9a646e6223f5b8177199f880f1abd2d",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:37.123Z",
+              "commit": "31065b81ca314543cf3009d7478d3812caa63bb5",
+              "path": "aggregator-protocol/all/31065b81ca314543cf3009d7478d3812caa63bb5",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:37.611Z",
+              "commit": "3934dcc27aef8b4d2703c093c0e2590a2d4a4eb3",
+              "path": "aggregator-protocol/all/3934dcc27aef8b4d2703c093c0e2590a2d4a4eb3",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:38.067Z",
+              "commit": "3df225af0f05a974d6a9de69a739c7ad621606b5",
+              "path": "aggregator-protocol/all/3df225af0f05a974d6a9de69a739c7ad621606b5",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:38.546Z",
+              "commit": "f62ab004053c0f3c0bfe53fe477ff104c716000f",
+              "path": "aggregator-protocol/all/f62ab004053c0f3c0bfe53fe477ff104c716000f",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:39.023Z",
+              "commit": "153d80212c44fe25c6c1c9b40c3b769af4954fd1",
+              "path": "aggregator-protocol/all/153d80212c44fe25c6c1c9b40c3b769af4954fd1",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:39.502Z",
+              "commit": "d9d74ff7787246f8e5fbdfa8b755d74a3040db18",
+              "path": "aggregator-protocol/all/d9d74ff7787246f8e5fbdfa8b755d74a3040db18",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:39.988Z",
+              "commit": "113e5898768712780b46f5d62c1ad06900e420a5",
+              "path": "aggregator-protocol/all/113e5898768712780b46f5d62c1ad06900e420a5",
+              "status": "success"
             }
           ]
         },
         "latest": {
-          "latest-run": "2025-11-24T17:10:57.441Z",
+          "latest-run": "2026-01-02T10:21:40.001Z",
           "builds": [
             {
               "date": "2025-11-24T17:10:57.441Z",
               "path": "aggregator-protocol/latest",
-              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/aggregator-protocol/all/fba1646f6495ca3f16410e522feebb1ca6865ed5"
+              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/aggregator-protocol/all/fba1646f6495ca3f16410e522feebb1ca6865ed5",
+              "status": "success"
+            },
+            {
+              "date": "2026-01-02T10:21:40.001Z",
+              "path": "aggregator-protocol/latest",
+              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/aggregator-protocol/all/113e5898768712780b46f5d62c1ad06900e420a5"
             }
           ]
         }
@@ -1420,7 +1576,7 @@
     }
   },
   "orchestrator": {
-    "latest-run": "2025-11-24T17:11:02.051Z",
+    "latest-run": "2026-01-02T10:21:48.833Z",
     "version": "1.1.2"
   }
 }
