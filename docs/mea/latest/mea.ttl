@@ -1,0 +1,49 @@
+
+@prefix fno: <https://w3id.org/function/ontology#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix mea: <https://w3id.org/mea#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix vann: <http://purl.org/vocab/vann/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+<https://w3id.org/mea#> a owl:Ontology ;
+                        rdfs:label "Member Extraction Algorithm Ontology"@en ;
+                        rdfs:comment "Ontology for ."@en ;
+                        dcterms:created "2026-04-09+02:00"^^xsd:date ;
+                        dcterms:modified "2025-04-09+02:00"^^xsd:date ;
+                        dcterms:creator <https://smessaert.be/#me> ;
+                        dcterms:contributor <https://smessaert.be/#me> ;
+                        vann:preferredNamespacePrefix "mea" ;
+                        vann:preferredNamespaceUri <https://w3id.org/mea#> ;
+                        owl:versionInfo "1.0.0" ;
+                        owl:versionIRI mea:1.0.0 .
+
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+### https://w3id.org/mea#DefaultGraph
+mea:DefaultGraph a owl:Class ;
+                 rdfs:label "DefaultGraph"@en ;
+                 rdfs:comment "Explicitly denote the default graph in RDF datasets."@en ;
+                 rdfs:isDefinedBy mea: .
+
+### https://w3id.org/mea#graph
+mea:graph a owl:ObjectProperty ;
+          rdfs:label "graph"@en ;
+          rdfs:comment "Links a reifier resource to the original graph of a reified triple. Use mea:DefaultGraph to denote the default graph."@en ;
+          rdfs:domain rdfs:Resource ;
+          rdfs:range rdfs:Resource ;
+          rdfs:isDefinedBy mea: .
+
+### https://w3id.org/mea#member
+mea:member a owl:ObjectProperty ;
+           rdfs:label "member"@en ;
+           rdfs:comment "Links a root resource to a member identifier in the default graph."@en ;
+           rdfs:domain rdfs:Resource ;
+           rdfs:range rdfs:Resource ;
+           rdfs:isDefinedBy mea: .

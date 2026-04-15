@@ -24,7 +24,7 @@
           ]
         },
         "level1-latest": {
-          "latest-run": "2026-04-15T05:33:18.603Z",
+          "latest-run": "2026-04-15T06:26:22.834Z",
           "builds": [
             {
               "date": "2025-03-05T09:46:07.494Z",
@@ -47,7 +47,7 @@
           ]
         },
         "level1-commits": {
-          "latest-run": "2026-04-15T05:33:18.603Z",
+          "latest-run": "2026-04-15T06:26:22.833Z",
           "builds": [
             {
               "date": "2025-03-05T09:46:06.976Z",
@@ -107,7 +107,7 @@
           ]
         },
         "level0-latest": {
-          "latest-run": "2026-04-15T05:33:18.603Z",
+          "latest-run": "2026-04-15T06:26:22.834Z",
           "builds": [
             {
               "date": "2025-03-05T09:46:07.486Z",
@@ -121,7 +121,7 @@
     "rdf-time-snippets": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-15T05:33:23.594Z",
+          "latest-run": "2026-04-15T06:26:26.338Z",
           "builds": [
             {
               "date": "2024-12-17T17:24:26.701Z",
@@ -164,7 +164,7 @@
     "claims-network": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-15T05:33:18.893Z",
+          "latest-run": "2026-04-15T06:26:23.074Z",
           "builds": [
             {
               "date": "2025-01-16T13:44:21.485Z",
@@ -259,7 +259,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-15T05:33:18.893Z",
+          "latest-run": "2026-04-15T06:26:23.074Z",
           "builds": [
             {
               "date": "2025-01-17T10:59:04.539Z",
@@ -286,7 +286,7 @@
     "ldes-server-for-developers": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-15T05:33:19.991Z",
+          "latest-run": "2026-04-15T06:26:24.403Z",
           "builds": [
             {
               "date": "2025-01-20T13:39:54.537Z",
@@ -386,7 +386,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-15T05:33:19.991Z",
+          "latest-run": "2026-04-15T06:26:24.403Z",
           "builds": [
             {
               "date": "2025-01-20T13:39:54.539Z",
@@ -407,7 +407,7 @@
     "force": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-15T05:33:19.431Z",
+          "latest-run": "2026-04-15T06:26:23.577Z",
           "builds": [
             {
               "date": "2025-03-19T14:24:28.385Z",
@@ -517,7 +517,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-15T05:33:19.431Z",
+          "latest-run": "2026-04-15T06:26:23.577Z",
           "builds": [
             {
               "date": "2025-03-19T14:24:28.388Z",
@@ -623,7 +623,7 @@
     "odrl3proposal": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-15T05:33:21.280Z",
+          "latest-run": "2026-04-15T06:26:25.581Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:36.585Z",
@@ -659,7 +659,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-15T05:33:21.280Z",
+          "latest-run": "2026-04-15T06:26:25.581Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:36.589Z",
@@ -692,7 +692,7 @@
     "policy-instantiation": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-15T05:33:23.292Z",
+          "latest-run": "2026-04-15T06:26:26.106Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:37.581Z",
@@ -712,7 +712,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-15T05:33:23.292Z",
+          "latest-run": "2026-04-15T06:26:26.106Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:37.584Z",
@@ -733,7 +733,7 @@
     "sotw": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-15T05:33:24.358Z",
+          "latest-run": "2026-04-15T06:26:26.862Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:38.587Z",
@@ -848,7 +848,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-15T05:33:24.358Z",
+          "latest-run": "2026-04-15T06:26:26.862Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:38.591Z",
@@ -887,7 +887,7 @@
     "hedge": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-15T05:33:19.687Z",
+          "latest-run": "2026-04-15T06:26:23.824Z",
           "builds": [
             {
               "date": "2025-06-24T08:18:47.351Z",
@@ -1086,7 +1086,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-15T05:33:19.687Z",
+          "latest-run": "2026-04-15T06:26:23.824Z",
           "builds": [
             {
               "date": "2025-06-24T08:18:47.354Z",
@@ -1149,7 +1149,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-15T05:33:19.164Z",
+          "latest-run": "2026-04-15T06:26:23.329Z",
           "builds": [
             {
               "date": "2025-06-25T15:19:44.161Z",
@@ -1178,7 +1178,7 @@
           ]
         },
         "all-commits-main": {
-          "latest-run": "2026-04-15T05:33:19.164Z",
+          "latest-run": "2026-04-15T06:26:23.329Z",
           "builds": [
             {
               "date": "2025-07-09T15:23:48.320Z",
@@ -1204,7 +1204,7 @@
     "time-fn": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-15T05:33:24.884Z",
+          "latest-run": "2026-04-15T06:26:27.377Z",
           "builds": [
             {
               "date": "2025-07-01T09:24:13.034Z",
@@ -1240,7 +1240,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-15T05:33:24.884Z",
+          "latest-run": "2026-04-15T06:26:27.377Z",
           "builds": [
             {
               "date": "2025-07-01T09:24:13.038Z",
@@ -1273,7 +1273,7 @@
     "trustenvelope": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-15T05:33:25.154Z",
+          "latest-run": "2026-04-15T06:26:27.655Z",
           "builds": [
             {
               "date": "2025-08-06T05:28:28.671Z",
@@ -1355,7 +1355,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-15T05:33:25.154Z",
+          "latest-run": "2026-04-15T06:26:27.655Z",
           "builds": [
             {
               "date": "2025-08-06T05:28:28.675Z",
@@ -1376,7 +1376,7 @@
     "SA4DS": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-15T05:33:24.057Z",
+          "latest-run": "2026-04-15T06:26:26.590Z",
           "builds": [
             {
               "date": "2025-10-30T12:46:59.154Z",
@@ -1387,7 +1387,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-15T05:33:24.057Z",
+          "latest-run": "2026-04-15T06:26:26.590Z",
           "builds": [
             {
               "date": "2025-11-24T17:10:59.932Z",
@@ -1402,7 +1402,7 @@
     "sparql-1-1-incremental-protocol": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-15T05:33:24.626Z",
+          "latest-run": "2026-04-15T06:26:27.140Z",
           "builds": [
             {
               "date": "2025-10-30T12:48:33.188Z",
@@ -1455,7 +1455,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-15T05:33:24.626Z",
+          "latest-run": "2026-04-15T06:26:27.140Z",
           "builds": [
             {
               "date": "2025-11-24T17:11:01.345Z",
@@ -1476,7 +1476,7 @@
     "aggregator-protocol": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-15T05:33:18.317Z",
+          "latest-run": "2026-04-15T06:26:22.527Z",
           "builds": [
             {
               "date": "2025-11-24T17:10:57.438Z",
@@ -1637,7 +1637,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-15T05:33:18.320Z",
+          "latest-run": "2026-04-15T06:26:22.528Z",
           "builds": [
             {
               "date": "2025-11-24T17:10:57.441Z",
@@ -1660,7 +1660,8 @@
             {
               "date": "2026-04-15T05:33:18.320Z",
               "path": "aggregator-protocol/latest",
-              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/aggregator-protocol/all/6a0687217aacaae44b738f9e58d405f66d86491d"
+              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/aggregator-protocol/all/6a0687217aacaae44b738f9e58d405f66d86491d",
+              "status": "success"
             }
           ]
         }
@@ -1669,7 +1670,7 @@
     "PolicyCAT": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-15T05:33:23.016Z",
+          "latest-run": "2026-04-15T06:26:25.860Z",
           "builds": [
             {
               "date": "2026-01-05T15:02:54.287Z",
@@ -1692,7 +1693,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-15T05:33:23.018Z",
+          "latest-run": "2026-04-15T06:26:25.860Z",
           "builds": [
             {
               "date": "2026-01-05T15:02:54.289Z",
@@ -1703,7 +1704,34 @@
             {
               "date": "2026-04-15T05:33:23.018Z",
               "path": "PolicyCAT/latest",
-              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/PolicyCAT/all/86da06bfd59dce7b3597093e406e6153d91fa3e4"
+              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/PolicyCAT/all/86da06bfd59dce7b3597093e406e6153d91fa3e4",
+              "status": "success"
+            }
+          ]
+        }
+      }
+    },
+    "mea": {
+      "publications": {
+        "all-commits": {
+          "latest-run": "2026-04-15T06:26:25.303Z",
+          "builds": [
+            {
+              "date": "2026-04-15T06:26:25.303Z",
+              "path": "mea/all/c7c283f6887c58477c39509661dfc7cfbe759b12",
+              "commit": "c7c283f6887c58477c39509661dfc7cfbe759b12",
+              "status": "success"
+            }
+          ]
+        },
+        "latest": {
+          "latest-run": "2026-04-15T06:26:25.318Z",
+          "builds": [
+            {
+              "date": "2026-04-15T06:26:25.318Z",
+              "path": "mea/latest",
+              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/mea/all/c7c283f6887c58477c39509661dfc7cfbe759b12",
+              "status": "success"
             }
           ]
         }
@@ -1711,7 +1739,7 @@
     }
   },
   "orchestrator": {
-    "latest-run": "2026-04-15T05:33:25.154Z",
-    "version": "1.1.3"
+    "latest-run": "2026-04-15T06:26:27.655Z",
+    "version": "1.1.4"
   }
 }
