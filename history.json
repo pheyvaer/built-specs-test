@@ -1708,31 +1708,6 @@
           ]
         }
       }
-    },
-    "mea": {
-      "publications": {
-        "all-commits": {
-          "latest-run": "2026-04-15T05:33:20.973Z",
-          "builds": [
-            {
-              "date": "2026-04-15T05:33:20.973Z",
-              "path": "mea/all/c7c283f6887c58477c39509661dfc7cfbe759b12",
-              "commit": "c7c283f6887c58477c39509661dfc7cfbe759b12",
-              "status": "success"
-            }
-          ]
-        },
-        "latest": {
-          "latest-run": "2026-04-15T05:33:20.975Z",
-          "builds": [
-            {
-              "date": "2026-04-15T05:33:20.975Z",
-              "path": "mea/latest",
-              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/mea/all/c7c283f6887c58477c39509661dfc7cfbe759b12"
-            }
-          ]
-        }
-      }
     }
   },
   "orchestrator": {
