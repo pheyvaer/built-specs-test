@@ -1,0 +1,21 @@
+img {
+    width: 100%;
+    height: auto;
+}
+
+#high-level-ldt,
+#ldt-add-new-slc,
+#ldt-discovery,
+#focus-on-data-exchange-types {
+    width: 70%;
+}
+
+figcaption {
+    font-style: normal;
+    text-align: left;
+    margin-left: 50px;
+}
+
+h5 {
+    font-style: normal;
+}

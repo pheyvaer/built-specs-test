@@ -1,0 +1,750 @@
+<!doctype html><html lang="en">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>Janus-QL Specification</title>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <meta content="Bikeshed version caf0aeb39, updated Mon Dec 15 22:51:46 2025 +0000" name="generator">
+  <link href="https://pheyvaer.github.io/built-specs-test/janus-ql-specification/all/81dee4d8dbe5e0a03985c56d1da4ea442de82680" rel="canonical">
+  <meta content="1145f9e1a48554b73a99aa6e92c08ee4b53352c0" name="revision">
+  <meta content="dark light" name="color-scheme">
+<style>/* Boilerplate: style-autolinks */
+.css.css, .property.property, .descriptor.descriptor {
+    color: var(--a-normal-text);
+    font-size: inherit;
+    font-family: inherit;
+}
+.css::before, .property::before, .descriptor::before {
+    content: "‘";
+}
+.css::after, .property::after, .descriptor::after {
+    content: "’";
+}
+.property, .descriptor {
+    /* Don't wrap property and descriptor names */
+    white-space: nowrap;
+}
+.type { /* CSS value <type> */
+    font-style: italic;
+}
+pre .property::before, pre .property::after {
+    content: "";
+}
+[data-link-type="property"]::before,
+[data-link-type="propdesc"]::before,
+[data-link-type="descriptor"]::before,
+[data-link-type="value"]::before,
+[data-link-type="function"]::before,
+[data-link-type="at-rule"]::before,
+[data-link-type="selector"]::before,
+[data-link-type="maybe"]::before {
+    content: "‘";
+}
+[data-link-type="property"]::after,
+[data-link-type="propdesc"]::after,
+[data-link-type="descriptor"]::after,
+[data-link-type="value"]::after,
+[data-link-type="function"]::after,
+[data-link-type="at-rule"]::after,
+[data-link-type="selector"]::after,
+[data-link-type="maybe"]::after {
+    content: "’";
+}
+
+[data-link-type].production::before,
+[data-link-type].production::after,
+.prod [data-link-type]::before,
+.prod [data-link-type]::after {
+    content: "";
+}
+
+[data-link-type=element],
+[data-link-type=element-attr] {
+    font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    font-size: .9em;
+}
+[data-link-type=element]::before { content: "<" }
+[data-link-type=element]::after  { content: ">" }
+
+[data-link-type=biblio] {
+    white-space: pre;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --selflink-text: black;
+        --selflink-bg: silver;
+        --selflink-hover-text: white;
+    }
+}
+</style>
+<style>/* Boilerplate: style-colors */
+/* Any --*-text not paired with a --*-bg is assumed to have a transparent bg */
+:root {
+    color-scheme: light dark;
+
+    --text: black;
+    --bg: white;
+
+    --unofficial-watermark: url(https://www.w3.org/StyleSheets/TR/2016/logos/UD-watermark);
+
+    --logo-bg: #1a5e9a;
+    --logo-active-bg: #c00;
+    --logo-text: white;
+
+    --tocnav-normal-text: #707070;
+    --tocnav-normal-bg: var(--bg);
+    --tocnav-hover-text: var(--tocnav-normal-text);
+    --tocnav-hover-bg: #f8f8f8;
+    --tocnav-active-text: #c00;
+    --tocnav-active-bg: var(--tocnav-normal-bg);
+
+    --tocsidebar-text: var(--text);
+    --tocsidebar-bg: #f7f8f9;
+    --tocsidebar-shadow: rgba(0,0,0,.1);
+    --tocsidebar-heading-text: hsla(203,20%,40%,.7);
+
+    --toclink-text: var(--text);
+    --toclink-underline: #3980b5;
+    --toclink-visited-text: var(--toclink-text);
+    --toclink-visited-underline: #054572;
+
+    --heading-text: #005a9c;
+
+    --hr-text: var(--text);
+
+    --algo-border: #def;
+
+    --del-text: red;
+    --del-bg: transparent;
+    --ins-text: #080;
+    --ins-bg: transparent;
+
+    --a-normal-text: #034575;
+    --a-normal-underline: #bbb;
+    --a-visited-text: var(--a-normal-text);
+    --a-visited-underline: #707070;
+    --a-hover-bg: rgba(75%, 75%, 75%, .25);
+    --a-active-text: #c00;
+    --a-active-underline: #c00;
+
+    --blockquote-border: silver;
+    --blockquote-bg: transparent;
+    --blockquote-text: currentcolor;
+
+    --issue-border: #e05252;
+    --issue-bg: #fbe9e9;
+    --issue-text: var(--text);
+    --issueheading-text: #831616;
+
+    --example-border: #e0cb52;
+    --example-bg: #fcfaee;
+    --example-text: var(--text);
+    --exampleheading-text: #574b0f;
+
+    --note-border: #52e052;
+    --note-bg: #e9fbe9;
+    --note-text: var(--text);
+    --noteheading-text: hsl(120, 70%, 30%);
+    --notesummary-underline: silver;
+
+    --assertion-border: #aaa;
+    --assertion-bg: #eee;
+    --assertion-text: black;
+
+    --advisement-border: orange;
+    --advisement-bg: #fec;
+    --advisement-text: var(--text);
+    --advisementheading-text: #b35f00;
+
+    --warning-border: red;
+    --warning-bg: hsla(40,100%,50%,0.95);
+    --warning-text: var(--text);
+
+    --amendment-border: #330099;
+    --amendment-bg: #F5F0FF;
+    --amendment-text: var(--text);
+    --amendmentheading-text: #220066;
+
+    --def-border: #8ccbf2;
+    --def-bg: #def;
+    --def-text: var(--text);
+    --defrow-border: #bbd7e9;
+
+    --datacell-border: silver;
+
+    --indexinfo-text: #707070;
+
+    --indextable-hover-text: black;
+    --indextable-hover-bg: #f7f8f9;
+
+    --outdatedspec-bg: rgba(0, 0, 0, .5);
+    --outdatedspec-text: black;
+    --outdated-bg: maroon;
+    --outdated-text: white;
+    --outdated-shadow: red;
+
+    --editedrec-bg: darkorange;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #ddd;
+        --bg: black;
+
+        --unofficial-watermark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cg fill='%23100808' transform='translate(200 200) rotate(-45) translate(-200 -200)' stroke='%23100808' stroke-width='3'%3E%3Ctext x='50%25' y='220' style='font: bold 70px sans-serif; text-anchor: middle; letter-spacing: 6px;'%3EUNOFFICIAL%3C/text%3E%3Ctext x='50%25' y='305' style='font: bold 70px sans-serif; text-anchor: middle; letter-spacing: 6px;'%3EDRAFT%3C/text%3E%3C/g%3E%3C/svg%3E");
+
+        --logo-bg: #1a5e9a;
+        --logo-active-bg: #c00;
+        --logo-text: white;
+
+        --tocnav-normal-text: #999;
+        --tocnav-normal-bg: var(--bg);
+        --tocnav-hover-text: var(--tocnav-normal-text);
+        --tocnav-hover-bg: #080808;
+        --tocnav-active-text: #f44;
+        --tocnav-active-bg: var(--tocnav-normal-bg);
+
+        --tocsidebar-text: var(--text);
+        --tocsidebar-bg: #080808;
+        --tocsidebar-shadow: rgba(255,255,255,.1);
+        --tocsidebar-heading-text: hsla(203,20%,40%,.7);
+
+        --toclink-text: var(--text);
+        --toclink-underline: #6af;
+        --toclink-visited-text: var(--toclink-text);
+        --toclink-visited-underline: #054572;
+
+        --heading-text: #8af;
+
+        --hr-text: var(--text);
+
+        --algo-border: #456;
+
+        --del-text: #f44;
+        --del-bg: transparent;
+        --ins-text: #4a4;
+        --ins-bg: transparent;
+
+        --a-normal-text: #6af;
+        --a-normal-underline: #555;
+        --a-visited-text: var(--a-normal-text);
+        --a-visited-underline: var(--a-normal-underline);
+        --a-hover-bg: rgba(25%, 25%, 25%, .2);
+        --a-active-text: #f44;
+        --a-active-underline: var(--a-active-text);
+
+        --borderedblock-bg: rgba(255, 255, 255, .05);
+
+        --blockquote-border: silver;
+        --blockquote-bg: var(--borderedblock-bg);
+        --blockquote-text: currentcolor;
+
+        --issue-border: #e05252;
+        --issue-bg: var(--borderedblock-bg);
+        --issue-text: var(--text);
+        --issueheading-text: hsl(0deg, 70%, 70%);
+
+        --example-border: hsl(50deg, 90%, 60%);
+        --example-bg: var(--borderedblock-bg);
+        --example-text: var(--text);
+        --exampleheading-text: hsl(50deg, 70%, 70%);
+
+        --note-border: hsl(120deg, 100%, 35%);
+        --note-bg: var(--borderedblock-bg);
+        --note-text: var(--text);
+        --noteheading-text: hsl(120, 70%, 70%);
+        --notesummary-underline: silver;
+
+        --assertion-border: #444;
+        --assertion-bg: var(--borderedblock-bg);
+        --assertion-text: var(--text);
+
+        --advisement-border: orange;
+        --advisement-bg: #222218;
+        --advisement-text: var(--text);
+        --advisementheading-text: #f84;
+
+        --warning-border: red;
+        --warning-bg: hsla(40,100%,20%,0.95);
+        --warning-text: var(--text);
+
+        --amendment-border: #330099;
+        --amendment-bg: #080010;
+        --amendment-text: var(--text);
+        --amendmentheading-text: #cc00ff;
+
+        --def-border: #8ccbf2;
+        --def-bg: #080818;
+        --def-text: var(--text);
+        --defrow-border: #136;
+
+        --datacell-border: silver;
+
+        --indexinfo-text: #aaa;
+
+        --indextable-hover-text: var(--text);
+        --indextable-hover-bg: #181818;
+
+        --outdatedspec-bg: rgba(255, 255, 255, .5);
+        --outdatedspec-text: black;
+        --outdated-bg: maroon;
+        --outdated-text: white;
+        --outdated-shadow: red;
+
+        --editedrec-bg: darkorange;
+    }
+    /* In case a transparent-bg image doesn't expect to be on a dark bg,
+       which is quite common in practice... */
+    img { background: white; }
+}
+</style>
+<style>/* Boilerplate: style-counters */
+body {
+    counter-reset: example figure issue;
+}
+.issue {
+    counter-increment: issue;
+}
+.issue:not(.no-marker)::before {
+    content: "Issue " counter(issue);
+}
+
+.example {
+    counter-increment: example;
+}
+.example:not(.no-marker)::before {
+    content: "Example " counter(example);
+}
+.invalid.example:not(.no-marker)::before,
+.illegal.example:not(.no-marker)::before {
+    content: "Invalid Example " counter(example);
+}
+
+figcaption {
+    counter-increment: figure;
+}
+figcaption:not(.no-marker)::before {
+    content: "Figure " counter(figure) " ";
+}
+</style>
+<style>/* Boilerplate: style-issues */
+a[href].issue-return {
+    float: right;
+    float: inline-end;
+    color: var(--issueheading-text);
+    font-weight: bold;
+    text-decoration: none;
+}
+</style>
+<style>/* Boilerplate: style-md-lists */
+/* This is a weird hack for me not yet following the commonmark spec
+   regarding paragraph and lists. */
+[data-md] > :first-child {
+    margin-top: 0;
+}
+[data-md] > :last-child {
+    margin-bottom: 0;
+}
+</style>
+<style>/* Boilerplate: style-selflinks */
+:root {
+    --selflink-text: white;
+    --selflink-bg: gray;
+    --selflink-hover-text: black;
+}
+.heading, .issue, .note, .example, li, dt {
+    position: relative;
+}
+a.self-link {
+    position: absolute;
+    top: 0;
+    left: calc(-1 * (3.5rem - 26px));
+    width: calc(3.5rem - 26px);
+    height: 2em;
+    text-align: center;
+    border: none;
+    transition: opacity .2s;
+    opacity: .5;
+}
+a.self-link:hover {
+    opacity: 1;
+}
+.heading > a.self-link {
+    font-size: 83%;
+}
+.example > a.self-link,
+.note > a.self-link,
+.issue > a.self-link {
+    /* These blocks are overflow:auto, so positioning outside
+       doesn't work. */
+    left: auto;
+    right: 0;
+}
+li > a.self-link {
+    left: calc(-1 * (3.5rem - 26px) - 2em);
+}
+dfn > a.self-link {
+    top: auto;
+    left: auto;
+    opacity: 0;
+    width: 1.5em;
+    height: 1.5em;
+    background: var(--selflink-bg);
+    color: var(--selflink-text);
+    font-style: normal;
+    transition: opacity .2s, background-color .2s, color .2s;
+}
+dfn:hover > a.self-link {
+    opacity: 1;
+}
+dfn > a.self-link:hover {
+    color: var(--selflink-hover-text);
+}
+
+a.self-link::before            { content: "¶"; }
+.heading > a.self-link::before { content: "§"; }
+dfn > a.self-link::before      { content: "#"; }
+</style>
+<style>/* Boilerplate: style-syntax-highlighting */
+code.highlight { padding: .1em; border-radius: .3em; }
+pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
+
+.highlight:not(.idl) { background: rgba(0, 0, 0, .03); }
+c-[a] { color: #990055 } /* Keyword.Declaration */
+c-[b] { color: #990055 } /* Keyword.Type */
+c-[c] { color: #708090 } /* Comment */
+c-[d] { color: #708090 } /* Comment.Multiline */
+c-[e] { color: #0077aa } /* Name.Attribute */
+c-[f] { color: #669900 } /* Name.Tag */
+c-[g] { color: #222222 } /* Name.Variable */
+c-[k] { color: #990055 } /* Keyword */
+c-[l] { color: #000000 } /* Literal */
+c-[m] { color: #000000 } /* Literal.Number */
+c-[n] { color: #0077aa } /* Name */
+c-[o] { color: #999999 } /* Operator */
+c-[p] { color: #999999 } /* Punctuation */
+c-[s] { color: #a67f59 } /* Literal.String */
+c-[t] { color: #a67f59 } /* Literal.String.Single */
+c-[u] { color: #a67f59 } /* Literal.String.Double */
+c-[cp] { color: #708090 } /* Comment.Preproc */
+c-[c1] { color: #708090 } /* Comment.Single */
+c-[cs] { color: #708090 } /* Comment.Special */
+c-[kc] { color: #990055 } /* Keyword.Constant */
+c-[kn] { color: #990055 } /* Keyword.Namespace */
+c-[kp] { color: #990055 } /* Keyword.Pseudo */
+c-[kr] { color: #990055 } /* Keyword.Reserved */
+c-[ld] { color: #000000 } /* Literal.Date */
+c-[nc] { color: #0077aa } /* Name.Class */
+c-[no] { color: #0077aa } /* Name.Constant */
+c-[nd] { color: #0077aa } /* Name.Decorator */
+c-[ni] { color: #0077aa } /* Name.Entity */
+c-[ne] { color: #0077aa } /* Name.Exception */
+c-[nf] { color: #0077aa } /* Name.Function */
+c-[nl] { color: #0077aa } /* Name.Label */
+c-[nn] { color: #0077aa } /* Name.Namespace */
+c-[py] { color: #0077aa } /* Name.Property */
+c-[ow] { color: #999999 } /* Operator.Word */
+c-[mb] { color: #000000 } /* Literal.Number.Bin */
+c-[mf] { color: #000000 } /* Literal.Number.Float */
+c-[mh] { color: #000000 } /* Literal.Number.Hex */
+c-[mi] { color: #000000 } /* Literal.Number.Integer */
+c-[mo] { color: #000000 } /* Literal.Number.Oct */
+c-[sb] { color: #a67f59 } /* Literal.String.Backtick */
+c-[sc] { color: #a67f59 } /* Literal.String.Char */
+c-[sd] { color: #a67f59 } /* Literal.String.Doc */
+c-[se] { color: #a67f59 } /* Literal.String.Escape */
+c-[sh] { color: #a67f59 } /* Literal.String.Heredoc */
+c-[si] { color: #a67f59 } /* Literal.String.Interpol */
+c-[sx] { color: #a67f59 } /* Literal.String.Other */
+c-[sr] { color: #a67f59 } /* Literal.String.Regex */
+c-[ss] { color: #a67f59 } /* Literal.String.Symbol */
+c-[vc] { color: #0077aa } /* Name.Variable.Class */
+c-[vg] { color: #0077aa } /* Name.Variable.Global */
+c-[vi] { color: #0077aa } /* Name.Variable.Instance */
+c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
+
+@media (prefers-color-scheme: dark) {
+    .highlight:not(.idl) { background: rgba(255, 255, 255, .05); }
+
+    c-[a] { color: #d33682 } /* Keyword.Declaration */
+    c-[b] { color: #d33682 } /* Keyword.Type */
+    c-[c] { color: #2aa198 } /* Comment */
+    c-[d] { color: #2aa198 } /* Comment.Multiline */
+    c-[e] { color: #268bd2 } /* Name.Attribute */
+    c-[f] { color: #b58900 } /* Name.Tag */
+    c-[g] { color: #cb4b16 } /* Name.Variable */
+    c-[k] { color: #d33682 } /* Keyword */
+    c-[l] { color: #657b83 } /* Literal */
+    c-[m] { color: #657b83 } /* Literal.Number */
+    c-[n] { color: #268bd2 } /* Name */
+    c-[o] { color: #657b83 } /* Operator */
+    c-[p] { color: #657b83 } /* Punctuation */
+    c-[s] { color: #6c71c4 } /* Literal.String */
+    c-[t] { color: #6c71c4 } /* Literal.String.Single */
+    c-[u] { color: #6c71c4 } /* Literal.String.Double */
+    c-[ch] { color: #2aa198 } /* Comment.Hashbang */
+    c-[cp] { color: #2aa198 } /* Comment.Preproc */
+    c-[cpf] { color: #2aa198 } /* Comment.PreprocFile */
+    c-[c1] { color: #2aa198 } /* Comment.Single */
+    c-[cs] { color: #2aa198 } /* Comment.Special */
+    c-[kc] { color: #d33682 } /* Keyword.Constant */
+    c-[kn] { color: #d33682 } /* Keyword.Namespace */
+    c-[kp] { color: #d33682 } /* Keyword.Pseudo */
+    c-[kr] { color: #d33682 } /* Keyword.Reserved */
+    c-[ld] { color: #657b83 } /* Literal.Date */
+    c-[nc] { color: #268bd2 } /* Name.Class */
+    c-[no] { color: #268bd2 } /* Name.Constant */
+    c-[nd] { color: #268bd2 } /* Name.Decorator */
+    c-[ni] { color: #268bd2 } /* Name.Entity */
+    c-[ne] { color: #268bd2 } /* Name.Exception */
+    c-[nf] { color: #268bd2 } /* Name.Function */
+    c-[nl] { color: #268bd2 } /* Name.Label */
+    c-[nn] { color: #268bd2 } /* Name.Namespace */
+    c-[py] { color: #268bd2 } /* Name.Property */
+    c-[ow] { color: #657b83 } /* Operator.Word */
+    c-[mb] { color: #657b83 } /* Literal.Number.Bin */
+    c-[mf] { color: #657b83 } /* Literal.Number.Float */
+    c-[mh] { color: #657b83 } /* Literal.Number.Hex */
+    c-[mi] { color: #657b83 } /* Literal.Number.Integer */
+    c-[mo] { color: #657b83 } /* Literal.Number.Oct */
+    c-[sa] { color: #6c71c4 } /* Literal.String.Affix */
+    c-[sb] { color: #6c71c4 } /* Literal.String.Backtick */
+    c-[sc] { color: #6c71c4 } /* Literal.String.Char */
+    c-[dl] { color: #6c71c4 } /* Literal.String.Delimiter */
+    c-[sd] { color: #6c71c4 } /* Literal.String.Doc */
+    c-[se] { color: #6c71c4 } /* Literal.String.Escape */
+    c-[sh] { color: #6c71c4 } /* Literal.String.Heredoc */
+    c-[si] { color: #6c71c4 } /* Literal.String.Interpol */
+    c-[sx] { color: #6c71c4 } /* Literal.String.Other */
+    c-[sr] { color: #6c71c4 } /* Literal.String.Regex */
+    c-[ss] { color: #6c71c4 } /* Literal.String.Symbol */
+    c-[fm] { color: #268bd2 } /* Name.Function.Magic */
+    c-[vc] { color: #cb4b16 } /* Name.Variable.Class */
+    c-[vg] { color: #cb4b16 } /* Name.Variable.Global */
+    c-[vi] { color: #cb4b16 } /* Name.Variable.Instance */
+    c-[vm] { color: #cb4b16 } /* Name.Variable.Magic */
+    c-[il] { color: #657b83 } /* Literal.Number.Integer.Long */
+}
+</style>
+ <body class="h-entry">
+  <div class="head">
+   <p data-fill-with="logo"><a class="logo" href="https://knows.idlab.ugent.be/">
+    <img alt="KNoWS" height="48" src="logo.png">
+</a>
+</p>
+   <h1 class="no-ref p-name" id="title">Janus-QL Specification</h1>
+   <h2 class="heading no-num no-ref no-toc settled" id="profile-and-date"><span class="content">Living Document,
+    <time class="dt-updated" datetime="2026-06-30">30 June 2026</time></span></h2>
+   <div data-fill-with="spec-metadata">
+    <dl>
+     <dt>Previous Versions:
+     <dd><a href="_ORCHESTRATOR_PREVIOUS_BUILD_FULL_LINK_" rel="prev">_ORCHESTRATOR_PREVIOUS_BUILD_FULL_LINK_</a>
+     <dt>Issue Tracking:
+     <dd><a href="https://github.com/argahsuknesib/JanusQL-spec/issues/">GitHub</a>
+     <dt class="editor">Editor:
+     <dd class="editor h-card p-author vcard"><a class="email fn p-name u-email" href="mailto:kushagrasingh.bisen@ugent.be">Kushagra Singh Bisen</a> (<a class="org p-org" href="http://idlab.ugent.be/">Ghent University - imec</a>)
+    </dl>
+   </div>
+   <div data-fill-with="warning"></div>
+   <hr title="Separator for header">
+  </div>
+  <div data-fill-with="at-risk"></div>
+  <nav data-fill-with="table-of-contents" id="toc">
+   <h2 class="no-num no-ref no-toc" id="contents">Table of Contents</h2>
+   <ol class="toc">
+    <li><a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
+    <li><a href="#conformance"><span class="secno">2</span> <span class="content">Conformance</span></a>
+    <li><a href="#query-model"><span class="secno">3</span> <span class="content">Query Model</span></a>
+    <li>
+     <a href="#window-declarations"><span class="secno">4</span> <span class="content">Window Declarations</span></a>
+     <ol class="toc">
+      <li><a href="#live-stream-window"><span class="secno">4.1</span> <span class="content">Live Stream Window {#live-stream-window}</span></a>
+      <li><a href="#historical-fixed-log-window"><span class="secno">4.2</span> <span class="content">Historical Fixed Log Window {#historical-fixed-log-window}</span></a>
+      <li><a href="#historical-sliding-log-window"><span class="secno">4.3</span> <span class="content">Historical Sliding Log Window {#historical-sliding-log-window}</span></a>
+     </ol>
+    <li><a href="#window-blocks"><span class="secno">5</span> <span class="content">Window Blocks</span></a>
+    <li><a href="#historical-subqueries"><span class="secno">6</span> <span class="content">Historical Subqueries</span></a>
+    <li><a href="#evaluation-semantics"><span class="secno">7</span> <span class="content">Evaluation Semantics</span></a>
+    <li>
+     <a href="#examples"><span class="secno">8</span> <span class="content">Examples</span></a>
+     <ol class="toc">
+      <li><a href="#example-live-historical-nested"><span class="secno">8.1</span> <span class="content">Live And Historical Query With Nested Historical Subquery {#example-live-historical-nested}</span></a>
+      <li><a href="#example-historical-only-without-register"><span class="secno">8.2</span> <span class="content">Historical-Only Query Without <code>REGISTER</code> {#example-historical-only-without-register}</span></a>
+      <li><a href="#example-historical-sliding-log-window"><span class="secno">8.3</span> <span class="content">Historical Sliding Log Window Declaration {#example-historical-sliding-log-window}</span></a>
+     </ol>
+    <li><a href="#limitations"><span class="secno">9</span> <span class="content">Limitations</span></a>
+    <li>
+     <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
+     <ol class="toc">
+      <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
+     </ol>
+   </ol>
+  </nav>
+  <main>
+   <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
+   <p>Janus-QL is a query language for combining live stream windows with historical log windows in a single query.</p>
+   <p>This specification defines a minimal first public Janus-QL language contract that matches the current validated Janus implementation. It defines only the public query forms that are intended for external users.</p>
+   <p>This specification describes Janus-QL using:</p>
+   <ul>
+    <li data-md>
+     <p>live windows over <code>ON STREAM</code>;</p>
+    <li data-md>
+     <p>historical log windows over <code>ON LOG</code>;</p>
+    <li data-md>
+     <p><code>WINDOW &amp;lt;name&amp;gt; { ... }</code> blocks inside <code>WHERE</code>; and</p>
+    <li data-md>
+     <p>historical-only nested subqueries inside an outer <code>WHERE</code>.</p>
+   </ul>
+   <p>This specification does not define legacy baseline syntax as part of the public language.</p>
+   <h2 class="heading settled" data-level="2" id="conformance"><span class="secno">2. </span><span class="content">Conformance</span><a class="self-link" href="#conformance"></a></h2>
+   <p>The key words MUST, MUST NOT, SHOULD, SHOULD NOT, and MAY in this specification are to be interpreted as described in BCP 14 <a data-link-type="biblio" href="#biblio-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">[RFC2119]</a> <a data-link-type="biblio" href="#biblio-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">[RFC8174]</a> when, and only when, they appear in all capitals.</p>
+   <p>A Janus-QL processor conforms to this specification if it accepts every query form defined by this specification and rejects every query form that this specification marks as unsupported or invalid.</p>
+   <p>This specification is intentionally minimal. A processor MAY implement additional legacy or experimental behavior, but such behavior is non-normative unless this specification explicitly defines it.</p>
+   <h2 class="heading settled" data-level="3" id="query-model"><span class="secno">3. </span><span class="content">Query Model</span><a class="self-link" href="#query-model"></a></h2>
+   <p>A Janus-QL query supports:</p>
+   <ul>
+    <li data-md>
+     <p>zero or more <code>PREFIX</code> declarations;</p>
+    <li data-md>
+     <p>one top-level <code>SELECT</code> clause;</p>
+    <li data-md>
+     <p>zero or more <code>FROM NAMED WINDOW</code> declarations;</p>
+    <li data-md>
+     <p>one <code>WHERE</code> clause;</p>
+    <li data-md>
+     <p>optional top-level <code>GROUP BY</code> and <code>HAVING</code> clauses; and</p>
+    <li data-md>
+     <p>optional <code>REGISTER RStream &lt;output> AS</code> when the query is registered as a live output stream.</p>
+   </ul>
+   <p>A Janus-QL query MUST contain exactly one top-level <code>SELECT</code> clause and exactly one top-level <code>WHERE</code> clause.</p>
+   <p>A Janus-QL query MAY omit <code>REGISTER RStream &lt;output> AS</code> when the query is executed as a historical-only query.</p>
+   <p>A query that registers a live output stream SHOULD use <code>REGISTER RStream &lt;output> AS</code>.</p>
+   <p>A <code>FROM NAMED WINDOW</code> declaration introduces a window name that MAY be referenced later in the <code>WHERE</code> clause by a <code>WINDOW &amp;lt;name&amp;gt; { ... }</code> block.</p>
+   <p>The public window declaration forms are:</p>
+   <ul>
+    <li data-md>
+     <p><code>FROM NAMED WINDOW &amp;lt;w&amp;gt; ON STREAM &amp;lt;s&amp;gt; [RANGE &amp;lt;range&amp;gt; STEP &amp;lt;step&amp;gt;]</code></p>
+    <li data-md>
+     <p><code>FROM NAMED WINDOW &amp;lt;w&amp;gt; ON LOG &amp;lt;l&amp;gt; [START &amp;lt;start&amp;gt; END &amp;lt;end&amp;gt;]</code></p>
+    <li data-md>
+     <p><code>FROM NAMED WINDOW &amp;lt;w&amp;gt; ON LOG &amp;lt;l&amp;gt; [OFFSET &amp;lt;offset&amp;gt; RANGE &amp;lt;range&amp;gt; STEP &amp;lt;step&amp;gt;]</code></p>
+   </ul>
+   <h2 class="heading settled" data-level="4" id="window-declarations"><span class="secno">4. </span><span class="content">Window Declarations</span><a class="self-link" href="#window-declarations"></a></h2>
+   <p>Janus-QL defines the following public window declaration forms.</p>
+   <h3 class="heading settled" data-level="4.1" id="live-stream-window"><span class="secno">4.1. </span><span class="content">Live Stream Window {#live-stream-window}</span><a class="self-link" href="#live-stream-window"></a></h3>
+   <p>The following form declares a live stream window:</p>
+<pre class="highlight language-sparql"><c- k>FROM NAMED</c-> WINDOW &amp;lt<c- p>;</c->w&amp;gt<c- p>;</c-> ON STREAM &amp;lt<c- p>;</c->s&amp;gt<c- p>;</c-> <c- p>[</c->RANGE &amp;lt<c- p>;</c->range&amp;gt<c- p>;</c-> STEP &amp;lt<c- p>;</c->step&amp;gt<c- p>;]</c->
+</pre>
+   <p>A processor MUST treat this form as a live window over stream <code>&amp;lt;s&amp;gt;</code>.</p>
+   <h3 class="heading settled" data-level="4.2" id="historical-fixed-log-window"><span class="secno">4.2. </span><span class="content">Historical Fixed Log Window {#historical-fixed-log-window}</span><a class="self-link" href="#historical-fixed-log-window"></a></h3>
+   <p>The following form declares a fixed historical log window:</p>
+<pre class="highlight language-sparql"><c- k>FROM NAMED</c-> WINDOW &amp;lt<c- p>;</c->w&amp;gt<c- p>;</c-> ON LOG &amp;lt<c- p>;</c->l&amp;gt<c- p>;</c-> <c- p>[</c->START &amp;lt<c- p>;</c->start&amp;gt<c- p>;</c-> END &amp;lt<c- p>;</c->end&amp;gt<c- p>;]</c->
+</pre>
+   <p>A processor MUST treat this form as a historical window over log <code>&amp;lt;l&amp;gt;</code> with explicit start and end bounds.</p>
+   <h3 class="heading settled" data-level="4.3" id="historical-sliding-log-window"><span class="secno">4.3. </span><span class="content">Historical Sliding Log Window {#historical-sliding-log-window}</span><a class="self-link" href="#historical-sliding-log-window"></a></h3>
+   <p>The following form declares a sliding historical log window:</p>
+<pre class="highlight language-sparql"><c- k>FROM NAMED</c-> WINDOW &amp;lt<c- p>;</c->w&amp;gt<c- p>;</c-> ON LOG &amp;lt<c- p>;</c->l&amp;gt<c- p>;</c-> <c- p>[</c-><c- k>OFFSET</c-> &amp;lt<c- p>;</c-><c- k>offset</c->&amp;gt<c- p>;</c-> RANGE &amp;lt<c- p>;</c->range&amp;gt<c- p>;</c-> STEP &amp;lt<c- p>;</c->step&amp;gt<c- p>;]</c->
+</pre>
+   <p>A processor MUST treat this form as a historical window over log <code>&amp;lt;l&amp;gt;</code> that is resolved relative to live evaluation time.</p>
+   <aside class="note">
+  Janus-QL v0.1 documents the current implementation behavior: <code>[T - OFFSET, T - OFFSET + RANGE]</code>.
+  This interpretation should be reviewed before a later stable release.
+  An alternative interpretation, <code>[T - OFFSET - RANGE, T - OFFSET]</code>, may be more intuitive because it treats <code>OFFSET</code> as the distance between the live evaluation time and the end of the historical window.
+</aside>
+   <p>For this form, <code>RANGE</code> MUST NOT be greater than <code>OFFSET</code>. Queries where <code>RANGE > OFFSET</code> MUST be rejected.</p>
+   <h2 class="heading settled" data-level="5" id="window-blocks"><span class="secno">5. </span><span class="content">Window Blocks</span><a class="self-link" href="#window-blocks"></a></h2>
+   <p>A declared window is referenced inside <code>WHERE</code> by a <code>WINDOW &amp;lt;name&amp;gt; { ... }</code> block.</p>
+   <p>Example:</p>
+<pre class="highlight language-sparql">WINDOW <c- nn>ex</c-><c- p>:</c-><c- f>liveWindow</c-> <c- p>{</c->
+  <c- g>?sensor</c-> <c- nn>ex</c-><c- p>:</c-><c- f>hasValue</c-> <c- g>?value</c-> <c- p>.</c->
+<c- p>}</c->
+</pre>
+   <p>A <code>WINDOW &amp;lt;name&amp;gt; { ... }</code> block MUST refer to a window name declared by a <code>FROM NAMED WINDOW</code> clause in the same query.</p>
+   <p>The graph pattern inside a <code>WINDOW &lt;name> { ... }</code> block is evaluated against the window selected by that declaration.</p>
+   <h2 class="heading settled" data-level="6" id="historical-subqueries"><span class="secno">6. </span><span class="content">Historical Subqueries</span><a class="self-link" href="#historical-subqueries"></a></h2>
+   <p>A nested <code>SELECT</code> block MAY appear inside the outer <code>WHERE</code> clause.</p>
+   <p>A nested subquery is supported only when every <code>WINDOW</code> referenced inside that nested subquery is a historical <code>ON LOG</code> window.</p>
+   <p>Live-only nested subqueries are not part of this version of Janus-QL and MUST be rejected.</p>
+   <p>Mixed live and historical nested subqueries are not part of this version of Janus-QL and MUST be rejected.</p>
+   <p>Supported historical-only nested subqueries are lowered to a materialized historical result and joined back into the outer query.</p>
+   <p>A supported historical-only nested subquery MAY reference more than one historical window.</p>
+   <p>A materialized historical subquery MUST project at least one anchor variable and at least one additional value. A nested historical subquery that projects only one variable MUST be rejected.</p>
+   <h2 class="heading settled" data-level="7" id="evaluation-semantics"><span class="secno">7. </span><span class="content">Evaluation Semantics</span><a class="self-link" href="#evaluation-semantics"></a></h2>
+   <p>Live windows are evaluated relative to the live stream schedule associated with the registered or executing query.</p>
+   <p>Historical fixed log windows use the explicit <code>[START ... END]</code> bounds given in the corresponding <code>FROM NAMED WINDOW</code> declaration.</p>
+   <p>Historical sliding log windows are resolved relative to live evaluation time <code>T</code>.</p>
+   <p>For a declaration of the form:</p>
+<pre class="highlight language-sparql"><c- k>FROM NAMED</c-> WINDOW &amp;lt<c- p>;</c->w&amp;gt<c- p>;</c-> ON LOG &amp;lt<c- p>;</c->l&amp;gt<c- p>;</c-> <c- p>[</c-><c- k>OFFSET</c-> &amp;lt<c- p>;</c-><c- k>offset</c->&amp;gt<c- p>;</c-> RANGE &amp;lt<c- p>;</c->range&amp;gt<c- p>;</c-> STEP &amp;lt<c- p>;</c->step&amp;gt<c- p>;]</c->
+</pre>
+   <p>the current Janus implementation resolves the interval as <code>[T - OFFSET, T - OFFSET + RANGE]</code>.</p>
+   <p>This specification defines that same interval for this version of Janus-QL.</p>
+   <p>Supported historical-only nested subqueries are evaluated as a historical materialization step whose result is joined back into the outer query during overall query evaluation.</p>
+   <h2 class="heading settled" data-level="8" id="examples"><span class="secno">8. </span><span class="content">Examples</span><a class="self-link" href="#examples"></a></h2>
+   <h3 class="heading settled" data-level="8.1" id="example-live-historical-nested"><span class="secno">8.1. </span><span class="content">Live And Historical Query With Nested Historical Subquery {#example-live-historical-nested}</span><a class="self-link" href="#example-live-historical-nested"></a></h3>
+<pre class="highlight language-sparql"><c- k>PREFIX</c-> <c- nn>ex</c-><c- p>:</c-> &amp;lt<c- p>;</c-><c- nn>http</c-><c- p>:</c-><c- o>//</c->example<c- p>.</c->org<c- o>/</c->&amp;gt<c- p>;</c->
+
+REGISTER RStream <c- nn>ex</c-><c- p>:</c-><c- f>output</c-> <c- k>AS</c->
+<c- k>SELECT</c-> <c- g>?sensor</c-> <c- g>?value</c-> <c- g>?historicalAverage</c->
+<c- k>FROM NAMED</c-> WINDOW <c- nn>ex</c-><c- p>:</c-><c- f>liveWindow</c-> ON STREAM <c- nn>ex</c-><c- p>:</c-><c- f>stream</c-> <c- p>[</c->RANGE <c- mi>60000</c-> STEP <c- mi>30000</c-><c- p>]</c->
+<c- k>FROM NAMED</c-> WINDOW <c- nn>ex</c-><c- p>:</c-><c- f>historicalWindow</c-> ON LOG <c- nn>ex</c-><c- p>:</c-><c- f>stream</c-> <c- p>[</c->START <c- mi>0</c-> END <c- mi>86400000</c-><c- p>]</c->
+<c- k>WHERE</c-> <c- p>{</c->
+  WINDOW <c- nn>ex</c-><c- p>:</c-><c- f>liveWindow</c-> <c- p>{</c->
+    <c- g>?sensor</c-> <c- nn>ex</c-><c- p>:</c-><c- f>hasValue</c-> <c- g>?value</c-> <c- p>.</c->
+  <c- p>}</c->
+
+  <c- p>{</c->
+    <c- k>SELECT</c-> <c- g>?sensor</c-> <c- p>(</c-><c- nf>AVG</c-><c- p>(</c-><c- g>?oldValue</c-><c- p>)</c-> <c- k>AS</c-> <c- g>?historicalAverage</c-><c- p>)</c->
+    <c- k>WHERE</c-> <c- p>{</c->
+      WINDOW <c- nn>ex</c-><c- p>:</c-><c- f>historicalWindow</c-> <c- p>{</c->
+        <c- g>?sensor</c-> <c- nn>ex</c-><c- p>:</c-><c- f>hasValue</c-> <c- g>?oldValue</c-> <c- p>.</c->
+      <c- p>}</c->
+    <c- p>}</c->
+    <c- k>GROUP BY</c-> <c- g>?sensor</c->
+  <c- p>}</c->
+
+  <c- k>FILTER</c-><c- p>(</c-><c- g>?value</c-> <c- o>></c-> <c- g>?historicalAverage</c-><c- p>)</c->
+<c- p>}</c->
+</pre>
+   <h3 class="heading settled" data-level="8.2" id="example-historical-only-without-register"><span class="secno">8.2. </span><span class="content">Historical-Only Query Without <code>REGISTER</code> {#example-historical-only-without-register}</span><a class="self-link" href="#example-historical-only-without-register"></a></h3>
+<pre class="highlight language-sparql"><c- k>PREFIX</c-> <c- nn>ex</c-><c- p>:</c-> &amp;lt<c- p>;</c-><c- nn>http</c-><c- p>:</c-><c- o>//</c->example<c- p>.</c->org<c- o>/</c->&amp;gt<c- p>;</c->
+
+<c- k>SELECT</c-> <c- g>?sensor</c-> <c- g>?value</c->
+<c- k>FROM NAMED</c-> WINDOW <c- nn>ex</c-><c- p>:</c-><c- f>historicalWindow</c-> ON LOG <c- nn>ex</c-><c- p>:</c-><c- f>stream</c-> <c- p>[</c->START <c- mi>0</c-> END <c- mi>86400000</c-><c- p>]</c->
+<c- k>WHERE</c-> <c- p>{</c->
+  WINDOW <c- nn>ex</c-><c- p>:</c-><c- f>historicalWindow</c-> <c- p>{</c->
+    <c- g>?sensor</c-> <c- nn>ex</c-><c- p>:</c-><c- f>hasValue</c-> <c- g>?value</c-> <c- p>.</c->
+  <c- p>}</c->
+<c- p>}</c->
+</pre>
+   <h3 class="heading settled" data-level="8.3" id="example-historical-sliding-log-window"><span class="secno">8.3. </span><span class="content">Historical Sliding Log Window Declaration {#example-historical-sliding-log-window}</span><a class="self-link" href="#example-historical-sliding-log-window"></a></h3>
+<pre class="highlight language-sparql"><c- k>PREFIX</c-> <c- nn>ex</c-><c- p>:</c-> &amp;lt<c- p>;</c-><c- nn>http</c-><c- p>:</c-><c- o>//</c->example<c- p>.</c->org<c- o>/</c->&amp;gt<c- p>;</c->
+
+REGISTER RStream <c- nn>ex</c-><c- p>:</c-><c- f>output</c-> <c- k>AS</c->
+<c- k>SELECT</c-> <c- g>?sensor</c-> <c- g>?value</c->
+<c- k>FROM NAMED</c-> WINDOW <c- nn>ex</c-><c- p>:</c-><c- f>liveWindow</c-> ON STREAM <c- nn>ex</c-><c- p>:</c-><c- f>stream</c-> <c- p>[</c->RANGE <c- mi>60000</c-> STEP <c- mi>30000</c-><c- p>]</c->
+<c- k>FROM NAMED</c-> WINDOW <c- nn>ex</c-><c- p>:</c-><c- f>previousHour</c-> ON LOG <c- nn>ex</c-><c- p>:</c-><c- f>stream</c-> <c- p>[</c-><c- k>OFFSET</c-> <c- mi>86400000</c-> RANGE <c- mi>3600000</c-> STEP <c- mi>30000</c-><c- p>]</c->
+<c- k>WHERE</c-> <c- p>{</c->
+  WINDOW <c- nn>ex</c-><c- p>:</c-><c- f>liveWindow</c-> <c- p>{</c->
+    <c- g>?sensor</c-> <c- nn>ex</c-><c- p>:</c-><c- f>hasValue</c-> <c- g>?value</c-> <c- p>.</c->
+  <c- p>}</c->
+
+  WINDOW <c- nn>ex</c-><c- p>:</c-><c- f>previousHour</c-> <c- p>{</c->
+    <c- g>?sensor</c-> <c- nn>ex</c-><c- p>:</c-><c- f>hasValue</c-> <c- g>?oldValue</c-> <c- p>.</c->
+  <c- p>}</c->
+<c- p>}</c->
+</pre>
+   <h2 class="heading settled" data-level="9" id="limitations"><span class="secno">9. </span><span class="content">Limitations</span><a class="self-link" href="#limitations"></a></h2>
+   <p><code>DEFINE BASELINE</code> and <code>USING BASELINE</code> are not part of the public Janus-QL specification.</p>
+   <p>The implementation may still contain legacy compatibility paths and internal baseline-related names. Those implementation artifacts are non-normative and do not define the public language.</p>
+   <p>Older implementation paths may still accept historical <code>[START ... END]</code> and <code>[OFFSET ... RANGE ... STEP ...]</code> forms on <code>ON STREAM</code>. This specification does not define those forms as public Janus-QL syntax. In this version, historical windows are defined only over <code>ON LOG</code>.</p>
+   <p>Live-only nested subqueries and mixed live/historical nested subqueries are not part of this version of Janus-QL.</p>
+   <p>This specification does not define unsupported future syntax beyond the public forms listed in this document.</p>
+  </main>
+  <h2 class="heading no-num no-ref settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
+  <h3 class="heading no-num no-ref settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
+  <dl>
+   <dt id="biblio-rfc2119">[RFC2119]
+   <dd>S. Bradner. <a href="https://datatracker.ietf.org/doc/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. March 1997. Best Current Practice. URL: <a href="https://datatracker.ietf.org/doc/html/rfc2119">https://datatracker.ietf.org/doc/html/rfc2119</a>
+   <dt id="biblio-rfc8174">[RFC8174]
+   <dd>B. Leiba. <a href="https://www.rfc-editor.org/info/rfc8174/"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. May 2017. Best Current Practice. URL: <a href="https://www.rfc-editor.org/info/rfc8174/">https://www.rfc-editor.org/info/rfc8174/</a>
+  </dl>

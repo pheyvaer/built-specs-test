@@ -24,7 +24,7 @@
           ]
         },
         "level1-latest": {
-          "latest-run": "2026-04-17T15:21:28.712Z",
+          "latest-run": "2026-06-30T14:52:03.820Z",
           "builds": [
             {
               "date": "2025-03-05T09:46:07.494Z",
@@ -47,7 +47,7 @@
           ]
         },
         "level1-commits": {
-          "latest-run": "2026-04-17T15:21:28.711Z",
+          "latest-run": "2026-06-30T14:52:03.819Z",
           "builds": [
             {
               "date": "2025-03-05T09:46:06.976Z",
@@ -107,7 +107,7 @@
           ]
         },
         "level0-latest": {
-          "latest-run": "2026-04-17T15:21:28.712Z",
+          "latest-run": "2026-06-30T14:52:03.820Z",
           "builds": [
             {
               "date": "2025-03-05T09:46:07.486Z",
@@ -121,7 +121,7 @@
     "rdf-time-snippets": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-17T15:21:32.645Z",
+          "latest-run": "2026-06-30T14:53:21.294Z",
           "builds": [
             {
               "date": "2024-12-17T17:24:26.701Z",
@@ -164,7 +164,7 @@
     "claims-network": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-17T15:21:28.990Z",
+          "latest-run": "2026-06-30T14:52:04.146Z",
           "builds": [
             {
               "date": "2025-01-16T13:44:21.485Z",
@@ -259,7 +259,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-17T15:21:28.990Z",
+          "latest-run": "2026-06-30T14:52:04.147Z",
           "builds": [
             {
               "date": "2025-01-17T10:59:04.539Z",
@@ -286,7 +286,7 @@
     "ldes-server-for-developers": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-17T15:21:30.040Z",
+          "latest-run": "2026-06-30T14:52:06.333Z",
           "builds": [
             {
               "date": "2025-01-20T13:39:54.537Z",
@@ -386,7 +386,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-17T15:21:30.040Z",
+          "latest-run": "2026-06-30T14:52:06.334Z",
           "builds": [
             {
               "date": "2025-01-20T13:39:54.539Z",
@@ -407,7 +407,7 @@
     "force": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-17T15:21:29.516Z",
+          "latest-run": "2026-06-30T14:52:04.802Z",
           "builds": [
             {
               "date": "2025-03-19T14:24:28.385Z",
@@ -517,7 +517,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-17T15:21:29.516Z",
+          "latest-run": "2026-06-30T14:52:04.802Z",
           "builds": [
             {
               "date": "2025-03-19T14:24:28.388Z",
@@ -623,7 +623,7 @@
     "odrl3proposal": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-17T15:21:31.837Z",
+          "latest-run": "2026-06-30T14:53:20.364Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:36.585Z",
@@ -659,7 +659,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-17T15:21:31.837Z",
+          "latest-run": "2026-06-30T14:53:20.364Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:36.589Z",
@@ -692,7 +692,7 @@
     "policy-instantiation": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-17T15:21:32.404Z",
+          "latest-run": "2026-06-30T14:53:20.976Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:37.581Z",
@@ -712,7 +712,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-17T15:21:32.404Z",
+          "latest-run": "2026-06-30T14:53:20.976Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:37.584Z",
@@ -733,7 +733,7 @@
     "sotw": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-17T15:21:33.188Z",
+          "latest-run": "2026-06-30T14:53:21.910Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:38.587Z",
@@ -848,7 +848,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-17T15:21:33.188Z",
+          "latest-run": "2026-06-30T14:53:21.910Z",
           "builds": [
             {
               "date": "2025-05-13T10:41:38.591Z",
@@ -887,7 +887,7 @@
     "hedge": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-17T15:21:29.766Z",
+          "latest-run": "2026-06-30T14:52:05.092Z",
           "builds": [
             {
               "date": "2025-06-24T08:18:47.351Z",
@@ -1086,7 +1086,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-17T15:21:29.766Z",
+          "latest-run": "2026-06-30T14:52:05.092Z",
           "builds": [
             {
               "date": "2025-06-24T08:18:47.354Z",
@@ -1149,7 +1149,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-17T15:21:29.269Z",
+          "latest-run": "2026-06-30T14:52:04.472Z",
           "builds": [
             {
               "date": "2025-06-25T15:19:44.161Z",
@@ -1178,7 +1178,7 @@
           ]
         },
         "all-commits-main": {
-          "latest-run": "2026-04-17T15:21:29.269Z",
+          "latest-run": "2026-06-30T14:52:04.472Z",
           "builds": [
             {
               "date": "2025-07-09T15:23:48.320Z",
@@ -1204,7 +1204,7 @@
     "time-fn": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-17T15:21:33.718Z",
+          "latest-run": "2026-06-30T14:53:22.510Z",
           "builds": [
             {
               "date": "2025-07-01T09:24:13.034Z",
@@ -1240,7 +1240,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-17T15:21:33.718Z",
+          "latest-run": "2026-06-30T14:53:22.510Z",
           "builds": [
             {
               "date": "2025-07-01T09:24:13.038Z",
@@ -1273,7 +1273,7 @@
     "trustenvelope": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-17T15:21:33.983Z",
+          "latest-run": "2026-06-30T14:53:22.795Z",
           "builds": [
             {
               "date": "2025-08-06T05:28:28.671Z",
@@ -1355,7 +1355,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-17T15:21:33.983Z",
+          "latest-run": "2026-06-30T14:53:22.795Z",
           "builds": [
             {
               "date": "2025-08-06T05:28:28.675Z",
@@ -1376,7 +1376,7 @@
     "SA4DS": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-17T15:21:32.902Z",
+          "latest-run": "2026-06-30T14:53:21.597Z",
           "builds": [
             {
               "date": "2025-10-30T12:46:59.154Z",
@@ -1387,7 +1387,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-17T15:21:32.902Z",
+          "latest-run": "2026-06-30T14:53:21.597Z",
           "builds": [
             {
               "date": "2025-11-24T17:10:59.932Z",
@@ -1402,7 +1402,7 @@
     "sparql-1-1-incremental-protocol": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-17T15:21:33.469Z",
+          "latest-run": "2026-06-30T14:53:22.177Z",
           "builds": [
             {
               "date": "2025-10-30T12:48:33.188Z",
@@ -1455,7 +1455,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-17T15:21:33.469Z",
+          "latest-run": "2026-06-30T14:53:22.177Z",
           "builds": [
             {
               "date": "2025-11-24T17:11:01.345Z",
@@ -1476,7 +1476,7 @@
     "aggregator-protocol": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-17T15:21:28.418Z",
+          "latest-run": "2026-06-30T14:52:03.501Z",
           "builds": [
             {
               "date": "2025-11-24T17:10:57.438Z",
@@ -1651,11 +1651,23 @@
               "commit": "af0554c93201f1cabba694b9e8b16b4d1f24669d",
               "path": "aggregator-protocol/all/af0554c93201f1cabba694b9e8b16b4d1f24669d",
               "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:02.769Z",
+              "commit": "448d0a4d225aa3244794936eb3680a68f19e4df0",
+              "path": "aggregator-protocol/all/448d0a4d225aa3244794936eb3680a68f19e4df0",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:03.501Z",
+              "commit": "b9a75d51a45d0a8ddc9d0224c99c78b1a901494a",
+              "path": "aggregator-protocol/all/b9a75d51a45d0a8ddc9d0224c99c78b1a901494a",
+              "status": "success"
             }
           ]
         },
         "latest": {
-          "latest-run": "2026-04-17T15:21:28.419Z",
+          "latest-run": "2026-06-30T14:52:03.506Z",
           "builds": [
             {
               "date": "2025-11-24T17:10:57.441Z",
@@ -1686,6 +1698,12 @@
               "path": "aggregator-protocol/latest",
               "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/aggregator-protocol/all/af0554c93201f1cabba694b9e8b16b4d1f24669d",
               "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:03.506Z",
+              "path": "aggregator-protocol/latest",
+              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/aggregator-protocol/all/b9a75d51a45d0a8ddc9d0224c99c78b1a901494a",
+              "status": "success"
             }
           ]
         }
@@ -1694,7 +1712,7 @@
     "PolicyCAT": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-17T15:21:32.134Z",
+          "latest-run": "2026-06-30T14:53:20.677Z",
           "builds": [
             {
               "date": "2026-01-05T15:02:54.287Z",
@@ -1717,7 +1735,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-17T15:21:32.134Z",
+          "latest-run": "2026-06-30T14:53:20.677Z",
           "builds": [
             {
               "date": "2026-01-05T15:02:54.289Z",
@@ -1738,7 +1756,7 @@
     "mea": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-17T15:21:31.586Z",
+          "latest-run": "2026-06-30T14:53:20.043Z",
           "builds": [
             {
               "date": "2026-04-15T06:26:25.303Z",
@@ -1749,7 +1767,7 @@
           ]
         },
         "latest": {
-          "latest-run": "2026-04-17T15:21:31.586Z",
+          "latest-run": "2026-06-30T14:53:20.043Z",
           "builds": [
             {
               "date": "2026-04-15T06:26:25.318Z",
@@ -1764,7 +1782,7 @@
     "ldt-interoperability-blueprint": {
       "publications": {
         "all-commits": {
-          "latest-run": "2026-04-17T15:21:31.290Z",
+          "latest-run": "2026-06-30T14:53:19.704Z",
           "builds": [
             {
               "date": "2026-04-17T13:21:50.935Z",
@@ -1789,11 +1807,167 @@
               "commit": "c3b396f128f96e90868d318cd2d689b82163f579",
               "path": "ldt-interoperability-blueprint/all/c3b396f128f96e90868d318cd2d689b82163f579",
               "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:09.668Z",
+              "commit": "8b0729d700d7a5f3285681cb9c106faecb954c53",
+              "path": "ldt-interoperability-blueprint/all/8b0729d700d7a5f3285681cb9c106faecb954c53",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:12.428Z",
+              "commit": "690b45fe1d2f7041ccce5d690ce8c3a08472bff8",
+              "path": "ldt-interoperability-blueprint/all/690b45fe1d2f7041ccce5d690ce8c3a08472bff8",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:15.101Z",
+              "commit": "015966d2d02e53cb9f6862481178329013e93890",
+              "path": "ldt-interoperability-blueprint/all/015966d2d02e53cb9f6862481178329013e93890",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:17.865Z",
+              "commit": "7a6bd86e28b623533405b5341fe485b9fc9f4c53",
+              "path": "ldt-interoperability-blueprint/all/7a6bd86e28b623533405b5341fe485b9fc9f4c53",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:20.563Z",
+              "commit": "ca46e379862906d84ed500b7c9d5d651a4a7b981",
+              "path": "ldt-interoperability-blueprint/all/ca46e379862906d84ed500b7c9d5d651a4a7b981",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:23.512Z",
+              "commit": "f7b8985f976272a7f7ae70b8e7824a5bb2ab5ccf",
+              "path": "ldt-interoperability-blueprint/all/f7b8985f976272a7f7ae70b8e7824a5bb2ab5ccf",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:26.240Z",
+              "commit": "89fe636f13747d0cc6f0661a66c1e743ad6ef7f0",
+              "path": "ldt-interoperability-blueprint/all/89fe636f13747d0cc6f0661a66c1e743ad6ef7f0",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:29.187Z",
+              "commit": "942dc82a7c8c7b4d381f001b809bbe83df5367d6",
+              "path": "ldt-interoperability-blueprint/all/942dc82a7c8c7b4d381f001b809bbe83df5367d6",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:31.777Z",
+              "commit": "87c649100ee1f9e50d16af74dc61c59bc9308c06",
+              "path": "ldt-interoperability-blueprint/all/87c649100ee1f9e50d16af74dc61c59bc9308c06",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:34.646Z",
+              "commit": "b538bb5acbaa362547db0de68f0701470e4f7e8c",
+              "path": "ldt-interoperability-blueprint/all/b538bb5acbaa362547db0de68f0701470e4f7e8c",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:37.650Z",
+              "commit": "58b242684b7c10215652a4a79f6160c0d952ded5",
+              "path": "ldt-interoperability-blueprint/all/58b242684b7c10215652a4a79f6160c0d952ded5",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:40.373Z",
+              "commit": "3e83df6f57f86ed4fcaff5b59801e5b9c011f001",
+              "path": "ldt-interoperability-blueprint/all/3e83df6f57f86ed4fcaff5b59801e5b9c011f001",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:43.169Z",
+              "commit": "58c5f42d52e1d27057962a01967739c2d86d3298",
+              "path": "ldt-interoperability-blueprint/all/58c5f42d52e1d27057962a01967739c2d86d3298",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:45.722Z",
+              "commit": "2fe73f7a7322c022bdfeb2953007261cdb084d86",
+              "path": "ldt-interoperability-blueprint/all/2fe73f7a7322c022bdfeb2953007261cdb084d86",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:48.468Z",
+              "commit": "ad20209683a69e6259aa61efdfa73600967931e4",
+              "path": "ldt-interoperability-blueprint/all/ad20209683a69e6259aa61efdfa73600967931e4",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:51.203Z",
+              "commit": "e1c31a6adbc39b4651ee627e4230a1c18eb4c2d1",
+              "path": "ldt-interoperability-blueprint/all/e1c31a6adbc39b4651ee627e4230a1c18eb4c2d1",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:54.113Z",
+              "commit": "573c0ca0f0ee12f4f482c21e5cc800bff574ec4e",
+              "path": "ldt-interoperability-blueprint/all/573c0ca0f0ee12f4f482c21e5cc800bff574ec4e",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:57.013Z",
+              "commit": "adddd8db0b05a96ffab261d78aac571e55e80f89",
+              "path": "ldt-interoperability-blueprint/all/adddd8db0b05a96ffab261d78aac571e55e80f89",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:52:59.700Z",
+              "commit": "cb3dc9be506340e6ea8c1bf9fcfc59f1f1143ebf",
+              "path": "ldt-interoperability-blueprint/all/cb3dc9be506340e6ea8c1bf9fcfc59f1f1143ebf",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:53:02.443Z",
+              "commit": "e093b0fab389c128607a1b93594bf009feaf0521",
+              "path": "ldt-interoperability-blueprint/all/e093b0fab389c128607a1b93594bf009feaf0521",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:53:05.145Z",
+              "commit": "7aab7ff89e113bdc9fff21d289b596de2aadc003",
+              "path": "ldt-interoperability-blueprint/all/7aab7ff89e113bdc9fff21d289b596de2aadc003",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:53:07.901Z",
+              "commit": "c8d76c24e7a76b46475b3c391b9328f42213bfa7",
+              "path": "ldt-interoperability-blueprint/all/c8d76c24e7a76b46475b3c391b9328f42213bfa7",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:53:10.860Z",
+              "commit": "8fcb1beeb740e6cebd4370db9aa3f55f7859cc62",
+              "path": "ldt-interoperability-blueprint/all/8fcb1beeb740e6cebd4370db9aa3f55f7859cc62",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:53:13.609Z",
+              "commit": "cd8d7b41914b2ae2cbb4931d251cac65fea396d1",
+              "path": "ldt-interoperability-blueprint/all/cd8d7b41914b2ae2cbb4931d251cac65fea396d1",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:53:16.104Z",
+              "commit": "b3f1c248d7478004cffde35cfd9f49af27a811cb",
+              "path": "ldt-interoperability-blueprint/all/b3f1c248d7478004cffde35cfd9f49af27a811cb",
+              "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:53:19.704Z",
+              "commit": "893ce9b36184b199638f00b7306e2a5e8a8ecb93",
+              "path": "ldt-interoperability-blueprint/all/893ce9b36184b199638f00b7306e2a5e8a8ecb93",
+              "status": "success"
             }
           ]
         },
         "latest": {
-          "latest-run": "2026-04-17T15:21:31.292Z",
+          "latest-run": "2026-06-30T14:53:19.731Z",
           "builds": [
             {
               "date": "2026-04-17T13:21:50.938Z",
@@ -1818,6 +1992,38 @@
               "path": "ldt-interoperability-blueprint/latest",
               "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/ldt-interoperability-blueprint/all/c3b396f128f96e90868d318cd2d689b82163f579",
               "status": "success"
+            },
+            {
+              "date": "2026-06-30T14:53:19.731Z",
+              "path": "ldt-interoperability-blueprint/latest",
+              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/ldt-interoperability-blueprint/all/893ce9b36184b199638f00b7306e2a5e8a8ecb93",
+              "status": "success"
+            }
+          ]
+        }
+      }
+    },
+    "janus-ql": {
+      "publications": {
+        "all-commits": {
+          "latest-run": "2026-06-30T14:52:06.112Z",
+          "builds": [
+            {
+              "date": "2026-06-30T14:52:06.112Z",
+              "path": "janus-ql-specification/all/81dee4d8dbe5e0a03985c56d1da4ea442de82680",
+              "commit": "81dee4d8dbe5e0a03985c56d1da4ea442de82680",
+              "status": "success"
+            }
+          ]
+        },
+        "latest": {
+          "latest-run": "2026-06-30T14:52:06.116Z",
+          "builds": [
+            {
+              "date": "2026-06-30T14:52:06.116Z",
+              "path": "janus-ql-specification/latest",
+              "source": "/builds/KNoWS/spec-platform/pipeline/tmp/storage-repo/docs/janus-ql-specification/all/81dee4d8dbe5e0a03985c56d1da4ea442de82680",
+              "status": "success"
             }
           ]
         }
@@ -1825,7 +2031,7 @@
     }
   },
   "orchestrator": {
-    "latest-run": "2026-04-17T15:21:33.983Z",
+    "latest-run": "2026-06-30T14:53:22.795Z",
     "version": "1.1.4"
   }
 }
